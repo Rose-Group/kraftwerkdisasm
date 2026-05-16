@@ -1,15 +1,15 @@
 
-	include	"include/Macros.asm"
-	include	"include/cube2asm_z80.asm"
+	include	"INCLUDE/Macros.asm"
+	include	"INCLUDE/cube2asm_z80.asm"
 
 ; -------------------------------------------------------------- 
 ; Bank01 Data - loc_B0000
 ; -------------------------------------------------------------- 
 	org	8000h
 PCM_Bank01:
-	incDAC	DrR_Scream, "sound/pcm/BANK_01/DrR_Scream.pcm"
-	incDAC	DrR_Grr, "sound/pcm/BANK_01/DrR_Grr.pcm"
-	dcb	8000h-(*-PCM_Bank00),0FFh
+	incDAC	DrR_Scream, "PCM/BANK_01/DrR_Scream.pcm"
+	incDAC	DrR_Grr, "PCM/BANK_01/DrR_Grr.pcm"
+	dcb	8000h-(*-PCM_Bank01),0FFh
 ; Bank01_End
 
 ; -------------------------------------------------------------- 
@@ -18,10 +18,10 @@ PCM_Bank01:
 
 	org	8000h
 PCM_Bank02:
-	incDAC	Yippee, "sound/pcm/BANK_02/Yippee.pcm"
-	incDAC	Yeehaw, "sound/pcm/BANK_02/Yeehaw.pcm"
-	incDAC	Yohoho, "sound/pcm/BANK_02/Yohoho.pcm"
-	dcb	8000h-(*-PCM_Bank01),0FFh
+	incDAC	Yippee, "PCM/BANK_02/Yippee.pcm"
+	incDAC	Yeehaw, "PCM/BANK_02/Yeehaw.pcm"
+	incDAC	Yohoho, "PCM/BANK_02/Yohoho.pcm"
+	dcb	8000h-(*-PCM_Bank02),0FFh
 ; Bank02_End
 
 ; -------------------------------------------------------------- 
@@ -30,9 +30,9 @@ PCM_Bank02:
 
 	org	8000h
 PCM_Bank03:
-	incDAC	Eggmobile, "sound/pcm/BANK_03/Eggmobile.pcm"
-	incDAC	EggmobileLeave, "sound/pcm/BANK_03/EggmobileLeave.pcm"
-	dcb	8000h-(*-PCM_Bank02),0FFh
+	incDAC	Eggmobile, "PCM/BANK_03/Eggmobile.pcm"
+	incDAC	EggmobileLeave, "PCM/BANK_03/EggmobileLeave.pcm"
+	dcb	8000h-(*-PCM_Bank03),0FFh
 ; Bank03_End
 
 ; -------------------------------------------------------------- 
@@ -41,11 +41,11 @@ PCM_Bank03:
 
 	org	8000h
 PCM_Bank04:
-	incDAC	Explosion, "sound/pcm/BANK_04/Explosion.pcm"
+	incDAC	Explosion, "PCM/BANK_04/Explosion.pcm"
 ; Unused PCM Data
-	incbin	"sound/pcm/BANK_04/UnusedPCMData.pcm"
-	incDAC	Vanish, "sound/pcm/BANK_04/Vanish.pcm"
-	dcb	8000h-(*-PCM_Bank03),0FFh
+	incbin	"PCM/BANK_04/UnusedPCMData.pcm"
+	incDAC	Vanish, "PCM/BANK_04/Vanish.pcm"
+	dcb	8000h-(*-PCM_Bank04),0FFh
 ; Bank04_End
 
 ; -------------------------------------------------------------- 
@@ -54,8 +54,8 @@ PCM_Bank04:
 
 	org	8000h
 PCM_Bank05:
-	incDAC	Machine, "sound/pcm/BANK_05/Machine.pcm"
-	dcb	8000h-(*-PCM_Bank04),0FFh
+	incDAC	Machine, "PCM/BANK_05/Machine.pcm"
+	dcb	8000h-(*-PCM_Bank05),0FFh
 ; Bank05_End
 
 ; -------------------------------------------------------------- 
@@ -64,8 +64,8 @@ PCM_Bank05:
 
 	org	8000h
 PCM_Bank06:
-	incDAC	EndingCheer, "sound/pcm/BANK_06/EndingCheer.pcm"
-	dcb	8000h-(*-PCM_Bank05),0FFh
+	incDAC	EndingCheer, "PCM/BANK_06/EndingCheer.pcm"
+	dcb	8000h-(*-PCM_Bank06),0FFh
 ; Bank06_End
 
 ; -------------------------------------------------------------- 
@@ -74,8 +74,8 @@ PCM_Bank06:
 
 	org	8000h
 PCM_Bank07:
-	incDAC	Thunder, "sound/pcm/BANK_07/Thunder.pcm"
-	dcb	8000h-(*-PCM_Bank06),0FFh
+	incDAC	Thunder, "PCM/BANK_07/Thunder.pcm"
+	dcb	8000h-(*-PCM_Bank07),0FFh
 ; Bank07_End
 
 ; -------------------------------------------------------------- 
@@ -84,11 +84,11 @@ PCM_Bank07:
 
 	org	8000h
 PCM_Bank08:
-	incDAC	Kick, "sound/pcm/BANK_08/Kick.pcm"
-	incDAC	Snare, "sound/pcm/BANK_08/Snare.pcm"
-	incDAC	Tom, "sound/pcm/BANK_08/Tom.pcm"
-	incDAC	DrR_Laugh, "sound/pcm/BANK_08/DrR_Laugh.pcm"
-	dcb	8000h-(*-PCM_Bank07),0FFh
+	incDAC	Kick, "PCM/BANK_08/Kick.pcm"
+	incDAC	Snare, "PCM/BANK_08/Snare.pcm"
+	incDAC	Tom, "PCM/BANK_08/Tom.pcm"
+	incDAC	DrR_Laugh, "PCM/BANK_08/DrR_Laugh.pcm"
+	dcb	8000h-(*-PCM_Bank08),0FFh
 ; Bank08_End
 
 ; -------------------------------------------------------------- 
@@ -97,12 +97,12 @@ PCM_Bank08:
 
 	org	8000h
 Snd_Bank09:
-	include	"sound/index/pcm_voice.asm"
+	include	"INDEX/pcm_voice.asm"
 
 	ALIGN	0A280h, 0
 
 ; loc_F2280
-	include	"sound/index/unk_index.asm"
+	include	"INDEX/unk_index.asm"
 
 	ALIGN	06000h, 0FFh
 
@@ -113,6 +113,7 @@ Snd_Bank09:
 	org	0
 CubeDriver:
 	include	"cube.asm"
+	include	"INDEX/sfx.asm"
 	dcb	1FF1h-(*-CubeDriver), 0FFh
 CubeDriver_End:
 
@@ -124,8 +125,8 @@ CubeDriver_End:
 
 	org	8000h
 Snd_Bank0A:
-	include	"index/fm_voice.asm"
-	include	"index/bgm.asm"
+	include	"INDEX/fm_voice.asm"
+	include	"INDEX/bgm.asm"
 	dcb	8000h-(*-Snd_Bank0A),0FFh
 
 	END

@@ -195,7 +195,7 @@ cdYeehaw1	EQU	24h
 cpNone		EQU	00h
 cpRight		EQU	40h
 cpLeft		EQU	80h
-cpCentre	EQU	C0h
+cpCentre	EQU	0C0h
 cpCenter = cpCentre
 
 ; --------------------------------------------------------------
@@ -207,7 +207,7 @@ cpCenter = cpCentre
 
 cType macros type
 
-	db	\type
+	db	type
 
 ; --------------------------------------------------------------
 ; Set fade out timer
@@ -218,7 +218,7 @@ cType macros type
 
 cFadeOut macros time
 
-	dw	\time
+	dw	time
 
 ; --------------------------------------------------------------
 ; Set tempo
@@ -229,7 +229,7 @@ cFadeOut macros time
 
 cTempo macros tempo
 
-	db	\tempo
+	db	tempo
 
 ; --------------------------------------------------------------
 ; Channel pointer
@@ -240,7 +240,7 @@ cTempo macros tempo
 
 cChannel macros addr
 
-	dw	\addr
+	dw	addr
 
 ; --------------------------------------------------------------
 ; Channel pointer SFX
@@ -251,7 +251,7 @@ cChannel macros addr
 
 cChannelSFX macros addr
 
-	dw	\addr
+	dw	addr
 
 ; --------------------------------------------------------------
 ; Store a note
@@ -264,9 +264,9 @@ cChannelSFX macros addr
 cNote macro note, length
 
 	if (narg=1)
-		db	\note
+		db	note
 	else
-		db	(\note)|$80, \length
+		db	(note)|80h, length
 	endif
 
 	endm
@@ -277,7 +277,7 @@ cNote macro note, length
 
 cLoopStart macros
 
-	db	$F8, $00
+	db	0F8h, 00h
 
 ; --------------------------------------------------------------
 ; Main loop end
@@ -285,7 +285,7 @@ cLoopStart macros
 
 cLoopEnd macros
 
-	db	$F8, $A1
+	db	0F8h, 0A1h
 
 ; --------------------------------------------------------------
 ; Set volta loop position
@@ -293,7 +293,7 @@ cLoopEnd macros
 
 cVoltaLoop macros
 
-	db	$F8, $20
+	db	0F8h, 20h
 
 ; --------------------------------------------------------------
 ; Volta section 1 start
@@ -301,7 +301,7 @@ cVoltaLoop macros
 
 cVoltaSect1 macros
 
-	db	$F8, $40
+	db	0F8h, 40h
 
 ; --------------------------------------------------------------
 ; Volta section 2 start
@@ -309,7 +309,7 @@ cVoltaSect1 macros
 
 cVoltaSect2 macros
 
-	db	$F8, $60
+	db	0F8h, 60h
 
 ; --------------------------------------------------------------
 ; Volta section 3 start
@@ -317,7 +317,7 @@ cVoltaSect2 macros
 
 cVoltaSect3 macros
 
-	db	$F8, $80
+	db	0F8h, 80h
 
 ; --------------------------------------------------------------
 ; Volta section end
@@ -325,7 +325,7 @@ cVoltaSect3 macros
 
 cVoltaSectEnd macros
 
-	db	$F8, $A0
+	db	0F8h, 0A0h
 
 ; --------------------------------------------------------------
 ; Loop (with counter) start
@@ -336,7 +336,7 @@ cVoltaSectEnd macros
 
 cLoopCnt macros count
 
-	db	$F8, $C0|(\count)
+	db	0F8h, 0C0h|(count)
 
 ; --------------------------------------------------------------
 ; Loop (with counter) end
@@ -344,7 +344,7 @@ cLoopCnt macros count
 
 cLoopCntEnd macros count
 
-	db	$F8, $E0
+	db	0F8h, 0E0h
 
 ; --------------------------------------------------------------
 ; Set note shift
@@ -357,7 +357,7 @@ cLoopCntEnd macros count
 
 cNoteShift macros dir, detune, trns
 
-	db	$F9, ((\dir)<<7)|((\detune)<<4)|(\trns)
+	db	0F9h, ((dir)<<7)|((detune)<<4)|(trns)
 
 ; --------------------------------------------------------------
 ; Set panning
@@ -368,7 +368,7 @@ cNoteShift macros dir, detune, trns
 
 cPan macros pan
 
-	db	$FA, \pan
+	db	0FAh, pan
 
 ; --------------------------------------------------------------
 ; Set tempo
@@ -379,7 +379,7 @@ cPan macros pan
 
 cSetTempo macros tempo
 
-	db	$FA, \tempo
+	db	0FAh, tempo
 
 ; --------------------------------------------------------------
 ; Set vibrato
@@ -391,7 +391,7 @@ cSetTempo macros tempo
 
 cVibrato macros vib, delay
 
-	db	$FB, ((\vib)<<4)|(\delay)
+	db	0FBh, ((vib)<<4)|(delay)
 
 ; --------------------------------------------------------------
 ; Set note slide
@@ -402,7 +402,7 @@ cVibrato macros vib, delay
 
 cSlide macros speed
 
-	db	$FC, (\speed)|$80
+	db	0FCh, (speed)|80h
 
 ; --------------------------------------------------------------
 ; Stop note slide
@@ -410,7 +410,7 @@ cSlide macros speed
 
 cSlideStop macros
 
-	db	$FC, $FF
+	db	0FCh, 0FFh
 
 ; --------------------------------------------------------------
 ; Set note release time
@@ -421,7 +421,7 @@ cSlideStop macros
 
 cRelease macros time
 
-	db	$FC, \time
+	db	0FCh, time
 
 ; --------------------------------------------------------------
 ; Set note sustain
@@ -429,7 +429,7 @@ cRelease macros time
 
 cSustain macros
 
-	db	$FC, $80
+	db	0FCh, 80h
 
 ; --------------------------------------------------------------
 ; Set FM volume
@@ -440,7 +440,7 @@ cSustain macros
 
 cVolFM macros vol
 
-	db	$FD, \vol
+	db	0FDh, vol
 
 ; --------------------------------------------------------------
 ; Set PSG instrument and volume
@@ -452,7 +452,7 @@ cVolFM macros vol
 
 cInsVolPSG macros ins, vol
 
-	db	$FD, ((\ins)<<4)|(\vol)
+	db	0FDh, ((ins)<<4)|(vol)
 
 ; --------------------------------------------------------------
 ; Set FM instrument
@@ -463,7 +463,7 @@ cInsVolPSG macros ins, vol
 
 cInsFM macros ins
 
-	db	$FE, \ins
+	db	0FEh, ins
 
 ; --------------------------------------------------------------
 ; Stop channel
@@ -471,7 +471,7 @@ cInsFM macros ins
 
 cStop macros
 
-	db	$FF, $00, $00
+	db	0FFh, 00h, 00h
 
 ; --------------------------------------------------------------
 ; Play sound
@@ -482,7 +482,7 @@ cStop macros
 
 cPlay macros id
 
-	db	$FF, \id, $00
+	db	0FFh, id, 00h
 
 ; --------------------------------------------------------------
 ; Jump to address
@@ -493,8 +493,8 @@ cPlay macros id
 
 cJump macro addr
 
-	db	$FF
-	ZDW	\addr
+	db	0FFh
+	dw	addr
 
 	endm
 
