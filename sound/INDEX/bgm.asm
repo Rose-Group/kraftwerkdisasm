@@ -34,7 +34,7 @@ BGM_Index:	; loc_937C
 
 BGM_01:		include	"bgm/01 - Title Screen.asm"
 BGM_02:		include	"bgm/02 - Configuration.asm"
-BGM_03:		incbin	"bgm/03 - Unused (Stage 13 Cutscene).bin"
+BGM_03:		include	"bgm/03 - Unused (Stage 13 Cutscene).asm"
 BGM_04:		incbin	"bgm/04 - Game Over.bin"
 BGM_05:		incbin	"bgm/05 - Stage 1-4.bin"
 BGM_06:		incbin	"bgm/06 - Stage 13.bin"
