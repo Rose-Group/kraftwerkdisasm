@@ -1,5 +1,10 @@
+; -------------------------------------------------------------- 
+; Dr. Robotnik's Mean Bean Machine (Kraftwerk Proto) Sound Data
+; -------------------------------------------------------------- 
 
 	include	"INCLUDE/Macros.asm"
+	include	"INCLUDE/Constants.asm"
+	include	"INCLUDE/RAM.asm"
 	include	"INCLUDE/cube2asm_z80.asm"
 
 ; -------------------------------------------------------------- 
@@ -108,18 +113,15 @@ Snd_Bank09:
 
 	ALIGN	0E000h, 0FFh
 
-; --------------------------------------------------------------
-; Cube sound driver (pre-compiled)
-; --------------------------------------------------------------
-
 	obj	0
-CubeDriver:
-	include	"cube.asm"
-	include	"INDEX/sfx.asm"
-	dcb	1FF1h-($-CubeDriver),0FFh
-CubeDriver_End:
-	obj	0FFF1h
 
+zCubeDriver:
+	include	"SRC/cube.asm"
+	include	"INDEX/sfx.asm"
+	dcb	1FF1h-($-zCubeDriver),0FFh
+zCubeDriver_End:
+
+	obj	0FFF1h
 	dcb	8000h-($-Snd_Bank09),0FFh
 
 ; -------------------------------------------------------------- 

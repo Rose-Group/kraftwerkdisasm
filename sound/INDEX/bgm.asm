@@ -33,7 +33,7 @@ BGM_Index:	; loc_937C
 	DW	BGM_NULL	; $E2DE - 20 -	Unplayable (BLANK)
 
 BGM_01:		include	"bgm/01 - Title Screen.asm"
-BGM_02:		incbin	"bgm/02 - Configuration.bin"
+BGM_02:		include	"bgm/02 - Configuration.asm"
 BGM_03:		incbin	"bgm/03 - Unused (Stage 13 Cutscene).bin"
 BGM_04:		incbin	"bgm/04 - Game Over.bin"
 BGM_05:		incbin	"bgm/05 - Stage 1-4.bin"

@@ -325,7 +325,7 @@ zLoc_1B5:
 		add	hl, hl
 		add	hl, hl
 		add	hl, hl
-		ld	bc, PCM_Index
+		ld	bc, zPCM_Index
 		add	hl, bc
 		ld	a, (hl)
 		inc	hl
@@ -3201,7 +3201,7 @@ zByte_14E3:	db 0
 ; PCM Pointers
 ; -------------------------------------------------------------- 
 
-PCM_Index:
+zPCM_Index:
 	DACPtr	1, 7, Kick
 	DACPtr	1, 7, Snare
 	DACPtr	1, 7, Tom
