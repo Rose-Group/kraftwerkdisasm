@@ -12,11 +12,11 @@ incDAC macro NAME,PATH
 ; DAC Pointer Include
 ; --------------------------------------------------------------
 
-DACPtr macro RATE,BANK,SAMPLE,END_SHIFT
+DACPtr macro RATE, BANK, SAMPLE, END_SHIFT
 	dw	RATE
 	dw	BANK+6
 	    if narg<4
-		dw	\SAMPLE\_End-SAMPLE
+		dw	(\SAMPLE\_End)-SAMPLE
 	    else
 		dw	(\SAMPLE\_End-END_SHIFT)-SAMPLE
 	    endif

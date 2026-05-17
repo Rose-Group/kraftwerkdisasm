@@ -28,7 +28,8 @@ zLoc_E:
 		call	zSub_143
 ; End of function zEntry
 
-zLoc_23:		ld	a, (4000h)
+zLoc_23:
+		ld	a, (4000h)
 		and	2
 		jr	z, zLoc_30
 		call	zSub_436
@@ -3100,7 +3101,7 @@ zPSGEnv_00:	db 0Fh, 0Bh, 7, 3, 80h
 
 ; ---------------------------------------------------------------------------
 
-	align	$1330, $00
+	align	1330h, 00h
 
 ; ---------------------------------------------------------------------------
 ; Channel Initialisation Data
@@ -3201,43 +3202,43 @@ zByte_14E3:	db 0
 ; -------------------------------------------------------------- 
 
 PCM_Index:
-	DACPtr	1, 7, Kick		; 14A0h, 8000h
-	DACPtr	1, 7, Snare		; 2CB0h, 94A0h
-	DACPtr	1, 7, Tom		; 1B41h, 0C150h
-	DACPtr	8, 7, Tom		; 1B41h, 0C150h
-	DACPtr	0Fh, 7, Tom		; 1B41h, 0C150h
-	DACPtr	3, 7, DrR_Laugh		; 0E80h, 0DC91h
-	DACPtr	4, 7, DrR_Laugh		; 0E80h, 0DC91h
-	DACPtr	5, 7, DrR_Laugh		; 0E80h, 0DC91h
-	DACPtr	6, 7, DrR_Laugh		; 0E80h, 0DC91h
-	DACPtr	7, 7, DrR_Laugh		; 0E80h, 0DC91h
-	DACPtr	1, 6, DrR_Scream	; 3FCDh, 8000h
-	DACPtr	3, 6, DrR_Grr		; 30F9h, 0BFCDh
-	DACPtr	3, 7, Yippee		; 1DC3h, 8000h
-	DACPtr	5, 7, Yippee		; 1DC3h, 8000h
-	DACPtr	7, 7, Yippee		; 1DC3h, 8000h
-	DACPtr	9, 7, Yippee		; 1DC3h, 8000h
-	DACPtr	1, 7, Yeehaw		; 2CA2h, 9DC3h
-	DACPtr	3, 7, Yeehaw		; 2CA2h, 9DC3h
-	DACPtr	1, 7, Yohoho		; 3588h, 0CA65h
-	DACPtr	0Fh, 8, Eggmobile	; 3AF0h, 8000h
-	DACPtr	0Fh, 8, EggmobileLeave	; 3B6Fh, 0BAF0h
-	DACPtr	3, 9, Explosion		; 39AEh, 8000h
-	DACPtr	9, 9, Explosion		; 39AEh, 8000h
-	DACPtr	0Fh, 9, Explosion	; 39AEh, 8000h
-	DACPtr	5, 7, Yeehaw		; 2CA2h, 9DC3h
-	DACPtr	0Fh, 9, Vanish		; 1317h, 0CE80h
-	DACPtr	4, 0Ah, Machine		; 7F72h, 8000h
-	DACPtr	3, 7, Yohoho		; 3588h, 0CA65h
-	DACPtr	5, 7, Yohoho		; 3588h, 0CA65h
-	DACPtr	0Fh, 0Bh, EndingCheer	; 7EE7h, 8000h
-	DACPtr	1, 0Dh, DrR_Laugh	; 0E80h, 0DC91h
-	DACPtr	2, 0Dh, DrR_Laugh	; 0E80h, 0DC91h
-	DACPtr	1, 0Ch, Thunder		; 5BE5h, 8000h
-	DACPtr	5, 0Ch, Thunder		; 5BE5h, 8000h
-	DACPtr	0Ah, 0Ch, Thunder	; 5BE5h, 8000h
-	DACPtr	0Fh, 0Ch, Thunder	; 5BE5h, 8000h
-	DACPtr	7, 7, Yeehaw		; 2CA2h, 9DC3h
+	DACPtr	1, 7, Kick, 0			; 14A0h, 8000h
+	DACPtr	1, 7, Snare, 0			; 2CB0h, 94A0h
+	DACPtr	1, 7, Tom, 0			; 1B41h, 0C150h
+	DACPtr	8, 7, Tom, 0			; 1B41h, 0C150h
+	DACPtr	0Fh, 7, Tom, 0			; 1B41h, 0C150h
+	DACPtr	3, 7, DrR_Laugh, 0		; 0E80h, 0DC91h
+	DACPtr	4, 7, DrR_Laugh, 0		; 0E80h, 0DC91h
+	DACPtr	5, 7, DrR_Laugh, 0		; 0E80h, 0DC91h
+	DACPtr	6, 7, DrR_Laugh, 0		; 0E80h, 0DC91h
+	DACPtr	7, 7, DrR_Laugh, 0		; 0E80h, 0DC91h
+	DACPtr	1, 0, DrR_Scream, 0		; 3FCDh, 8000h
+	DACPtr	3, 0, DrR_Grr, 0		; 30F9h, 0BFCDh
+	DACPtr	3, 1, Yippee, 0			; 1DC3h, 8000h
+	DACPtr	5, 1, Yippee, 0			; 1DC3h, 8000h
+	DACPtr	7, 1, Yippee, 0			; 1DC3h, 8000h
+	DACPtr	9, 1, Yippee, 0			; 1DC3h, 8000h
+	DACPtr	1, 1, Yeehaw, 0			; 2CA2h, 9DC3h
+	DACPtr	3, 1, Yeehaw, 0			; 2CA2h, 9DC3h
+	DACPtr	1, 1, Yohoho, 0			; 3588h, 0CA65h
+	DACPtr	0Fh, 2, Eggmobile, 0		; 3AF0h, 8000h
+	DACPtr	0Fh, 2, EggmobileLeave, 0	; 3B6Fh, 0BAF0h
+	DACPtr	3, 3, Explosion, 0		; 39AEh, 8000h
+	DACPtr	9, 3, Explosion, 0		; 39AEh, 8000h
+	DACPtr	0Fh, 3, Explosion, 0		; 39AEh, 8000h
+	DACPtr	5, 1, Yeehaw, 0			; 2CA2h, 9DC3h
+	DACPtr	0Fh, 3, Vanish, 0		; 1317h, 0CE80h
+	DACPtr	4, 4, Machine, 0		; 7F72h, 8000h
+	DACPtr	3, 1, Yohoho, 0			; 3588h, 0CA65h
+	DACPtr	5, 1, Yohoho, 0			; 3588h, 0CA65h
+	DACPtr	0Fh, 5, EndingCheer, 0		; 7EE7h, 8000h
+	DACPtr	1, 7, DrR_Laugh, 0		; 0E80h, 0DC91h
+	DACPtr	2, 7, DrR_Laugh, 0		; 0E80h, 0DC91h
+	DACPtr	1, 6, Thunder, 0		; 5BE5h, 8000h
+	DACPtr	5, 6, Thunder, 0		; 5BE5h, 8000h
+	DACPtr	0Ah, 6, Thunder, 0		; 5BE5h, 8000h
+	DACPtr	0Fh, 6, Thunder, 0		; 5BE5h, 8000h
+	DACPtr	7, 1, Yeehaw, 0			; 2CA2h, 9DC3h
 
 ; ---------------------------------------------------------------------------
 ; End of Sound Driver Data

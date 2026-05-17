@@ -1,4 +1,4 @@
-FMInstruments:
+FM_Instruments:
 	; Patch 00
 	; 7F 23 22 11   14 23 1E 7F   9F 9F 8F 5A
 	; 0F 00 00 00   09 00 00 00   6F 81 12 03
@@ -887,7 +887,7 @@ FMInstruments:
 	cfiAmpMod	00h, 00h, 00h, 00h
 	cfiDecayRt2	00h, 00h, 00h, 00h
 	cfiReleaseRt	0Fh, 0Fh, 0Fh, 0Fh
-	cfiDecayLv	0Dh, 0Dh, 0Fh, 0Fh
+	cfiDecayLv	0Dh, 0Eh, 0Fh, 0Fh
 	cfiSSGEG	00h, 00h, 00h, 00h
 	cfiAlgorithm	01h
 	cfiFeedback	00h
@@ -2171,7 +2171,7 @@ FMInstruments:
 	; 00 00 00 00   3A
 	cfiName		patch72
 	cfiCoarseFreq	01h, 01h, 03h, 01h
-	cfiDetune	07h, 02h, 04h, 03h
+	cfiDetune	07h, 02h, 04h, 00h
 	cfiTotalLv	1Ah, 1Eh, 32h, 7Fh
 	cfiAttack	15h, 0Eh, 1Fh, 1Ah
 	cfiRateScale	02h, 02h, 02h, 01h

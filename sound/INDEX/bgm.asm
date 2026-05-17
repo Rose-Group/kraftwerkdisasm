@@ -32,7 +32,7 @@ BGM_Index:	; loc_937C
 	DW	BGM_NULL	; $E2DE - 1F -	Init Track (BLANK)
 	DW	BGM_NULL	; $E2DE - 20 -	Unplayable (BLANK)
 
-BGM_01:		incbin	"bgm/01 - Title Screen.bin"
+BGM_01:		include	"bgm/01 - Title Screen.asm"
 BGM_02:		incbin	"bgm/02 - Configuration.bin"
 BGM_03:		incbin	"bgm/03 - Unused (Stage 13 Cutscene).bin"
 BGM_04:		incbin	"bgm/04 - Game Over.bin"
@@ -55,4 +55,4 @@ BGM_15:		incbin	"bgm/15 - Unused (Alt Ending).bin"
 BGM_16:		incbin	"bgm/16 - Stage 9-12 Cutscene.bin"
 BGM_17:		incbin	"bgm/17 - Stage 1-4 Cutscene.bin"
 BGM_18:		incbin	"bgm/18 - Stage 5-8 Cutscene.bin"
-BGM_NULL:	incbin	"bgm/Null Song.bin"
+BGM_NULL:	include	"bgm/Null Song.asm"
