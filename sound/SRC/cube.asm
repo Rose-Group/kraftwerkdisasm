@@ -7,17 +7,11 @@
 zEntry:
 		di
 		ld	sp, 1FF0h
-
-zLoc_4:
 		xor	a
 		ld	(1FFEh), a
-
-zLoc_8:
 		dec	a
 		ld	(zByte_14DE), a
 		ld	a, 0Fh
-
-zLoc_E:
 		ld	(1FFDh), a
 		ld	a, 0FFh
 		ld	(1FF9h), a
