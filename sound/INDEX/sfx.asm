@@ -170,7 +170,7 @@ SFX_45_FM5:
 	cVibrato	4, 0Ah
 	cPan		cpCentre
 	cNoteShift	0, 0, 0
-	cSlide		0
+	cSustain
 	cNote	cnD2, 2
 	cSlide		7Eh
 	cRelease	1
@@ -223,7 +223,7 @@ SFX_48_FM5:
 	cPan		cpCentre
 	cNoteShift	0, 0, 0
 	cVoltaLoop
-		cSlide		0
+		cSustain
 		cSlideStop
 		cNote	cnF0, 1
 		cSlide		7Eh
@@ -246,7 +246,7 @@ SFX_48_FM5:
 	cVoltaSectEnd
 	cVoltaSect3
 		cVolFM		9
-		cSlide		0
+		cSustain
 		cSlideStop
 		cNote	cnF0, 1
 		cSlide		7Eh
@@ -282,7 +282,7 @@ SFX_49_FM4:
 	cVibrato	2, 1
 	cPan		cpRight
 	cNoteShift	0, 7, 0
-	cSlide		0
+	cSustain
 	cNote	cnG2, 2
 	cSlide		1Bh
 	cNote	cnF1, 0Ah
@@ -717,7 +717,7 @@ SFX_54_FM5:
 	cNoteShift	0, 0, 0
 	cVoltaLoop
 		cRelease	1
-		cSlide		0
+		cSustain
 		cNote	cnG1, 1
 		cNote	cnC2
 		cNote	cnG2
@@ -980,7 +980,7 @@ SFX_5C_FM5:
 	cVibrato	4, 0Fh
 	cPan		cpCentre
 	cNoteShift	0, 0, 0
-	cSlide		0
+	cSustain
 	cNote	cnG2, 0
 	cSlide		7Eh
 	cRelease	1
@@ -1009,7 +1009,7 @@ SFX_5E_FM5:
 	cVibrato	4, 0Fh
 	cPan		cpCentre
 	cNoteShift	0, 0, 0
-	cSlide		0
+	cSustain
 	cNote	cnF3, 0
 	cSlide		5Bh
 	cNote	cnC3, 4
@@ -1383,7 +1383,7 @@ SFX_59_FM4:
 	cVibrato	4, 0Fh
 	cPan		cpCentre
 	cNoteShift	0, 0, 0
-	cSlide		0
+	cSustain
 	cVolFM		6
 	cNote	cnA3, 0
 	cSlide		0Eh
@@ -1421,7 +1421,7 @@ SFX_59_FM5:
 	cVibrato	4, 0Fh
 	cPan		cpCentre
 	cNoteShift	0, 0, 0
-	cSlide		0
+	cSustain
 	cNote	cnF5, 3
 	cSlide		1Ah
 	cNote	cnDs3, 16h

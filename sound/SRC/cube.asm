@@ -129,7 +129,7 @@ zLoc_B2:
 
 
 zSub_BB:
-		ld	iy, 14D2h
+		ld	iy, zByte_14D2
 		xor	a
 		ld	(zByte_14D5), a
 		ld	(iy+0), a
