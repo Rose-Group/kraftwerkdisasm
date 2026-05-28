@@ -33,7 +33,7 @@
 ; Segment type: Pure code
 ; segment "ROM"
 StartofROM:				; DATA XREF: ROM:ROMStart_Loc↓o
-		dc.l stack_base         ; Initial Stack Pointer
+		dc.l v_stackbase        ; Initial Stack Pointer
                 dc.l Entry              ; Entry Point
                 dc.l Exception          ; Bus Error
                 dc.l Exception          ; Address Error
@@ -435,7 +435,7 @@ InitGame:                               ; CODE XREF: Entry+108↑p
 
                 lea     (v_soundtestflag).l,a1
                 jsr     sub_21EDC
-                cmp.w   (stack_base).l,d0
+                cmp.w   (v_stackbase).l,d0
                 beq.w   loc_4DE
                 lea     (unk_FFFE02).l,a1
                 jsr     sub_21EDC
@@ -445,7 +445,7 @@ InitGame:                               ; CODE XREF: Entry+108↑p
 
 loc_4A4:                                ; CODE XREF: InitGame+28↑j
                 lea     (unk_FFFE00).l,a1
-                lea     (stack_base).l,a2
+                lea     (v_stackbase).l,a2
                 move.w  #$2B,d0 ; '+'
 
 loc_4B4:                                ; CODE XREF: InitGame+42↓j
@@ -459,7 +459,7 @@ loc_4B4:                                ; CODE XREF: InitGame+42↓j
 
 
 sub_4BE:                                ; CODE XREF: InitGame+2C↑p
-                lea     (stack_base).l,a0
+                lea     (v_stackbase).l,a0
                 moveq   #0,d0
                 move.w  #$FF,d1
 
@@ -1290,8 +1290,8 @@ CompileDec:                             ; CODE XREF: ROM:00001772↓j
                 swap    d0
                 andi.w  #3,d0
                 move.w  d0,(VDP_CTRL).l
-                lea     (RAM_START).l,a1
-                lea     (unk_FF0100).l,a2
+                lea     (v_compdecbuffer).l,a1
+                lea     (v_compdecvdpbuffer).l,a2
                 clr.w   d0
                 clr.w   d1
 
@@ -34036,7 +34036,7 @@ SpecPlane8A:                            ; DATA XREF: sub_18A08+3A↑o
                 addi.w  #$5F00,d5
                 bsr.w   SetVRAMRead
                 lea     (VDP_DATA).l,a3
-                lea     (RAM_START).l,a4
+                lea     (v_compdecbuffer).l,a4
                 move.w  #$3F,d0 ; '?'
 
 loc_1926C:                              ; CODE XREF: sub_18A08+866↓j
@@ -34044,7 +34044,7 @@ loc_1926C:                              ; CODE XREF: sub_18A08+866↓j
                 dbf     d0,loc_1926C
                 move.w  #$6580,d5
                 bsr.w   SetVRAMWrite
-                lea     (RAM_START).l,a4
+                lea     (v_compdecbuffer).l,a4
                 move.w  #$3F,d0 ; '?'
 
 loc_19284:                              ; CODE XREF: sub_18A08+87E↓j
@@ -34054,7 +34054,7 @@ loc_19284:                              ; CODE XREF: sub_18A08+87E↓j
 ; ---------------------------------------------------------------------------
 
 SpecPlane89:                            ; DATA XREF: sub_18A08+36↑o
-                lea     (RAM_START).l,a0
+                lea     (v_compdecbuffer).l,a0
                 clr.l   d0
                 move.w  2(a2),d0
                 adda.l  d0,a0
@@ -34622,7 +34622,7 @@ loc_1995C:                              ; CODE XREF: sub_18A08+F4C↑j
 
 loc_19960:                              ; CODE XREF: sub_18A08+F3E↑j
                 movem.l d2,-(sp)
-                lea     (RAM_START).l,a3
+                lea     (v_compdecbuffer).l,a3
                 clr.l   d3
                 move.w  2(a2),d3
                 move.l  $A(a3,d3.l),d2
@@ -34697,7 +34697,7 @@ loc_19A08:                              ; CODE XREF: sub_18A08+1004↓j
                 move.b  #$80,(a3)+
                 dbf     d2,loc_19A08
                 lea     (unk_FF198C).l,a3
-                lea     (RAM_START).l,a4
+                lea     (v_compdecbuffer).l,a4
                 clr.l   d3
                 move.w  2(a2),d3
                 move.w  $1E(a4,d3.l),d2
@@ -40793,8 +40793,8 @@ sub_21EAC:                              ; CODE XREF: sub_4BE+1A↑j
                 movem.l d0-d3/a1-a2,-(sp)
                 lea     (v_soundtestflag).l,a1
                 bsr.w   sub_21EDC
-                move.w  d0,(stack_base).l
-                lea     (stack_base).l,a1
+                move.w  d0,(v_stackbase).l
+                lea     (v_stackbase).l,a1
                 lea     (unk_FFFE00).l,a2
                 move.w  #$2B,d0 ; '+'
 
