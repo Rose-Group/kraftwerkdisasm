@@ -40754,7 +40754,7 @@ word_21E3C:     dc.w $7B0, $8B0, $AB0, $9B0, $530, $630, $430, $330
 ; ---------------------------------------------------------------------------
                 move.l  #EndofROM-1,d0
                 addq.l  #1,d0
-;                lea     (Entry).w,a0
+;                lea     (Entry).w,a0	; Thank you asm68k
                 lea     ($200).w,a0
                 sub.l   a0,d0
                 asr.l   #1,d0
@@ -40776,7 +40776,7 @@ loc_21E74:                              ; CODE XREF: ROM:00021E76↓j
                 nop
                 nop
                 move.b  #0,(v_bytecodeflag).l
-;                cmp.w   (Checksum).w,d1
+;                cmp.w   (Checksum).w,d1	; Thank you asm68k
                 cmp.w   ($18E).w,d1
                 beq.w   loc_21EA4
                 move.b  #$FF,(v_bytecodeflag).l
