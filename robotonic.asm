@@ -18052,25 +18052,27 @@ loc_CED6:				; CODE XREF: ROM:0000CEC6↑j
 		andi	#$F8FF,sr
 		rts
 ; ---------------------------------------------------------------------------
-OpponentScrBoxMap:dc.b %1110
-		dc.b %1110
-		dc.b %1110
-		dc.b %1100
-		dc.b %1110
-		dc.b %1111
-		dc.b %1111
-		dc.b %1111
-		dc.b %1111
-		dc.b %1111
-		dc.b %1111
-		dc.b %1111
-		dc.b %1111
-		dc.b %1111
-		dc.b %111
-		dc.b %100
-MapEni_OpponentScrBox:dc.b 7, 0, 0, $4E, 0, $5B, $35, $80, $59, 5, $90, $59, 5, $90, $59, 5
-					; DATA XREF: ROM:0000CE62↑o
-		dc.b $93, $3F, $80, 0
+OpponentScrBoxMap:
+	dc.b %1110
+	dc.b %1110
+	dc.b %1110
+	dc.b %1100
+	dc.b %1110
+	dc.b %1111
+	dc.b %1111
+	dc.b %1111
+	dc.b %1111
+	dc.b %1111
+	dc.b %1111
+	dc.b %1111
+	dc.b %1111
+	dc.b %1111
+	dc.b %111
+	dc.b %100
+
+MapEni_OpponentScrBox:
+	incbin	"data/maps/enigma/opponents_screen/Box Outline.eni
+	even
 
 ; =============== S U B R O U T I N E =======================================
 
