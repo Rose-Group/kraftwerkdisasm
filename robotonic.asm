@@ -14072,54 +14072,72 @@ loc_A662:				; CODE XREF: ROM:0000A65A↑j
 locret_A6C0:				; CODE XREF: ROM:0000A652↑j
 		rts
 ; ---------------------------------------------------------------------------
-off_A6C2:	dc.l ArtUnc_Robotnik_0	; DATA XREF: sub_F816+2E↓o
-		dc.l ArtUnc_Robotnik_1
-		dc.l ArtUnc_Robotnik_2
-		dc.l ArtUnc_Robotnik_3
-		dc.l ArtUnc_Robotnik_4
-		dc.l ArtUnc_Robotnik_5
-		dc.l ArtUnc_Robotnik_6
-		dc.l ArtUnc_Robotnik_7
-		dc.l ArtUnc_Robotnik_8
-		dc.l ArtUnc_Robotnik_9
-		dc.l ArtUnc_Robotnik_10
-		dc.l ArtUnc_Robotnik_11
-		dc.l ArtUnc_Robotnik_12
-		dc.l ArtUnc_Robotnik_13
-		dc.l ArtUnc_Robotnik_14
-		dc.l ArtUnc_Robotnik_15
-		dc.l ArtUnc_Robotnik_16
-		dc.l ArtUnc_Robotnik_17
-		dc.l ArtUnc_Robotnik_18
-		dc.l ArtUnc_Robotnik_19
-		dc.l ArtUnc_Robotnik_20
-		dc.l ArtNem_RobotnikShip
-		dc.l ArtNem_RobotnikShip
-		dc.l ArtUnc_Robotnik_0
-		dc.l ArtUnc_Robotnik_13
-		dc.l ArtUnc_Robotnik_14
-		dc.l ArtUnc_Robotnik_15
-		dc.l ArtUnc_Robotnik_16
-		dc.l ArtUnc_Robotnik_18
-Cutscene_OpponentAnims:dc.l Anim_IntroCoconuts
-					; DATA XREF: ROM:0000A5AC↑o
-					; sub_F58A+F2↓o ...
-		dc.l Anim_IntroFrankly
-		dc.l Anim_IntroDynamight
-		dc.l Anim_IntroArms
-		dc.l Anim_IntroCoconuts
-		dc.l Anim_IntroGrounder
-		dc.l Anim_IntroDavy
-		dc.l Anim_IntroCoconuts
-		dc.l Anim_IntroSpike
-		dc.l Anim_IntroSirLogik
-		dc.l Anim_IntroDragon
-		dc.l Anim_Intro_Scratch
-		dc.l Anim_IntroRobotnik
-		dc.l Anim_IntroCoconuts
-		dc.l Anim_IntroHumpty
-		dc.l Anim_IntroSkweel
-		dc.l Anim_IntroRobotnik
+off_A6C2:
+	dc.l ArtUnc_Robotnik_0
+	dc.l ArtUnc_Robotnik_1
+	dc.l ArtUnc_Robotnik_2
+	dc.l ArtUnc_Robotnik_3
+	dc.l ArtUnc_Robotnik_4
+	dc.l ArtUnc_Robotnik_5
+	dc.l ArtUnc_Robotnik_6
+	dc.l ArtUnc_Robotnik_7
+	dc.l ArtUnc_Robotnik_8
+	dc.l ArtUnc_Robotnik_9
+	dc.l ArtUnc_Robotnik_10
+	dc.l ArtUnc_Robotnik_11
+	dc.l ArtUnc_Robotnik_12
+	dc.l ArtUnc_Robotnik_13
+	dc.l ArtUnc_Robotnik_14
+	dc.l ArtUnc_Robotnik_15
+	dc.l ArtUnc_Robotnik_16
+	dc.l ArtUnc_Robotnik_17
+	dc.l ArtUnc_Robotnik_18
+	dc.l ArtUnc_Robotnik_19
+	dc.l ArtUnc_Robotnik_20
+	dc.l ArtNem_RobotnikShip
+	dc.l ArtNem_RobotnikShip
+	dc.l ArtUnc_Robotnik_0
+	dc.l ArtUnc_Robotnik_13
+	dc.l ArtUnc_Robotnik_14
+	dc.l ArtUnc_Robotnik_15
+	dc.l ArtUnc_Robotnik_16
+	dc.l ArtUnc_Robotnik_18
+
+Cutscene_OpponentAnims:
+	dc.l Anim_IntroCoconuts
+	dc.l Anim_IntroFrankly
+	dc.l Anim_IntroDynamight
+	dc.l Anim_IntroArms
+	dc.l Anim_IntroCoconuts
+	dc.l Anim_IntroGrounder
+	dc.l Anim_IntroDavy
+	dc.l Anim_IntroCoconuts
+	dc.l Anim_IntroSpike
+	dc.l Anim_IntroSirLogik
+	dc.l Anim_IntroDragon
+	dc.l Anim_IntroScratch
+	dc.l Anim_IntroRobotnik	; ?
+	dc.l Anim_IntroCoconuts
+	dc.l Anim_IntroHumpty
+	dc.l Anim_IntroSkweel
+	dc.l Anim_IntroRobotnik	; ?
+
+; TODO - Split Cutscene Animations
+
+;	include	"anim/sprite/cutscene/Coconuts.asm"
+;	include	"anim/sprite/cutscene/Frankly.asm"
+;	include	"anim/sprite/cutscene/Davy Sprocket.asm"
+;	include	"anim/sprite/cutscene/Dynamight.asm"
+;	include	"anim/sprite/cutscene/Arms.asm"
+;	include	"anim/sprite/cutscene/Spike.asm"
+;	include	"anim/sprite/cutscene/Dragon Breath.asm"
+;	include	"anim/sprite/cutscene/Sir Ffuzzy-Logik.asm"
+;	include	"anim/sprite/cutscene/Humpty.asm"
+;	include	"anim/sprite/cutscene/Grounder.asm"
+;	include	"anim/sprite/cutscene/Skweel.asm"
+;	include	"anim/sprite/cutscene/Scratch.asm"
+;	include	"anim/sprite/cutscene/Dr. Robotnik.asm"
+
 Anim_IntroCoconuts:dc.l Anim_IntroCoconuts_0
 					; DATA XREF: ROM:Cutscene_OpponentAnims↑o
 					; ROM:0000A746↑o ...
@@ -14391,7 +14409,7 @@ Anim_IntroSkweel_0:dc.b 4, 0		; DATA XREF: ROM:Anim_IntroSkweel↑o
 		dc.b 4, 3
 		dc.b $FF, 0
 		dc.l Anim_IntroSkweel_0
-Anim_Intro_Scratch:dc.l Anim_IntroScratch_0 ; DATA XREF: ROM:0000A762↑o
+Anim_IntroScratch:dc.l Anim_IntroScratch_0 ; DATA XREF: ROM:0000A762↑o
 		dc.l Anim_IntroScratch_1
 		dc.l Anim_IntroScratch_2
 		dc.l Anim_IntroScratch_3
@@ -14433,9 +14451,8 @@ Anim_IntroScratch_5:dc.b 5, 6		; DATA XREF: ROM:0000A9E4↑o
 		dc.l Anim_IntroScratch_5
 Anim_IntroScratch_6:dc.b $32, 6		; DATA XREF: ROM:0000A9E8↑o
 		dc.b $FE, 0
-Anim_IntroRobotnik:dc.l Anim_IntroRobotnik_0
-					; DATA XREF: ROM:Act_RobotnikIntro↑o
-					; ROM:0000A62A↑o ...
+Anim_IntroRobotnik:
+		dc.l Anim_IntroRobotnik_0
 		dc.l Anim_IntroRobotnik_1
 		dc.l Anim_IntroRobotnik_2
 Anim_IntroRobotnik_0:dc.b $32, $1C	; DATA XREF: ROM:Anim_IntroRobotnik↑o
@@ -14568,26 +14585,29 @@ LoadCutscene:				; DATA XREF: ROM:00001C8A↑o
 ; End of function LoadCutscene
 
 ; ---------------------------------------------------------------------------
-CutsceneBG_Flags:dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 1
-		dc.b 1
-		dc.b 0
-CutsceneBG_Table:dc.l ResetCutsceneMap
-		dc.l ResetCutsceneMap
+CutsceneBG_Flags:
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 1
+	dc.b 1
+	dc.b 0
+
+CutsceneBG_Table:
+	dc.l ResetCutsceneMap
+	dc.l ResetCutsceneMap
 ; ---------------------------------------------------------------------------
 
 LoadCutscene_GetPal:			; DATA XREF: ROM:00001CC0↑o
@@ -14599,8 +14619,9 @@ LoadCutscene_GetPal:			; DATA XREF: ROM:00001CC0↑o
 		movea.l CutscenePal_Table(pc,d1.w),a2
 		jmp	(a2)
 ; ---------------------------------------------------------------------------
-CutscenePal_Table:dc.l Load_CutscenePal
-		dc.l Load_CutscenePal
+CutscenePal_Table:
+	dc.l Load_CutscenePal
+	dc.l Load_CutscenePal
 ; ---------------------------------------------------------------------------
 
 ResetCutsceneMap:			; DATA XREF: ROM:CutsceneBG_Table↑o
@@ -14627,24 +14648,26 @@ Load_CutscenePal:			; DATA XREF: ROM:CutscenePal_Table↑o
 		move.b	#0,d1
 		jmp	(FadeToPalette).l
 ; ---------------------------------------------------------------------------
-Cutscene_OpponentPals:dc.b $31
-		dc.b $3D
-		dc.b $42
-		dc.b $45
-		dc.b $31
-		dc.b $4B
-		dc.b $41
-		dc.b $31
-		dc.b $47
-		dc.b $49
-		dc.b $48
-		dc.b $4E
-		dc.b $31
-		dc.b $31
-		dc.b $4A
-		dc.b $4D
-		dc.b $31
-		dc.b 0
+Cutscene_OpponentPals:
+	dc.b (Pal_CutsceneCoconuts-Palettes)>>5
+	dc.b (Pal_CutsceneFrankly-Palettes)>>5
+	dc.b (Pal_CutsceneDynamight-Palettes)>>5
+	dc.b (Pal_CutsceneArms-Palettes)>>5
+	dc.b (Pal_CutsceneCoconuts-Palettes)>>5
+	dc.b (Pal_CutsceneGrounder-Palettes)>>5
+	dc.b (Pal_CutsceneDavy-Palettes)>>5
+	dc.b (Pal_CutsceneCoconuts-Palettes)>>5
+	dc.b (Pal_CutsceneSpike-Palettes)>>5
+	dc.b (Pal_CutsceneSirFfuzzy-Palettes)>>5
+	dc.b (Pal_CutsceneDragon-Palettes)>>5
+	dc.b (Pal_CutsceneScratch-Palettes)>>5
+	dc.b (Pal_CutsceneCoconuts-Palettes)>>5
+	dc.b (Pal_CutsceneCoconuts-Palettes)>>5
+	dc.b (Pal_CutsceneHumpty-Palettes)>>5
+	dc.b (Pal_CutsceneSkweel-Palettes)>>5
+	dc.b (Pal_CutsceneCoconuts-Palettes)>>5
+	dc.b 0
+
 ; ---------------------------------------------------------------------------
 
 Load_CutsceneBG:			; CODE XREF: ROM:0000ABEC↑j
@@ -14675,11 +14698,11 @@ Act_CutsceneBGScroll:			; DATA XREF: ROM:0000AC5C↑o
 		move.w	#$A,d0
 		move.w	#3,d1
 
-loc_AC9A:				; CODE XREF: Act_CutsceneBGScroll+12↓j
+.loop1:				; CODE XREF: Act_CutsceneBGScroll+12↓j
 		move.l	4(a0,d0.w),d2
 		add.l	d2,(a0,d0.w)
 		addq.l	#8,d0
-		dbf	d1,loc_AC9A
+		dbf	d1,.loop1
 		lea	(v_hscrollbuffer).l,a2
 		move.w	#$15C,d0
 		move.w	(unk_FF05D4).l,d1
@@ -14687,41 +14710,43 @@ loc_AC9A:				; CODE XREF: Act_CutsceneBGScroll+12↓j
 		cmpi.w	#$58,d1 ; 'X'
 		bcc.w	ActorDeleteSelf
 		subq.w	#1,d1
-		bcs.w	loc_ACD4
+		bcs.w	.carryset
 
-loc_ACCA:				; CODE XREF: Act_CutsceneBGScroll+3E↓j
+.loop2:				; CODE XREF: Act_CutsceneBGScroll+3E↓j
 		clr.l	(a2,d0.w)
 		subq.w	#4,d0
-		dbf	d1,loc_ACCA
+		dbf	d1,.loop2
 
-loc_ACD4:				; CODE XREF: Act_CutsceneBGScroll+34↑j
+.carryset:				; CODE XREF: Act_CutsceneBGScroll+34↑j
 		clr.w	d1
 		move.w	#$22,d2 ; '"'
 
-loc_ACDA:				; CODE XREF: Act_CutsceneBGScroll+66↓j
+.mainloop:				; CODE XREF: Act_CutsceneBGScroll+66↓j
 		clr.w	d3
-		move.b	Act_CutBGScroll_Scanlines(pc,d1.w),d3
+		move.b	.Scanlines(pc,d1.w),d3
 
-loc_ACE0:				; CODE XREF: Act_CutsceneBGScroll+5E↓j
+.loop3:				; CODE XREF: Act_CutsceneBGScroll+5E↓j
 		clr.w	(a2,d0.w)
 		move.w	(a0,d2.w),2(a2,d0.w)
 		subq.w	#4,d0
-		bcs.w	locret_ACFA
-		dbf	d3,loc_ACE0
+		bcs.w	.return
+		dbf	d3,.loop3
 		addq.w	#1,d1
 		subq.w	#8,d2
-		bra.s	loc_ACDA
+		bra.s	.mainloop
 ; ---------------------------------------------------------------------------
 
-locret_ACFA:				; CODE XREF: Act_CutsceneBGScroll+5A↑j
+.return:				; CODE XREF: Act_CutsceneBGScroll+5A↑j
 		rts
 ; End of function Act_CutsceneBGScroll
 
 ; ---------------------------------------------------------------------------
-Act_CutBGScroll_Scanlines:dc.b 7
-		dc.b 7
-		dc.b $1F
-		dc.b $FF
+.Scanlines:
+	dc.b 7
+	dc.b 7
+	dc.b $1F
+	dc.b $FF
+
 dword_AD00:	dc.l $FFF0FFF		; DATA XREF: sub_9F10+8↑o
 		dc.l $FFFFFFFF
 		dc.l $FFFFFFFF
@@ -15085,217 +15110,240 @@ loc_B0F6:				; CODE XREF: sub_B0C4+8↑j
 ; End of function sub_B0C4
 
 ; ---------------------------------------------------------------------------
-Anim_CreditEnd_Hardest:dc.w $20		; DATA XREF: Act_CreditsRoll:Credits_EndMsgIndex↑o
-		dc.l Str_CreditEnd_ThankYou
-		dc.w $50
-		dc.l Str_CreditEnd_ForYourPlaying
-		dc.w $18
-		dc.l Str_CreditEnd_Compile
-		dc.w $D0
-		dc.l Str_CreditEnd_Sega
-		dc.w 0
-Anim_CreditEnd_Hard:dc.w $20		; DATA XREF: Act_CreditsRoll+88↑o
-		dc.l Str_CreditEnd_LetsTry
-		dc.w $50
-		dc.l Str_CreditEnd_Hardest
-		dc.w $18
-		dc.l Str_CreditEnd_Compile
-		dc.w $D0
-		dc.l Str_CreditEnd_Sega
-		dc.w 0
-Anim_CreditEnd_Normal:dc.w $20		; DATA XREF: Act_CreditsRoll+8C↑o
-		dc.l Str_CreditEnd_LetsTry
-		dc.w $50
-		dc.l Str_CreditEnd_Hard
-		dc.w $18
-		dc.l Str_CreditEnd_Compile
-		dc.w $D0
-		dc.l Str_CreditEnd_Sega
-		dc.w 0
-Anim_CreditEnd_Easy:dc.w $20		; DATA XREF: Act_CreditsRoll+90↑o
-		dc.l Str_CreditEnd_LetsTry
-		dc.w $50
-		dc.l Str_CreditEnd_Easy
-		dc.w $18
-		dc.l Str_CreditEnd_Compile
-		dc.w $D0
-		dc.l Str_CreditEnd_Sega
-		dc.w 0
-Str_CreditEnd_ThankYou:dc.w $C8		; DATA XREF: ROM:0000B100↑o
-		dc.w 8
-		dc.b "thank"
-		dc.b $45
-		dc.b "you"
-		dc.b 0
-Str_CreditEnd_ForYourPlaying:dc.w $100	; DATA XREF: ROM:0000B106↑o
-		dc.w $F
-		dc.b "for"
-		dc.b $45
-		dc.b "your"
-		dc.b $45
-		dc.b "playing"
-		dc.b $47
-		dc.b	0
-Str_CreditEnd_Compile:dc.w $D8		; DATA XREF: ROM:0000B10C↑o
-					; ROM:0000B126↑o ...
-		dc.w $C
-		dc.b $50, $45, $58, $60, $60, $5A, $45, $45
-		dc.b "compile"
-		dc.b 0
-Str_CreditEnd_Sega:dc.w $D8		; DATA XREF: ROM:0000B112↑o
-					; ROM:0000B12C↑o ...
-		dc.w 9
-		dc.b $50, $45, $58, $60, $60, $5A, $45, $45, $51, $52, $53, $54
-Str_CreditEnd_LetsTry:dc.w $FC		; DATA XREF: ROM:0000B11A↑o
-					; ROM:0000B134↑o ...
-		dc.w 8
-		dc.b "let"
-		dc.b $4E
-		dc.b $73
-		dc.b $45
-		dc.b "try"
-		dc.b 0
-Str_CreditEnd_Hardest:dc.w $E8		; DATA XREF: ROM:0000B120↑o
-		dc.w $D
-		dc.b "hardest"
-		dc.b $45
-		dc.b "level"
-		dc.b $47
-Str_CreditEnd_Hard:dc.w $F4		; DATA XREF: ROM:0000B13A↑o
-		dc.w $A
-		dc.b "hard"
-		dc.b $45
-		dc.b "level"
-		dc.b $47
-		dc.b 0
-Str_CreditEnd_Easy:dc.w $EC		; DATA XREF: ROM:0000B154↑o
-		dc.w $C
-		dc.b "normal"
-		dc.b $45
-		dc.b "level"
-		dc.b $47
-		dc.b 0
-Anim_CreditsStaff:dc.w $1E0		; DATA XREF: Act_CreditsRoll+6↑o
-		dc.l Str_Credits_Staff
-		dc.w $80
-		dc.l Str_Credits_Director
-		dc.w $40
-		dc.l Str_Credits_T_Shinyu
-		dc.w $160
-		dc.l Str_Credits_T_Yanagihori
-		dc.w $80
-		dc.l Str_Credits_Design
-		dc.w $40
-		dc.l Str_Credits_T_Segawa
-		dc.w $40
-		dc.l Str_Credits_S_Yamaguchi
-		dc.w $40
-		dc.l Str_Credits_H_Moriya
-		dc.w $160
-		dc.l Str_Credits_K_Saka
-		dc.w $80
-		dc.l Str_Credits_Program
-		dc.w $40
-		dc.l Str_Credits_M_Ishihara
-		dc.w $160
-		dc.l Str_Credits_T_Aoki
-		dc.w $80
-		dc.l Str_Credits_Sound
-		dc.w $40
-		dc.l Str_Credits_M_Nagao
-		dc.w $160
-		dc.l Str_Credits_M_Hikichi
-		dc.w $80
-		dc.l Str_Credits_SpecialThanks
-		dc.w $1E0
-		dc.l Str_Credits_S_Yokohama
-		dc.w $8000
-Str_Credits_Staff:dc.w $C0		; DATA XREF: ROM:0000B1F2↑o
-		dc.w 5
-		dc.b "staff"
-		dc.b 0
-Str_Credits_Director:dc.w $C0		; DATA XREF: ROM:0000B1F8↑o
-		dc.w 8
-		dc.b "director"
-Str_Credits_Design:dc.w $C0		; DATA XREF: ROM:0000B20A↑o
-		dc.w 6
-		dc.b "design"
-Str_Credits_Program:dc.w $C0		; DATA XREF: ROM:0000B228↑o
-		dc.w 7
-		dc.b "program"
-		dc.b 0
-Str_Credits_Sound:dc.w $C0		; DATA XREF: ROM:0000B23A↑o
-		dc.w 5
-		dc.b "sound"
-		dc.b 0
-Str_Credits_SpecialThanks:dc.w $C0	; DATA XREF: ROM:0000B24C↑o
-		dc.w $F
-		dc.b "special"
-		dc.b $45
-		dc.b "thanks"
-		dc.b $45
-		dc.b "to"
-		dc.b 0
-Str_Credits_T_Shinyu:dc.w $C0		; DATA XREF: ROM:0000B1FE↑o
-		dc.w $C
-		dc.b "tetsuo"
-		dc.b $45
-		dc.b "shinyu"
-		dc.b 0
-Str_Credits_T_Yanagihori:dc.w $C0	; DATA XREF: ROM:0000B204↑o
-		dc.w $12
-		dc.b "takayuki"
-		dc.b $45
-		dc.b "yanagihori"
-		dc.b 0
-Str_Credits_T_Segawa:dc.w $C0		; DATA XREF: ROM:0000B210↑o
-		dc.w $C
-		dc.b "takaya"
-		dc.b $45
-		dc.b "segawa"
-		dc.b 0
-Str_Credits_S_Yamaguchi:dc.w $C0	; DATA XREF: ROM:0000B216↑o
-		dc.w $E
-		dc.b "saori"
-		dc.b $45
-		dc.b "yamaguchi"
-		dc.b 0
-Str_Credits_H_Moriya:dc.w $C0		; DATA XREF: ROM:0000B21C↑o
-		dc.w $D
-		dc.b "hideaki"
-		dc.b $45
-		dc.b "moriya"
-Str_Credits_K_Saka:dc.w $C0		; DATA XREF: ROM:0000B222↑o
-		dc.w $B
-		dc.b "keisuke"
-		dc.b $45
-		dc.b "saka"
-Str_Credits_M_Ishihara:dc.w $C0		; DATA XREF: ROM:0000B22E↑o
-		dc.w $E
-		dc.b "manabu"
-		dc.b $45
-		dc.b "ishihara"
-		dc.b 0
-Str_Credits_T_Aoki:dc.w $C0		; DATA XREF: ROM:0000B234↑o
-		dc.w $B
-		dc.b "tsukasa"
-		dc.b $45
-		dc.b "aoki"
-Str_Credits_M_Nagao:dc.w $C0		; DATA XREF: ROM:0000B240↑o
-		dc.w $D
-		dc.b "masayuki"
-		dc.b $45
-		dc.b "nagao"
-Str_Credits_M_Hikichi:dc.w $C0		; DATA XREF: ROM:0000B246↑o
-		dc.w $F
-		dc.b "masanori"
-		dc.b $45
-		dc.b "hikichi"
-Str_Credits_S_Yokohama:dc.w $C0		; DATA XREF: ROM:0000B252↑o
-		dc.w $F
-		dc.b "shinobu"
-		dc.b $45
-		dc.b "yokoyama"
+
+; TODO - Make a Credit's String Macro
+
+Anim_CreditEnd_Hardest:
+	dc.w $20
+	dc.l Str_CreditEnd_ThankYou
+	dc.w $50
+	dc.l Str_CreditEnd_ForYourPlaying
+	dc.w $18
+	dc.l Str_CreditEnd_Compile
+	dc.w $D0
+	dc.l Str_CreditEnd_Sega
+	dc.w 0
+
+Anim_CreditEnd_Hard:
+	dc.w $20
+	dc.l Str_CreditEnd_LetsTry
+	dc.w $50
+	dc.l Str_CreditEnd_Hardest
+	dc.w $18
+	dc.l Str_CreditEnd_Compile
+	dc.w $D0
+	dc.l Str_CreditEnd_Sega
+	dc.w 0
+
+Anim_CreditEnd_Normal:
+	dc.w $20
+	dc.l Str_CreditEnd_LetsTry
+	dc.w $50
+	dc.l Str_CreditEnd_Hard
+	dc.w $18
+	dc.l Str_CreditEnd_Compile
+	dc.w $D0
+	dc.l Str_CreditEnd_Sega
+	dc.w 0
+
+Anim_CreditEnd_Easy:
+	dc.w $20
+	dc.l Str_CreditEnd_LetsTry
+	dc.w $50
+	dc.l Str_CreditEnd_Easy
+	dc.w $18
+	dc.l Str_CreditEnd_Compile
+	dc.w $D0
+	dc.l Str_CreditEnd_Sega
+	dc.w 0
+
+Str_CreditEnd_ThankYou:
+	dc.w $C8		; DATA XREF: ROM:0000B100↑o
+	dc.w 8
+	dc.b "thank", $45, "you"
+	even
+
+Str_CreditEnd_ForYourPlaying:
+	dc.w $100
+	dc.w $F
+	dc.b "for", $45, "your", $45, "playing", $47
+	even
+
+Str_CreditEnd_Compile:
+	dc.w $D8
+	dc.w $C
+	dc.b $50, $45, $58, $60, $60, $5A, $45, $45, "compile"
+	even
+
+Str_CreditEnd_Sega:
+	dc.w $D8
+	dc.w 9
+	dc.b $50, $45, $58, $60, $60, $5A, $45, $45, $51, $52, $53, $54
+	even
+
+Str_CreditEnd_LetsTry:
+	dc.w $FC
+	dc.w 8
+	dc.b "let", $4E, "s", $45, "try"
+	even
+
+Str_CreditEnd_Hardest:
+	dc.w $E8
+	dc.w $D
+	dc.b "hardest", $45, "level", $47
+	even
+
+Str_CreditEnd_Hard:
+	dc.w $F4
+	dc.w $A
+	dc.b "hard", $45, "level", $47
+	even
+
+Str_CreditEnd_Easy:
+	dc.w $EC
+	dc.w $C
+	dc.b "normal", $45, "level", $47
+	even
+
+Anim_CreditsStaff:
+	dc.w $1E0
+	dc.l Str_Credits_Staff
+	dc.w $80
+	dc.l Str_Credits_Director
+	dc.w $40
+	dc.l Str_Credits_T_Shinyu
+	dc.w $160
+	dc.l Str_Credits_T_Yanagihori
+	dc.w $80
+	dc.l Str_Credits_Design
+	dc.w $40
+	dc.l Str_Credits_T_Segawa
+	dc.w $40
+	dc.l Str_Credits_S_Yamaguchi
+	dc.w $40
+	dc.l Str_Credits_H_Moriya
+	dc.w $160
+	dc.l Str_Credits_K_Saka
+	dc.w $80
+	dc.l Str_Credits_Program
+	dc.w $40
+	dc.l Str_Credits_M_Ishihara
+	dc.w $160
+	dc.l Str_Credits_T_Aoki
+	dc.w $80
+	dc.l Str_Credits_Sound
+	dc.w $40
+	dc.l Str_Credits_M_Nagao
+	dc.w $160
+	dc.l Str_Credits_M_Hikichi
+	dc.w $80
+	dc.l Str_Credits_SpecialThanks
+	dc.w $1E0
+	dc.l Str_Credits_S_Yokohama
+	dc.w $8000
+
+Str_Credits_Staff:
+	dc.w $C0
+	dc.w 5
+	dc.b "staff"
+	even
+
+Str_Credits_Director:
+	dc.w $C0
+	dc.w 8
+	dc.b "director"
+	even
+
+Str_Credits_Design:
+	dc.w $C0
+	dc.w 6
+	dc.b "design"
+	even
+
+Str_Credits_Program:
+	dc.w $C0
+	dc.w 7
+	dc.b "program"
+	even
+
+Str_Credits_Sound:
+	dc.w $C0
+	dc.w 5
+	dc.b "sound"
+	even
+
+Str_Credits_SpecialThanks:
+	dc.w $C0
+	dc.w $F
+	dc.b "special", $45, "thanks", $45, "to"
+	even
+
+Str_Credits_T_Shinyu:
+	dc.w $C0
+	dc.w $C
+	dc.b "tetsuo", $45, "shinyu"
+	even
+
+Str_Credits_T_Yanagihori:
+	dc.w $C0
+	dc.w $12
+	dc.b "takayuki", $45, "yanagihori"
+	even
+
+Str_Credits_T_Segawa:
+	dc.w $C0
+	dc.w $C
+	dc.b "takaya", $45, "segawa"
+	even
+
+Str_Credits_S_Yamaguchi:
+	dc.w $C0
+	dc.w $E
+	dc.b "saori", $45, "yamaguchi"
+	even
+
+Str_Credits_H_Moriya:
+	dc.w $C0
+	dc.w $D
+	dc.b "hideaki", $45, "moriya"
+	even
+
+Str_Credits_K_Saka:
+	dc.w $C0
+	dc.w $B
+	dc.b "keisuke", $45, "saka"
+	even
+
+Str_Credits_M_Ishihara:
+	dc.w $C0
+	dc.w $E
+	dc.b "manabu", $45, "ishihara"
+	even
+
+Str_Credits_T_Aoki:
+	dc.w $C0
+	dc.w $B
+	dc.b "tsukasa", $45, "aoki"
+	even
+
+Str_Credits_M_Nagao:
+	dc.w $C0
+	dc.w $D
+	dc.b "masayuki", $45, "nagao"
+	even
+
+Str_Credits_M_Hikichi:
+	dc.w $C0
+	dc.w $F
+	dc.b "masanori", $45, "hikichi"
+	even
+
+Str_Credits_S_Yokohama:
+	dc.w $C0
+	dc.w $F
+	dc.b "shinobu", $45, "yokoyama"
+	even
+
 ; ---------------------------------------------------------------------------
 
 Run_MainMenu:				; DATA XREF: ROM:00001A78↑o
