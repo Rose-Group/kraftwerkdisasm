@@ -17058,7 +17058,7 @@ Run_MainMenu:                           ; DATA XREF: ROM:00001A78↑o
                 move.b  #0,d1
                 move.b  #2,d2
                 lea     (Palettes).l,a2
-                adda.l  #(Pal_MainMenuShadow-Palettes),a2
+                adda.l  #(Pal_MainMenuIcon-Palettes),a2
                 jsr     (FadeToPal_StepCnt).l
                 lea     (Act_MainMenu).l,a1
                 jsr     (FindActorSlot).l
