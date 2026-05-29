@@ -2422,35 +2422,37 @@ BC_StopSound:                           ; DATA XREF: ROM:00001612↑o
 BC_PlaySound3:                          ; DATA XREF: ROM:00001616↑o
                 jmp     JmpTo_PlaySound2
 ; ---------------------------------------------------------------------------
+
 Bytecode:
 	include	"src/bytecode/Game Bytecode.asm"
 
 ; ---------------------------------------------------------------------------
 
-PlayCutsceneBGM:                        ; DATA XREF: ROM:00001C90↑o
-                clr.w   d1
-                move.b  (v_stage).l,d1
-                move.b  CutsceneBGMIDs(pc,d1.w),d0
-                jmp     JmpTo_PlaySound
+PlayCutsceneBGM:			; DATA XREF: ROM:00001C90↑o
+		clr.w	d1
+		move.b	(v_stage).l,d1
+		move.b	CutsceneBGMIDs(pc,d1.w),d0
+		jmp	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
-CutsceneBGMIDs: dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b $17
-                dc.b $17
-                dc.b $17
-                dc.b $17
-                dc.b $18
-                dc.b $18
-                dc.b $18
-                dc.b $18
-                dc.b $16
-                dc.b $16
-                dc.b $16
-                dc.b $16
-                dc.b $F
-                dc.b 0
-                dc.b 0
+CutsceneBGMIDs:
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b BGM_INTRO_1
+	dc.b BGM_INTRO_1
+	dc.b BGM_INTRO_1
+	dc.b BGM_INTRO_1
+	dc.b BGM_INTRO_2
+	dc.b BGM_INTRO_2
+	dc.b BGM_INTRO_2
+	dc.b BGM_INTRO_2
+	dc.b BGM_INTRO_3
+	dc.b BGM_INTRO_3
+	dc.b BGM_INTRO_3
+	dc.b BGM_INTRO_3
+	dc.b BGM_INTRO_4
+	dc.b 0
+	dc.b 0
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -2471,24 +2473,25 @@ loc_256C:                               ; CODE XREF: PlayStageBGM+12↑j
 ; End of function PlayStageBGM
 
 ; ---------------------------------------------------------------------------
-StageBGMIDs:    dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b $13
-                dc.b $13
-                dc.b $13
-                dc.b $13
-                dc.b 7
-                dc.b 7
-                dc.b 7
-                dc.b 7
-                dc.b 6
-                dc.b 0
-                dc.b 0
+StageBGMIDs:
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b BGM_STAGE_1
+	dc.b BGM_STAGE_1
+	dc.b BGM_STAGE_1
+	dc.b BGM_STAGE_1
+	dc.b BGM_STAGE_2
+	dc.b BGM_STAGE_2
+	dc.b BGM_STAGE_2
+	dc.b BGM_STAGE_2
+	dc.b BGM_STAGE_3
+	dc.b BGM_STAGE_3
+	dc.b BGM_STAGE_3
+	dc.b BGM_STAGE_3
+	dc.b BGM_STAGE_4
+	dc.b 0
+	dc.b 0
 ; ---------------------------------------------------------------------------
 
 LoadStageBGArt:                         ; DATA XREF: ROM:00001D32↑o
@@ -2552,12 +2555,10 @@ byte_3100:      dc.b 6, 9               ; DATA XREF: ROM:off_59B2↓o
                 dc.b 2, 23
                 dc.b 8, 25
                 dc.b 1, 9
-                dc.b $FE
-                dc.b 0
+                dc.b $FE, 0
 byte_311A:      dc.b 0, 9               ; DATA XREF: ROM:000059C2↓o
                                         ; ROM:000059CA↓o
-                dc.b $FE
-                dc.b 0
+                dc.b $FE, 0
 off_311E:       dc.l byte_31A2          ; DATA XREF: ROM:00005AAA↓o
                 dc.l byte_31AE
                 dc.l byte_31BA
@@ -3140,14 +3141,15 @@ ActorRandomAnimTime:                    ; CODE XREF: ActorParseAnim+A↑p
 ; End of function ActorRandomAnimTime
 
 ; ---------------------------------------------------------------------------
-Actor_AnimTimes:dc.b $30, $60, 2, $6C, $40, $46, $50, $5C
-                dc.b $30, $60, $20, $6C, $40, $46, $50, $5C
-                dc.b 0, 0, 0, 0, 0, $46, $50, $5C
-                dc.b $80, $A0, $60, $78, $BD, $AA, $B4, $C0
-                dc.b 0, 0, 0, 0, $20, $10, $C, $30
-                dc.b $30, $60, 0, $6C, $40, $46, $50, $5C
-                dc.b $30, $60, 0, $6C, $40, $46, $50, $5C
-                dc.b $30, $60, 0, $6C, $40, $46, $50, $5C
+Actor_AnimTimes:
+	dc.b $30, $60, 2, $6C, $40, $46, $50, $5C
+	dc.b $30, $60, $20, $6C, $40, $46, $50, $5C
+	dc.b 0, 0, 0, 0, 0, $46, $50, $5C
+	dc.b $80, $A0, $60, $78, $BD, $AA, $B4, $C0
+	dc.b 0, 0, 0, 0, $20, $10, $C, $30
+	dc.b $30, $60, 0, $6C, $40, $46, $50, $5C
+	dc.b $30, $60, 0, $6C, $40, $46, $50, $5C
+	dc.b $30, $60, 0, $6C, $40, $46, $50, $5C
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -3437,22 +3439,23 @@ JmpTo_PlayStageBGM:                     ; CODE XREF: HandleStageBGM+4E↑j
                                         ; ROM:00003A2C↓p
                 jmp     (PlayStageBGM).l
 ; ---------------------------------------------------------------------------
-MaxPuyoColours: dc.b 4
-                dc.b 4
-                dc.b 4
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b 5
+MaxPuyoColours:
+	dc.b 4
+	dc.b 4
+	dc.b 4
+	dc.b 5
+	dc.b 5
+	dc.b 5
+	dc.b 5
+	dc.b 5
+	dc.b 5
+	dc.b 5
+	dc.b 5
+	dc.b 5
+	dc.b 5
+	dc.b 5
+	dc.b 5
+	dc.b 5
 ; ---------------------------------------------------------------------------
 
 GenPuyoOrder:                           ; DATA XREF: ROM:00001D86↑o
@@ -3527,15 +3530,16 @@ loc_3908:                               ; CODE XREF: ROM:00003920↓j
                 dbf     d1,loc_3908
                 rts
 ; ---------------------------------------------------------------------------
-PuyoColours:    dc.b 0                  ; DATA XREF: ROM:0000387C↑o
-                                        ; ROM:000038E4↑o
-                dc.b 1
-                dc.b 3
-                dc.b 4
-                dc.b 5
-                dc.b 6
-                dc.b 2
-                dc.b 0
+
+PuyoColours:				; DATA XREF: ROM:0000387C↑o
+	dc.b 0
+	dc.b 1
+	dc.b 3
+	dc.b 4
+	dc.b 5
+	dc.b 6
+	dc.b 2
+	dc.b 0
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -3554,11 +3558,12 @@ loc_3940:                               ; CODE XREF: sub_392E+A↑j
 ; End of function sub_392E
 
 ; ---------------------------------------------------------------------------
-word_3948:      dc.w $C
-                dc.w 8
-                dc.w 4
-                dc.w 2
-                dc.w 0
+word_3948:
+	dc.w $C
+	dc.w 8
+	dc.w 4
+	dc.w 2
+	dc.w 0
 ; ---------------------------------------------------------------------------
 
 LevelEnd:                               ; DATA XREF: ROM:00001D1C↑o
@@ -3616,13 +3621,13 @@ loc_39CE:                               ; CODE XREF: sub_39AA+1E↑j
 ; End of function sub_39AA
 
 ; ---------------------------------------------------------------------------
-byte_39E2:      dc.b $F3, 0             ; DATA XREF: sub_39AA+6↑o
-                                        ; ROM:000039EC↓o
-                dc.b 2, 4
-                dc.b 4, 5
-                dc.b 2, 4
-                dc.b $FF, 0
-                dc.l byte_39E2
+byte_39E2:
+	dc.b $F3, 0
+	dc.b 2, 4
+	dc.b 4, 5
+	dc.b 2, 4
+	dc.b $FF, 0
+	dc.l byte_39E2
 ; ---------------------------------------------------------------------------
 
 loc_39F0:                               ; DATA XREF: ROM:00001D8E↑o
@@ -3895,30 +3900,28 @@ GetPuyoDropSpeeds:                      ; CODE XREF: sub_3D84+A↓j
                 rts
 ; END OF FUNCTION CHUNK FOR sub_3D84
 ; ---------------------------------------------------------------------------
-PuyoDropSpeeds: dc.b 7
-                dc.b 9
-                dc.b $B
-                dc.b 8
-                dc.b 9
-                dc.b $A
-                dc.b $B
-                dc.b $C
-                dc.b $D
-                dc.b $E
-                dc.b $F
-                dc.b $11
-                dc.b $11
-                dc.b $12
-                dc.b $12
-                dc.b $13
+PuyoDropSpeeds:
+	dc.b 7
+	dc.b 9
+	dc.b $B
+	dc.b 8
+	dc.b 9
+	dc.b $A
+	dc.b $B
+	dc.b $C
+	dc.b $D
+	dc.b $E
+	dc.b $F
+	dc.b $11
+	dc.b $11
+	dc.b $12
+	dc.b $12
+	dc.b $13
 
 ; =============== S U B R O U T I N E =======================================
 
 
 sub_3D84:                               ; CODE XREF: ROM:00003B68↑p
-
-; FUNCTION CHUNK AT 00003D5E SIZE 00000016 BYTES
-
                 move.b  (v_levelmode).l,d0
                 andi.b  #3,d0
                 beq.s   GetPuyoDropSpeeds
@@ -4338,19 +4341,20 @@ loc_4202:                               ; CODE XREF: sub_41DA+20↑j
                 rts
 ; ---------------------------------------------------------------------------
 ExercisePuyoCount:
-                dc.b 4
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b 5
-                dc.b 0
+	dc.b 4
+	dc.b 5
+	dc.b 5
+	dc.b 5
+	dc.b 5
+	dc.b 0
+
 ExercisePuyoOrder:
-                dc.b 0
-                dc.b 1
-                dc.b 3
-                dc.b 4
-                dc.b 5
-                dc.b 2
+	dc.b 0
+	dc.b 1
+	dc.b 3
+	dc.b 4
+	dc.b 5
+	dc.b 2
 ; ---------------------------------------------------------------------------
 
 loc_4246:                               ; CODE XREF: sub_41DA+5A↑j
@@ -4561,34 +4565,37 @@ loc_4444:                               ; CODE XREF: sub_4422+12↑j
 ; End of function sub_4422
 
 ; ---------------------------------------------------------------------------
-byte_444E:      dc.b $F0, 0             ; DATA XREF: sub_4422↑o
-                                        ; ROM:00004460↓o
-                dc.b 1, 2
-                dc.b 0, 0
-                dc.b 2, 3
-                dc.b 0, 0
-                dc.b 1, 2
-                dc.b 0, 0
-                dc.b 2, 3
-                dc.b $FF, 0
-                dc.l byte_444E
-byte_4464:      dc.b 4, 0               ; DATA XREF: ROM:0000446E↓o
-                dc.b 5, 1
-                dc.b 4, 0
-                dc.b 5, 2
-                dc.b $FF, 0
-                dc.l byte_4464
-byte_4472:      dc.b $F0, 0             ; DATA XREF: sub_4422:loc_4444↑o
-                                        ; ROM:00004484↓o
-                dc.b 1, 1
-                dc.b 0, 0
-                dc.b 1, 2
-                dc.b 0, 0
-                dc.b 1, 1
-                dc.b 0, 0
-                dc.b 1, 2
-                dc.b $FF, 0
-                dc.l byte_4472
+byte_444E:
+	dc.b $F0, 0
+	dc.b 1, 2
+	dc.b 0, 0
+	dc.b 2, 3
+	dc.b 0, 0
+	dc.b 1, 2
+	dc.b 0, 0
+	dc.b 2, 3
+	dc.b $FF, 0
+	dc.l byte_444E
+
+byte_4464:
+	dc.b 4, 0
+	dc.b 5, 1
+	dc.b 4, 0
+	dc.b 5, 2
+	dc.b $FF, 0
+	dc.l byte_4464
+
+byte_4472:
+	dc.b $F0, 0
+	dc.b 1, 1
+	dc.b 0, 0
+	dc.b 1, 2
+	dc.b 0, 0
+	dc.b 1, 1
+	dc.b 0, 0
+	dc.b 1, 2
+	dc.b $FF, 0
+	dc.l byte_4472
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -5059,14 +5066,15 @@ loc_48D2:                               ; CODE XREF: CheckPuyoPop+B4↑j
 ; End of function CheckPuyoPop
 
 ; ---------------------------------------------------------------------------
-PuyoPopSounds:  dc.b $4C
-                dc.b $4D
-                dc.b $4E
-                dc.b $4F
-                dc.b $50
-                dc.b $51
-                dc.b $52
-                dc.b 0
+PuyoPopSounds:
+	dc.b SFX_PUYO_POP_1
+	dc.b SFX_PUYO_POP_2
+	dc.b SFX_PUYO_POP_3
+	dc.b SFX_PUYO_POP_4
+	dc.b SFX_PUYO_POP_5
+	dc.b SFX_PUYO_POP_6
+	dc.b SFX_PUYO_POP_7
+	even
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -5133,11 +5141,12 @@ Act_PuyoPop:                            ; DATA XREF: SpawnPuyoPop↑o
 ; End of function Act_PuyoPop
 
 ; ---------------------------------------------------------------------------
-Anim_PuyoPop:   dc.b 8, 8               ; DATA XREF: SpawnPuyoPop+3C↑o
-                dc.b 1, 4
-                dc.b 1, 5
-                dc.b 1, 6
-                dc.b $FE, 0
+Anim_PuyoPop:
+	dc.b 8, 8
+	dc.b 1, 4
+	dc.b 1, 5
+	dc.b 1, 6
+	dc.b $FE, 0
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -5306,12 +5315,13 @@ sub_4B74:                               ; DATA XREF: Act_PuyoPop_Pop:loc_4B0A↑
 ; End of function sub_4B74
 
 ; ---------------------------------------------------------------------------
-Anim_PuyoPoppedPiece:dc.b 1, 6          ; DATA XREF: Act_PuyoPop_Pop+1AE↑o
-                dc.b 3, 5
-                dc.b 6, 4
-                dc.b 3, 5
-                dc.b 4, 6
-                dc.b $FE, 0
+Anim_PuyoPoppedPiece:
+	dc.b 1, 6
+	dc.b 3, 5
+	dc.b 6, 4
+	dc.b 3, 5
+	dc.b 4, 6
+	dc.b $FE, 0
 ; ---------------------------------------------------------------------------
 
 Act_GarbageRemove:                      ; DATA XREF: SpawnGarbageRemove↑o
@@ -5319,17 +5329,17 @@ Act_GarbageRemove:                      ; DATA XREF: SpawnGarbageRemove↑o
                 bcs.w   ActorDeleteSelf
                 rts
 ; ---------------------------------------------------------------------------
-Anim_GarbageRemove:dc.b 6, 0            ; DATA XREF: SpawnGarbageRemove+2A↑o
-                dc.b 6, 1
-                dc.b 6, 2
-                dc.b 6, 3
-                dc.b $FE, 0
+Anim_GarbageRemove:
+	dc.b 6, 0
+	dc.b 6, 1
+	dc.b 6, 2
+	dc.b 6, 3
+	dc.b $FE, 0
 
 ; =============== S U B R O U T I N E =======================================
 
 
-sub_4BB8:                               ; CODE XREF: ROM:00003D24↑p
-                                        ; ROM:0001249E↓p
+sub_4BB8:
                 bsr.w   GetPuyoField
                 movea.l a2,a3
                 adda.l  #$C,a2
@@ -5427,31 +5437,35 @@ loc_4C52:                               ; CODE XREF: sub_4C24+24↑j
 ; End of function sub_4C24
 
 ; ---------------------------------------------------------------------------
-byte_4CD4:      dc.b 1, 2               ; DATA XREF: ROM:00004D98↓o
-                                        ; sub_50AE+1E↓o ...
-                dc.b 0, 0
-                dc.b 2, 3
-                dc.b 0, 0
-                dc.b 1, 2
-                dc.b 0, 0
-                dc.b 2, 3
-                dc.b 0, 0
-byte_4CE4:      dc.b $FE, 0             ; DATA XREF: sub_4C24+88↑o
-byte_4CE6:      dc.b 1, 2               ; DATA XREF: sub_5088+1C↓o
-                dc.b 0, 0
-                dc.b 2, 3
-                dc.b 0, 0
-                dc.b 1, 2
-                dc.b 0, 0
-                dc.b 2, 3
-                dc.b 0, 0
-                dc.b $FF, 0
-                dc.l byte_4CFC
-byte_4CFC:      dc.b $A, 1              ; DATA XREF: sub_4C24+42↑o
-                                        ; ROM:00004CF8↑o ...
-                dc.b 8, 0
-                dc.b $FF, 0
-                dc.l byte_4CFC
+byte_4CD4:
+	dc.b 1, 2
+	dc.b 0, 0
+	dc.b 2, 3
+	dc.b 0, 0
+	dc.b 1, 2
+	dc.b 0, 0
+	dc.b 2, 3
+	dc.b 0, 0
+byte_4CE4:
+	dc.b $FE, 0
+
+byte_4CE6:
+	dc.b 1, 2
+	dc.b 0, 0
+	dc.b 2, 3
+	dc.b 0, 0
+	dc.b 1, 2
+	dc.b 0, 0
+	dc.b 2, 3
+	dc.b 0, 0
+	dc.b $FF, 0
+	dc.l byte_4CFC
+
+byte_4CFC:
+	dc.b $A, 1
+	dc.b 8, 0
+	dc.b $FF, 0
+	dc.l byte_4CFC
 ; ---------------------------------------------------------------------------
 
 loc_4D06:                               ; DATA XREF: sub_4C24:loc_4C52↑o
@@ -6226,123 +6240,123 @@ loc_541E:                               ; CODE XREF: ROM:00005424↓j
                 movem.l (sp)+,a2
                 rts
 ; ---------------------------------------------------------------------------
-byte_5436:      dc.b 0                  ; DATA XREF: ROM:00005412↑o
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b $80
-                dc.b $90
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b $80
-                dc.b $90
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b $D0
-                dc.b $80
-                dc.b $90
-                dc.b 0
-                dc.b 0
-                dc.b $D0
-                dc.b $D0
-                dc.b $80
-                dc.b $90
-                dc.b 0
-                dc.b 0
-                dc.b 5
-                dc.w $300
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b $B0
-                dc.b $C0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b $D0
-                dc.b $B0
-                dc.b $C0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b $D0
-                dc.b $B0
-                dc.b $C0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b $D0
-                dc.b $B0
-                dc.b $C0
-                dc.b 0
-                dc.b 0
-                dc.b 5
-                dc.w $400
-                dc.b 0
-                dc.b 0
-                dc.b $C0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b $90
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b 0
-                dc.b $80
-                dc.b $90
-                dc.b 0
-                dc.b $B0
-                dc.b 0
-                dc.b 0
-                dc.b $D0
-                dc.b $80
-                dc.b 0
-                dc.b $B0
-                dc.b 0
-                dc.b $D0
-                dc.b $80
-                dc.b $90
-                dc.b 0
-                dc.b $C0
-                dc.b $C0
-                dc.b $D0
-                dc.b $80
-                dc.b $90
-                dc.b $B0
-                dc.b $B0
-                dc.w $500
+byte_5436:
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b $80
+	dc.b $90
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b $80
+	dc.b $90
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b $D0
+	dc.b $80
+	dc.b $90
+	dc.b 0
+	dc.b 0
+	dc.b $D0
+	dc.b $D0
+	dc.b $80
+	dc.b $90
+	dc.b 0
+	dc.b 0
+	dc.b 5
+	dc.w $300
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b $B0
+	dc.b $C0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b $D0
+	dc.b $B0
+	dc.b $C0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b $D0
+	dc.b $B0
+	dc.b $C0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b $D0
+	dc.b $B0
+	dc.b $C0
+	dc.b 0
+	dc.b 0
+	dc.b 5
+	dc.w $400
+	dc.b 0
+	dc.b 0
+	dc.b $C0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b $90
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b $80
+	dc.b $90
+	dc.b 0
+	dc.b $B0
+	dc.b 0
+	dc.b 0
+	dc.b $D0
+	dc.b $80
+	dc.b 0
+	dc.b $B0
+	dc.b 0
+	dc.b $D0
+	dc.b $80
+	dc.b $90
+	dc.b 0
+	dc.b $C0
+	dc.b $C0
+	dc.b $D0
+	dc.b $80
+	dc.b $90
+	dc.b $B0
+	dc.b $B0
+	dc.w $500
 
 ; =============== S U B R O U T I N E =======================================
 
 
-GetCtrlData:                            ; CODE XREF: ROM:0000B43C↓p
-                                        ; ROM:0000B788↓p ...
+GetCtrlData:
                 move.w  (v_jpad1hold).l,d0
                 tst.b   (v_swapctrls).l
                 beq.w   locret_54BE
@@ -6356,8 +6370,7 @@ locret_54BE:                            ; CODE XREF: GetCtrlData+C↑j
 ; =============== S U B R O U T I N E =======================================
 
 
-sub_54C0:                               ; CODE XREF: ROM:00003C3E↑p
-                                        ; sub_3D84+F4↑p ...
+sub_54C0:
                 movem.l d2/a2,-(sp)
                 clr.w   d2
                 move.b  $2A(a0),d2
@@ -6432,14 +6445,15 @@ locret_5578:                            ; CODE XREF: sub_5512+A↑j
 ; End of function sub_5512
 
 ; ---------------------------------------------------------------------------
-byte_557A:      dc.b $40                ; DATA XREF: sub_5512:loc_5556↑o
-                dc.b $10
-                dc.b $20
-                dc.b $FF
-                dc.b 0
-                dc.b $40
-                dc.b $20
-                dc.b $40
+byte_557A:
+	dc.b $40
+	dc.b $10
+	dc.b $20
+	dc.b $FF
+	dc.b 0
+	dc.b $40
+	dc.b $20
+	dc.b $40
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -6572,26 +6586,29 @@ loc_569E:                               ; CODE XREF: GetPuyoTileID+A↑j
 ; End of function GetPuyoTileID
 
 ; ---------------------------------------------------------------------------
-PuyoPalLines:   dc.w 0
-                dc.w 0
-                dc.w $4000
-                dc.w $4000
-                dc.w $2000
-                dc.w $2000
-                dc.w $4000
-                dc.w $4000
-                dc.w $4000
-                dc.w $4000
-                dc.w $4000
-                dc.w $4000
-                dc.w $4000
-                dc.w $4000
-byte_56C2:      dc.b 0
-                dc.b 0
-                dc.b $10
-                dc.b $11
-                dc.b $12
-                dc.b $14
+PuyoPalLines:
+	dc.w 0
+	dc.w 0
+	dc.w $4000
+	dc.w $4000
+	dc.w $2000
+	dc.w $2000
+	dc.w $4000
+	dc.w $4000
+	dc.w $4000
+	dc.w $4000
+	dc.w $4000
+	dc.w $4000
+	dc.w $4000
+	dc.w $4000
+
+byte_56C2:
+	dc.b 0
+	dc.b 0
+	dc.b $10
+	dc.b $11
+	dc.b $12
+	dc.b $14
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -6666,14 +6683,15 @@ loc_574E:                               ; CODE XREF: sub_5708+40↑j
 ; End of function sub_5708
 
 ; ---------------------------------------------------------------------------
-byte_5758:      dc.b 0
-                dc.b $C
-                dc.b $FF
-                dc.b $F4
-                dc.b 0
-                dc.b 2
-                dc.b $FF
-                dc.b $FE
+byte_5758:
+	dc.b 0
+	dc.b $C
+	dc.b $FF
+	dc.b $F4
+	dc.b 0
+	dc.b 2
+	dc.b $FF
+	dc.b $FE
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -7545,481 +7563,73 @@ sub_5FE0:                               ; CODE XREF: sub_5E4E+9A↑p
 ; End of function sub_5FE0
 
 ; ---------------------------------------------------------------------------
-OpponentPalettes:dc.b $2A               ; DATA XREF: ROM:0000D278↓o
-                                        ; sub_112FC+20↓o
-                dc.b $2B
-                dc.b $2D
-                dc.b $44
-                dc.b $2A
-                dc.b $2E
-                dc.b $2F
-                dc.b $2C
-                dc.b $30
-                dc.b $43
-                dc.b $3C
-                dc.b $2A
-                dc.b $3F
-                dc.b $2A
-                dc.b $3E
-                dc.b $40
-OpponentArt:    dc.l ArtNem_Scratch     ; DATA XREF: sub_5E4E+4C↑o
-                dc.l ArtNem_Frankly
-                dc.l ArtNem_Dynamight
-                dc.l ArtNem_Arms
-                dc.l ArtNem_Scratch
-                dc.l ArtNem_Grounder
-                dc.l ArtNem_DavySprocket
-                dc.l ArtNem_Coconuts
-                dc.l ArtNem_Spike
-                dc.l ArtNem_SirFfuzzyLogik
-                dc.l ArtNem_DragonBreath
-                dc.l ArtNem_Scratch
-                dc.l ArtNem_Robotnik
-                dc.l ArtNem_Scratch
-                dc.l ArtNem_Humpty
-                dc.l ArtNem_Skweel
-OpponentAnims:  dc.l Anim_Scratch       ; DATA XREF: sub_5EF4+2A↑o
-                                        ; sub_5EF4+64↑o
-                dc.l Anim_Frankly
-                dc.l Anim_Dynamight
-                dc.l Anim_Arms
-                dc.l Anim_Scratch
-                dc.l Anim_Grounder
-                dc.l Anim_DavySprocket
-                dc.l Anim_Coconuts
-                dc.l Anim_Spike
-                dc.l Anim_SirFfuzzyLogik
-                dc.l Anim_DragonBreath
-                dc.l Anim_Scratch
-                dc.l Anim_Robotnik
-                dc.l Anim_Scratch
-                dc.l Anim_Humpty
-                dc.l Anim_Skweel
-Anim_Scratch:   dc.l AnimScratch_Idle   ; DATA XREF: ROM:OpponentAnims↑o
-                                        ; ROM:00006066↑o ...
-                dc.l AnimScratch_Win
-                dc.l AnimScratch_Lose
-                dc.l AnimScratch_Defeated
-AnimScratch_Idle:dc.w $32               ; DATA XREF: ROM:Anim_Scratch↑o
-                dc.l MapEni_Scratch_0
-                dc.w $19
-                dc.l MapEni_Scratch_1
-                dc.w $FF00
-AnimScratch_Win:dc.w $32                ; DATA XREF: ROM:0000609A↑o
-                dc.l MapEni_Scratch_2
-                dc.w $F
-                dc.l MapEni_Scratch_3
-                dc.w $FF00
-AnimScratch_Lose:dc.w $32               ; DATA XREF: ROM:0000609E↑o
-                dc.l MapEni_Scratch_4
-                dc.w $F
-                dc.l MapEni_Scratch_5
-                dc.w $FF00
-AnimScratch_Defeated:dc.w $32           ; DATA XREF: ROM:000060A2↑o
-                dc.l MapEni_Scratch_Defeated
-                dc.w $FF00
-Anim_Frankly:   dc.l AnimFrankly_Idle   ; DATA XREF: ROM:0000605A↑o
-                dc.l AnimFrankly_Win
-                dc.l AnimFrankly_Lose
-                dc.l AnimFrankly_Defeated
-AnimFrankly_Idle:dc.w $14               ; DATA XREF: ROM:Anim_Frankly↑o
-                dc.l MapEni_Frankly_0
-                dc.w $14
-                dc.l MapEni_Frankly_1
-                dc.w $FF00
-AnimFrankly_Win:dc.w $32                ; DATA XREF: ROM:000060DC↑o
-                dc.l MapEni_Frankly_2
-                dc.w $FF00
-AnimFrankly_Lose:dc.w $A                ; DATA XREF: ROM:000060E0↑o
-                dc.l MapEni_Frankly_3
-                dc.w $A
-                dc.l MapEni_Frankly_4
-                dc.w $FF00
-AnimFrankly_Defeated:dc.w $32           ; DATA XREF: ROM:000060E4↑o
-                dc.l MapEni_Frankly_Defeated
-                dc.w $FF00
-Anim_Coconuts:  dc.l AnimCoconuts_Idle  ; DATA XREF: ROM:00006072↑o
-                dc.l AnimCoconuts_Win
-                dc.l AnimCoconuts_Lose
-                dc.l AnimCoconuts_Defeated
-AnimCoconuts_Idle:dc.w $46              ; DATA XREF: ROM:Anim_Coconuts↑o
-                dc.l MapEni_Coconuts_0
-                dc.w 8
-                dc.l MapEni_Coconuts_1
-                dc.w $C
-                dc.l MapEni_Coconuts_0
-                dc.w 8
-                dc.l MapEni_Coconuts_1
-                dc.w $FF00
-AnimCoconuts_Win:dc.w $32               ; DATA XREF: ROM:00006118↑o
-                dc.l MapEni_Coconuts_2
-                dc.w $1E
-                dc.l MapEni_Coconuts_3
-                dc.w $FF00
-AnimCoconuts_Lose:dc.w 4                ; DATA XREF: ROM:0000611C↑o
-                dc.l MapEni_Coconuts_4
-                dc.w 4
-                dc.l MapEni_Coconuts_5
-                dc.w 4
-                dc.l MapEni_Coconuts_6
-                dc.w 4
-                dc.l MapEni_Coconuts_5
-                dc.w $FF00
-AnimCoconuts_Defeated:dc.w $32          ; DATA XREF: ROM:00006120↑o
-                dc.l MapEni_Coconuts_Defeated
-                dc.w $FF00
-Anim_Dynamight: dc.l AnimDynamight_Idle ; DATA XREF: ROM:0000605E↑o
-                dc.l AnimDynamight_Win
-                dc.l AnimDynamight_Lose
-                dc.l AnimDynamight_Defeated
-AnimDynamight_Idle:dc.w $14             ; DATA XREF: ROM:Anim_Dynamight↑o
-                dc.l MapEni_Dynamight_0
-                dc.w $14
-                dc.l MapEni_Dynamight_1
-                dc.w $FF00
-AnimDynamight_Win:dc.w 4                ; DATA XREF: ROM:00006172↑o
-                dc.l MapEni_Dynamight_2
-                dc.w 4
-                dc.l MapEni_Dynamight_3
-                dc.w 4
-                dc.l MapEni_Dynamight_4
-                dc.w 5
-                dc.l MapEni_Dynamight_5
-                dc.w 5
-                dc.l MapEni_Dynamight_6
-                dc.w $FF00
-AnimDynamight_Lose:dc.w 4               ; DATA XREF: ROM:00006176↑o
-                dc.l MapEni_Dynamight_7
-                dc.w 4
-                dc.l MapEni_Dynamight_8
-                dc.w 4
-                dc.l MapEni_Dynamight_9
-                dc.w $FF00
-AnimDynamight_Defeated:dc.w $32         ; DATA XREF: ROM:0000617A↑o
-                dc.l MapEni_Dynamight_Defeated
-                dc.w $FF00
-Anim_Grounder:  dc.l AnimGrounder_Idle  ; DATA XREF: ROM:0000606A↑o
-                dc.l AnimGrounder_Win
-                dc.l AnimGrounder_Lose
-                dc.l AnimGrounder_Defeated
-AnimGrounder_Idle:dc.w $78              ; DATA XREF: ROM:Anim_Grounder↑o
-                dc.l MapEni_Grounder_0
-                dc.w 4
-                dc.l MapEni_Grounder_1
-                dc.w 7
-                dc.l MapEni_Grounder_2
-                dc.w 4
-                dc.l MapEni_Grounder_1
-                dc.w $FF00
-AnimGrounder_Win:dc.w $3C               ; DATA XREF: ROM:000061CC↑o
-                dc.l MapEni_Grounder_3
-                dc.w $A
-                dc.l MapEni_Grounder_4
-                dc.w $A
-                dc.l MapEni_Grounder_3
-                dc.w $A
-                dc.l MapEni_Grounder_4
-                dc.w $FF00
-AnimGrounder_Lose:dc.w $F               ; DATA XREF: ROM:000061D0↑o
-                dc.l MapEni_Grounder_5
-                dc.w $50
-                dc.l MapEni_Grounder_6
-                dc.w $FF00
-AnimGrounder_Defeated:dc.w $32          ; DATA XREF: ROM:000061D4↑o
-                dc.l MapEni_Grounder_Defeated
-                dc.w $FF00
-Anim_Spike:     dc.l AnimSpike_Idle     ; DATA XREF: ROM:00006076↑o
-                dc.l AnimSpike_Win
-                dc.l AnimSpike_Lose
-                dc.l AnimSpike_Defeated
-AnimSpike_Idle: dc.w $50                ; DATA XREF: ROM:Anim_Spike↑o
-                dc.l MapEni_Spike_0
-                dc.w 5
-                dc.l MapEni_Spike_1
-                dc.w 8
-                dc.l MapEni_Spike_2
-                dc.w 5
-                dc.l MapEni_Spike_1
-                dc.w $78
-                dc.l MapEni_Spike_0
-                dc.w 4
-                dc.l MapEni_Spike_1
-                dc.w 6
-                dc.l MapEni_Spike_2
-                dc.w 4
-                dc.l MapEni_Spike_1
-                dc.w 5
-                dc.l MapEni_Spike_0
-                dc.w 4
-                dc.l MapEni_Spike_1
-                dc.w 6
-                dc.l MapEni_Spike_2
-                dc.w 4
-                dc.l MapEni_Spike_1
-                dc.w $FF00
-AnimSpike_Win:  dc.w $64                ; DATA XREF: ROM:00006226↑o
-                dc.l MapEni_Spike_3
-                dc.w $C
-                dc.l MapEni_Spike_4
-                dc.w $C
-                dc.l MapEni_Spike_3
-                dc.w $C
-                dc.l MapEni_Spike_4
-                dc.w $FF00
-AnimSpike_Lose: dc.w $5A                ; DATA XREF: ROM:0000622A↑o
-                dc.l MapEni_Spike_5
-                dc.w $A
-                dc.l MapEni_Spike_6
-                dc.w 6
-                dc.l MapEni_Spike_5
-                dc.w $A
-                dc.l MapEni_Spike_6
-                dc.w $FF00
-AnimSpike_Defeated:dc.w $32             ; DATA XREF: ROM:0000622E↑o
-                dc.l MapEni_Spike_Defeated
-                dc.w $FF00
-Anim_DavySprocket:dc.l AnimDavy_Idle    ; DATA XREF: ROM:0000606E↑o
-                dc.l AnimDavy_Win
-                dc.l AnimDavy_Lose
-                dc.l AnimDavy_Defeated
-AnimDavy_Idle:  dc.w $78                ; DATA XREF: ROM:Anim_DavySprocket↑o
-                dc.l MapEni_DavySprocket_0
-                dc.w 8
-                dc.l MapEni_DavySprocket_1
-                dc.w 8
-                dc.l MapEni_DavySprocket_0
-                dc.w 8
-                dc.l MapEni_DavySprocket_1
-                dc.w $FF00
-AnimDavy_Win:   dc.w 8                  ; DATA XREF: ROM:000062BC↑o
-                dc.l MapEni_DavySprocket_2
-                dc.w 8
-                dc.l MapEni_DavySprocket_3
-                dc.w $FF00
-AnimDavy_Lose:  dc.w $A                 ; DATA XREF: ROM:000062C0↑o
-                dc.l MapEni_DavySprocket_4
-                dc.w $A
-                dc.l MapEni_DavySprocket_5
-                dc.w $FF00
-AnimDavy_Defeated:dc.w $32              ; DATA XREF: ROM:000062C4↑o
-                dc.l MapEni_DavySprocket_Defeated
-                dc.w $FF00
-Anim_DragonBreath:dc.l AnimDragonBreath_Idle ; DATA XREF: ROM:0000607E↑o
-                dc.l AnimDragonBreath_Win
-                dc.l AnimDragonBreath_Lose
-                dc.l AnimDragonBreath_Defeated
-AnimDragonBreath_Idle:dc.w $5A          ; DATA XREF: ROM:Anim_DragonBreath↑o
-                dc.l MapEni_DragonBreath_0
-                dc.w 8
-                dc.l MapEni_DragonBreath_1
-                dc.w 5
-                dc.l MapEni_DragonBreath_2
-                dc.w 8
-                dc.l MapEni_DragonBreath_1
-                dc.w $FF00
-AnimDragonBreath_Win:dc.w $46           ; DATA XREF: ROM:0000630A↑o
-                dc.l MapEni_DragonBreath_3
-                dc.w $14
-                dc.l MapEni_DragonBreath_4
-                dc.w $FF00
-AnimDragonBreath_Lose:dc.w $3C          ; DATA XREF: ROM:0000630E↑o
-                dc.l MapEni_DragonBreath_5
-                dc.w 5
-                dc.l MapEni_DragonBreath_6
-                dc.w 5
-                dc.l MapEni_DragonBreath_7
-                dc.w 5
-                dc.l MapEni_DragonBreath_6
-                dc.w 5
-                dc.l MapEni_DragonBreath_7
-                dc.w 5
-                dc.l MapEni_DragonBreath_6
-                dc.w 5
-                dc.l MapEni_DragonBreath_7
-                dc.w $FF00
-AnimDragonBreath_Defeated:dc.w $32      ; DATA XREF: ROM:00006312↑o
-                dc.l MapEni_DragonBreath_Defeated
-                dc.w $FF00
-Anim_Humpty:    dc.l AnimHumpty_Idle    ; DATA XREF: ROM:0000608E↑o
-                dc.l AnimHumpty_Win
-                dc.l AnimHumpty_Lose
-                dc.l AnimHumpty_Defeated
-AnimHumpty_Idle:dc.w $3C                ; DATA XREF: ROM:Anim_Humpty↑o
-                dc.l MapEni_Humpty_0
-                dc.w $14
-                dc.l MapEni_Humpty_1
-                dc.w $FF00
-AnimHumpty_Win: dc.w $78                ; DATA XREF: ROM:00006376↑o
-                dc.l MapEni_Humpty_2
-                dc.w 5
-                dc.l MapEni_Humpty_3
-                dc.w 3
-                dc.l MapEni_Humpty_4
-                dc.w 5
-                dc.l MapEni_Humpty_3
-                dc.w 6
-                dc.l MapEni_Humpty_2
-                dc.w 7
-                dc.l MapEni_Humpty_5
-                dc.w 6
-                dc.l MapEni_Humpty_2
-                dc.w 5
-                dc.l MapEni_Humpty_3
-                dc.w 3
-                dc.l MapEni_Humpty_4
-                dc.w 5
-                dc.l MapEni_Humpty_3
-                dc.w 5
-                dc.l MapEni_Humpty_2
-                dc.w 5
-                dc.l MapEni_Humpty_5
-                dc.w $FF00
-AnimHumpty_Lose:dc.w 9                  ; DATA XREF: ROM:0000637A↑o
-                dc.l MapEni_Humpty_6
-                dc.w 8
-                dc.l MapEni_Humpty_7
-                dc.w 7
-                dc.l MapEni_Humpty_8
-                dc.w 7
-                dc.l MapEni_Humpty_7
-                dc.w $FF00
-AnimHumpty_Defeated:dc.w $32            ; DATA XREF: ROM:0000637E↑o
-                dc.l MapEni_Humpty_Defeated
-                dc.w $FF00
-Anim_Robotnik:  dc.l AnimRobotnik_Idle  ; DATA XREF: ROM:00006086↑o
-                dc.l AnimRobotnik_Win
-                dc.l AnimRobotnik_Lose
-                dc.l AnimRobotnik_Defeated
-AnimRobotnik_Idle:dc.w $50              ; DATA XREF: ROM:Anim_Robotnik↑o
-                dc.l MapEni_Robotnik_0
-                dc.w 5
-                dc.l MapEni_Robotnik_1
-                dc.w 5
-                dc.l MapEni_Robotnik_2
-                dc.w 5
-                dc.l MapEni_Robotnik_1
-                dc.w $FF00
-AnimRobotnik_Win:dc.w 8                 ; DATA XREF: ROM:00006400↑o
-                dc.l MapEni_Robotnik_3
-                dc.w 8
-                dc.l MapEni_Robotnik_4
-                dc.w $FF00
-AnimRobotnik_Lose:dc.w 5                ; DATA XREF: ROM:00006404↑o
-                dc.l MapEni_Robotnik_5
-                dc.w 5
-                dc.l MapEni_Robotnik_6
-                dc.w $FF00
-AnimRobotnik_Defeated:dc.w $32          ; DATA XREF: ROM:00006408↑o
-                dc.l MapEni_Robotnik_Defeated
-                dc.w $FF00
-Anim_Skweel:    dc.l AnimSkweel_Idle    ; DATA XREF: ROM:00006092↑o
-                dc.l AnimSkweel_Win
-                dc.l AnimSkweel_Lose
-                dc.l AnimSkweel_Defeated
-AnimSkweel_Idle:dc.w $3A                ; DATA XREF: ROM:Anim_Skweel↑o
-                dc.l MapEni_Skweel_0
-                dc.w 5
-                dc.l MapEni_Skweel_1
-                dc.w 5
-                dc.l MapEni_Skweel_2
-                dc.w 5
-                dc.l MapEni_Skweel_1
-                dc.w $FF00
-AnimSkweel_Win: dc.w 9                  ; DATA XREF: ROM:0000644E↑o
-                dc.l MapEni_Skweel_3
-                dc.w 8
-                dc.l MapEni_Skweel_4
-                dc.w 9
-                dc.l MapEni_Skweel_3
-                dc.w 8
-                dc.l MapEni_Skweel_5
-                dc.w $FF00
-AnimSkweel_Lose:dc.w 5                  ; DATA XREF: ROM:00006452↑o
-                dc.l MapEni_Skweel_6
-                dc.w 5
-                dc.l MapEni_Skweel_7
-                dc.w 5
-                dc.l MapEni_Skweel_8
-                dc.w 6
-                dc.l MapEni_Skweel_9
-                dc.w 7
-                dc.l MapEni_Skweel_10
-                dc.w 5
-                dc.l MapEni_Skweel_11
-                dc.w $FF00
-AnimSkweel_Defeated:dc.w $32            ; DATA XREF: ROM:00006456↑o
-                dc.l MapEni_Skweel_Defeated
-                dc.w $FF00
-Anim_SirFfuzzyLogik:dc.l AnimSirFfuzzy_Idle ; DATA XREF: ROM:0000607A↑o
-                dc.l AnimSirFfuzzy_Win
-                dc.l AnimSirFfuzzy_Lose
-                dc.l AnimSirFfuzzy_Defeated
-AnimSirFfuzzy_Idle:dc.w 7               ; DATA XREF: ROM:Anim_SirFfuzzyLogik↑o
-                dc.l MapEni_SirFfuzzyLogik_0
-                dc.w 7
-                dc.l MapEni_SirFfuzzyLogik_1
-                dc.w 7
-                dc.l MapEni_SirFfuzzyLogik_2
-                dc.w 7
-                dc.l MapEni_SirFfuzzyLogik_1
-                dc.w $FF00
-AnimSirFfuzzy_Win:dc.w 9                ; DATA XREF: ROM:000064C0↑o
-                dc.l MapEni_SirFfuzzyLogik_3
-                dc.w 9
-                dc.l MapEni_SirFfuzzyLogik_4
-                dc.w 9
-                dc.l MapEni_SirFfuzzyLogik_5
-                dc.w 9
-                dc.l MapEni_SirFfuzzyLogik_4
-                dc.w $FF00
-AnimSirFfuzzy_Lose:dc.w 5               ; DATA XREF: ROM:000064C4↑o
-                dc.l MapEni_SirFfuzzyLogik_6
-                dc.w 5
-                dc.l MapEni_SirFfuzzyLogik_7
-                dc.w 5
-                dc.l MapEni_SirFfuzzyLogik_8
-                dc.w 5
-                dc.l MapEni_SirFfuzzyLogik_7
-                dc.w $FF00
-AnimSirFfuzzy_Defeated:dc.w 8           ; DATA XREF: ROM:000064C8↑o
-                dc.l MapEni_SirFfuzzyLogik_Defeated_0
-                dc.w 8
-                dc.l MapEni_SirFfuzzyLogik_Defeated_1
-                dc.w 8
-                dc.l MapEni_SirFfuzzyLogik_Defeated_2
-                dc.w 8
-                dc.l MapEni_SirFfuzzyLogik_Defeated_1
-                dc.w $FF00
-Anim_Arms:      dc.l AnimArms_Idle      ; DATA XREF: ROM:00006062↑o
-                dc.l AnimArms_Win
-                dc.l AnimArms_Lose
-                dc.l AnimArms_Defeated
-AnimArms_Idle:  dc.w $28                ; DATA XREF: ROM:Anim_Arms↑o
-                dc.l MapEni_Arms_0
-                dc.w 4
-                dc.l MapEni_Arms_1
-                dc.w 8
-                dc.l MapEni_Arms_2
-                dc.w 4
-                dc.l MapEni_Arms_1
-                dc.w $FF00
-AnimArms_Win:   dc.w 8                  ; DATA XREF: ROM:00006538↑o
-                dc.l MapEni_Arms_3
-                dc.w 4
-                dc.l MapEni_Arms_4
-                dc.w 8
-                dc.l MapEni_Arms_5
-                dc.w 4
-                dc.l MapEni_Arms_4
-                dc.w $FF00
-AnimArms_Lose:  dc.w 8                  ; DATA XREF: ROM:0000653C↑o
-                dc.l MapEni_Arms_6
-                dc.w 8
-                dc.l MapEni_Arms_7
-                dc.w $FF00
-AnimArms_Defeated:dc.w $32              ; DATA XREF: ROM:00006540↑o
-                dc.l MapEni_Arms_Defeated
-                dc.w $FF00
+OpponentPalettes:
+	dc.b (Pal_Scratch-Palettes)>>5
+	dc.b (Pal_Frankly-Palettes)>>5
+	dc.b (Pal_Dynamight-Palettes)>>5
+	dc.b (Pal_Arms-Palettes)>>5
+	dc.b (Pal_Scratch-Palettes)>>5
+	dc.b (Pal_Grounder-Palettes)>>5
+	dc.b (Pal_DavySprocket-Palettes)>>5
+	dc.b (Pal_Coconuts-Palettes)>>5
+	dc.b (Pal_Spike-Palettes)>>5
+	dc.b (Pal_SirFfuzzyLogik-Palettes)>>5
+	dc.b (Pal_DragonBreath-Palettes)>>5
+	dc.b (Pal_Scratch-Palettes)>>5
+	dc.b (Pal_Robotnik-Palettes)>>5
+	dc.b (Pal_Scratch-Palettes)>>5
+	dc.b (Pal_Humpty-Palettes)>>5
+	dc.b (Pal_Skweel-Palettes)>>5
+
+OpponentArt:
+	dc.l ArtNem_Scratch     ; DATA XREF: sub_5E4E+4C↑o
+	dc.l ArtNem_Frankly
+	dc.l ArtNem_Dynamight
+	dc.l ArtNem_Arms
+	dc.l ArtNem_Scratch
+	dc.l ArtNem_Grounder
+	dc.l ArtNem_DavySprocket
+	dc.l ArtNem_Coconuts
+	dc.l ArtNem_Spike
+	dc.l ArtNem_SirFfuzzyLogik
+	dc.l ArtNem_DragonBreath
+	dc.l ArtNem_Scratch
+	dc.l ArtNem_Robotnik
+	dc.l ArtNem_Scratch
+	dc.l ArtNem_Humpty
+	dc.l ArtNem_Skweel
+
+OpponentAnims:
+	dc.l Anim_Scratch
+	dc.l Anim_Frankly
+	dc.l Anim_Dynamight
+	dc.l Anim_Arms
+	dc.l Anim_Scratch
+	dc.l Anim_Grounder
+	dc.l Anim_DavySprocket
+	dc.l Anim_Coconuts
+	dc.l Anim_Spike
+	dc.l Anim_SirFfuzzyLogik
+	dc.l Anim_DragonBreath
+	dc.l Anim_Scratch
+	dc.l Anim_Robotnik
+	dc.l Anim_Scratch
+	dc.l Anim_Humpty
+	dc.l Anim_Skweel
+
+	include	"data/anim/plane/portrait/Scratch.asm"
+	include	"data/anim/plane/portrait/Frankly.asm"
+	include	"data/anim/plane/portrait/Coconuts.asm"
+	include	"data/anim/plane/portrait/Dynamight.asm"
+	include	"data/anim/plane/portrait/Grounder.asm"
+	include	"data/anim/plane/portrait/Spike.asm"
+	include	"data/anim/plane/portrait/Davy Sprocket.asm"
+	include	"data/anim/plane/portrait/Dragon Breath.asm"
+	include	"data/anim/plane/portrait/Humpty.asm"
+	include	"data/anim/plane/portrait/Dr. Robotnik.asm"
+	include	"data/anim/plane/portrait/Skweel.asm"
+	include	"data/anim/plane/portrait/Sir Ffuzzy-Logik.asm"
+	include	"data/anim/plane/portrait/Arms.asm"
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -8040,22 +7650,23 @@ GetOppSpecialAnims:                     ; CODE XREF: sub_658E+A↑j
 ; End of function sub_658E
 
 ; ---------------------------------------------------------------------------
-Opp_SpecAnim:   dc.l AnimSpec_Null
-                dc.l AnimSpec_Frankly
-                dc.l AnimSpec_Null
-                dc.l AnimSpec_Arms
-                dc.l AnimSpec_Null
-                dc.l AnimSpec_Null
-                dc.l AnimSpec_Null
-                dc.l AnimSpec_Coconuts
-                dc.l AnimSpec_Null
-                dc.l AnimSpec_SirFfuzzy
-                dc.l AnimSpec_Null
-                dc.l AnimSpec_Null
-                dc.l AnimSpec_Null
-                dc.l AnimSpec_Null
-                dc.l AnimSpec_Humpty
-                dc.l AnimSpec_Null
+Opp_SpecAnim:
+	dc.l AnimSpec_Null
+	dc.l AnimSpec_Frankly
+	dc.l AnimSpec_Null
+	dc.l AnimSpec_Arms
+	dc.l AnimSpec_Null
+	dc.l AnimSpec_Null
+	dc.l AnimSpec_Null
+	dc.l AnimSpec_Coconuts
+	dc.l AnimSpec_Null
+	dc.l AnimSpec_SirFfuzzy
+	dc.l AnimSpec_Null
+	dc.l AnimSpec_Null
+	dc.l AnimSpec_Null
+	dc.l AnimSpec_Null
+	dc.l AnimSpec_Humpty
+	dc.l AnimSpec_Null
 ; ---------------------------------------------------------------------------
 
 AnimSpec_Null:                          ; DATA XREF: ROM:Opp_SpecAnim↑o
@@ -11458,8 +11069,7 @@ loc_8942:                               ; CODE XREF: sub_4C24+10↑j
                 rts
 ; END OF FUNCTION CHUNK FOR sub_4C24
 ; ---------------------------------------------------------------------------
-byte_8996:      dc.b $FE                ; DATA XREF: sub_4C24+3D62↑o
-                dc.b 0
+byte_8996:	dc.b $FE, 0
 ; ---------------------------------------------------------------------------
 
 loc_8998:                               ; DATA XREF: sub_4C24:loc_8942↑o
@@ -13182,8 +12792,7 @@ byte_98B0:      dc.b 0
                 dc.b 0
                 dc.b 0
                 dc.l $15F90
-                dc.b 0
-                dc.b $24
+                dc.w $24
                 dc.b 1
                 dc.b 0
 
@@ -13626,43 +13235,24 @@ word_9AF4:      dc.w $1000              ; DATA XREF: sub_9970+A4↑o
                 dc.w 4
                 dc.w $1000
                 dc.w 4
-ArtNem_GroupedStars:dc.b 0, $11, $80, 4, 7, $16, $3A, $25, $17, $46, $37, $56, $38, $66, $36, $77
-                                        ; DATA XREF: ROM:00002238↑o
-                dc.b $7A, $83, 4, $A, $17, $7B, $84, 3, 0, $15, $1A, $26, $3C, $89, 4, 6
-                dc.b $14, 9, $25, $18, $8A, 3, 2, $28, $F8, $48, $FA, $8B, 4, 8, $16, $3B
-                dc.b $8C, 5, $16, $8F, 3, 1, $15, $19, $28, $F9, $36, $39, $58, $FB, $FF, $DA
-                dc.b $36, $8E, $1A, $DC, $31, $DE, $4E, $F3, $D, $F4, $D6, $79, $8F, $81, $EB, $D2
-                dc.b $D9, $6D, $B, $88, $5C, $7F, $69, $9F, $32, $33, $79, $EC, $1B, $CA, 6, $EC
-                dc.b $8A, $6B, $A3, $8E, $95, $B0, $3A, $8C, 2, $F8, $E8, $17, $6F, $D8, $E, $47
-                dc.b $2C, 8, $2E, $B, 2, $B, $82, $32, $B, $8F, $9D, $17, $19, $F0, $B8, $CF
-                dc.b $9F, $EF, $D6, $7D, $46, $D1, $C3, $5B, $86, $3B, $C9, $DE, $6C, $DF, $4D, $4F
-                dc.b $31, $F1, $1B, $46, $D0, $B7, $6B, $2D, $D8, $C2, $BC, $98, $57, $9B, $37, $D3
-                dc.b $5A, $A6, $3E, $2D, $EB, $D2, $D9, $6D, $B, $88, $5C, $7F, $69, $9C, $65, $86
-                dc.b $6F, $3D, $A8, $BC, $AB, $35, $D9, $19, $BA, $38, $E9, $5B, $F7, $3D, $46, $2F
-                dc.b $8D, $DB, $85, $53, $DF, $E6, $A1, $54, $AB, 9, $A6, $56, $6F, $29, $59, $81
-                dc.b $14, $AD, $20, $BD, $46, 1, $7C, $7B, $BB, $5D, $BA, $19, $1F, $EF, 5, $C6
-                dc.b $41, 5, $C6, $41, 5, $C1, $D1, 5, $C7, $DB, $82, $E0, $8E, $5C, $17, $19
-                dc.b $F5, $1B, $42, $DD, $AC, $B7, $63, $A, $F2, $61, $5E, $6C, $DF, $4D, $EE, $63
-                dc.b $E2, $36, $8D, $A1, $6E, $D6, $5B, $B1, $85, $79, $30, $AF, $36, $6F, $A6, $B5
-                dc.b $4C, $7C, 5, $53, $DA, $ED, $54, $AB, $62, $99, $19, $D5, $23, $81, $4A, $DF
-                dc.b $B9, $7A, $8C, $5F, $1E, $EE, $D7, $6E, $95, $4F, $60, $C2, $A9, $40, $CD, $32
-                dc.b $B0, $3A, $A4, $58, $11, $48, $C8, $2F, $51, $80, $5F, $1E, $C1, $76, $BB, $38
-                dc.b $F9, $1C, $E8, $82, $E3, $E7, $45, $C7, $20, $B8, $2E, 8, $2E, $B, $82, $B
-                dc.b $8E, $47, $DF, $99, $75, $53, $D8, $30, $AA, $50, $33, $4C, $AC, $E, $A9, $16
-                dc.b $F2, $91, $90, $5E, $A3, 0, $BE, $3D, $82, $ED, $76, $71, $F2, $39, $D1, 5
-                dc.b $C1, $D1, 5, $C7, $CE, $8B, $83, $A2, $B, $83, $A2, $B, $8E, $47, $DF, $99
-                dc.b $70, 0
-Cutscene_SpecAnims:dc.l SpecIntro_CoconutHead
-                                        ; DATA XREF: ROM:0000A592↓o
-                                        ; ROM:0000A610↓o ...
-                dc.l SpecIntro_GrounderMove
-                dc.l SpecIntro_SkweelMove
-                dc.l SpecIntro_SpawnOpeningRobots
-                dc.l SpecIntro_RobotnikShip
-                dc.l SpecIntro_SirFfuzzyEyes
-                dc.l SpecIntro_VanishGrounder
-                dc.l SpecIntro_VanishScratch
-                dc.l SpecIntro_RobotnikLaugh
+
+; ---------------------------------------------------------------------------
+
+ArtNem_GroupedStars:
+	incbin	"data/art/nemesis/2P Versus/Grouped Stars.nem"
+	even
+; ---------------------------------------------------------------------------
+
+Cutscene_SpecAnims:
+	dc.l SpecIntro_CoconutHead
+	dc.l SpecIntro_GrounderMove
+	dc.l SpecIntro_SkweelMove
+	dc.l SpecIntro_SpawnOpeningRobots
+	dc.l SpecIntro_RobotnikShip
+	dc.l SpecIntro_SirFfuzzyEyes
+	dc.l SpecIntro_VanishGrounder
+	dc.l SpecIntro_VanishScratch
+	dc.l SpecIntro_RobotnikLaugh
 ; ---------------------------------------------------------------------------
 
 SpecIntro_RobotnikLaugh:                ; DATA XREF: ROM:00009DF6↑o
