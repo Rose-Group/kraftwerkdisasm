@@ -97,13 +97,13 @@ StartofROM:				; DATA XREF: ROM:ROMStart_Loc↓o
 		dc.l Exception
 		dc.l Exception
 		dc.l Exception
-Console:	dc.b "SEGA GENESIS	"
+Console:	dc.b "SEGA GENESIS    "
 Date:		dc.b "(C)SEGA 1993.AUG"
-Title_Local:	dc.b "robotonic					"
-Total_Int:	dc.b "robotonic					"
-Serial_No:	dc.b "MK-1706	-00"
+Title_Local:	dc.b "robotonic                                       "
+Total_Int:	dc.b "robotonic                                       "
+Serial_No:	dc.b "MK-1706    -00"
 Checksum:	dc.w 0
-Input:		dc.b "J		"
+Input:		dc.b "J               "
 ROMStart_Loc:	dc.l StartofROM
 ROMEnd_Loc:	dc.l EndofROM-1
 RAMStart_Loc:	dc.l RAM_START
@@ -111,9 +111,9 @@ RAMEnd_Loc:	dc.l RAM_END
 SRAMSupport:	dc.l $20202020
 		dc.l $20202020
 		dc.l $20202020
-ModemSupport:	dc.b "		"
-Notes:		dc.b "PD					"
-Region:		dc.b "U		"
+ModemSupport:	dc.b "            "
+Notes:		dc.b "PD                                      "
+Region:		dc.b "U               "
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -19313,7 +19313,7 @@ Act_TitleHandler_GotoIntro:		; CODE XREF: ROM:0000DC2E↑j
 		clr.b	(v_bytecodedisabled).l
 		rts
 ; ---------------------------------------------------------------------------
-Str_PressStart: dc.b "PRESS	START	BUTTON" ; DATA XREF: ROM:0000DC42↑o
+Str_PressStart: dc.b "PRESS  START  BUTTON" ; DATA XREF: ROM:0000DC42↑o
 		dc.b $FF
 		dc.b 0
 Str_CompileCpy: dc.b "@1993 COMPILE"	; DATA XREF: ROM:loc_DC02↑o
@@ -23765,7 +23765,7 @@ Cut_Opening:	dc.b $85, $83		; DATA XREF: ROM:00010392↑o
 		dc.b $83, $F
 		dc.b $81, $5A
 		dc.w $C38E
-		dc.b "My latest invention, the	"
+		dc.b "My latest invention, the  "
 		dc.b "mean bean-steaming machine"
 		dc.b $83, $C
 		dc.b $82
@@ -23773,7 +23773,7 @@ Cut_Opening:	dc.b $85, $83		; DATA XREF: ROM:00010392↑o
 		dc.b $81, $78
 		dc.w $C310
 		dc.b "will not only dispose of"
-		dc.b "those fun-loving jolly	"
+		dc.b "those fun-loving jolly  "
 		dc.b "beans of Beanville"
 		dc.b $83, $C
 		dc.b $82
@@ -37206,9 +37206,11 @@ word_20E28:	dc.w $10E2, $172, $1E5, $172, $1D1, $1D2, $1D3, $1CF, $1D0, $1E6, $1
 					; ROM:0001B68A↑o
 		dc.w $1D4, $186, $1EA, $186, $1D7, $1D8, $1D9, $1D5, $1D6, $1EB, $18A, $1EC, $1ED, $1EE, $188, $197
 		dc.w 0, $1EF, $DD, $19A, $1DC, $1DD, $1CC, $9B9, $1F0, $1F1, $C1, $1B7, $1F2, $199, $19B, $1A0
-Str_RegionLock: dc.b "	Developed for use onry with ntsc	"
-					; DATA XREF: ROM:00020EEE↓o
-		dc.b "		genesis system.		"
+; ---------------------------------------------------------------------------
+
+Str_RegionLock: dc.b "    Developed for use onry with ntsc    "
+		dc.b "            genesis system.             "
+
 ; ---------------------------------------------------------------------------
 		move.b	($A10001).l,d0
 		andi.b	#$C0,d0
@@ -37673,8 +37675,7 @@ SoundTest_SelNonSFX:			; CODE XREF: ROM:000211B2↑p
 ; End of function SoundTest_SelNonSFX
 
 ; ---------------------------------------------------------------------------
-asc_212C6:	dc.b "			"
-					; DATA XREF: SoundTest_SelNonSFX+2A↑o
+asc_212C6:	dc.b "                      "
 		dc.b $FF
 		dc.b 0
 
@@ -37780,76 +37781,76 @@ ST_BGMNameIndex:dc.l SoundTest_BGM01_Name ; DATA XREF: ROM:0002124C↑o
 		dc.l SoundTest_BGM17_Name
 		dc.l SoundTest_BGM18_Name
 SoundTest_BGM01_Name:dc.b 1		; DATA XREF: ROM:ST_BGMNameIndex↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM02_Name:dc.b 2		; DATA XREF: ROM:00021384↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM03_Name:dc.b 3		; DATA XREF: ROM:00021388↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM04_Name:dc.b 4		; DATA XREF: ROM:0002138C↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM05_Name:dc.b 5		; DATA XREF: ROM:00021390↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM06_Name:dc.b 6		; DATA XREF: ROM:00021394↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM07_Name:dc.b 7		; DATA XREF: ROM:00021398↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM08_Name:dc.b 8		; DATA XREF: ROM:0002139C↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM09_Name:dc.b 9		; DATA XREF: ROM:000213A0↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM0A_Name:dc.b $A		; DATA XREF: ROM:000213A4↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM0B_Name:dc.b $B		; DATA XREF: ROM:000213A8↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM0C_Name:dc.b $C		; DATA XREF: ROM:000213AC↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM0D_Name:dc.b $D		; DATA XREF: ROM:000213B0↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM0E_Name:dc.b $E		; DATA XREF: ROM:000213B4↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM0F_Name:dc.b $F		; DATA XREF: ROM:000213B8↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM10_Name:dc.b $10		; DATA XREF: ROM:000213BC↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM11_Name:dc.b $11		; DATA XREF: ROM:000213C0↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM12_Name:dc.b $12		; DATA XREF: ROM:000213C4↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM13_Name:dc.b $13		; DATA XREF: ROM:000213C8↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM14_Name:dc.b $14		; DATA XREF: ROM:000213CC↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM15_Name:dc.b $15		; DATA XREF: ROM:000213D0↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM16_Name:dc.b $16		; DATA XREF: ROM:000213D4↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM17_Name:dc.b $17		; DATA XREF: ROM:000213D8↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_BGM18_Name:dc.b $18		; DATA XREF: ROM:000213DC↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 ST_VoiceNameIndex:dc.l SoundTest_VOI81_Name ; DATA XREF: ROM:00021378↑o
 		dc.l SoundTest_VOI82_Name
@@ -37875,85 +37876,85 @@ ST_VoiceNameIndex:dc.l SoundTest_VOI81_Name ; DATA XREF: ROM:00021378↑o
 		dc.l SoundTest_VOI96_Name
 		dc.l SoundTest_VOI97_Name
 SoundTest_VOI81_Name:dc.b $81		; DATA XREF: ROM:ST_VoiceNameIndex↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI82_Name:dc.b $82		; DATA XREF: ROM:00021444↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI83_Name:dc.b $83		; DATA XREF: ROM:00021448↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI84_Name:dc.b $84		; DATA XREF: ROM:0002144C↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI85_Name:dc.b $85		; DATA XREF: ROM:00021450↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI86_Name:dc.b $86		; DATA XREF: ROM:00021454↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI87_Name:dc.b $87		; DATA XREF: ROM:00021458↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI88_Name:dc.b $88		; DATA XREF: ROM:0002145C↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI89_Name:dc.b $89		; DATA XREF: ROM:00021460↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI8A_Name:dc.b $8A		; DATA XREF: ROM:00021464↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI8B_Name:dc.b $8B		; DATA XREF: ROM:00021468↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI8C_Name:dc.b $8C		; DATA XREF: ROM:0002146C↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI8D_Name:dc.b $8D		; DATA XREF: ROM:00021470↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI8E_Name:dc.b $8E		; DATA XREF: ROM:00021474↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI8F_Name:dc.b $8F		; DATA XREF: ROM:00021478↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI90_Name:dc.b $90		; DATA XREF: ROM:0002147C↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI91_Name:dc.b $91		; DATA XREF: ROM:00021480↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI92_Name:dc.b $92		; DATA XREF: ROM:00021484↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI93_Name:dc.b $93		; DATA XREF: ROM:00021488↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI94_Name:dc.b $94		; DATA XREF: ROM:0002148C↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI95_Name:dc.b $95		; DATA XREF: ROM:00021490↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI96_Name:dc.b $96		; DATA XREF: ROM:00021494↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 SoundTest_VOI97_Name:dc.b $97		; DATA XREF: ROM:00021498↑o
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 		dc.b $98
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 		dc.b $99
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 		dc.b $9A
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 		dc.b $9B
-		dc.b "	"
+		dc.b "  "
 		dc.b $FF
 ST_CmdNameIndex:dc.l SoundText_CmdFE_Name ; DATA XREF: ROM:0002137C↑o
 		dc.l SoundText_CmdFD_Name
@@ -38089,7 +38090,7 @@ OptStr_ToExit:	dc.w $CBA		; DATA XREF: ROM:00021630↑o
 		dc.b $FF
 OptStr_Pads:	dc.w $222		; DATA XREF: ROM:00021610↑o
 		dc.w $E200
-		dc.b "pad1	pad2"
+		dc.b "pad1  pad2"
 		dc.b $FF
 		dc.b 0
 OptStr_Start:	dc.w $316		; DATA XREF: ROM:00021634↑o
@@ -38111,19 +38112,19 @@ OptStr_ButtonC: dc.w $610		; DATA XREF: ROM:0002161C↑o
 		dc.b $FF
 OptStr_ButtonUp:dc.w $790		; DATA XREF: ROM:00021620↑o
 		dc.w $8200
-		dc.b "	up:"
+		dc.b "      up:"
 		dc.b $FF
 OptStr_ButtonDown:dc.w $890		; DATA XREF: ROM:00021624↑o
 		dc.w $8200
-		dc.b "	down:"
+		dc.b "    down:"
 		dc.b $FF
 OptStr_ButtonRight:dc.w $990		; DATA XREF: ROM:00021628↑o
 		dc.w $8200
-		dc.b "	right:"
+		dc.b "   right:"
 		dc.b $FF
 OptStr_ButtonLeft:dc.w $A90		; DATA XREF: ROM:0002162C↑o
 		dc.w $8200
-		dc.b "	left:"
+		dc.b "    left:"
 		dc.b $FF
 OptionsMenu_TextIndex:dc.w $A		; DATA XREF: ROM:Options_ModeIndex↑o
 		dc.l OptStr_Options
@@ -38142,7 +38143,7 @@ OptStr_Options: dc.w $120		; DATA XREF: ROM:000216F8↑o
 		dc.b $FF
 OptStr_Players: dc.w $312		; DATA XREF: ROM:000216FC↑o
 		dc.w $E200
-		dc.b "player-1	player-2"
+		dc.b "player-1       player-2"
 		dc.b $FF
 OptStr_PressStartExit:dc.w $C8E		; DATA XREF: ROM:00021700↑o
 		dc.w $A200
@@ -38151,32 +38152,32 @@ OptStr_PressStartExit:dc.w $C8E		; DATA XREF: ROM:00021700↑o
 		dc.b 0
 OptStr_AssignA: dc.w $40C		; DATA XREF: ROM:00021704↑o
 		dc.w $E200
-		dc.b "a:		a:"
+		dc.b "a:              a:"
 		dc.b $FF
 		dc.b 0
 OptStr_AssignB: dc.w $50C		; DATA XREF: ROM:00021708↑o
 		dc.w $E200
-		dc.b "b:		b:"
+		dc.b "b:              b:"
 		dc.b $FF
 		dc.b 0
 OptStr_AssignC: dc.w $60C		; DATA XREF: ROM:0002170C↑o
 		dc.w $E200
-		dc.b "c:		c:"
+		dc.b "c:              c:"
 		dc.b $FF
 		dc.b 0
 OptStr_CPULevel:dc.w $78C		; DATA XREF: ROM:00021710↑o
 		dc.w $E200
-		dc.b "vs.com level	:"
+		dc.b "vs.com level   :"
 		dc.b $FF
 		dc.b 0
 OptStr_VSMatches:dc.w $88C		; DATA XREF: ROM:00021714↑o
 		dc.w $E200
-		dc.b "1p vs.2p mode	:"
+		dc.b "1p vs.2p mode  :"
 		dc.b $FF
 		dc.b 0
 OptStr_Sampling:dc.w $98C		; DATA XREF: ROM:00021718↑o
 		dc.w $E200
-		dc.b "sampling	:"
+		dc.b "sampling       :"
 		dc.b $FF
 		dc.b 0
 OptStr_KeyAssign:dc.w $21A		; DATA XREF: ROM:0002171C↑o
@@ -38697,10 +38698,10 @@ KeyAssign_TextIndex:dc.l OptStr_NoUse	; DATA XREF: PrintP2CtrlOption+2E↑r
 					; "no use	"
 		dc.l OptStr_TurnLeft	; "turn left	$"
 		dc.l OptStr_TurnRight	; "turn right #"
-OptStr_NoUse:	dc.b "no use	"	; DATA XREF: ROM:KeyAssign_TextIndex↑o
+OptStr_NoUse:	dc.b "no use      "	; DATA XREF: ROM:KeyAssign_TextIndex↑o
 		dc.b $FF
 		dc.b 0
-OptStr_TurnLeft:dc.b "turn left	$"	; DATA XREF: ROM:00021C1C↑o
+OptStr_TurnLeft:dc.b "turn left  $"	; DATA XREF: ROM:00021C1C↑o
 		dc.b $FF
 		dc.b 0
 OptStr_TurnRight:dc.b "turn right #"	; DATA XREF: ROM:00021C20↑o
@@ -38729,11 +38730,11 @@ Difficulty_TextIndex:dc.l OptStr_Hardest
 		dc.l OptStr_easy	; "easy	"
 OptStr_Hardest: dc.b "hardest"		; DATA XREF: ROM:Difficulty_TextIndex↑o
 		dc.b $FF
-OptStr_Hard:	dc.b "hard	"		; DATA XREF: ROM:00021C6C↑o
+OptStr_Hard:	dc.b "hard   "		; DATA XREF: ROM:00021C6C↑o
 		dc.b $FF
 OptStr_Normal:	dc.b "normal "		; DATA XREF: ROM:00021C70↑o
 		dc.b $FF
-OptStr_easy:	dc.b "easy	"		; DATA XREF: ROM:00021C74↑o
+OptStr_easy:	dc.b "easy   "		; DATA XREF: ROM:00021C74↑o
 		dc.b $FF
 
 ; =============== S U B R O U T I N E =======================================
