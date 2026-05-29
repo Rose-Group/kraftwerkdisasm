@@ -15504,61 +15504,62 @@ loc_B528:				; CODE XREF: ROM:0000B51E↑j
 		clr.b	(v_bytecodedisabled).l
 		jmp	(ActorDeleteSelf).l
 ; ---------------------------------------------------------------------------
-LevelModes:	dc.b	0
-		dc.b	1
-		dc.b	2
-		dc.b	3
-		dc.b	4
-		dc.b	0
-Anim_MenuCursor:dc.b 4, $3E		; DATA XREF: ROM:0000B3D6↑o
-					; ROM:0000B590↓o
-		dc.b 4, $3F
-		dc.b 4, $3E
-		dc.b 4, $40
-		dc.b 8, $3E
-		dc.b 4, $3F
-		dc.b 4, $3E
-		dc.b 4, $40
-		dc.b $3C, $3E
-		dc.b 4, $3E
-		dc.b 4, $3F
-		dc.b 4, $3E
-		dc.b 4, $40
-		dc.b 8, $3E
-		dc.b 4, $3F
-		dc.b 4, $3E
-		dc.b 4, $40
-		dc.b $3C, $3E
-		dc.b 4, $3E
-		dc.b 2, $41
-		dc.b 4, $3E
-		dc.b 2, $41
-		dc.b $50, $3E
-		dc.b 4, $3F
-		dc.b 4, $3E
-		dc.b 4, $40
-		dc.b 8, $3E
-		dc.b 4, $3F
-		dc.b 4, $3E
-		dc.b 4, $40
-		dc.b $3C, $3E
-		dc.b 4, $3E
-		dc.b 2, $41
-		dc.b $50, $3E
-		dc.b 4, $3F
-		dc.b 4, $3E
-		dc.b 4, $40
-		dc.b 8, $3E
-		dc.b 4, $3F
-		dc.b 4, $3E
-		dc.b 4, $40
-		dc.b $3C, $3E
-		dc.b $FF, 0
-		dc.l Anim_MenuCursor
+LevelModes:	
+	dc.b	0
+	dc.b	1
+	dc.b	2
+	dc.b	3
+	dc.b	4
+	dc.b	0
+
+Anim_MenuCursor:
+	dc.b 4, $3E
+	dc.b 4, $3F
+	dc.b 4, $3E
+	dc.b 4, $40
+	dc.b 8, $3E
+	dc.b 4, $3F
+	dc.b 4, $3E
+	dc.b 4, $40
+	dc.b $3C, $3E
+	dc.b 4, $3E
+	dc.b 4, $3F
+	dc.b 4, $3E
+	dc.b 4, $40
+	dc.b 8, $3E
+	dc.b 4, $3F
+	dc.b 4, $3E
+	dc.b 4, $40
+	dc.b $3C, $3E
+	dc.b 4, $3E
+	dc.b 2, $41
+	dc.b 4, $3E
+	dc.b 2, $41
+	dc.b $50, $3E
+	dc.b 4, $3F
+	dc.b 4, $3E
+	dc.b 4, $40
+	dc.b 8, $3E
+	dc.b 4, $3F
+	dc.b 4, $3E
+	dc.b 4, $40
+	dc.b $3C, $3E
+	dc.b 4, $3E
+	dc.b 2, $41
+	dc.b $50, $3E
+	dc.b 4, $3F
+	dc.b 4, $3E
+	dc.b 4, $40
+	dc.b 8, $3E
+	dc.b 4, $3F
+	dc.b 4, $3E
+	dc.b 4, $40
+	dc.b $3C, $3E
+	dc.b $FF, 0
+	dc.l Anim_MenuCursor
 ; ---------------------------------------------------------------------------
 
-locret_B594:				; CODE XREF: ROM:0000B42C↑p
-					; ROM:0000B4A2↑p ...
+locret_B594:
 		rts
 ; ---------------------------------------------------------------------------
 		move.w	$2A(a0),d0
@@ -17375,23 +17376,10 @@ Password_LoadBG:			; DATA XREF: ROM:00001AD6↑o
 		move.w	#$1B,d2
 		jmp	EniDec
 ; ---------------------------------------------------------------------------
-MapEni_Password:dc.b 9, 0, 0, 0, 0, $DA, $26, $C8, 2, $C8, 2, $C8, 0, $9B, $20, $AB
-					; DATA XREF: ROM:0000C77C↑o
-		dc.b $20, $AB, $20, $A2, $6C, $85, $2C, $85, $2C, $85, 9, $B2, $1E, $B2, $1E, $B2
-		dc.b $1E, $3C, $F0, $2A, $A, $CF, $3C, $2A, $84, $E3, $CF, $A, $A1, $C4, $B8, 9
-		dc.b $13, $C4, $E0, $9C, $A8, $94, $2E, $CA, $CA, $CA, $CA, $CA, $CA, $C8, 2, $C8
-		dc.b 2, $C8, 2, $F8, 2, $98, $42, $C8, $2A, $C8, $2A, $F8, $2A, $98, $6A, $C8
-		dc.b $52, $C8, $52, $F8, $52, $98, $92, $C8, $7A, $C8, $7A, $F8, $7A, $88, $BA, $89
-		dc.b $26, $90, $A0, $18, 2, $D0, $39, $B, $C9, $24, $A0, $28, $8A, $43, $E4, $2F
-		dc.b $24, $92, $AB, $8A, $2C, $92, $68, $9B, $F, $E, $B9, $2E, $C9, $B2, $8A, $3C
-		dc.b $27, $81, $AE, $6E, $B2, $8F, $A2, $B0, 5, $F0, $6B, $A4, $6D, $AC, 1, $7C
-		dc.b $1B, $2B, $2B, $20, 0, $5F, 6, $F8, 2, $98, $40, $17, $C1, $BE, $A, $A6
-		dc.b $1A, 5, $F0, $6F, $85, $29, $89, 1, $7C, $E, 2, $7B, $E1, $EA, $22, $EA
-		dc.b $24, $90, $5F, 3, $81, $2A, $B8, $A2, $C9, $26, $89, $B0, $F0, $B8, $1B, $6B
-		dc.b $92, $EC, $9B, $28, $A3, $EA, $9B, $81, $A2, $8F, 6, $99, $C0, $1A, $28, $FA
-		dc.b $E6, $EB, $28, $FA, $2B, $A, $E9, $1A, $2B, $A, $E9, $1A, $2B, $A, $E9, $1B
-		dc.b $6B, $B, $2B, $2B, $2B, $2B, $2B, $2B, $20, $B, $20, $B, $20, $B, $20, $F
-		dc.b $E0, 0
+MapEni_Password:
+	incbin	"data/maps/enigma/password/Password BG.eni"
+	even
+
 ; ---------------------------------------------------------------------------
 
 Password_Checks:			; DATA XREF: ROM:00001ADE↑o
