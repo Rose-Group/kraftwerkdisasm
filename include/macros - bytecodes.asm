@@ -157,13 +157,13 @@ BCOMP macro vram, art
 	endm
 
 ; --------------------------------------------------------------
-; Plame command list queue bytecode instruction
+; Plane Map list queue bytecode instruction
 ; --------------------------------------------------------------
 ; PARAMETERS:
-;	list	- Plane command list ID
+;	list	- Plane Map List ID
 ; --------------------------------------------------------------
 
-BPCMD macros list
+BPLN macros list
 
 	dc.w	$C, \list
 
@@ -210,7 +210,7 @@ BSND macros snd
 ;	snd	- Sound ID
 ; --------------------------------------------------------------
 
-BSNDP macros snd
+BSND2 macros snd
 
 	dc.w	$10, \snd
 
@@ -237,7 +237,7 @@ BSSTOP macros
 ;	snd	- Sound ID
 ; --------------------------------------------------------------
 
-BSNDP2 macros
+BSNDP3 macros
 
 	dc.w	$13, \snd
 
@@ -282,21 +282,6 @@ BFADEI macros pal, pal2, line, speed
 BCOMPI macro vram, art
 
 	dc.w	$16, \vram
-	dc.l	\art
-
-	endm
-
-; --------------------------------------------------------------
-; Nemesis decompression (checks intro scenes) bytecode instruction
-; --------------------------------------------------------------
-; PARAMETERS:
-;	vram	- VRAM address to decompress to
-;	art	- Pointer to compressed art
-; --------------------------------------------------------------
-
-BNEMI macro vram, art
-
-	dc.w	$17, \vram
 	dc.l	\art
 
 	endm

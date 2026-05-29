@@ -104,8 +104,8 @@ Pal_CutsceneBG:
 	incbin	"data/pal/fix/33 - Cutscene BG.pal"
 Pal_RobotnikLair:
 	incbin	"data/pal/fix/34 - Robotnik Lair.pal"
-Pal_OpeningGrounder:
-	incbin	"data/pal/fix/35 - Opening Grounder.pal"
+Pal_LairSprites:
+	incbin	"data/pal/fix/35 - Robotnik Lair Sprites.pal"
 Pal_CutsceneRobotnik:
 	incbin	"data/pal/fix/36 - Cutscene Robotnik.pal"
 Pal_OpeningScratch:
