@@ -18111,22 +18111,23 @@ loc_CF38:				; CODE XREF: DrawOpponentScrBG+42↓j
 ; End of function DrawOpponentScrBG
 
 ; ---------------------------------------------------------------------------
-OpponentScrBGBases:dc.w 0		; DATA XREF: ROM:0000CE50↑o
-		dc.w 0
-		dc.w 0
-		dc.w $C400
-		dc.w $C400
-		dc.w $C400
-		dc.w $C400
-		dc.w $C400
-		dc.w $A400
-		dc.w $A400
-		dc.w $A400
-		dc.w $8400
-		dc.w $8400
-		dc.w $8400
-		dc.w $8400
-		dc.w $E400
+OpponentScrBGBases:
+	dc.w 0
+	dc.w 0
+	dc.w 0
+	dc.w $C400
+	dc.w $C400
+	dc.w $C400
+	dc.w $C400
+	dc.w $C400
+	dc.w $A400
+	dc.w $A400
+	dc.w $A400
+	dc.w $8400
+	dc.w $8400
+	dc.w $8400
+	dc.w $8400
+	dc.w $E400
 ; ---------------------------------------------------------------------------
 
 Stage_DrawSmallText:			; DATA XREF: ROM:00001D9C↑o
@@ -18172,39 +18173,41 @@ loc_D01A:				; CODE XREF: ROM:0000CFFC↑j
 		bsr.w	DrawOpponentScrBG
 		bra.w	loc_D13A
 ; ---------------------------------------------------------------------------
-OppScr_ScrlFlags:dc.b $FF
-		dc.b 0
-		dc.b 0
-		dc.b $FF
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b $FF
-OppScr_Opponent:dc.b 0			; DATA XREF: ROM:0000CF9C↑o
-					; ROM:0000E734↓o
-		dc.b 4
-		dc.b $D
-		dc.b 3
-		dc.b 1
-		dc.b $E
-		dc.b 7
-		dc.b 6
-		dc.b $F
-		dc.b 2
-		dc.b 5
-		dc.b 8
-		dc.b 9
-		dc.b $A
-		dc.b $B
-		dc.b $C
+OppScr_ScrlFlags:
+	dc.b $FF
+	dc.b 0
+	dc.b 0
+	dc.b $FF
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b $FF
+
+OppScr_Opponent:
+	dc.b OPP_SKELETON
+	dc.b OPP_NASU_GRAVE
+	dc.b OPP_MUMMY
+	dc.b OPP_ARMS
+	dc.b OPP_FRANKLY
+	dc.b OPP_HUMPTY
+	dc.b OPP_COCONUTS
+	dc.b OPP_DAVY
+	dc.b OPP_SKWEEL
+	dc.b OPP_DYNAMIGHT
+	dc.b OPP_GROUNDER
+	dc.b OPP_SPIKE
+	dc.b OPP_SIR_FFUZZY
+	dc.b OPP_DRAGON
+	dc.b OPP_SCRATCH
+	dc.b OPP_ROBOTNIK
 ; ---------------------------------------------------------------------------
 
 Act_OpponentScr:			; DATA XREF: ROM:0000CFB4↑o
@@ -18282,18 +18285,19 @@ loc_D0F6:				; CODE XREF: ROM:0000D0F0↑j
 		move.w	d5,(a1)+
 		rts
 ; ---------------------------------------------------------------------------
-OppScr_StageTextTiles:dc.w $8493	; DATA XREF: ROM:0000D0D2↑o
-		dc.w $8494
-		dc.w $8495
-		dc.w $8496
-		dc.w $8497
-		dc.w 0
-		dc.w $8498
-		dc.w $8499
-		dc.w $849A
-		dc.w $849B
-		dc.w $849C
-		dc.w 0
+OppScr_StageTextTiles:
+	dc.w $8493
+	dc.w $8494
+	dc.w $8495
+	dc.w $8496
+	dc.w $8497
+	dc.w 0
+	dc.w $8498
+	dc.w $8499
+	dc.w $849A
+	dc.w $849B
+	dc.w $849C
+	dc.w 0
 ; ---------------------------------------------------------------------------
 
 Act_OpponentScr_Done:			; CODE XREF: ROM:0000D060↑j
@@ -18332,22 +18336,23 @@ loc_D186:				; CODE XREF: ROM:0000D16E↑j
 		andi	#$F8FF,sr
 		rts
 ; ---------------------------------------------------------------------------
-OppScr_OppLayout:dc.w 0
-		dc.w 0
-		dc.w 0
-		dc.w $1300
-		dc.w $E130
-		dc.w $7E13
-		dc.w $67E1
-		dc.w $F67E
-		dc.w $2F67
-		dc.w $52F6
-		dc.w $852F
-		dc.w $9852
-		dc.w $A985
-		dc.w $BA98
-		dc.w $BA9
-		dc.w $C00
+OppScr_OppLayout:
+	dc.w 0
+	dc.w 0
+	dc.w 0
+	dc.w $1300
+	dc.w $E130
+	dc.w $7E13
+	dc.w $67E1
+	dc.w $F67E
+	dc.w $2F67
+	dc.w $52F6
+	dc.w $852F
+	dc.w $9852
+	dc.w $A985
+	dc.w $BA98
+	dc.w $BA9
+	dc.w $C00
 ; ---------------------------------------------------------------------------
 
 loc_D1B2:				; DATA XREF: ROM:loc_D13A↑o
@@ -18372,22 +18377,23 @@ loc_D1B2:				; DATA XREF: ROM:loc_D13A↑o
 loc_D1F4:				; CODE XREF: ROM:0000D1D6↑j
 		jmp	(ActorDeleteSelf).l
 ; ---------------------------------------------------------------------------
-OppScr_PalLoad: dc.b $FF, $FF
-		dc.b $FF, $FF
-		dc.b $FF, $FF
-		dc.b 2, $3E
-		dc.b $FF, $FF
-		dc.b $FF, $FF
-		dc.b $FF, $FF
-		dc.b $FF, $FF
-		dc.b $FF, $FF
-		dc.b $FF, $FF
-		dc.b $FF, $FF
-		dc.b $FF, $FF
-		dc.b $FF, $FF
-		dc.b $FF, $FF
-		dc.b 0, $30
-		dc.b 3, $30
+OppScr_PalLoad:
+	dc.b -1, -1
+	dc.b -1, -1
+	dc.b -1, -1
+	dc.b  2, (Pal_Humpty-Palettes)>>5
+	dc.b -1, -1
+	dc.b -1, -1
+	dc.b -1, -1
+	dc.b -1, -1
+	dc.b -1, -1
+	dc.b -1, -1
+	dc.b -1, -1
+	dc.b -1, -1
+	dc.b -1, -1
+	dc.b -1, -1
+	dc.b  0, (Pal_Spike-Palettes)>>5
+	dc.b  3, (Pal_Spike-Palettes)>>5
 ; ---------------------------------------------------------------------------
 
 loc_D21A:				; CODE XREF: ROM:0000D1C4↑j
@@ -18437,103 +18443,137 @@ loc_D298:				; CODE XREF: ROM:0000D22E↑j
 		addi.w	#$1A,$26(a0)
 		rts
 ; ---------------------------------------------------------------------------
-OppScr_OppPalLine:dc.b 0
-		dc.b 1
-		dc.b 2
-		dc.b 0
-		dc.b 0
-		dc.b 3
-		dc.b 0
-		dc.b 3
-		dc.b 0
-		dc.b 1
-		dc.b 2
-		dc.b 3
-		dc.b 0
-		dc.b 0
-		dc.b 2
-		dc.b 1
-OppScr_Mappings:dc.l 0			; DATA XREF: ROM:0000D170↑o
-					; ROM:0000D234↑o
-		dc.l 0
-		dc.l 0
-		dc.w 0
-		dc.w 0
-		dc.l ArtNem_Frankly
-		dc.l MapEni_Frankly_0
-		dc.l MapEni_Frankly_Defeated
-		dc.w $2000
-		dc.w $A100
-		dc.l ArtNem_Dynamight
-		dc.l MapEni_Dynamight_0
-		dc.l MapEni_Dynamight_9
-		dc.w $4000
-		dc.w $C200
-		dc.l ArtNem_Arms
-		dc.l MapEni_Arms_8
-		dc.l MapEni_Arms_Defeated
-		dc.w 0
-		dc.w $8000
-		dc.l 0
-		dc.l 0
-		dc.l 0
-		dc.w 0
-		dc.w 0
-		dc.l ArtNem_Grounder
-		dc.l MapEni_Grounder_0
-		dc.l MapEni_Grounder_Defeated
-		dc.w $6000
-		dc.w $E300
-		dc.l ArtNem_DavySprocket
-		dc.l MapEni_DavySprocket_0
-		dc.l MapEni_DavySprocket_Defeated
-		dc.w 0
-		dc.w $8000
-		dc.l ArtNem_Coconuts
-		dc.l MapEni_Coconuts_0
-		dc.l MapEni_Coconuts_Defeated
-		dc.w $6000
-		dc.w $E300
-		dc.l ArtNem_Spike
-		dc.l MapEni_Spike_0
-		dc.l MapEni_Spike_Defeated
-		dc.w 0
-		dc.w $8000
-		dc.l ArtNem_SirFfuzzyLogik
-		dc.l MapEni_SirFfuzzyLogik_0
-		dc.l MapEni_SirFfuzzyLogik_Defeated_2
-		dc.w $2000
-		dc.w $A100
-		dc.l ArtNem_DragonBreath
-		dc.l MapEni_DragonBreath_0
-		dc.l MapEni_DragonBreath_Defeated
-		dc.w $4000
-		dc.w $C200
-		dc.l ArtNem_Scratch
-		dc.l MapEni_Scratch_1
-		dc.l MapEni_Scratch_Defeated
-		dc.w $6000
-		dc.w $E300
-		dc.l ArtNem_Robotnik
-		dc.l MapEni_Robotnik_0
-		dc.l MapEni_Robotnik_Defeated
-		dc.w 0
-		dc.w $8000
-		dc.l 0
-		dc.l 0
-		dc.l 0
-		dc.w 0
-		dc.w 0
-		dc.l ArtNem_Humpty
-		dc.l MapEni_Humpty_0
-		dc.l MapEni_Humpty_Defeated
-		dc.w $4000
-		dc.w $C200
-		dc.l ArtNem_Skweel
-		dc.l MapEni_Skweel_0
-		dc.l MapEni_Skweel_Defeated
-		dc.w $2000
-		dc.w $A100
+OppScr_OppPalLine:
+	dc.b 0
+	dc.b 1
+	dc.b 2
+	dc.b 0
+	dc.b 0
+	dc.b 3
+	dc.b 0
+	dc.b 3
+	dc.b 0
+	dc.b 1
+	dc.b 2
+	dc.b 3
+	dc.b 0
+	dc.b 0
+	dc.b 2
+	dc.b 1
+
+OppScr_Mappings:
+	; Opponent 0: Skeleton T
+	dc.l 0
+	dc.l 0
+	dc.l 0
+	dc.w 0
+	dc.w 0
+
+	; Opponent 1: Frankly
+	dc.l ArtNem_Frankly
+	dc.l MapEni_Frankly_0
+	dc.l MapEni_Frankly_Defeated
+	dc.w $2000
+	dc.w $A100
+
+	; Opponent 2: Dynamight
+	dc.l ArtNem_Dynamight
+	dc.l MapEni_Dynamight_0
+	dc.l MapEni_Dynamight_9
+	dc.w $4000
+	dc.w $C200
+
+	; Opponent 3: Arms
+	dc.l ArtNem_Arms
+	dc.l MapEni_Arms_8
+	dc.l MapEni_Arms_Defeated
+	dc.w 0
+	dc.w $8000
+
+	; Opponent 4: Nasu Grave
+	dc.l 0
+	dc.l 0
+	dc.l 0
+	dc.w 0
+	dc.w 0
+
+	; Opponent 5: Grounder
+	dc.l ArtNem_Grounder
+	dc.l MapEni_Grounder_0
+	dc.l MapEni_Grounder_Defeated
+	dc.w $6000
+	dc.w $E300
+
+	; Opponent 6: Davy Sprocket
+	dc.l ArtNem_DavySprocket
+	dc.l MapEni_DavySprocket_0
+	dc.l MapEni_DavySprocket_Defeated
+	dc.w 0
+	dc.w $8000
+
+	; Opponent 7: Coconuts
+	dc.l ArtNem_Coconuts
+	dc.l MapEni_Coconuts_0
+	dc.l MapEni_Coconuts_Defeated
+	dc.w $6000
+	dc.w $E300
+
+	; Opponent 8: Spike
+	dc.l ArtNem_Spike
+	dc.l MapEni_Spike_0
+	dc.l MapEni_Spike_Defeated
+	dc.w 0
+	dc.w $8000
+
+	; Opponent 9: Sir Ffuzzy-Logik
+	dc.l ArtNem_SirFfuzzyLogik
+	dc.l MapEni_SirFfuzzyLogik_0
+	dc.l MapEni_SirFfuzzyLogik_Defeated_2
+	dc.w $2000
+	dc.w $A100
+
+	; Opponent $A: Dragon Breath
+	dc.l ArtNem_DragonBreath
+	dc.l MapEni_DragonBreath_0
+	dc.l MapEni_DragonBreath_Defeated
+	dc.w $4000
+	dc.w $C200
+
+	; Opponent $B: Scratch
+	dc.l ArtNem_Scratch
+	dc.l MapEni_Scratch_1
+	dc.l MapEni_Scratch_Defeated
+	dc.w $6000
+	dc.w $E300
+
+	; Opponent $C: Dr. Robotnik
+	dc.l ArtNem_Robotnik
+	dc.l MapEni_Robotnik_0
+	dc.l MapEni_Robotnik_Defeated
+	dc.w 0
+	dc.w $8000
+
+	; Opponent $D: Mummy
+	dc.l 0
+	dc.l 0
+	dc.l 0
+	dc.w 0
+	dc.w 0
+
+	; Opponent $E: Humpty
+	dc.l ArtNem_Humpty
+	dc.l MapEni_Humpty_0
+	dc.l MapEni_Humpty_Defeated
+	dc.w $4000
+	dc.w $C200
+
+	; Opponent $F: Skweel
+	dc.l ArtNem_Skweel
+	dc.l MapEni_Skweel_0
+	dc.l MapEni_Skweel_Defeated
+	dc.w $2000
+	dc.w $A100
+
 ; ---------------------------------------------------------------------------
 		ori	#$700,sr
 		move.w	#$CC08,d5
@@ -19135,7 +19175,8 @@ loc_D9E6:				; CODE XREF: Act_TitleRobotnik+1E↑j
 ; End of function Act_TitleRobotnik
 
 ; ---------------------------------------------------------------------------
-PalAnim_TitleRobotnik:dc.b 0, $5A	; DATA XREF: Act_TitleRobotnik+12↑o
+PalAnim_TitleRobotnik:
+		dc.b 0, $5A
 		dc.b 1, 1
 		dc.b 2, 1
 		dc.b 1, 1
@@ -19165,8 +19206,9 @@ PalAnim_TitleRobotnik:dc.b 0, $5A	; DATA XREF: Act_TitleRobotnik+12↑o
 		dc.b 4, 6
 		dc.b 3, 6
 		dc.b $FF, 0
-PalCyc_TitleRobotnik:dc.w $200, $200, $200, $200
-					; DATA XREF: Act_TitleRobotnik+3E↑o
+
+PalCyc_TitleRobotnik:
+		dc.w $200, $200, $200, $200
 		dc.w $A00, $800, $600, $A00
 		dc.w $A00, $800, $A00, $A20
 		dc.w $A00, $800, $600, $400
@@ -19351,15 +19393,21 @@ Act_TitleHandler_GotoIntro:		; CODE XREF: ROM:0000DC2E↑j
 		clr.b	(v_bytecodedisabled).l
 		rts
 ; ---------------------------------------------------------------------------
-Str_PressStart: dc.b "PRESS  START  BUTTON" ; DATA XREF: ROM:0000DC42↑o
-		dc.b $FF
-		dc.b 0
-Str_CompileCpy: dc.b "@1993 COMPILE"	; DATA XREF: ROM:loc_DC02↑o
-		dc.b $FF
-Str_SegaCpy:	dc.b "@1993 "		; DATA XREF: ROM:0000DC10↑o
-		dc.b $28, $29, $2A, $2B
-		dc.b $FF
-		dc.b 0
+Str_PressStart:
+	dc.b "PRESS  START  BUTTON" ; DATA XREF: ROM:0000DC42↑o
+	dc.b $FF
+	even
+
+Str_CompileCpy:
+	dc.b "@1993 COMPILE"	; DATA XREF: ROM:loc_DC02↑o
+	dc.b $FF
+	even
+
+Str_SegaCpy:
+	dc.b "@1993 ", $28, $29, $2A, $2B
+	dc.b $FF
+	even
+
 Anim_TitleEChute:dc.b 5, $39		; DATA XREF: ROM:0000DB42↑o
 		dc.b 5, $3A
 		dc.b 5, $3B
@@ -20017,16 +20065,17 @@ loc_E306:				; CODE XREF: CheckSoundTest+30↑j
 ; End of function CheckSoundTest
 
 ; ---------------------------------------------------------------------------
-SoundTestCode:	dc.b $40
-		dc.b $40
-		dc.b 4
-		dc.b $10
-		dc.b $10
-		dc.b 4
-		dc.b $20
-		dc.b $20
-		dc.b $FF
-		dc.b 0
+SoundTestCode:
+	dc.b	BUTTON_A
+	dc.b	BUTTON_A
+	dc.b	BUTTON_L
+	dc.b	BUTTON_B
+	dc.b	BUTTON_B
+	dc.b	BUTTON_L
+	dc.b	BUTTON_C
+	dc.b	BUTTON_C
+	dc.b	$FF
+	even
 ; ---------------------------------------------------------------------------
 
 Act_TitleHandler_StartGame:		; CODE XREF: ROM:0000DA8E↑j
@@ -20208,8 +20257,8 @@ off_E4F4:	dc.l ArtUnc_Robotnik_0
 		dc.l ArtUnc_Robotnik_16
 		dc.l ArtUnc_Robotnik_17
 		dc.l ArtUnc_Robotnik_18
-byte_E540:	dc.b $32, 0		; DATA XREF: sub_E3AC+28↑o
-					; ROM:0000E5A8↓o
+
+byte_E540:	dc.b $32, 0
 		dc.b 6, 1
 		dc.b 6, 2
 		dc.b 6, 3
@@ -21406,7 +21455,8 @@ loc_F00A:				; CODE XREF: RunGameTutorial+1E↑j
 ; End of function RunGameTutorial
 
 ; ---------------------------------------------------------------------------
-TutorialTextTimers:dc.w $80		; DATA XREF: RunGameTutorial:loc_F00A↑o
+TutorialTextTimers:
+		dc.w $80		; DATA XREF: RunGameTutorial:loc_F00A↑o
 		dc.w 1
 		dc.w $80
 		dc.w 1
@@ -21461,12 +21511,13 @@ loc_F0A0:				; CODE XREF: Act_TutorialText+1A↑j
 ; End of function Act_TutorialText
 
 ; ---------------------------------------------------------------------------
-TutorialCmdList:dc.l TutorialCmd_EndText
-		dc.l TutorialCmd_SetDelay
-		dc.l TutorialCmd_SetVRAMWrite
-		dc.l TutorialCmd_QueuePlaneID
-		dc.l TutorialCmd_Unused
-		dc.l TutorialCmd_PlaySound
+TutorialCmdList:
+	dc.l TutorialCmd_EndText
+	dc.l TutorialCmd_SetDelay
+	dc.l TutorialCmd_SetVRAMWrite
+	dc.l TutorialCmd_QueuePlaneID
+	dc.l TutorialCmd_Unused
+	dc.l TutorialCmd_PlaySound
 ; ---------------------------------------------------------------------------
 
 TutorialCmd_Unused:			; DATA XREF: ROM:0000F0C0↑o
@@ -21513,7 +21564,8 @@ Act_TutorialText_Render:		; CODE XREF: Act_TutorialText+22↑p
 ; End of function Act_TutorialText_Render
 
 ; ---------------------------------------------------------------------------
-TutorialTextIndex:dc.l word_F506	; DATA XREF: RunGameTutorial+42↑o
+TutorialTextIndex:
+		dc.l word_F506
 		dc.l word_F506
 		dc.l word_F506
 		dc.l word_F506
@@ -21536,13 +21588,21 @@ TutorialTextIndex:dc.l word_F506	; DATA XREF: RunGameTutorial+42↑o
 		dc.l word_F178
 		dc.l word_F17A
 		dc.l word_F17C
+
 word_F170:	dc.w $FF00		; DATA XREF: ROM:0000F154↑o
+
 word_F172:	dc.w $FF00		; DATA XREF: ROM:0000F158↑o
+
 word_F174:	dc.w $FF00		; DATA XREF: ROM:0000F15C↑o
+
 word_F176:	dc.w $FF00		; DATA XREF: ROM:0000F160↑o
+
 word_F178:	dc.w $FF00		; DATA XREF: ROM:0000F164↑o
+
 word_F17A:	dc.w $FF00		; DATA XREF: ROM:0000F168↑o
+
 word_F17C:	dc.w $FF00		; DATA XREF: ROM:0000F16C↑o
+
 Text_Tutorial_0:dc.w $FF0C, $2B		; DATA XREF: ROM:0000F130↑o
 		dc.w $FF08, $C224
 		dc.w $360
@@ -22090,7 +22150,7 @@ loc_F626:				; CODE XREF: sub_F58A+84↑j
 		adda.w	d3,a3
 		move.w	(a3)+,$A(a1)
 		move.w	(a3),$E(a1)
-		lea	(OpponentRoleCallAnim).l,a3
+		lea	(RoleCallAnimID).l,a3
 		clr.w	d3
 		move.b	(a3,d2.w),d3
 		lea	(Cutscene_OpponentAnims).l,a3
@@ -22111,41 +22171,44 @@ loc_F690:				; CODE XREF: sub_FA36+20↓p
 ; End of function sub_F58A
 
 ; ---------------------------------------------------------------------------
-OpponentRoleCallPals:dc.b $31
-		dc.b $3D
-		dc.b $42
-		dc.b $45
-		dc.b $31
-		dc.b $4B
-		dc.b $41
-		dc.b $31
-		dc.b $47
-		dc.b $49
-		dc.b $48
-		dc.b $4E
-		dc.b $36
-		dc.b $31
-		dc.b $4A
-		dc.b $4D
-		dc.b $31
-		dc.b 1
-OpponentRoleCallPos:dc.w $30, $40	; DATA XREF: sub_F58A+D6↑o
-		dc.w $38, $28
-		dc.w $40, 8
-		dc.w $28, $20
-		dc.w $30, $40
-		dc.w $38, $30
-		dc.w $30, $30
-		dc.w $30, $38
-		dc.w $30, $28
-		dc.w $30, $28
-		dc.w $30, $28
-		dc.w $30, $28
-		dc.w $28, $FFE8
-		dc.w $30, $20
-		dc.w $30, $30
-		dc.w $30, $20
-		dc.w $28, $20
+OpponentRoleCallPals:
+	dc.b (Pal_CoconutsIntro-Palettes)>>5
+	dc.b (Pal_FranklyIntro-Palettes)>>5
+	dc.b (Pal_DynamightIntro-Palettes)>>5
+	dc.b (Pal_ArmsIntro-Palettes)>>5
+	dc.b (Pal_CoconutsIntro-Palettes)>>5
+	dc.b (Pal_GrounderIntro-Palettes)>>5
+	dc.b (Pal_DavySprocketIntro-Palettes)>>5
+	dc.b (Pal_CoconutsIntro-Palettes)>>5
+	dc.b (Pal_SpikeIntro-Palettes)>>5
+	dc.b (Pal_SirFfuzzyLogikIntro-Palettes)>>5
+	dc.b (Pal_DragonBreathIntro-Palettes)>>5
+	dc.b (Pal_ScratchIntro-Palettes)>>5
+	dc.b (Pal_Black-Palettes)>>5
+	dc.b (Pal_CoconutsIntro-Palettes)>>5
+	dc.b (Pal_HumptyIntro-Palettes)>>5
+	dc.b (Pal_SkweelIntro-Palettes)>>5
+	dc.b (Pal_CoconutsIntro-Palettes)>>5
+	dc.b (Pal_RedYellowPuyos-Palettes)>>5
+
+OpponentRoleCallPos:
+	dc.w $30, $40
+	dc.w $38, $28
+	dc.w $40, 8
+	dc.w $28, $20
+	dc.w $30, $40
+	dc.w $38, $30
+	dc.w $30, $30
+	dc.w $30, $38
+	dc.w $30, $28
+	dc.w $30, $28
+	dc.w $30, $28
+	dc.w $30, $28
+	dc.w $28, -$18
+	dc.w $30, $20
+	dc.w $30, $30
+	dc.w $30, $20
+	dc.w $28, $20
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -22168,7 +22231,7 @@ loc_F724:				; CODE XREF: sub_F706+18↑j
 		bne.s	loc_F762
 		clr.w	d2
 		move.b	(v_opponent).l,d2
-		lea	(OpponentRoleCallAnim).l,a3
+		lea	(RoleCallAnimID).l,a3
 		clr.w	d3
 		move.b	(a3,d2.w),d3
 		lea	(Cutscene_OpponentAnims).l,a3
@@ -22200,23 +22263,23 @@ loc_F78C:				; CODE XREF: sub_F706+80↑j
 ; End of function sub_F706
 
 ; ---------------------------------------------------------------------------
-OpponentRoleCallAnim:dc.b 0		; DATA XREF: sub_F58A+E6↑o
-					; sub_F706+3C↑o
-		dc.b 0
-		dc.b 4
-		dc.b 1
-		dc.b 0
-		dc.b 1
-		dc.b 5
-		dc.b 1
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 2
-		dc.b 2
-		dc.b 0
-		dc.b 0
-		dc.b 0
+RoleCallAnimID:
+	dc.b 0
+	dc.b 0
+	dc.b 4
+	dc.b 1
+	dc.b 0
+	dc.b 1
+	dc.b 5
+	dc.b 1
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 2
+	dc.b 2
+	dc.b 0
+	dc.b 0
+	dc.b 0
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -22319,24 +22382,25 @@ sub_F89A:				; DATA XREF: ROM:00001FF6↑o
 ; End of function sub_F89A
 
 ; ---------------------------------------------------------------------------
-byte_F8BC:	dc.b $10		; DATA XREF: sub_F89A+8↑o
-		dc.b 0
-		dc.b 4
-		dc.b $D
-		dc.b 3
-		dc.b 1
-		dc.b $E
-		dc.b 7
-		dc.b 6
-		dc.b $F
-		dc.b 2
-		dc.b 5
-		dc.b 8
-		dc.b 9
-		dc.b $A
-		dc.b $B
-		dc.b $C
-		dc.b $11
+byte_F8BC:
+	dc.b $10		; DATA XREF: sub_F89A+8↑o
+	dc.b OPP_SKELETON
+	dc.b OPP_NASU_GRAVE
+	dc.b OPP_MUMMY
+	dc.b OPP_ARMS
+	dc.b OPP_FRANKLY
+	dc.b OPP_HUMPTY
+	dc.b OPP_COCONUTS
+	dc.b OPP_DAVY
+	dc.b OPP_SKWEEL
+	dc.b OPP_DYNAMIGHT
+	dc.b OPP_GROUNDER
+	dc.b OPP_SPIKE
+	dc.b OPP_SIR_FFUZZY
+	dc.b OPP_DRAGON
+	dc.b OPP_SCRATCH
+	dc.b OPP_ROBOTNIK
+	dc.b $11
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -22808,100 +22872,139 @@ loc_FDD0:				; CODE XREF: sub_FDB4+1E↓j
 ; End of function sub_FDB4
 
 ; ---------------------------------------------------------------------------
-RoleCallText:	dc.l Str_RoleCall_Arms	; DATA XREF: sub_FD0C+2↑o
-		dc.l Str_RoleCall_Arms
-		dc.l Str_RoleCall_Arms
-		dc.l Str_RoleCall_Arms
-		dc.l Str_RoleCall_Arms
-		dc.l Str_RoleCall_Frankly
-		dc.l Str_RoleCall_Humpty
-		dc.l Str_RoleCall_Coconuts
-		dc.l Str_RoleCall_Davy
-		dc.l Str_RoleCall_Skweel
-		dc.l Str_RoleCall_Dynamight
-		dc.l Str_RoleCall_Grounder
-		dc.l Str_RoleCall_Spike
-		dc.l Str_RoleCall_SirFfuzzy
-		dc.l Str_RoleCall_Dragon
-		dc.l Str_RoleCall_Scratch
-		dc.l Str_RoleCall_Robotnik
-		dc.l Str_RoleCall_HasBean
-		dc.l Str_RoleCall_Cast
-		dc.l Str_RoleCall_And
-Str_RoleCall_Cast:dc.w 4		; DATA XREF: ROM:0000FE4E↑o
-		dc.w $D724
-		dc.b "CAST"
-		dc.b $FF
-		dc.b 0
-Str_RoleCall_And:dc.w 6			; DATA XREF: ROM:0000FE52↑o
-		dc.w $D722
-		dc.b "AND..."
-		dc.b $FF
-		dc.b 0
-Str_RoleCall_Arms:dc.w 4		; DATA XREF: ROM:RoleCallText↑o
-					; ROM:0000FE0A↑o ...
-		dc.w $D724
-		dc.b "ARMS"
-		dc.b $FF
-		dc.b 0
-Str_RoleCall_Frankly:dc.w 7		; DATA XREF: ROM:0000FE1A↑o
-		dc.w $D722
-		dc.b "FRANKLY"
-		dc.b $FF
-Str_RoleCall_Humpty:dc.w 6		; DATA XREF: ROM:0000FE1E↑o
-		dc.w $D722
-		dc.b "HUMPTY"
-		dc.b $FF
-		dc.b 0
-Str_RoleCall_Coconuts:dc.w 8		; DATA XREF: ROM:0000FE22↑o
-		dc.w $D722
-		dc.b "COCONUTS"
-		dc.b $FF
-		dc.b 0
-Str_RoleCall_Davy:dc.w $D		; DATA XREF: ROM:0000FE26↑o
-		dc.w $D722
-		dc.b "DAVY SPROCKET"
-		dc.b $FF
-Str_RoleCall_Dynamight:dc.w 9		; DATA XREF: ROM:0000FE2E↑o
-		dc.w $D722
-		dc.b "DYNAMIGHT"
-		dc.b $FF
-Str_RoleCall_Skweel:dc.w 6		; DATA XREF: ROM:0000FE2A↑o
-		dc.w $D722
-		dc.b "SKWEEL"
-		dc.b $FF
-		dc.b 0
-Str_RoleCall_Grounder:dc.w 8		; DATA XREF: ROM:0000FE32↑o
-		dc.w $D722
-		dc.b "GROUNDER"
-		dc.b $FF
-		dc.b 0
-Str_RoleCall_Spike:dc.w 5		; DATA XREF: ROM:0000FE36↑o
-		dc.w $D722
-		dc.b "SPIKE"
-		dc.b $FF
-Str_RoleCall_SirFfuzzy:dc.w $10		; DATA XREF: ROM:0000FE3A↑o
-		dc.w $D722
-		dc.b "SIR FFUZZY-LOGIK"
-		dc.b $FF
-		dc.b 0
-Str_RoleCall_Dragon:dc.w $D		; DATA XREF: ROM:0000FE3E↑o
-		dc.w $D722
-		dc.b "DRAGON BREATH"
-		dc.b $FF
-Str_RoleCall_Scratch:dc.w 7		; DATA XREF: ROM:0000FE42↑o
-		dc.w $D722
-		dc.b "SCRATCH"
-		dc.b $FF
-Str_RoleCall_Robotnik:dc.w $B		; DATA XREF: ROM:0000FE46↑o
-		dc.w $D722
-		dc.b "DR.ROBOTNIK"
-		dc.b $FF
-Str_RoleCall_HasBean:dc.w 8		; DATA XREF: ROM:0000FE4A↑o
-		dc.w $D722
-		dc.b "HAS BEAN"
-		dc.b $FF
-		dc.b 0
+RoleCallText:
+	dc.l Str_RoleCall_Arms	; DATA XREF: sub_FD0C+2↑o
+	dc.l Str_RoleCall_Arms
+	dc.l Str_RoleCall_Arms
+	dc.l Str_RoleCall_Arms
+	dc.l Str_RoleCall_Arms
+	dc.l Str_RoleCall_Frankly
+	dc.l Str_RoleCall_Humpty
+	dc.l Str_RoleCall_Coconuts
+	dc.l Str_RoleCall_Davy
+	dc.l Str_RoleCall_Skweel
+	dc.l Str_RoleCall_Dynamight
+	dc.l Str_RoleCall_Grounder
+	dc.l Str_RoleCall_Spike
+	dc.l Str_RoleCall_SirFfuzzy
+	dc.l Str_RoleCall_Dragon
+	dc.l Str_RoleCall_Scratch
+	dc.l Str_RoleCall_Robotnik
+	dc.l Str_RoleCall_HasBean
+	dc.l Str_RoleCall_Cast
+	dc.l Str_RoleCall_And
+
+Str_RoleCall_Cast:
+	dc.w 4
+	dc.w $D724
+	dc.b "CAST"
+	dc.b $FF
+	even
+
+Str_RoleCall_And:
+	dc.w 6
+	dc.w $D722
+	dc.b "AND..."
+	dc.b $FF
+	even
+
+Str_RoleCall_Arms:
+	dc.w 4
+	dc.w $D724
+	dc.b "ARMS"
+	dc.b $FF
+	even
+
+Str_RoleCall_Frankly:
+	dc.w 7
+	dc.w $D722
+	dc.b "FRANKLY"
+	dc.b $FF
+	even
+
+Str_RoleCall_Humpty:
+	dc.w 6
+	dc.w $D722
+	dc.b "HUMPTY"
+	dc.b $FF
+	even
+
+Str_RoleCall_Coconuts:
+	dc.w 8
+	dc.w $D722
+	dc.b "COCONUTS"
+	dc.b $FF
+	even
+
+Str_RoleCall_Davy:
+	dc.w $D
+	dc.w $D722
+	dc.b "DAVY SPROCKET"
+	dc.b $FF
+	even
+
+Str_RoleCall_Dynamight:
+	dc.w 9
+	dc.w $D722
+	dc.b "DYNAMIGHT"
+	dc.b $FF
+	even
+
+Str_RoleCall_Skweel:
+	dc.w 6
+	dc.w $D722
+	dc.b "SKWEEL"
+	dc.b $FF
+	even
+
+Str_RoleCall_Grounder:
+	dc.w 8
+	dc.w $D722
+	dc.b "GROUNDER"
+	dc.b $FF
+	even
+
+Str_RoleCall_Spike:
+	dc.w 5
+	dc.w $D722
+	dc.b "SPIKE"
+	dc.b $FF
+	even
+
+Str_RoleCall_SirFfuzzy:
+	dc.w $10
+	dc.w $D722
+	dc.b "SIR FFUZZY-LOGIK"
+	dc.b $FF
+	even
+
+Str_RoleCall_Dragon:
+	dc.w $D
+	dc.w $D722
+	dc.b "DRAGON BREATH"
+	dc.b $FF
+	even
+
+Str_RoleCall_Scratch:
+	dc.w 7
+	dc.w $D722
+	dc.b "SCRATCH"
+	dc.b $FF
+	even
+
+Str_RoleCall_Robotnik:
+	dc.w $B
+	dc.w $D722
+	dc.b "DR.ROBOTNIK"
+	dc.b $FF
+	even
+
+Str_RoleCall_HasBean:
+	dc.w 8
+	dc.w $D722
+	dc.b "HAS BEAN"
+	dc.b $FF
+	even
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -23170,135 +23273,135 @@ loc_1019A:				; CODE XREF: CutCmd_AddSpace+4↑j
 ; End of function CutCmd_AddSpace
 
 ; ---------------------------------------------------------------------------
-FontTable_Main: dc.b $11		; DATA XREF: RenderTitleText↑o
-					; sub_FD72+C↑o ...
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b 7
-		dc.b $11
-		dc.b $36
-		dc.b $37
-		dc.b $11
-		dc.b $11
-		dc.b 9
-		dc.b $C
-		dc.b $D
-		dc.b $E
-		dc.b $F
-		dc.b 1
-		dc.b 8
-		dc.b 2
-		dc.b $11
-		dc.b $12
-		dc.b $13
-		dc.b $14
-		dc.b $15
-		dc.b $16
-		dc.b $17
-		dc.b $18
-		dc.b $19
-		dc.b $1A
-		dc.b $1B
-		dc.b 4
-		dc.b 5
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b 6
-		dc.b $B
-		dc.b $1C
-		dc.b $1D
-		dc.b $1E
-		dc.b $1F
-		dc.b $20
-		dc.b $21
-		dc.b $22
-		dc.b $23
-		dc.b $24
-		dc.b $25
-		dc.b $26
-		dc.b $27
-		dc.b $28
-		dc.b $29
-		dc.b $2A
-		dc.b $2B
-		dc.b $2C
-		dc.b $2D
-		dc.b $2E
-		dc.b $2F
-		dc.b $30
-		dc.b $31
-		dc.b $32
-		dc.b $33
-		dc.b $34
-		dc.b $35
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $38
-		dc.b $39
-		dc.b $3A
-		dc.b $3B
-		dc.b $3C
-		dc.b $3D
-		dc.b $3E
-		dc.b $3F
-		dc.b $40
-		dc.b $41
-		dc.b $42
-		dc.b $43
-		dc.b $44
-		dc.b $45
-		dc.b $46
-		dc.b $47
-		dc.b $48
-		dc.b $49
-		dc.b $4A
-		dc.b $4B
-		dc.b $4C
-		dc.b $4D
-		dc.b $4E
-		dc.b $4F
-		dc.b $50
-		dc.b $51
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
-		dc.b $11
+FontTable_Main:
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b 7
+	dc.b $11
+	dc.b $36
+	dc.b $37
+	dc.b $11
+	dc.b $11
+	dc.b 9
+	dc.b $C
+	dc.b $D
+	dc.b $E
+	dc.b $F
+	dc.b 1
+	dc.b 8
+	dc.b 2
+	dc.b $11
+	dc.b $12
+	dc.b $13
+	dc.b $14
+	dc.b $15
+	dc.b $16
+	dc.b $17
+	dc.b $18
+	dc.b $19
+	dc.b $1A
+	dc.b $1B
+	dc.b 4
+	dc.b 5
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b 6
+	dc.b $B
+	dc.b $1C
+	dc.b $1D
+	dc.b $1E
+	dc.b $1F
+	dc.b $20
+	dc.b $21
+	dc.b $22
+	dc.b $23
+	dc.b $24
+	dc.b $25
+	dc.b $26
+	dc.b $27
+	dc.b $28
+	dc.b $29
+	dc.b $2A
+	dc.b $2B
+	dc.b $2C
+	dc.b $2D
+	dc.b $2E
+	dc.b $2F
+	dc.b $30
+	dc.b $31
+	dc.b $32
+	dc.b $33
+	dc.b $34
+	dc.b $35
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $38
+	dc.b $39
+	dc.b $3A
+	dc.b $3B
+	dc.b $3C
+	dc.b $3D
+	dc.b $3E
+	dc.b $3F
+	dc.b $40
+	dc.b $41
+	dc.b $42
+	dc.b $43
+	dc.b $44
+	dc.b $45
+	dc.b $46
+	dc.b $47
+	dc.b $48
+	dc.b $49
+	dc.b $4A
+	dc.b $4B
+	dc.b $4C
+	dc.b $4D
+	dc.b $4E
+	dc.b $4F
+	dc.b $50
+	dc.b $51
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
+	dc.b $11
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -23404,41 +23507,62 @@ loc_1033A:				; CODE XREF: Act_TextBoxArrow+28↑j
 ; End of function Act_TextBoxArrow
 
 ; ---------------------------------------------------------------------------
-CutsceneArrowLoc:dc.b 0			; DATA XREF: Act_TextBoxArrow+18↑r
-		dc.b $28
-		dc.b $28
-		dc.b $38
-		dc.b 0
-		dc.b $28
-		dc.b $10
-		dc.b 0
-		dc.b $28
-		dc.b $28
-		dc.b $28
-		dc.b 0
-		dc.b $58
-		dc.b 0
-		dc.b $30
-		dc.b 8
-		dc.b 0
-		dc.b 0
-Cutscene_Index: dc.l Cut_Coconuts	; DATA XREF: Act_Cutscene+5E↑o
-		dc.l Cut_Frankly
-		dc.l Cut_Dynamight
-		dc.l Cut_Arms
-		dc.l Cut_Coconuts
-		dc.l Cut_Grounder
-		dc.l Cut_Davy
-		dc.l Cut_Coconuts
-		dc.l Cut_Spike
-		dc.l Cut_SirFfuzzy
-		dc.l Cut_Dragon
-		dc.l Cut_Scratch
-		dc.l Cut_Robotnik
-		dc.l Cut_Coconuts
-		dc.l Cut_Humpty
-		dc.l Cut_Skweel
-		dc.l Cut_Opening
+CutsceneArrowLoc:
+	dc.b 0
+	dc.b $28
+	dc.b $28
+	dc.b $38
+	dc.b 0
+	dc.b $28
+	dc.b $10
+	dc.b 0
+	dc.b $28
+	dc.b $28
+	dc.b $28
+	dc.b 0
+	dc.b $58
+	dc.b 0
+	dc.b $30
+	dc.b 8
+	dc.b 0
+	dc.b 0
+
+Cutscene_Index:
+	dc.l Cut_Coconuts
+	dc.l Cut_Frankly
+	dc.l Cut_Dynamight
+	dc.l Cut_Arms
+	dc.l Cut_Coconuts
+	dc.l Cut_Grounder
+	dc.l Cut_Davy
+	dc.l Cut_Coconuts
+	dc.l Cut_Spike
+	dc.l Cut_SirFfuzzy
+	dc.l Cut_Dragon
+	dc.l Cut_Scratch
+	dc.l Cut_Robotnik
+	dc.l Cut_Coconuts
+	dc.l Cut_Humpty
+	dc.l Cut_Skweel
+	dc.l Cut_Opening
+
+; TODO - Split Cutscene Dialogue into separate files and convert to the macro format
+
+;	include	"data/text/cutscene/Humpty.asm"
+;	include	"data/text/cutscene/Skweel.asm"
+;	include	"data/text/cutscene/Frankly.asm"
+;	include	"data/text/cutscene/Dynamight.asm"
+;	include	"data/text/cutscene/Arms.asm"
+;	include	"data/text/cutscene/Grounder.asm"
+;	include	"data/text/cutscene/Davy Sprocket.asm"
+;	include	"data/text/cutscene/Coconuts.asm"
+;	include	"data/text/cutscene/Spike.asm"
+;	include	"data/text/cutscene/Sir Ffuzzy-Logik.asm"
+;	include	"data/text/cutscene/Dragon Breath.asm"
+;	include	"data/text/cutscene/Scratch.asm"
+;	include	"data/text/cutscene/Dr. Robonik.asm"
+;	include	"data/text/cutscene/Opening.asm"
+
 Cut_Humpty:	dc.b $85, 2		; DATA XREF: ROM:0001038A↑o
 		dc.b $83, 2
 		dc.b $85, 0
@@ -23448,8 +23572,8 @@ Cut_Humpty:	dc.b $85, 2		; DATA XREF: ROM:0001038A↑o
 		dc.b $85, 1
 		dc.b "Gracious!"
 		dc.b $86
-		dc.b "You",$27,"re here already."
-		dc.b "I",$27,"m shell shocked!"
+		dc.b "You're here already."
+		dc.b "I'm shell shocked!"
 		dc.b $85, 0
 		dc.b $83, $C
 		dc.b $82
@@ -23471,17 +23595,17 @@ Cut_Skweel:	dc.b $83, 2		; DATA XREF: ROM:0001038E↑o
 		dc.b $83, 4
 		dc.b $81, $59
 		dc.w $D70C
-		dc.b "I",$27,"ve got more sizzle than"
+		dc.b "I've got more sizzle than"
 		dc.b "a rasher of bacon."
 		dc.b $83, $A
 		dc.b $82
 		dc.b $83, 6
 		dc.b $81, $77
 		dc.w $D70C
-		dc.b "I",$27,"m hungry and it ain",$27,"t"
+		dc.b "I'm hungry and it ain't"
 		dc.b "meals on wheels"
 		dc.b $86
-		dc.b "I",$27,"m after - it",$27,"s you."
+		dc.b "I'm after - it's you."
 		dc.b $83, $A
 		dc.b $82
 		dc.b $80
@@ -23507,7 +23631,7 @@ Cut_Frankly:	dc.b $85, 0		; DATA XREF: ROM:00010356↑o
 		dc.b $85, 1
 		dc.b $83, 2
 		dc.b $85, 2
-		dc.b "I",$27,"m a bright spark though "
+		dc.b "I'm a bright spark though "
 		dc.b "and I reckon I know how to"
 		dc.b "beat you."
 		dc.b $85, 3
@@ -23533,7 +23657,7 @@ Cut_Dynamight:	dc.b $85, 0		; DATA XREF: ROM:0001035A↑o
 		dc.b $81, $56
 		dc.w $D78C
 		dc.b $85, 1
-		dc.b "As if Dr. R hasn",$27,"t had"
+		dc.b "As if Dr. R hasn't had"
 		dc.b "enough stick already."
 		dc.b $85, 0
 		dc.b $83, 8
@@ -23563,7 +23687,7 @@ Cut_Arms:	dc.b $83, 2		; DATA XREF: ROM:0001035E↑o
 		dc.b $83, 4
 		dc.b $81, $5C
 		dc.w $D788
-		dc.b "I",$27,"ve to prepare Dr. Robotnik"
+		dc.b "I've to prepare Dr. Robotnik"
 		dc.b "a beautiful bean feast."
 		dc.b $83, 6
 		dc.b $82
@@ -23580,7 +23704,7 @@ Cut_Grounder:	dc.b $83, 2		; DATA XREF: ROM:00010366↑o
 		dc.b $81, $2C
 		dc.w $D894
 		dc.b $85, 1
-		dc.b "I",$27,"m Grounder"
+		dc.b "I'm Grounder"
 		dc.b $83, 8
 		dc.b $82
 		dc.b $85, 0
@@ -23589,7 +23713,7 @@ Cut_Grounder:	dc.b $83, 2		; DATA XREF: ROM:00010366↑o
 		dc.w $D78C
 		dc.b $85, 1
 		dc.b "but you can call me SAM - "
-		dc.b $27,"cos I",$27,"m like a Surface to"
+		dc.b "'cos I'm like a Surface to"
 		dc.b "Air Missile"
 		dc.b $83, $C
 		dc.b $82
@@ -23598,7 +23722,7 @@ Cut_Grounder:	dc.b $83, 2		; DATA XREF: ROM:00010366↑o
 		dc.b $81, $5A
 		dc.w $D80C
 		dc.b $85, 1
-		dc.b "and I",$27,"m gonna have you for"
+		dc.b "and I'm gonna have you for"
 		dc.b "launch."
 		dc.b $83, $C
 		dc.b $85, 0
@@ -23621,7 +23745,7 @@ Cut_Davy:	dc.b $83, 2		; DATA XREF: ROM:0001036A↑o
 		dc.b $81, $5C
 		dc.w $D708
 		dc.b $85, 4
-		dc.b "I reckon I",$27,"ll have to"
+		dc.b "I reckon I'll have to"
 		dc.b $86
 		dc.b "pioneer some new techniques."
 		dc.b $83, 4
@@ -23635,9 +23759,9 @@ Cut_Coconuts:	dc.b $83, 2		; DATA XREF: ROM:Cutscene_Index↑o
 		dc.b $81, $76
 		dc.w $D70E
 		dc.b $85, 2
-		dc.b "I",$27,"m Coconuts"
+		dc.b "I'm Coconuts"
 		dc.b $86
-		dc.b "and I",$27,"m Dr. Robotnik",$27,"s"
+		dc.b "and I'm Dr. Robotnik's"
 		dc.b "favorite robot"
 		dc.b $83, 3
 		dc.b $85, 0
@@ -23650,7 +23774,7 @@ Cut_Coconuts:	dc.b $83, 2		; DATA XREF: ROM:Cutscene_Index↑o
 		dc.b $81, $5B
 		dc.w $D80A
 		dc.b $85, 2
-		dc.b "because I",$27,"m going to finish"
+		dc.b "because I'm going to finish"
 		dc.b "you in a flash."
 		dc.b $83, 6
 		dc.b $85, 1
@@ -23661,8 +23785,8 @@ Cut_Spike:	dc.b $83, 4		; DATA XREF: ROM:00010372↑o
 		dc.b $85, 0
 		dc.b $81, $56
 		dc.w $D70C
-		dc.b "C",$27,"mon squirt,let",$27,"s see"
-		dc.b "what you",$27,"re made of."
+		dc.b "C'mon squirt,let's see"
+		dc.b "what you're made of."
 		dc.b $83, 6
 		dc.b $85, 1
 		dc.b $83, 4
@@ -23672,7 +23796,7 @@ Cut_Spike:	dc.b $83, 4		; DATA XREF: ROM:00010372↑o
 		dc.b $81, $59
 		dc.w $D70C
 		dc.b "Forget those rivet-brains"
-		dc.b "you",$27,"ve seen."
+		dc.b "you've seen."
 		dc.b $83, 4
 		dc.b $85, 1
 		dc.b $83, 6
@@ -23681,7 +23805,7 @@ Cut_Spike:	dc.b $83, 4		; DATA XREF: ROM:00010372↑o
 		dc.b $85, 0
 		dc.b $81, $57
 		dc.w $D70C
-		dc.b "I",$27,"m Spike and I",$27,"m gonna"
+		dc.b "I'm Spike and I'm gonna"
 		dc.b "stick it to ya!"
 		dc.b $83, $A
 		dc.b $82
@@ -23708,7 +23832,7 @@ Cut_SirFfuzzy:	dc.b $83, 2		; DATA XREF: ROM:00010376↑o
 		dc.b $81, $54
 		dc.w $D70C
 		dc.b "Prepare to duel Lord"
-		dc.b "Robotnik",$27,"s champion."
+		dc.b "Robotnik's champion."
 		dc.b $83, $10
 		dc.b $82
 		dc.b $80
@@ -23716,14 +23840,14 @@ Cut_Dragon:	dc.b $83, 4		; DATA XREF: ROM:0001037A↑o
 		dc.b $85, 0
 		dc.b $81, $54
 		dc.w $D70E
-		dc.b "Ol",$27," Ffuzzy-Fface got"
+		dc.b "Ol' Ffuzzy-Fface got"
 		dc.b "tied in knots, huh?"
 		dc.b $83, $A
 		dc.b $82
 		dc.b $83, 4
 		dc.b $81, $5C
 		dc.w $D70A
-		dc.b "I guess that",$27,"s why the Doc",$27,"s"
+		dc.b "I guess that's why the Doc's"
 		dc.b "sending the boys round."
 		dc.b $83, $A
 		dc.b $82
@@ -23740,7 +23864,7 @@ Cut_Scratch:	dc.b $83, 2		; DATA XREF: ROM:0001037E↑o
 		dc.b $81, $79
 		dc.w $D70C
 		dc.b $85, 1
-		dc.b "You",$27,"ve been scratching"
+		dc.b "You've been scratching"
 		dc.b $86
 		dc.b "around here for too long,"
 		dc.b "worm-bait."
@@ -23762,7 +23886,7 @@ Cut_Scratch:	dc.b $83, 2		; DATA XREF: ROM:0001037E↑o
 		dc.b $81, $57
 		dc.w $D70C
 		dc.b $85, 5
-		dc.b "I",$27,"m winning this one by"
+		dc.b "I'm winning this one by"
 		dc.b "fair means or fowl."
 		dc.b $83, 3
 		dc.b $85, 6
@@ -23776,13 +23900,13 @@ Cut_Robotnik:	dc.b $85, $84		; DATA XREF: ROM:00010382↑o
 		dc.w $D58E
 		dc.b "You dopey duncebots -"
 		dc.b $86
-		dc.b "Can",$27,"t you do anything right?"
+		dc.b "Can't you do anything right?"
 		dc.b $83, $A
 		dc.b $82
 		dc.b $83, 6
 		dc.b $81, $76
 		dc.w $D510
-		dc.b "Now I",$27,"ll have to do my"
+		dc.b "Now I'll have to do my"
 		dc.b "own dirty work and"
 		dc.b $86
 		dc.b "blend those beans."
