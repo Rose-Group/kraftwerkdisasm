@@ -22172,23 +22172,23 @@ loc_F690:				; CODE XREF: sub_FA36+20↓p
 
 ; ---------------------------------------------------------------------------
 OpponentRoleCallPals:
-	dc.b (Pal_CoconutsIntro-Palettes)>>5
-	dc.b (Pal_FranklyIntro-Palettes)>>5
-	dc.b (Pal_DynamightIntro-Palettes)>>5
-	dc.b (Pal_ArmsIntro-Palettes)>>5
-	dc.b (Pal_CoconutsIntro-Palettes)>>5
-	dc.b (Pal_GrounderIntro-Palettes)>>5
-	dc.b (Pal_DavySprocketIntro-Palettes)>>5
-	dc.b (Pal_CoconutsIntro-Palettes)>>5
-	dc.b (Pal_SpikeIntro-Palettes)>>5
-	dc.b (Pal_SirFfuzzyLogikIntro-Palettes)>>5
-	dc.b (Pal_DragonBreathIntro-Palettes)>>5
-	dc.b (Pal_ScratchIntro-Palettes)>>5
-	dc.b (Pal_Black-Palettes)>>5
-	dc.b (Pal_CoconutsIntro-Palettes)>>5
-	dc.b (Pal_HumptyIntro-Palettes)>>5
-	dc.b (Pal_SkweelIntro-Palettes)>>5
-	dc.b (Pal_CoconutsIntro-Palettes)>>5
+	dc.b (Pal_CutsceneCoconuts-Palettes)>>5
+	dc.b (Pal_CutsceneFrankly-Palettes)>>5
+	dc.b (Pal_CutsceneDynamight-Palettes)>>5
+	dc.b (Pal_CutsceneArms-Palettes)>>5
+	dc.b (Pal_CutsceneCoconuts-Palettes)>>5
+	dc.b (Pal_CutsceneGrounder-Palettes)>>5
+	dc.b (Pal_CutsceneDavy-Palettes)>>5
+	dc.b (Pal_CutsceneCoconuts-Palettes)>>5
+	dc.b (Pal_CutsceneSpike-Palettes)>>5
+	dc.b (Pal_CutsceneSirFfuzzy-Palettes)>>5
+	dc.b (Pal_CutsceneDragon-Palettes)>>5
+	dc.b (Pal_CutsceneScratch-Palettes)>>5
+	dc.b (Pal_CutsceneRobotnik-Palettes)>>5
+	dc.b (Pal_CutsceneCoconuts-Palettes)>>5
+	dc.b (Pal_CutsceneHumpty-Palettes)>>5
+	dc.b (Pal_CutsceneSkweel-Palettes)>>5
+	dc.b (Pal_CutsceneCoconuts-Palettes)>>5
 	dc.b (Pal_RedYellowPuyos-Palettes)>>5
 
 OpponentRoleCallPos:
@@ -22873,7 +22873,7 @@ loc_FDD0:				; CODE XREF: sub_FDB4+1E↓j
 
 ; ---------------------------------------------------------------------------
 RoleCallText:
-	dc.l Str_RoleCall_Arms	; DATA XREF: sub_FD0C+2↑o
+	dc.l Str_RoleCall_Arms
 	dc.l Str_RoleCall_Arms
 	dc.l Str_RoleCall_Arms
 	dc.l Str_RoleCall_Arms
@@ -24869,22 +24869,24 @@ loc_114C6:				; CODE XREF: GetOpponentAI+C↑j
 ; End of function GetOpponentAI
 
 ; ---------------------------------------------------------------------------
-OpponentAIIndex:dc.l AIData_SkeletonT	; DATA XREF: GetOpponentAI+18↑r
-		dc.l AIData_Frankly
-		dc.l AIData_Dynamight
-		dc.l AIData_Arms
-		dc.l AIData_NasuGrave
-		dc.l AIData_Grounder
-		dc.l AIData_Davy
-		dc.l AIData_Coconuts
-		dc.l AIData_Spike
-		dc.l AIData_SirFfuzzy
-		dc.l AIData_Dragon
-		dc.l AIData_Scratch
-		dc.l AIData_Robotnik
-		dc.l AIData_Mummy
-		dc.l AIData_Humpty
-		dc.l AIData_Skweel
+OpponentAIIndex:
+	dc.l AIData_SkeletonT
+	dc.l AIData_Frankly
+	dc.l AIData_Dynamight
+	dc.l AIData_Arms
+	dc.l AIData_NasuGrave
+	dc.l AIData_Grounder
+	dc.l AIData_Davy
+	dc.l AIData_Coconuts
+	dc.l AIData_Spike
+	dc.l AIData_SirFfuzzy
+	dc.l AIData_Dragon
+	dc.l AIData_Scratch
+	dc.l AIData_Robotnik
+	dc.l AIData_Mummy
+	dc.l AIData_Humpty
+	dc.l AIData_Skweel
+
 AIData_SkeletonT:dc.b 0			; DATA XREF: ROM:OpponentAIIndex↑o
 		dc.b $C0
 		dc.b 3
@@ -25103,22 +25105,23 @@ loc_11636:				; CODE XREF: GetSpecOppAI+4↑j
 ; End of function GetSpecOppAI
 
 ; ---------------------------------------------------------------------------
-SpecAI_Index:	dc.l SpecAI_None	; DATA XREF: GetSpecOppAI+14↑r
-		dc.l SpecAI_Frankly
-		dc.l SpecAI_None
-		dc.l SpecAI_None
-		dc.l SpecAI_None
-		dc.l SpecAI_None
-		dc.l SpecAI_None
-		dc.l SpecAI_Coconuts
-		dc.l SpecAI_None
-		dc.l SpecAI_None
-		dc.l SpecAI_None
-		dc.l SpecAI_None
-		dc.l SpecAI_None
-		dc.l SpecAI_None
-		dc.l SpecAI_None
-		dc.l SpecAI_None
+SpecAI_Index:
+	dc.l SpecAI_None	; DATA XREF: GetSpecOppAI+14↑r
+	dc.l SpecAI_Frankly
+	dc.l SpecAI_None
+	dc.l SpecAI_None
+	dc.l SpecAI_None
+	dc.l SpecAI_None
+	dc.l SpecAI_None
+	dc.l SpecAI_Coconuts
+	dc.l SpecAI_None
+	dc.l SpecAI_None
+	dc.l SpecAI_None
+	dc.l SpecAI_None
+	dc.l SpecAI_None
+	dc.l SpecAI_None
+	dc.l SpecAI_None
+	dc.l SpecAI_None
 ; ---------------------------------------------------------------------------
 
 SpecAI_None:				; DATA XREF: ROM:SpecAI_Index↑o
@@ -27319,71 +27322,76 @@ byte_12885:	dc.b 1			; DATA XREF: ROM:00012876↑r
 ; ---------------------------------------------------------------------------
 		nop
 ; ---------------------------------------------------------------------------
-SpriteIndex:	dc.l SprMap_RedPuyo	; DATA XREF: DrawActors+2C↑o
-		dc.l SprMap_YellowPuyo
-		dc.l SprMap_Attacks
-		dc.l SprMap_GreenPuyo
-		dc.l SprMap_PurplePuyo
-		dc.l SprMap_BluePuyo
-		dc.l SprMap_StageUI
-		dc.l SprMap_PuyoStaff
-		dc.l SprMap_ID_08
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Frankly
-		dc.l SprMap_Dynamight
-		dc.l SprMap_Arms
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Grounder
-		dc.l SprMap_Davy
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Spike
-		dc.l SprMap_SirFfuzzy
-		dc.l SprMap_Dragon
-		dc.l SprMap_Scratch
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Humpty
-		dc.l SprMap_Skweel
-		dc.l SprMap_HasBean
-		dc.l SprMap_BigPuyo
-		dc.l SprMap_ID_1B
-		dc.l SprMap_ID_1C
-		dc.l SprMap_ID_1D
-		dc.l SprMap_ID_1E
-		dc.l SprMap_ID_1F
-		dc.l SprMap_ID_20
-		dc.l SprMap_ID_21
-		dc.l SprMap_ID_PortraitFlash
-		dc.l SprMap_ID_PortraitFlash
-		dc.l SprMap_ID_24
-		dc.l SprMap_ID_25
-		dc.l SprMap_TutorialController
-		dc.l SprMap_ID_27
-		dc.l SprMap_OpeningBadniks
-		dc.l SprMap_ID_29
-		dc.l SprMap_Tutorial
-		dc.l SprMap_Robotnik
-		dc.l SprMap_ID_2C
-		dc.l SprMap_ID_2D
-		dc.l SprMap_DifficultyFaces
-		dc.l SprMap_ID_2F
-		dc.l SprMap_DifficultyFaces
-		dc.l SprMap_ID_31
-		dc.l SprMap_ID_32
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Coconuts
-		dc.l SprMap_Coconuts
-		dc.l SprMap_ID_40
+
+; TODO - Split and document what each sprite map is used for
+
+SpriteIndex:
+	dc.l SprMap_RedPuyo
+	dc.l SprMap_YellowPuyo
+	dc.l SprMap_Attacks
+	dc.l SprMap_GreenPuyo
+	dc.l SprMap_PurplePuyo
+	dc.l SprMap_BluePuyo
+	dc.l SprMap_StageUI
+	dc.l SprMap_PuyoStaff
+	dc.l SprMap_ID_08
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Frankly
+	dc.l SprMap_Dynamight
+	dc.l SprMap_Arms
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Grounder
+	dc.l SprMap_Davy
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Spike
+	dc.l SprMap_SirFfuzzy
+	dc.l SprMap_Dragon
+	dc.l SprMap_Scratch
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Humpty
+	dc.l SprMap_Skweel
+	dc.l SprMap_HasBean
+	dc.l SprMap_BigPuyo
+	dc.l SprMap_ID_1B
+	dc.l SprMap_ID_1C
+	dc.l SprMap_ID_1D
+	dc.l SprMap_ID_1E
+	dc.l SprMap_ID_1F
+	dc.l SprMap_ID_20
+	dc.l SprMap_ID_21
+	dc.l SprMap_ID_PortraitFlash
+	dc.l SprMap_ID_PortraitFlash
+	dc.l SprMap_ID_24
+	dc.l SprMap_ID_25
+	dc.l SprMap_TutorialController
+	dc.l SprMap_ID_27
+	dc.l SprMap_OpeningBadniks
+	dc.l SprMap_ID_29
+	dc.l SprMap_Tutorial
+	dc.l SprMap_Robotnik
+	dc.l SprMap_ID_2C
+	dc.l SprMap_ID_2D
+	dc.l SprMap_DifficultyFaces
+	dc.l SprMap_ID_2F
+	dc.l SprMap_DifficultyFaces
+	dc.l SprMap_ID_31
+	dc.l SprMap_ID_32
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Coconuts
+	dc.l SprMap_Coconuts
+	dc.l SprMap_ID_40
+
 SprMap_Tutorial:dc.l SprMap_Tutorial_0	; DATA XREF: ROM:00012936↑o
 		dc.l SprMap_Tutorial_1
 		dc.l SprMap_Tutorial_2
@@ -31286,33 +31294,36 @@ word_18736:	dc.w 1			; DATA XREF: ROM:0001833C↑o
 		dc.w $FFFC, 3, $60A3, $FFFC
 word_18740:	dc.w 1			; DATA XREF: ROM:00018340↑o
 		dc.w $FFFC, 3, $60A4, $FFFC
-StageText_Index:dc.l StageTxt_BattleVSExercise
-					; DATA XREF: sub_18A08+96↓o
-					; sub_18A08+E82↓o
-		dc.l StageTxt_BattleTutorial
-		dc.l StageTxt_ModeSelect
-		dc.l StageTxt_SelectLevel1P
-		dc.l StageTxt_SelectLevel2P
-		dc.l StageTxt_NoBonus
-		dc.l StageTxt_BattleScenario
-		dc.l StageTxt_InsertCoins1
-		dc.l StageTxt_Continue
-		dc.l StageTxt_PressStartExercise
-		dc.l StageTxt_InsertCoins2
-		dc.l StageTxt_PressStart1P
-		dc.l StageTxt_YouWin
-		dc.l StageTxt_GamesWon
-		dc.l 0
-		dc.l StageTxt_ExerciseLevel
-		dc.l StageTxt_PressStart2P
-		dc.l StageTxt_StartContinue
-		dc.l StageTxt_PressStart1P2P
-		dc.l StageTxt_PressStart1P2P
-		dc.l StageTxt_PressStart1P2P
-		dc.l StageTxt_PressStart1P2P
-		dc.l StageTxt_AllClear
-		dc.l StageTxt_PressStart1P2P
-StageTxt_PressStart2P:dc.w 0		; DATA XREF: ROM:0001878A↑o
+
+; ---------------------------------------------------------------------------
+
+StageText_Index:
+	dc.l StageTxt_BattleVSExercise
+	dc.l StageTxt_BattleTutorial
+	dc.l StageTxt_ModeSelect
+	dc.l StageTxt_SelectLevel1P
+	dc.l StageTxt_SelectLevel2P
+	dc.l StageTxt_NoBonus
+	dc.l StageTxt_BattleScenario
+	dc.l StageTxt_InsertCoins1
+	dc.l StageTxt_Continue
+	dc.l StageTxt_PressStartExercise
+	dc.l StageTxt_InsertCoins2
+	dc.l StageTxt_PressStart1P
+	dc.l StageTxt_YouWin
+	dc.l StageTxt_GamesWon
+	dc.l 0
+	dc.l StageTxt_ExerciseLevel
+	dc.l StageTxt_PressStart2P
+	dc.l StageTxt_StartContinue
+	dc.l StageTxt_PressStart1P2P
+	dc.l StageTxt_PressStart1P2P
+	dc.l StageTxt_PressStart1P2P
+	dc.l StageTxt_PressStart1P2P
+	dc.l StageTxt_AllClear
+	dc.l StageTxt_PressStart1P2P
+
+StageTxt_PressStart2P:dc.w 0
 		dc.w $C514
 		dc.w $E500
 		dc.b $34, $38, $1E, $3A, $3A, 0, 6, $34, 0, $3A, $3C, $16, $38, $3C, 0, $18
@@ -31543,11 +31554,6 @@ word_18A00:	dc.w $40		; DATA XREF: ProcessPlaneCmds+28↑r
 
 
 sub_18A08:				; CODE XREF: ProcessPlaneCmds+38↑p
-
-; FUNCTION CHUNK AT 00019CD0 SIZE 0000001A BYTES
-; FUNCTION CHUNK AT 00019CEE SIZE 0000001C BYTES
-; FUNCTION CHUNK AT 00019D0C SIZE 0000001A BYTES
-
 		move.b	(a2),d2
 		bpl.w	QueueLoadMap
 		andi.w	#$7F,d2
@@ -31697,7 +31703,8 @@ loc_18B5E:				; CODE XREF: sub_18A08+14E↑j
 		move.w	#1,d4
 		bra.w	CopyTilemap
 ; ---------------------------------------------------------------------------
-word_18B9E:	dc.w $C1E8		; DATA XREF: sub_18A08+162↑o
+word_18B9E:
+		dc.w $C1E8		; DATA XREF: sub_18A08+162↑o
 		dc.w $C1E9
 		dc.w $C1E9
 		dc.w $C1E9
@@ -31904,8 +31911,7 @@ byte_18DA0:	dc.b 0			; DATA XREF: sub_18A08+326↑o
 		dc.b $23
 		dc.w $D8
 		dc.w $128
-StagePW_IconAnimIndex:			; DATA XREF: sub_18A08+320↑o
-					; sub_18A08+352↑r
+StagePW_IconAnimIndex:
 		dc.l Anim_StagePW_PuyoIcon
 		dc.l Anim_StagePW_PuyoIcon
 		dc.l Anim_StagePW_PuyoIcon
@@ -31937,10 +31943,11 @@ Anim_StagePW_HasBeanIcon:		; DATA XREF: sub_18A08+3C8↑o
 		dc.b $23, $B
 		dc.b $FF, 0
 		dc.l Anim_StagePW_HasBeanIcon
-Str_Password:				; DATA XREF: sub_18A08+2E0↑o
-		dc.b 0, $9E, $80, $A4, $A4, $AC, $9C, $A2, $86, 0
-byte_18E08:	dc.b 0, $80, $96, $96, 0, $84, $96, $88, $80, $A2
-					; DATA XREF: sub_18A08+412↓o
+Str_Password:
+	dc.b 0, $9E, $80, $A4, $A4, $AC, $9C, $A2, $86, 0
+byte_18E08:
+	dc.b 0, $80, $96, $96, 0, $84, $96, $88, $80, $A2
+
 		dc.b $3A
 		dc.b $3C
 		dc.b $C9
@@ -32201,16 +32208,16 @@ SpecPlane8F:				; DATA XREF: sub_18A08+4E↑o
 		lea	(byte_190F0).l,a4
 		bra.w	CopyTilemap8
 ; ---------------------------------------------------------------------------
-byte_190DA:	dc.b $FC, $FC, $CA, $C8, $F1, $C0, $FC
-					; DATA XREF: sub_18A08+6B6↑o
-		dc.b $D5, $D6, $CD, $CE, $CF, $D0, $D1
-		dc.b $DF, $E5, $DD, $DE, $DF, $E0, $E1
-		dc.b 0
-byte_190F0:	dc.b $FC, $C0, $F1, $C8, $CA, $FC, $FC
-					; DATA XREF: sub_18A08+6C8↑o
-		dc.b $D1, $D0, $CF, $CE, $CD, $D6, $D5
-		dc.b $E1, $E0, $DF, $DE, $DD, $E5, $DF
-		dc.b 0
+byte_190DA:
+	dc.b $FC, $FC, $CA, $C8, $F1, $C0, $FC
+	dc.b $D5, $D6, $CD, $CE, $CF, $D0, $D1
+	dc.b $DF, $E5, $DD, $DE, $DF, $E0, $E1
+	even
+byte_190F0:
+	dc.b $FC, $C0, $F1, $C8, $CA, $FC, $FC
+	dc.b $D1, $D0, $CF, $CE, $CD, $D6, $D5
+	dc.b $E1, $E0, $DF, $DE, $DD, $E5, $DF
+	even
 ; ---------------------------------------------------------------------------
 
 SpecPlane8E:				; DATA XREF: sub_18A08+4A↑o
@@ -32467,80 +32474,90 @@ off_19388:	dc.l byte_19398		; DATA XREF: sub_18A08+910↑r
 		dc.l byte_193B0
 		dc.l byte_193C8
 		dc.l byte_193E0
-byte_19398:	dc.b 1			; DATA XREF: sub_18A08:off_19388↑o
-		dc.b 1
-		dc.b 2
-		dc.b 2
-		dc.b 2
-		dc.b 1
-		dc.b 3
-		dc.b 3
-		dc.b 1
-		dc.b 2
-		dc.b 2
-		dc.b 2
-		dc.b 1
-		dc.b 3
-		dc.b 3
-		dc.b 1
-		dc.b 2
-		dc.b 2
-		dc.b 1
-		dc.b 3
-		dc.b 1
-		dc.b 2
-		dc.b $FF
-		dc.b 0
-byte_193B0:	dc.b 1			; DATA XREF: sub_18A08+984↑o
-		dc.b 2
-		dc.b 2
-		dc.b 2
-		dc.b 2
-		dc.b 1
-		dc.b 3
-		dc.b 1
-		dc.b 2
-		dc.b 1
-		dc.b 3
-		dc.b 1
-		dc.b 2
-		dc.b 1
-		dc.b 3
-		dc.b 1
-		dc.b 2
-		dc.b 1
-		dc.b 3
-		dc.b 1
-		dc.b 2
-		dc.b 1
-		dc.b 3
-		dc.b $FF
-byte_193C8:	dc.b 1			; DATA XREF: sub_18A08+988↑o
-		dc.b 1
-		dc.b 2
-		dc.b 2
-		dc.b 2
-		dc.b 2
-		dc.b 3
-		dc.b 3
-		dc.b 2
-		dc.b 2
-		dc.b 2
-		dc.b 2
-		dc.b 3
-		dc.b 3
-		dc.b 2
-		dc.b 1
-		dc.b 3
-		dc.b 3
-		dc.b 1
-		dc.b 3
-		dc.b 3
-		dc.b 1
-		dc.b $FF
-		dc.b 0
-byte_193E0:	dc.b 1			; DATA XREF: sub_18A08+98C↑o
-		dc.b $FF
+
+byte_19398:
+	dc.b 1
+	dc.b 1
+	dc.b 2
+	dc.b 2
+	dc.b 2
+	dc.b 1
+	dc.b 3
+	dc.b 3
+	dc.b 1
+	dc.b 2
+	dc.b 2
+	dc.b 2
+	dc.b 1
+	dc.b 3
+	dc.b 3
+	dc.b 1
+	dc.b 2
+	dc.b 2
+	dc.b 1
+	dc.b 3
+	dc.b 1
+	dc.b 2
+	dc.b $FF
+	even
+
+byte_193B0:
+	dc.b 1
+	dc.b 2
+	dc.b 2
+	dc.b 2
+	dc.b 2
+	dc.b 1
+	dc.b 3
+	dc.b 1
+	dc.b 2
+	dc.b 1
+	dc.b 3
+	dc.b 1
+	dc.b 2
+	dc.b 1
+	dc.b 3
+	dc.b 1
+	dc.b 2
+	dc.b 1
+	dc.b 3
+	dc.b 1
+	dc.b 2
+	dc.b 1
+	dc.b 3
+	dc.b $FF
+	even
+
+byte_193C8:
+	dc.b 1
+	dc.b 1
+	dc.b 2
+	dc.b 2
+	dc.b 2
+	dc.b 2
+	dc.b 3
+	dc.b 3
+	dc.b 2
+	dc.b 2
+	dc.b 2
+	dc.b 2
+	dc.b 3
+	dc.b 3
+	dc.b 2
+	dc.b 1
+	dc.b 3
+	dc.b 3
+	dc.b 1
+	dc.b 3
+	dc.b 3
+	dc.b 1
+	dc.b $FF
+	even
+
+byte_193E0:
+	dc.b 1
+	dc.b $FF
+	even
 ; ---------------------------------------------------------------------------
 
 loc_193E2:				; DATA XREF: sub_18A08+97C↑o
@@ -32767,72 +32784,54 @@ word_19702:	dc.w $C286		; DATA XREF: sub_18A08:off_196F2↑o
 		dc.w 6
 		dc.w $E
 		dc.w $8000
-		dc.l byte_19732
+		dc.l word_19732
 word_1970E:	dc.w $C2BA		; DATA XREF: sub_18A08+CEE↑o
 		dc.w 6
 		dc.w $E
 		dc.w $8000
-		dc.l byte_19732
+		dc.l word_19732
 word_1971A:	dc.w $C286		; DATA XREF: sub_18A08+CF2↑o
 		dc.w 6
 		dc.w $E
 		dc.w $8000
-		dc.l byte_197DA
+		dc.l word_197DA
 word_19726:	dc.w $C2BA		; DATA XREF: sub_18A08+CF6↑o
 		dc.w 6
 		dc.w $E
 		dc.w $8000
-		dc.l byte_197DA
-byte_19732:	dc.b 0, 0, 0, 0, 4, $64, 4 ; DATA XREF: sub_18A08+D02↑o
-					; sub_18A08+D0E↑o
-		dc.b $66, 0, 0, 0, 0, 0, 0
-		dc.b 0, 0, 4, $65, 4, $67, 0
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 4, $68
-		dc.b 4, $6A, 0, 0, 0, 0, 0
-		dc.b 0, 0, 0, 4, $69, 4, $6B
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 4
-		dc.b $6C, 4, $6E, 0, 0, 0, 0
-		dc.b 0, 0, 0, 0, 4, $6D, 4
-		dc.b $6F, 0, 0, 0, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 4, $70, 4, $72, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 4, $71
-		dc.b 4, $73, 0, 0, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 0, 4, $74, 4, $76, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 4
-		dc.b $75, 4, $77, 0, 0, 0, 0
-byte_197DA:	dc.b 0, 0, 0, 0, 0, 0, 0 ; DATA XREF: sub_18A08+D1A↑o
-					; sub_18A08+D26↑o
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 0, 0, 4, $64, 4, $66, 0
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 4, $65, 4, $67, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 0
-		dc.b 0, 4, $6C, 4, $6E, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 4
-		dc.b $6D, 4, $6F, 0, 0, 0, 0
-		dc.b 4, $E0, 5, $74, 5, $6C, 5
-		dc.b $6C, 5, $6C, 5, $6C, 4, $E1
-		dc.b 5, $75, 5, $6D, 5, $6D, 5
-		dc.b $6D, 5, $6D, 0, 0, 0, 0
-		dc.b 4, $74, 4, $76, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 4, $75
-		dc.b 4, $77, 0, 0, 0, 0, 4
-		dc.b $E0, 5, $7E, 5, $6C, 5, $6C
-		dc.b 5, $6C, 5, $6C, 4, $E1, 5
-		dc.b $7F, 5, $6D, 5, $6D, 5, $6D
-		dc.b 5, $6D, 0, 0, 0, 0, 0
-		dc.b 0, 0, 0, 0, 0, 0, 0
+		dc.l word_197DA
+
+word_19732:
+	dc.w 0, 0, $464, $466, 0, 0
+	dc.w 0, 0, $465, $467, 0, 0
+	dc.w 0, 0, 0, 0, 0, 0
+	dc.w 0, 0, $468, $46A, 0, 0
+	dc.w 0, 0, $469, $46B, 0, 0
+	dc.w 0, 0, 0, 0, 0, 0
+	dc.w 0, 0, $46C, $46E, 0, 0
+	dc.w 0, 0, $46D, $46F, 0, 0
+	dc.w 0, 0, 0, 0, 0, 0
+	dc.w 0, 0, $470, $472, 0, 0
+	dc.w 0, 0, $471, $473, 0, 0
+	dc.w 0, 0, 0, 0, 0, 0
+	dc.w 0, 0, $474, $476, 0, 0
+	dc.w 0, 0, $475, $477, 0, 0
+
+word_197DA:
+	dc.w 0, 0, 0, 0, 0, 0
+	dc.w 0, 0, $464, $466, 0, 0
+	dc.w 0, 0, $465, $467, 0, 0
+	dc.w 0, 0, 0, 0, 0, 0
+	dc.w 0, 0, 0, 0, 0, 0
+	dc.w 0, 0, $46C, $46E, 0, 0
+	dc.w 0, 0, $46D, $46F, 0, 0
+	dc.w $4E0, $574, $56C, $56C, $56C, $56C
+	dc.w $4E1, $575, $56D, $56D, $56D, $56D
+	dc.w 0, 0, $474, $476, 0, 0
+	dc.w 0, 0, $475, $477, 0, 0
+	dc.w $4E0, $57E, $56C, $56C, $56C, $56C
+	dc.w $4E1, $57F, $56D, $56D, $56D, $56D
+	dc.w 0, 0, 0, 0, 0, 0
 ; ---------------------------------------------------------------------------
 
 SpecPlane80:				; DATA XREF: sub_18A08:PlaneCmd_Index↑o
@@ -33114,7 +33113,7 @@ loc_19B3C:				; CODE XREF: sub_18A08+1122↑j
 		move.b	StageCrumbleIDs(pc,d0.w),d2
 		rts
 ; ---------------------------------------------------------------------------
-StageCrumbleIDs:			; DATA XREF: sub_18A08+113C↑r
+StageCrumbleIDs:
 		dc.b 3
 		dc.b 3
 		dc.b 3
@@ -33131,7 +33130,8 @@ StageCrumbleIDs:			; DATA XREF: sub_18A08+113C↑r
 		dc.b 0
 		dc.b 0
 		dc.b 0
-FloorCrumbleIndex:			; DATA XREF: sub_18A08+105E↑o
+
+FloorCrumbleIndex:
 		dc.l CrumbleMap_Grass1P
 		dc.l CrumbleMap_Grass2P
 		dc.l CrumbleMap_PuyoCabin1P
@@ -33140,8 +33140,8 @@ FloorCrumbleIndex:			; DATA XREF: sub_18A08+105E↑o
 		dc.l CrumbleMap_Grass2P
 		dc.l CrumbleMap_Grass1P
 		dc.l CrumbleMap_Grass2P
-CrumbleMap_Grass1P:			; DATA XREF: sub_18A08:FloorCrumbleIndex↑o
-					; sub_18A08+1162↑o ...
+
+CrumbleMap_Grass1P:
 		dc.l MapByte_CrumbleGrass
 		dc.w $20
 		dc.w $C000
@@ -33150,8 +33150,8 @@ CrumbleMap_Grass1P:			; DATA XREF: sub_18A08:FloorCrumbleIndex↑o
 		dc.w $ED00
 		dc.w $CD04
 		dc.w $C004
-CrumbleMap_Grass2P:			; DATA XREF: sub_18A08+1156↑o
-					; sub_18A08+1166↑o ...
+
+CrumbleMap_Grass2P:
 		dc.l MapByte_CrumbleGrass
 		dc.w $20
 		dc.w $C000
@@ -33160,7 +33160,8 @@ CrumbleMap_Grass2P:			; DATA XREF: sub_18A08+1156↑o
 		dc.w $ED30
 		dc.w $CD34
 		dc.w $C034
-CrumbleMap_PuyoCabin1P:			; DATA XREF: sub_18A08+115A↑o
+
+CrumbleMap_PuyoCabin1P:
 		dc.l MapByte_CrumbleCabin
 		dc.w $20
 		dc.w $E000
@@ -33169,7 +33170,8 @@ CrumbleMap_PuyoCabin1P:			; DATA XREF: sub_18A08+115A↑o
 		dc.w $ED00
 		dc.w $CD04
 		dc.w $C004
-CrumbleMap_PuyoCabin2P:			; DATA XREF: sub_18A08+115E↑o
+
+CrumbleMap_PuyoCabin2P:
 		dc.l MapByte_CrumbleCabin
 		dc.w $20
 		dc.w $E000
@@ -33178,6 +33180,7 @@ CrumbleMap_PuyoCabin2P:			; DATA XREF: sub_18A08+115E↑o
 		dc.w $ED30
 		dc.w $CD34
 		dc.w $C034
+
 ; ---------------------------------------------------------------------------
 
 SpecPlane85:				; DATA XREF: sub_18A08+26↑o
@@ -33533,139 +33536,163 @@ SetVRAMRead:				; CODE XREF: PausePuyoField:loc_8E78↑p
 ; End of function SetVRAMRead
 
 ; ---------------------------------------------------------------------------
-MapByte_CrumbleGrass:dc.b $8E, $8F, $90, $91, $92, $93, $94, $95, $8E, $8F, $90, $91, $92, $93, $94, $95
-					; DATA XREF: sub_18A08:CrumbleMap_Grass1P↑o
-					; sub_18A08:CrumbleMap_Grass2P↑o
-		dc.b $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7, $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7
-		dc.b $8E, $8F, $90, $91, $B9, $BA, $BB, $BC, $BD, $BE, $BF, $C0, $92, $93, $94, $95
-		dc.b $A0, $A1, $A2, $C1, $C2, $C3, $C4, $C5, $C6, $C7, $C8, $C9, $A4, $A5, $A6, $A7
-		dc.b $8E, $8F, $CA, $CB, $CC, $CD, $CE, $77, $CF, $D0, $D1, $D2, $D3, $D4, $94, $95
-		dc.b $A0, $A1, $D5, $D6, $D7, $D8, $D9, $DA, $DB, $DC, $DD, $DE, $DF, $E0, $A6, $A7
-		dc.b $8E, $8F, $E1, $E2, $74, $75, $76, $77, $78, $79, $7A, $7B, $74, $75, $94, $95
-		dc.b $A0, $A1, $E3, $E4, $E5, $E6, $E7, $E8, $E9, $EA, $EB, $EC, $ED, $EE, $A6, $A7
-		dc.b $8E, $8F, $72, $73, $74, $75, $76, $77, $78, $79, $7A, $7B, $74, $75, $94, $95
-		dc.b $A0, $A1, $84, $85, $86, $87, $88, $89, $8A, $8B, $8C, $8D, $86, $87, $A6, $A7
-		dc.b $8E, $8F, $90, $91, $92, $93, $94, $95, $8E, $8F, $90, $91, $92, $93, $94, $95
-		dc.b $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7, $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7
-		dc.b 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6
-		dc.b $13, $14, $15, $16, $17, $18, $11, $12, $13, $14, $15, $16
-MapByte_CrumbleCabin:dc.b $1B, $18, $15, $14, $15, $16, $17, $18, $19, $15, $16, $1A, $1B, $18, $15, $1A
-					; DATA XREF: sub_18A08:CrumbleMap_PuyoCabin1P↑o
-					; sub_18A08:CrumbleMap_PuyoCabin2P↑o
-		dc.b $3B, $38, $35, $34, $35, $36, $37, $38, $39, $35, $36, $3A, $3B, $38, $35, $34
-		dc.b $1B, $18, $15, $14, $15, $1C, $FF, $FF, $FF, $FF, $13, $1A, $1B, $18, $15, $1A
-		dc.b $3B, $38, $35, $34, $35, $3C, $13, $18, $19, $1C, $33, $3A, $3B, $38, $35, $34
-		dc.b $1B, $18, $15, $1C, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $13, $18, $15, $1A
-		dc.b $3B, $38, $35, $3C, $13, $1C, $FF, $FF, $FF, $FF, $13, $1C, $33, $38, $35, $34
-		dc.b $1B, $1C, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, $13, $1A
-		dc.b $3B, $3C, $13, $1C, 0, 0, 0, 0, 0, 0, 0, 0, $13, $1C, $33, $34
-		dc.b $1B, $1C, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, $13, $1A
-		dc.b $3B, $3C, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, $33, $34
-		dc.b $1B, $18, $15, $14, $15, $16, $17, $18, $19, $15, $16, $1A, $1B, $18, $15, $1A
-		dc.b $3B, $38, $35, $34, $35, $36, $37, $38, $39, $35, $36, $3A, $3B, $38, $35, $34
-		dc.b $13, $14, $15, $16, $17, $16, $1C, 5, 2, $A, 1, 2
-		dc.b $33, $34, $35, $36, $37, $36, $3C, 5, 1, 2, 6, 5
-PuyoPortrait_Default:dc.w 9		; DATA XREF: ROM:PuyoPortrait_Mummy↓o
-					; ROM:PuyoPortrait_Sukiyapotes↓o ...
-		dc.w 6
-		dc.w $C61E
-		dc.b 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-		dc.b $20, $21, $22, $23, $24, $25, $26, $27, $28, $29
-		dc.b $40, $41, $42, $43, $44, $45, $46, $47, $48, $49
-		dc.b $60, $61, $62, $63, $64, $65, $66, $67, $68, $69
-		dc.b $80, $81, $82, $83, $84, $85, $86, $87, $88, $89
-		dc.b $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7, $A8, $A9
-		dc.b $C0, $C1, $C2, $C3, $C4, $C5, $C6, $C7, $C8, $C9
-PuyoPortrait_Defeated:dc.w 9		; DATA XREF: ROM:0001A0EA↓o
-					; ROM:0001A214↓o ...
-		dc.w 6
-		dc.w $C61E
-		dc.b $16, $17, $18, $19, $1A, $1B, $1C, $1D, $1E, $1F
-		dc.b $36, $37, $38, $39, $3A, $3B, $3C, $3D, $3E, $3F
-		dc.b $56, $57, $58, $59, $5A, $5B, $5C, $5D, $5E, $5F
-		dc.b $76, $77, $78, $79, $7A, $7B, $7C, $7D, $7E, $7F
-		dc.b $96, $97, $98, $99, $9A, $9B, $9C, $9D, $9E, $9F
-		dc.b $B6, $B7, $B8, $B9, $BA, $BB, $BC, $BD, $BE, $BF
-		dc.b $D6, $D7, $D8, $D9, $DA, $DB, $DC, $DD, $DE, $DF
-PuyoOppPortraitIndex:dc.l PuyoPortrait_SkeletonT
-					; DATA XREF: sub_18A08+11C8↑o
-					; sub_18A08+11F8↑o
-		dc.l PuyoPortrait_Suketoudara
-		dc.l PuyoPortrait_Zombie
-		dc.l PuyoPortrait_Draco
-		dc.l PuyoPortrait_Nasu
-		dc.l PuyoPortrait_Witch
-		dc.l PuyoPortrait_Sasoriman
-		dc.l PuyoPortrait_Harpy
-		dc.l PuyoPortrait_Zoh
-		dc.l PuyoPortrait_Schezo
-		dc.l PuyoPortrait_Minotauros
-		dc.l PuyoPortrait_Rulue
-		dc.l PuyoPortrait_Satan
-		dc.l PuyoPortrait_Mummy
-		dc.l PuyoPortrait_Sukiyapotes
-		dc.l PuyoPortrait_Panotty
-		dc.l PuyoPortrait_SkeletonT
-PuyoPortrait_Mummy:dc.l PuyoPortrait_Default ; DATA XREF: ROM:0001A0D6↑o
-		dc.l PuyoPortrait_Defeated
-		dc.l PuyoPortrait_Mummy_0
-		dc.l PuyoPortrait_Mummy_1
-		dc.l PuyoPortrait_Mummy_2
-		dc.l PuyoPortrait_Mummy_3
-		dc.l PuyoPortrait_Mummy_4
-		dc.l PuyoPortrait_Mummy_5
-		dc.l PuyoPortrait_Mummy_6
-		dc.l PuyoPortrait_Mummy_7
-		dc.l PuyoPortrait_Mummy_8
-		dc.l PuyoPortrait_Mummy_9
-PuyoPortrait_Mummy_0:dc.w 3		; DATA XREF: ROM:0001A0EE↑o
-		dc.w 1
-		dc.w $C724
-		dc.b $43, $44, $45, $46
-		dc.b $63, $64, $65, $66
+; TODO - Split Crumble Tiles into individual files
+
+MapByte_CrumbleGrass:
+	dc.b $8E, $8F, $90, $91, $92, $93, $94, $95, $8E, $8F, $90, $91, $92, $93, $94, $95
+	dc.b $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7, $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7
+	dc.b $8E, $8F, $90, $91, $B9, $BA, $BB, $BC, $BD, $BE, $BF, $C0, $92, $93, $94, $95
+	dc.b $A0, $A1, $A2, $C1, $C2, $C3, $C4, $C5, $C6, $C7, $C8, $C9, $A4, $A5, $A6, $A7
+	dc.b $8E, $8F, $CA, $CB, $CC, $CD, $CE, $77, $CF, $D0, $D1, $D2, $D3, $D4, $94, $95
+	dc.b $A0, $A1, $D5, $D6, $D7, $D8, $D9, $DA, $DB, $DC, $DD, $DE, $DF, $E0, $A6, $A7
+	dc.b $8E, $8F, $E1, $E2, $74, $75, $76, $77, $78, $79, $7A, $7B, $74, $75, $94, $95
+	dc.b $A0, $A1, $E3, $E4, $E5, $E6, $E7, $E8, $E9, $EA, $EB, $EC, $ED, $EE, $A6, $A7
+	dc.b $8E, $8F, $72, $73, $74, $75, $76, $77, $78, $79, $7A, $7B, $74, $75, $94, $95
+	dc.b $A0, $A1, $84, $85, $86, $87, $88, $89, $8A, $8B, $8C, $8D, $86, $87, $A6, $A7
+	dc.b $8E, $8F, $90, $91, $92, $93, $94, $95, $8E, $8F, $90, $91, $92, $93, $94, $95
+	dc.b $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7, $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7
+	dc.b 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6
+	dc.b $13, $14, $15, $16, $17, $18, $11, $12, $13, $14, $15, $16
+	even
+
+MapByte_CrumbleCabin:
+	dc.b $1B, $18, $15, $14, $15, $16, $17, $18, $19, $15, $16, $1A, $1B, $18, $15, $1A
+	dc.b $3B, $38, $35, $34, $35, $36, $37, $38, $39, $35, $36, $3A, $3B, $38, $35, $34
+	dc.b $1B, $18, $15, $14, $15, $1C, $FF, $FF, $FF, $FF, $13, $1A, $1B, $18, $15, $1A
+	dc.b $3B, $38, $35, $34, $35, $3C, $13, $18, $19, $1C, $33, $3A, $3B, $38, $35, $34
+	dc.b $1B, $18, $15, $1C, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $13, $18, $15, $1A
+	dc.b $3B, $38, $35, $3C, $13, $1C, $FF, $FF, $FF, $FF, $13, $1C, $33, $38, $35, $34
+	dc.b $1B, $1C, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, $13, $1A
+	dc.b $3B, $3C, $13, $1C, 0, 0, 0, 0, 0, 0, 0, 0, $13, $1C, $33, $34
+	dc.b $1B, $1C, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, $13, $1A
+	dc.b $3B, $3C, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, $33, $34
+	dc.b $1B, $18, $15, $14, $15, $16, $17, $18, $19, $15, $16, $1A, $1B, $18, $15, $1A
+	dc.b $3B, $38, $35, $34, $35, $36, $37, $38, $39, $35, $36, $3A, $3B, $38, $35, $34
+	dc.b $13, $14, $15, $16, $17, $16, $1C, 5, 2, $A, 1, 2
+	dc.b $33, $34, $35, $36, $37, $36, $3C, 5, 1, 2, 6, 5
+	even
+
+; ---------------------------------------------------------------------------
+; TODO - Split Puyo Portrait Data into individual files
+
+PuyoPortrait_Default:
+	dc.w 9
+	dc.w 6
+	dc.w $C61E
+	dc.b 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+	dc.b $20, $21, $22, $23, $24, $25, $26, $27, $28, $29
+	dc.b $40, $41, $42, $43, $44, $45, $46, $47, $48, $49
+	dc.b $60, $61, $62, $63, $64, $65, $66, $67, $68, $69
+	dc.b $80, $81, $82, $83, $84, $85, $86, $87, $88, $89
+	dc.b $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7, $A8, $A9
+	dc.b $C0, $C1, $C2, $C3, $C4, $C5, $C6, $C7, $C8, $C9
+	even
+
+PuyoPortrait_Defeated:
+	dc.w 9
+	dc.w 6
+	dc.w $C61E
+	dc.b $16, $17, $18, $19, $1A, $1B, $1C, $1D, $1E, $1F
+	dc.b $36, $37, $38, $39, $3A, $3B, $3C, $3D, $3E, $3F
+	dc.b $56, $57, $58, $59, $5A, $5B, $5C, $5D, $5E, $5F
+	dc.b $76, $77, $78, $79, $7A, $7B, $7C, $7D, $7E, $7F
+	dc.b $96, $97, $98, $99, $9A, $9B, $9C, $9D, $9E, $9F
+	dc.b $B6, $B7, $B8, $B9, $BA, $BB, $BC, $BD, $BE, $BF
+	dc.b $D6, $D7, $D8, $D9, $DA, $DB, $DC, $DD, $DE, $DF
+	even
+
+PuyoOppPortraitIndex:
+	dc.l PuyoPortrait_SkeletonT
+	dc.l PuyoPortrait_Suketoudara
+	dc.l PuyoPortrait_Zombie
+	dc.l PuyoPortrait_Draco
+	dc.l PuyoPortrait_Nasu
+	dc.l PuyoPortrait_Witch
+	dc.l PuyoPortrait_Sasoriman
+	dc.l PuyoPortrait_Harpy
+	dc.l PuyoPortrait_Zoh
+	dc.l PuyoPortrait_Schezo
+	dc.l PuyoPortrait_Minotauros
+	dc.l PuyoPortrait_Rulue
+	dc.l PuyoPortrait_Satan
+	dc.l PuyoPortrait_Mummy
+	dc.l PuyoPortrait_Sukiyapotes
+	dc.l PuyoPortrait_Panotty
+	dc.l PuyoPortrait_SkeletonT
+
+PuyoPortrait_Mummy:
+	dc.l PuyoPortrait_Default ; DATA XREF: ROM:0001A0D6↑o
+	dc.l PuyoPortrait_Defeated
+	dc.l PuyoPortrait_Mummy_0
+	dc.l PuyoPortrait_Mummy_1
+	dc.l PuyoPortrait_Mummy_2
+	dc.l PuyoPortrait_Mummy_3
+	dc.l PuyoPortrait_Mummy_4
+	dc.l PuyoPortrait_Mummy_5
+	dc.l PuyoPortrait_Mummy_6
+	dc.l PuyoPortrait_Mummy_7
+	dc.l PuyoPortrait_Mummy_8
+	dc.l PuyoPortrait_Mummy_9
+
+PuyoPortrait_Mummy_0:
+	dc.w 3
+	dc.w 1
+	dc.w $C724
+	dc.b $43, $44, $45, $46
+	dc.b $63, $64, $65, $66
+	even
+
 PuyoPortrait_Mummy_1:dc.w 3		; DATA XREF: ROM:0001A0F2↑o
 		dc.w 1
 		dc.w $C724
 		dc.b $A, $B, $C, $D
 		dc.b $2A, $2B, $2C, $2D
+		even
 PuyoPortrait_Mummy_2:dc.w 3		; DATA XREF: ROM:0001A0F6↑o
 		dc.w 1
 		dc.w $C724
 		dc.b $4A, $4B, $4C, $4D
 		dc.b $6A, $6B, $6C, $6D
+		even
 PuyoPortrait_Mummy_3:dc.w 3		; DATA XREF: ROM:0001A0FA↑o
 		dc.w 1
 		dc.w $C724
 		dc.b $E, $F, $10, $11
 		dc.b $2E, $2F, $30, $31
+		even
 PuyoPortrait_Mummy_4:dc.w 3		; DATA XREF: ROM:0001A0FE↑o
 		dc.w 1
 		dc.w $C724
 		dc.b $4E, $4F, $50, $51
 		dc.b $6E, $6F, $70, $71
+		even
 PuyoPortrait_Mummy_5:dc.w 3		; DATA XREF: ROM:0001A102↑o
 		dc.w 1
 		dc.w $C724
 		dc.b $8E, $8F, $90, $91
 		dc.b $AE, $AF, $B0, $B1
+		even
 PuyoPortrait_Mummy_6:dc.w 7		; DATA XREF: ROM:0001A106↑o
 		dc.w 2
 		dc.w $C720
 		dc.b $41, $42, $8A, $8B, $8C, $8D, $47, $48
 		dc.b $12, $13, $AA, $AB, $AC, $AD, $14, $15
 		dc.b $32, $33, $83, $84, $85, $86, $34, $35
+		even
 PuyoPortrait_Mummy_7:dc.w 7		; DATA XREF: ROM:0001A10A↑o
 		dc.w 2
 		dc.w $C720
 		dc.b $41, $42, $CA, $CB, $CC, $CD, $47, $48
 		dc.b $52, $53, $EA, $EB, $EC, $ED, $54, $55
 		dc.b $72, $73, $83, $84, $85, $86, $74, $75
+		even
 PuyoPortrait_Mummy_8:dc.w 7		; DATA XREF: ROM:0001A10E↑o
 		dc.w 2
 		dc.w $C720
 		dc.b $41, $42, $CA, $CB, $CC, $CD, $47, $48
 		dc.b $92, $93, $EA, $EB, $EC, $ED, $94, $95
 		dc.b $B2, $B3, $83, $84, $85, $86, $B4, $B5
+		even
 PuyoPortrait_Mummy_9:dc.w 9		; DATA XREF: ROM:0001A112↑o
 		dc.w 6
 		dc.w $C61E
@@ -33676,6 +33703,7 @@ PuyoPortrait_Mummy_9:dc.w 9		; DATA XREF: ROM:0001A112↑o
 		dc.b $96, $97, $98, $99, $9A, $9B, $9C, $9D, $9E, $9F
 		dc.b $B6, $B7, $B8, $B9, $BA, $BB, $BC, $BD, $BE, $BF
 		dc.b $D6, $D7, $D8, $D9, $DA, $DB, $DC, $DD, $DE, $DF
+		even
 PuyoPortrait_Sukiyapotes:dc.l PuyoPortrait_Default
 					; DATA XREF: ROM:0001A0DA↑o
 		dc.l PuyoPortrait_Defeated
@@ -33697,14 +33725,14 @@ PuyoPortrait_Sukiyapotes_0:dc.w 4	; DATA XREF: ROM:0001A218↑o
 		dc.b $A, $B, $C, $D, $E
 		dc.b $2A, $2B, $2C, $2D, $2E
 		dc.b $4A, $4B, $4C, $4D, $4E
-		dc.b 0
+		even
 PuyoPortrait_Sukiyapotes_1:dc.w 4	; DATA XREF: ROM:0001A21C↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $22, $6B, $6C, $6D, $6E
 		dc.b $8A, $8B, $8C, $8D, $8E
 		dc.b $AA, $AB, $AC, $AD, $AE
-		dc.b 0
+		even
 PuyoPortrait_Sukiyapotes_2:dc.w 7	; DATA XREF: ROM:0001A220↑o
 		dc.w 5
 		dc.w $C6A0
@@ -33714,6 +33742,7 @@ PuyoPortrait_Sukiyapotes_2:dc.w 7	; DATA XREF: ROM:0001A220↑o
 		dc.b $81, $82, $83, $CE, $CF, $86, $87, $88
 		dc.b $A1, $A2, $A3, $A4, $A5, $A6, $A7, $A8
 		dc.b $C1, $C2, $C3, $C4, $C5, $C6, $C7, $C8
+		even
 PuyoPortrait_Sukiyapotes_3:dc.w 7	; DATA XREF: ROM:0001A224↑o
 		dc.w 5
 		dc.w $C6A0
@@ -33723,6 +33752,7 @@ PuyoPortrait_Sukiyapotes_3:dc.w 7	; DATA XREF: ROM:0001A224↑o
 		dc.b $6F, $70, $83, $CE, $CF, $86, $14, $15
 		dc.b $8F, $90, $A3, $A4, $A5, $A6, $34, $35
 		dc.b $AF, $B0, $C3, $C4, $C5, $C6, $54, $55
+		even
 PuyoPortrait_Sukiyapotes_4:dc.w 7	; DATA XREF: ROM:0001A228↑o
 		dc.w 5
 		dc.w $C6A0
@@ -33732,6 +33762,7 @@ PuyoPortrait_Sukiyapotes_4:dc.w 7	; DATA XREF: ROM:0001A228↑o
 		dc.b $71, $72, $83, $CE, $CF, $86, $74, $75
 		dc.b $91, $92, $A3, $A4, $A5, $A6, $94, $95
 		dc.b $B1, $B2, $C3, $C4, $C5, $C6, $B4, $B5
+		even
 PuyoPortrait_Sukiyapotes_11:dc.w 6	; DATA XREF: ROM:0001A244↑o
 		dc.w 4
 		dc.w $C624
@@ -33740,33 +33771,38 @@ PuyoPortrait_Sukiyapotes_11:dc.w 6	; DATA XREF: ROM:0001A244↑o
 		dc.b $59, $5A, $4F, $50, $51, $52, $53
 		dc.b $D4, $D5, $7B, $7C, $7D, $7E, $7F
 		dc.b $F4, $F5, $9B, $9C, $9D, $9E, $9F
-		dc.b 0
+		even
 PuyoPortrait_Sukiyapotes_5:dc.w 1	; DATA XREF: ROM:0001A22C↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $84, $85
+		even
 PuyoPortrait_Sukiyapotes_6:dc.w 1	; DATA XREF: ROM:0001A230↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $CA, $CB
+		even
 PuyoPortrait_Sukiyapotes_7:dc.w 1	; DATA XREF: ROM:0001A234↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $CC, $CD
+		even
 PuyoPortrait_Sukiyapotes_8:dc.w 1	; DATA XREF: ROM:0001A238↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $CE, $CF
+		even
 PuyoPortrait_Sukiyapotes_9:dc.w 1	; DATA XREF: ROM:0001A23C↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $D0, $D1
+		even
 PuyoPortrait_Sukiyapotes_10:dc.w 1	; DATA XREF: ROM:0001A240↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $D2, $D3
+		even
 PuyoPortrait_Panotty:dc.l PuyoPortrait_Default
-					; DATA XREF: ROM:0001A0DE↑o
 		dc.l PuyoPortrait_Defeated
 		dc.l PuyoPortrait_Panotty_0
 		dc.l PuyoPortrait_Panotty_1
@@ -33786,26 +33822,31 @@ PuyoPortrait_Panotty_0:dc.w 4		; DATA XREF: ROM:0001A378↑o
 		dc.w $C822
 		dc.b $AA, $AB, $AC, $AD, $AE
 		dc.b $CA, $CB, $CC, $CD, $CE
+		even
 PuyoPortrait_Panotty_1:dc.w 4		; DATA XREF: ROM:0001A37C↑o
 		dc.w 1
 		dc.w $C822
 		dc.b $EA, $EB, $EC, $ED, $EE
 		dc.b $E5, $E6, $E7, $E8, $E9
+		even
 PuyoPortrait_Panotty_2:dc.w 5		; DATA XREF: ROM:0001A380↑o
 		dc.w 1
 		dc.w $C822
 		dc.b $E0, $E1, $E2, $E3, $E4, $87
 		dc.b $E5, $E6, $E7, $E8, $E9, $A7
+		even
 PuyoPortrait_Panotty_3:dc.w 5		; DATA XREF: ROM:0001A384↑o
 		dc.w 1
 		dc.w $C822
 		dc.b $E0, $FA, $FB, $FC, $E4, $87
 		dc.b $E5, $E6, $E7, $E8, $E9, $A7
+		even
 PuyoPortrait_Panotty_4:dc.w 5		; DATA XREF: ROM:0001A388↑o
 		dc.w 1
 		dc.w $C822
 		dc.b $E0, $FD, $FE, $FF, $E4, $87
 		dc.b $E5, $E6, $E7, $E8, $E9, $A7
+		even
 PuyoPortrait_Panotty_5:dc.w 9		; DATA XREF: ROM:0001A38C↑o
 		dc.w 5
 		dc.w $C61E
@@ -33815,6 +33856,7 @@ PuyoPortrait_Panotty_5:dc.w 9		; DATA XREF: ROM:0001A38C↑o
 		dc.b $60, $61, $F1, $F2, $64, $F3, $F4, $67, $68, $69
 		dc.b $80, $81, $F5, $F6, $F7, $F8, $F9, $87, $88, $89
 		dc.b $A0, $A1, $E5, $E6, $E7, $E8, $E9, $A7, $A8, $A9
+		even
 PuyoPortrait_Panotty_6:dc.w 9		; DATA XREF: ROM:0001A390↑o
 		dc.w 5
 		dc.w $C61E
@@ -33824,6 +33866,7 @@ PuyoPortrait_Panotty_6:dc.w 9		; DATA XREF: ROM:0001A390↑o
 		dc.b $60, $D1, $F1, $F2, $64, $F3, $F4, $67, $74, $75
 		dc.b $80, $81, $F5, $D3, $D4, $D5, $F9, $87, $88, $89
 		dc.b $A0, $A1, $E5, $E6, $E7, $E8, $E9, $A7, $A8, $A9
+		even
 PuyoPortrait_Panotty_7:dc.w 9		; DATA XREF: ROM:0001A394↑o
 		dc.w 5
 		dc.w $C61E
@@ -33833,6 +33876,7 @@ PuyoPortrait_Panotty_7:dc.w 9		; DATA XREF: ROM:0001A394↑o
 		dc.b $70, $71, $F1, $F2, $64, $F3, $F4, $67, $52, $53
 		dc.b $80, $81, $F5, $F6, $F7, $F8, $F9, $87, $88, $89
 		dc.b $A0, $A1, $E5, $E6, $E7, $E8, $E9, $A7, $A8, $A9
+		even
 PuyoPortrait_Panotty_8:dc.w 9		; DATA XREF: ROM:0001A398↑o
 		dc.w 5
 		dc.w $C61E
@@ -33842,6 +33886,7 @@ PuyoPortrait_Panotty_8:dc.w 9		; DATA XREF: ROM:0001A398↑o
 		dc.b $30, $31, $F1, $F2, $64, $F3, $F4, $67, $B4, $B5
 		dc.b $80, $81, $F5, $D3, $D4, $D5, $F9, $87, $88, $89
 		dc.b $A0, $A1, $E5, $E6, $E7, $E8, $E9, $A7, $A8, $A9
+		even
 PuyoPortrait_Panotty_9:dc.w 9		; DATA XREF: ROM:0001A39C↑o
 		dc.w 5
 		dc.w $C61E
@@ -33851,27 +33896,30 @@ PuyoPortrait_Panotty_9:dc.w 9		; DATA XREF: ROM:0001A39C↑o
 		dc.b $CF, $D0, $F1, $F2, $64, $F3, $F4, $67, $B2, $B3
 		dc.b $80, $81, $F5, $D3, $D4, $D5, $F9, $87, $88, $89
 		dc.b $A0, $A1, $E5, $E6, $E7, $E8, $E9, $A7, $A8, $A9
+		even
 PuyoPortrait_Panotty_10:dc.w 5		; DATA XREF: ROM:0001A3A0↑o
 		dc.w 2
 		dc.w $C7A0
 		dc.b $4C, $4D, $4E, $7A, $7B, $7C
 		dc.b $97, $98, $99, $9A, $C, $D
 		dc.b $B7, $B8, $B9, $BA, $2C, $2D
+		even
 PuyoPortrait_Panotty_11:dc.w 5		; DATA XREF: ROM:0001A3A4↑o
 		dc.w 2
 		dc.w $C7A0
 		dc.b $77, $4A, $4B, $7A, $7B, $7C
 		dc.b $97, $6A, $6B, $A, $B, $9C
 		dc.b $B7, $B8, $B9, $2A, $2B, $BC
+		even
 PuyoPortrait_Panotty_12:dc.w 5		; DATA XREF: ROM:0001A3A8↑o
 		dc.w 2
 		dc.w $C7A0
 		dc.b $77, $78, $2F, $7A, $7B, $7C
 		dc.b $97, $98, $4F, $E, $F, $9C
 		dc.b $B7, $B8, $6F, $2E, $BB, $BC
-PuyoPortrait_SkeletonT:dc.l PuyoPortrait_Default
-					; DATA XREF: ROM:PuyoOppPortraitIndex↑o
-					; ROM:0001A0E2↑o
+		even
+PuyoPortrait_SkeletonT:
+		dc.l PuyoPortrait_Default
 		dc.l PuyoPortrait_Defeated
 		dc.l PuyoPortrait_SkeletonT_0
 		dc.l PuyoPortrait_SkeletonT_1
@@ -33890,11 +33938,13 @@ PuyoPortrait_SkeletonT_0:dc.w 5		; DATA XREF: ROM:0001A59C↑o
 		dc.w $C724
 		dc.b $43, $44, $45, $46, $47, $48
 		dc.b $63, $64, $65, $66, $67, $68
+		even
 PuyoPortrait_SkeletonT_1:dc.w 5		; DATA XREF: ROM:0001A5A0↑o
 		dc.w 1
 		dc.w $C724
 		dc.b $43, $44, $45, $46, $B4, $B5
 		dc.b $94, $95, $65, $66, $67, $68
+		even
 PuyoPortrait_SkeletonT_2:dc.w 6		; DATA XREF: ROM:0001A5A4↑o
 		dc.w 3
 		dc.w $C7A4
@@ -33902,6 +33952,7 @@ PuyoPortrait_SkeletonT_2:dc.w 6		; DATA XREF: ROM:0001A5A4↑o
 		dc.b $D, $E, $F, $10, $11, $12, $13
 		dc.b $2D, $2E, $2F, $30, $31, $32, $33
 		dc.b $4D, $4E, $4F, $50, $51, $52, $53
+		even
 PuyoPortrait_SkeletonT_3:dc.w 6		; DATA XREF: ROM:0001A5A8↑o
 		dc.w 3
 		dc.w $C7A4
@@ -33909,6 +33960,7 @@ PuyoPortrait_SkeletonT_3:dc.w 6		; DATA XREF: ROM:0001A5A8↑o
 		dc.b $6D, $6E, $6F, $70, $71, $72, $73
 		dc.b $8D, $8E, $8F, $90, $91, $92, $93
 		dc.b $AD, $AE, $AF, $B0, $B1, $B2, $B3
+		even
 PuyoPortrait_SkeletonT_4:dc.w 6		; DATA XREF: ROM:0001A5AC↑o
 		dc.w 3
 		dc.w $C7A4
@@ -33916,41 +33968,49 @@ PuyoPortrait_SkeletonT_4:dc.w 6		; DATA XREF: ROM:0001A5AC↑o
 		dc.b $CD, $CE, $CF, $D0, $D1, $D2, $D3
 		dc.b $ED, $EE, $EF, $F0, $F1, $F2, $F3
 		dc.b $F7, $F8, $F9, $FA, $FB, $FC, $FD
+		even
 PuyoPortrait_SkeletonT_5:dc.w 2		; DATA XREF: ROM:0001A5B0↑o
 		dc.w 1
 		dc.w $C61E
 		dc.b 0, 1, 2
 		dc.b $20, $21, $22
+		even
 PuyoPortrait_SkeletonT_6:dc.w 2		; DATA XREF: ROM:0001A5B4↑o
 		dc.w 1
 		dc.w $C61E
 		dc.b $A, $B, $C
 		dc.b $2A, $2B, $2C
+		even
 PuyoPortrait_SkeletonT_7:dc.w 2		; DATA XREF: ROM:0001A5B8↑o
 		dc.w 1
 		dc.w $C61E
 		dc.b $4A, $4B, $4C
 		dc.b $6A, $6B, $6C
+		even
 PuyoPortrait_SkeletonT_8:dc.w 2		; DATA XREF: ROM:0001A5BC↑o
 		dc.w 1
 		dc.w $C61E
 		dc.b $8A, $8B, $8C
 		dc.b $AA, $AB, $AC
+		even
 PuyoPortrait_SkeletonT_9:dc.w 2		; DATA XREF: ROM:0001A5C0↑o
 		dc.w 1
 		dc.w $C61E
 		dc.b $CA, $CB, $CC
 		dc.b $EA, $EB, $EC
+		even
 PuyoPortrait_SkeletonT_10:dc.w 2	; DATA XREF: ROM:0001A5C4↑o
 		dc.w 1
 		dc.w $C61E
 		dc.b $E0, $E1, $E2
 		dc.b $E3, $E4, $E5
+		even
 PuyoPortrait_SkeletonT_11:dc.w 2	; DATA XREF: ROM:0001A5C8↑o
 		dc.w 1
 		dc.w $C61E
 		dc.b $E6, $E7, $E8
 		dc.b $F4, $F5, $F6
+		even
 PuyoPortrait_Suketoudara:dc.l PuyoPortrait_Default
 					; DATA XREF: ROM:0001A0A6↑o
 		dc.l PuyoPortrait_Defeated
@@ -33968,39 +34028,46 @@ PuyoPortrait_Suketoudara_0:dc.w 4	; DATA XREF: ROM:0001A6B2↑o
 		dc.w $C7A0
 		dc.b $61, $62, $63, $64, $65
 		dc.b $81, $82, $83, $84, $85
+		even
 PuyoPortrait_Suketoudara_1:dc.w 4	; DATA XREF: ROM:0001A6B6↑o
 		dc.w 1
 		dc.w $C7A0
 		dc.b $A, $B, $C, $D, $E
 		dc.b $2A, $2B, $2C, $2D, $2E
+		even
 PuyoPortrait_Suketoudara_2:dc.w 4	; DATA XREF: ROM:0001A6BA↑o
 		dc.w 1
 		dc.w $C7A0
 		dc.b $4A, $4B, $4C, $4D, $4E
 		dc.b $6A, $6B, $6C, $6D, $6E
+		even
 PuyoPortrait_Suketoudara_3:dc.w 5	; DATA XREF: ROM:0001A6BE↑o
 		dc.w 2
 		dc.w $C71E
 		dc.b $10, $11, $12, $13, $14, $15
 		dc.b $30, $31, $32, $33, $34, $35
 		dc.b $80, $81, $82, $83, $84, $85
+		even
 PuyoPortrait_Suketoudara_4:dc.w 5	; DATA XREF: ROM:0001A6C2↑o
 		dc.w 2
 		dc.w $C71E
 		dc.b $10, $11, $12, $13, $14, $15
 		dc.b $50, $51, $52, $53, $54, $55
 		dc.b $70, $71, $72, $73, $74, $75
+		even
 PuyoPortrait_Suketoudara_5:dc.w 5	; DATA XREF: ROM:0001A6C6↑o
 		dc.w 2
 		dc.w $C71E
 		dc.b $10, $11, $12, $13, $14, $15
 		dc.b $90, $91, $92, $93, $94, $95
 		dc.b $B0, $B1, $B2, $B3, $B4, $B5
+		even
 PuyoPortrait_Suketoudara_6:dc.w 4	; DATA XREF: ROM:0001A6CA↑o
 		dc.w 1
 		dc.w $C6A0
 		dc.b $D0, $D1, $D2, $D3, $D4
 		dc.b $F0, $F1, $F2, $F3, $F4
+		even
 PuyoPortrait_Suketoudara_7:dc.w 5	; DATA XREF: ROM:0001A6CE↑o
 		dc.w 3
 		dc.w $C7A0
@@ -34008,6 +34075,7 @@ PuyoPortrait_Suketoudara_7:dc.w 5	; DATA XREF: ROM:0001A6CE↑o
 		dc.b $81, $82, $83, $84, $85, $86
 		dc.b $A1, $A2, $A3, $A4, $A5, $A6
 		dc.b $C1, $C2, $C3, $C4, $C5, $C6
+		even
 PuyoPortrait_Suketoudara_8:dc.w 5	; DATA XREF: ROM:0001A6D2↑o
 		dc.w 3
 		dc.w $C7A0
@@ -34015,6 +34083,7 @@ PuyoPortrait_Suketoudara_8:dc.w 5	; DATA XREF: ROM:0001A6D2↑o
 		dc.b $AA, $AB, $AC, $AD, $AE, $AF
 		dc.b $CA, $CB, $CC, $CD, $CE, $CF
 		dc.b $EA, $EB, $EC, $ED, $EE, $EF
+		even
 PuyoPortrait_Zombie:dc.l PuyoPortrait_Default
 					; DATA XREF: ROM:0001A0AA↑o
 		dc.l PuyoPortrait_Defeated
@@ -34030,18 +34099,21 @@ PuyoPortrait_Zombie_0:dc.w 3		; DATA XREF: ROM:0001A7A2↑o
 		dc.b $64, $65, $66, $67
 		dc.b $84, $85, $86, $87
 		dc.b $A4, $A5, $A6, $A7
+		even
 PuyoPortrait_Zombie_1:dc.w 3		; DATA XREF: ROM:0001A7A6↑o
 		dc.w 2
 		dc.w $C7A6
 		dc.b $11, $12, $13, $14
 		dc.b $31, $32, $33, $34
 		dc.b $51, $52, $53, $54
+		even
 PuyoPortrait_Zombie_2:dc.w 3		; DATA XREF: ROM:0001A7AA↑o
 		dc.w 2
 		dc.w $C7A6
 		dc.b $71, $72, $73, $74
 		dc.b $91, $92, $93, $94
 		dc.b $B1, $B2, $B3, $B4
+		even
 PuyoPortrait_Zombie_3:dc.w 6		; DATA XREF: ROM:0001A7AE↑o
 		dc.w 6
 		dc.w $C624
@@ -34052,21 +34124,21 @@ PuyoPortrait_Zombie_3:dc.w 6		; DATA XREF: ROM:0001A7AE↑o
 		dc.b $8A, $8B, $8C, $8D, $8E, $8F, $90
 		dc.b $AA, $AB, $AC, $AD, $AE, $AF, $B0
 		dc.b $CA, $CB, $CC, $CD, $CE, $CF, $D0
-		dc.b 0
+		even
 PuyoPortrait_Zombie_4:dc.w 2		; DATA XREF: ROM:0001A7B2↑o
 		dc.w 2
 		dc.w $C7A6
 		dc.b $6B, $6C, $6D
 		dc.b $8B, $8C, $8D
 		dc.b $AB, $AC, $AD
-		dc.b	0
+		even
 PuyoPortrait_Zombie_5:dc.w 2		; DATA XREF: ROM:0001A7B6↑o
 		dc.w 2
 		dc.w $C7A6
 		dc.b $D1, $D2, $D3
 		dc.b $F1, $F2, $F3
 		dc.b $F4, $F5, $F6
-		dc.b 0
+		even
 PuyoPortrait_Draco:dc.l PuyoPortrait_Default ; DATA XREF: ROM:0001A0AE↑o
 		dc.l PuyoPortrait_Defeated
 		dc.l PuyoPortrait_Draco_0
@@ -34090,87 +34162,96 @@ PuyoPortrait_Draco_0:dc.w 4		; DATA XREF: ROM:0001A850↑o
 		dc.b $22, $23, $24, $25, $26
 		dc.b $42, $43, $44, $45, $46
 		dc.b $62, $63, $64, $65, $66
-		dc.b 0
+		even
 PuyoPortrait_Draco_1:dc.w 4		; DATA XREF: ROM:0001A854↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $22, $23, $24, $25, $26
 		dc.b $A, $B, $C, $D, $E
 		dc.b $2A, $2B, $2C, $2D, $2E
-		dc.b 0
+		even
 PuyoPortrait_Draco_2:dc.w 4		; DATA XREF: ROM:0001A858↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $22, $23, $24, $25, $26
 		dc.b $4A, $4B, $4C, $4D, $4E
 		dc.b $6A, $6B, $6C, $6D, $6E
-		dc.b 0
+		even
 PuyoPortrait_Draco_3:dc.w 1		; DATA XREF: ROM:0001A85C↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $83, $84
 		dc.b $A3, $A4
+		even
 PuyoPortrait_Draco_4:dc.w 1		; DATA XREF: ROM:0001A860↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $F, $10
 		dc.b $A3, $A4
+		even
 PuyoPortrait_Draco_5:dc.w 1		; DATA XREF: ROM:0001A864↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $2F, $30
 		dc.b $A3, $A4
+		even
 PuyoPortrait_Draco_6:dc.w 1		; DATA XREF: ROM:0001A868↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $8A, $8B
 		dc.b $A3, $A4
+		even
 PuyoPortrait_Draco_7:dc.w 1		; DATA XREF: ROM:0001A86C↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $AA, $AB
 		dc.b $A3, $A4
+		even
 PuyoPortrait_Draco_8:dc.w 1		; DATA XREF: ROM:0001A870↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $CA, $CB
 		dc.b $A3, $A4
+		even
 PuyoPortrait_Draco_9:dc.w 4		; DATA XREF: ROM:0001A874↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $11, $12, $13, $14, $15
 		dc.b $31, $32, $33, $34, $35
 		dc.b $51, $52, $53, $54, $55
-		dc.b 0
+		even
 PuyoPortrait_Draco_10:dc.w 4		; DATA XREF: ROM:0001A878↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $71, $72, $73, $74, $75
 		dc.b $91, $92, $93, $94, $95
 		dc.b $B1, $B2, $B3, $B4, $B5
-		dc.b 0
+		even
 PuyoPortrait_Draco_11:dc.w 4		; DATA XREF: ROM:0001A87C↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $71, $72, $73, $74, $75
 		dc.b $D1, $D2, $D3, $D4, $D5
 		dc.b $6A, $6B, $6C, $6D, $6E
-		dc.b 0
+		even
 PuyoPortrait_Draco_12:dc.w 1		; DATA XREF: ROM:0001A880↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $8C, $8D
 		dc.b $A3, $A4
+		even
 PuyoPortrait_Draco_13:dc.w 1		; DATA XREF: ROM:0001A884↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $AC, $AD
 		dc.b $A3, $A4
+		even
 PuyoPortrait_Draco_14:dc.w 1		; DATA XREF: ROM:0001A888↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $CC, $CD
 		dc.b $EC, $ED
+		even
 PuyoPortrait_Nasu:dc.l PuyoPortrait_Default ; DATA XREF: ROM:0001A0B2↑o
 		dc.l PuyoPortrait_Defeated
 		dc.l PuyoPortrait_Nasu_0
@@ -34190,6 +34271,7 @@ PuyoPortrait_Nasu_0:dc.w 8		; DATA XREF: ROM:0001A972↑o
 		dc.b $81, $82, $83, $84, $85, $86, $87, $88, $89
 		dc.b $A1, $A2, $A3, $A4, $A5, $A6, $A7, $A8, $A9
 		dc.b $C1, $C2, $C3, $C4, $C5, $C6, $C7, $C8, $C9
+		even
 PuyoPortrait_Nasu_1:dc.w 8		; DATA XREF: ROM:0001A976↑o
 		dc.w 5
 		dc.w $C6A0
@@ -34199,6 +34281,7 @@ PuyoPortrait_Nasu_1:dc.w 8		; DATA XREF: ROM:0001A976↑o
 		dc.b $70, $71, $83, $84, $85, $86, $33, $34, $35
 		dc.b $A1, $A2, $A3, $A4, $A5, $52, $53, $54, $55
 		dc.b $C1, $C2, $C3, $C4, $C5, $72, $73, $74, $75
+		even
 PuyoPortrait_Nasu_2:dc.w 5		; DATA XREF: ROM:0001A97A↑o
 		dc.w 3
 		dc.w $C6A2
@@ -34206,6 +34289,7 @@ PuyoPortrait_Nasu_2:dc.w 5		; DATA XREF: ROM:0001A97A↑o
 		dc.b $A, $B, $C, $D, $E, $F
 		dc.b $2A, $2B, $2C, $2D, $2E, $2F
 		dc.b $82, $83, $84, $4D, $4E, $4F
+		even
 PuyoPortrait_Nasu_3:dc.w 5		; DATA XREF: ROM:0001A97E↑o
 		dc.w 3
 		dc.w $C6A2
@@ -34213,6 +34297,7 @@ PuyoPortrait_Nasu_3:dc.w 5		; DATA XREF: ROM:0001A97E↑o
 		dc.b $6A, $6B, $6C, $6D, $6E, $6F
 		dc.b $8A, $8B, $8C, $8D, $8E, $8F
 		dc.b $AA, $AB, $AC, $AD, $AE, $AF
+		even
 PuyoPortrait_Nasu_5:dc.w 3		; DATA XREF: ROM:0001A986↑o
 		dc.w 3
 		dc.w $C724
@@ -34220,6 +34305,7 @@ PuyoPortrait_Nasu_5:dc.w 3		; DATA XREF: ROM:0001A986↑o
 		dc.b $CA, $CB, $CC, $CD
 		dc.b $EA, $EB, $EC, $ED
 		dc.b $F0, $F1, $F2, $F3
+		even
 PuyoPortrait_Nasu_6:dc.w 3		; DATA XREF: ROM:0001A98A↑o
 		dc.w 3
 		dc.w $C724
@@ -34227,6 +34313,7 @@ PuyoPortrait_Nasu_6:dc.w 3		; DATA XREF: ROM:0001A98A↑o
 		dc.b $7B, $7C, $7D, $7E
 		dc.b $9B, $9C, $9D, $9E
 		dc.b $BB, $BC, $BD, $BE
+		even
 PuyoPortrait_Nasu_7:dc.w 3		; DATA XREF: ROM:0001A98E↑o
 		dc.w 3
 		dc.w $C724
@@ -34234,6 +34321,7 @@ PuyoPortrait_Nasu_7:dc.w 3		; DATA XREF: ROM:0001A98E↑o
 		dc.b $B0, $B1, $B2, $B3
 		dc.b $D0, $D1, $D2, $D3
 		dc.b $F0, $F1, $F2, $F3
+		even
 PuyoPortrait_Nasu_4:dc.w 9		; DATA XREF: ROM:0001A982↑o
 		dc.w 6
 		dc.w $C61E
@@ -34244,6 +34332,7 @@ PuyoPortrait_Nasu_4:dc.w 9		; DATA XREF: ROM:0001A982↑o
 		dc.b $96, $37, $37, $97, $98, $99, $9A, $37, $37, $9F
 		dc.b $B6, $37, $37, $B7, $B8, $B9, $BA, $37, $37, $BF
 		dc.b $D6, $D7, $D8, $D9, $DA, $DB, $DC, $DD, $DE, $DF
+		even
 PuyoPortrait_Witch:dc.l PuyoPortrait_Default ; DATA XREF: ROM:0001A0B6↑o
 		dc.l PuyoPortrait_Defeated
 		dc.l PuyoPortrait_Witch_0
@@ -34267,69 +34356,84 @@ PuyoPortrait_Witch_0:dc.w 5		; DATA XREF: ROM:0001AADC↑o
 		dc.b $22, $23, $24, $25, $26, $27
 		dc.b $42, $43, $44, $45, $46, $47
 		dc.b $62, $63, $64, $65, $66, $67
+		even
 PuyoPortrait_Witch_1:dc.w 5		; DATA XREF: ROM:0001AAE0↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $A, $B, $C, $D, $E, $F
 		dc.b $2A, $2B, $2C, $2D, $2E, $2F
 		dc.b $4A, $4B, $4C, $4D, $4E, $4F
+		even
 PuyoPortrait_Witch_2:dc.w 5		; DATA XREF: ROM:0001AAE4↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $6A, $6B, $6C, $6D, $6E, $6F
 		dc.b $8A, $8B, $8C, $8D, $8E, $8F
 		dc.b $AA, $AB, $AC, $AD, $AE, $AF
+		even
 PuyoPortrait_Witch_3:dc.w 1		; DATA XREF: ROM:0001AAE8↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $84, $85
+		even
 PuyoPortrait_Witch_4:dc.w 1		; DATA XREF: ROM:0001AAEC↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $CA, $CB
+		even
 PuyoPortrait_Witch_5:dc.w 1		; DATA XREF: ROM:0001AAF0↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $EA, $EB
+		even
 PuyoPortrait_Witch_6:dc.w 5		; DATA XREF: ROM:0001AAF4↑o
 		dc.w 1
 		dc.w $C722
 		dc.b $10, $11, $12, $13, $14, $15
 		dc.b $30, $31, $32, $33, $34, $35
+		even
 PuyoPortrait_Witch_7:dc.w 5		; DATA XREF: ROM:0001AAF8↑o
 		dc.w 1
 		dc.w $C722
 		dc.b $50, $51, $52, $53, $54, $55
 		dc.b $70, $71, $72, $73, $74, $75
+		even
 PuyoPortrait_Witch_8:dc.w 5		; DATA XREF: ROM:0001AAFC↑o
 		dc.w 1
 		dc.w $C722
 		dc.b $90, $91, $92, $93, $94, $95
 		dc.b $AA, $AB, $AC, $AD, $AE, $AF
+		even
 PuyoPortrait_Witch_9:dc.w 1		; DATA XREF: ROM:0001AB00↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $B0, $B1
+		even
 PuyoPortrait_Witch_10:dc.w 1		; DATA XREF: ROM:0001AB04↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $D0, $D1
+		even
 PuyoPortrait_Witch_11:dc.w 1		; DATA XREF: ROM:0001AB08↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $F0, $F1
+		even
 PuyoPortrait_Witch_12:dc.w 1		; DATA XREF: ROM:0001AB0C↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $B2, $B3
+		even
 PuyoPortrait_Witch_13:dc.w 1		; DATA XREF: ROM:0001AB10↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $D2, $D3
+		even
 PuyoPortrait_Witch_14:dc.w 1		; DATA XREF: ROM:0001AB14↑o
 		dc.w 0
 		dc.w $C826
 		dc.b $F2, $F3
+		even
 PuyoPortrait_Sasoriman:dc.l PuyoPortrait_Default
 					; DATA XREF: ROM:0001A0BA↑o
 		dc.l PuyoPortrait_Defeated
@@ -34345,18 +34449,21 @@ PuyoPortrait_Sasoriman_0:dc.w 5		; DATA XREF: ROM:0001ABE6↑o
 		dc.b $61, $62, $63, $64, $65, $66
 		dc.b $81, $82, $83, $84, $85, $86
 		dc.b $A1, $A2, $A3, $A4, $A5, $A6
+		even
 PuyoPortrait_Sasoriman_1:dc.w 5		; DATA XREF: ROM:0001ABEA↑o
 		dc.w 2
 		dc.w $C7A0
 		dc.b $A, $B, $C, $D, $E, $F
 		dc.b $2A, $2B, $2C, $2D, $2E, $2F
 		dc.b $4A, $4B, $4C, $4D, $4E, $4F
+		even
 PuyoPortrait_Sasoriman_2:dc.w 5		; DATA XREF: ROM:0001ABEE↑o
 		dc.w 2
 		dc.w $C7A0
 		dc.b $A, $B, $C, $D, $E, $F
 		dc.b $6A, $6B, $6C, $6D, $6E, $6F
 		dc.b $8A, $8B, $8C, $8D, $8E, $8F
+		even
 PuyoPortrait_Sasoriman_3:dc.w 6		; DATA XREF: ROM:0001ABF2↑o
 		dc.w 3
 		dc.w $C7A0
@@ -34364,18 +34471,21 @@ PuyoPortrait_Sasoriman_3:dc.w 6		; DATA XREF: ROM:0001ABF2↑o
 		dc.b $30, $31, $32, $33, $34, $35, $B0
 		dc.b $50, $51, $52, $53, $54, $55, $D0
 		dc.b $70, $71, $72, $73, $74, $75, $F0
+		even
 PuyoPortrait_Sasoriman_4:dc.w 5		; DATA XREF: ROM:0001ABF6↑o
 		dc.w 2
 		dc.w $C7A0
 		dc.b $AA, $AB, $AC, $AD, $AE, $AF
 		dc.b $CA, $CB, $CC, $CD, $CE, $CF
 		dc.b $EA, $EB, $EC, $ED, $EE, $EF
+		even
 PuyoPortrait_Sasoriman_5:dc.w 5		; DATA XREF: ROM:0001ABFA↑o
 		dc.w 2
 		dc.w $C7A0
 		dc.b $AA, $AB, $AC, $AD, $AE, $AF
 		dc.b $6A, $6B, $6C, $6D, $6E, $6F
 		dc.b $8A, $8B, $8C, $8D, $8E, $8F
+		even
 PuyoPortrait_Harpy:dc.l PuyoPortrait_Default ; DATA XREF: ROM:0001A0BE↑o
 		dc.l PuyoPortrait_Defeated
 		dc.l PuyoPortrait_Harpy_0
@@ -34395,61 +34505,73 @@ PuyoPortrait_Harpy_0:dc.w 5		; DATA XREF: ROM:0001ACA0↑o
 		dc.w $C724
 		dc.b $43, $44, $45, $46, $47, $48
 		dc.b $63, $64, $65, $66, $67, $68
+		even
 PuyoPortrait_Harpy_1:dc.w 5		; DATA XREF: ROM:0001ACA4↑o
 		dc.w 1
 		dc.w $C724
 		dc.b $A, $B, $C, $D, $E, $F
 		dc.b $2A, $2B, $2C, $2D, $2E, $2F
+		even
 PuyoPortrait_Harpy_2:dc.w 5		; DATA XREF: ROM:0001ACA8↑o
 		dc.w 1
 		dc.w $C724
 		dc.b $4A, $4B, $4C, $4D, $4E, $4F
 		dc.b $6A, $6B, $6C, $6D, $6E, $6F
+		even
 PuyoPortrait_Harpy_3:dc.w 2		; DATA XREF: ROM:0001ACAC↑o
 		dc.w 1
 		dc.w $C826
 		dc.b $84, $85, $86
 		dc.b $A4, $A5, $A6
+		even
 PuyoPortrait_Harpy_4:dc.w 2		; DATA XREF: ROM:0001ACB0↑o
 		dc.w 1
 		dc.w $C826
 		dc.b $10, $11, $12
 		dc.b $30, $31, $32
+		even
 PuyoPortrait_Harpy_5:dc.w 2		; DATA XREF: ROM:0001ACB4↑o
 		dc.w 1
 		dc.w $C826
 		dc.b $50, $51, $52
 		dc.b $70, $71, $72
+		even
 PuyoPortrait_Harpy_6:dc.w 2		; DATA XREF: ROM:0001ACB8↑o
 		dc.w 1
 		dc.w $C826
 		dc.b $13, $14, $15
 		dc.b $33, $34, $35
+		even
 PuyoPortrait_Harpy_7:dc.w 2		; DATA XREF: ROM:0001ACBC↑o
 		dc.w 1
 		dc.w $C826
 		dc.b $53, $54, $55
 		dc.b $73, $74, $75
+		even
 PuyoPortrait_Harpy_8:dc.w 2		; DATA XREF: ROM:0001ACC0↑o
 		dc.w 1
 		dc.w $C826
 		dc.b $93, $94, $95
 		dc.b $B3, $B4, $B5
+		even
 PuyoPortrait_Harpy_9:dc.w 5		; DATA XREF: ROM:0001ACC4↑o
 		dc.w 1
-		dc.b $C7, $24, $8A, $8B, $8C, $8D
-		dc.b $8E, $8F, $AA, $AB, $AC, $AD
-		dc.b $AE, $AF
+		dc.w $C724
+		dc.b $8A, $8B, $8C, $8D, $8E, $8F
+		dc.b $AA, $AB, $AC, $AD, $AE, $AF
+		even
 PuyoPortrait_Harpy_10:dc.w 5		; DATA XREF: ROM:0001ACC8↑o
 		dc.w 1
 		dc.w $C724
 		dc.b $CA, $CB, $CC, $CD, $CE, $CF
 		dc.b $2A, $2B, $2C, $2D, $2E, $2F
+		even
 PuyoPortrait_Harpy_11:dc.w 5		; DATA XREF: ROM:0001ACCC↑o
 		dc.w 1
 		dc.w $C724
 		dc.b $EA, $EB, $EC, $ED, $EE, $EF
 		dc.b $6A, $6B, $6C, $6D, $6E, $6F
+		even
 PuyoPortrait_Zoh:dc.l PuyoPortrait_Default ; DATA XREF: ROM:0001A0C2↑o
 		dc.l PuyoPortrait_Defeated
 		dc.l PuyoPortrait_Zoh_0
@@ -34468,6 +34590,7 @@ PuyoPortrait_Zoh_0:dc.w 5		; DATA XREF: ROM:0001AD8C↑o
 		dc.b $42, $43, $44, $45, $46, $47
 		dc.b $62, $63, $64, $65, $66, $67
 		dc.b $82, $83, $84, $85, $86, $87
+		even
 PuyoPortrait_Zoh_1:dc.w 5		; DATA XREF: ROM:0001AD90↑o
 		dc.w 3
 		dc.w $C6A2
@@ -34475,6 +34598,7 @@ PuyoPortrait_Zoh_1:dc.w 5		; DATA XREF: ROM:0001AD90↑o
 		dc.b $42, $43, $44, $2C, $2D, $2E
 		dc.b $A, $B, $64, $4C, $4D, $4E
 		dc.b $2A, $2B, $84, $85, $86, $87
+		even
 PuyoPortrait_Zoh_2:dc.w 5		; DATA XREF: ROM:0001AD94↑o
 		dc.w 3
 		dc.w $C6A2
@@ -34482,6 +34606,7 @@ PuyoPortrait_Zoh_2:dc.w 5		; DATA XREF: ROM:0001AD94↑o
 		dc.b $42, $43, $44, $8C, $8D, $8E
 		dc.b $4A, $4B, $64, $AC, $AD, $AE
 		dc.b $6A, $6B, $84, $85, $86, $87
+		even
 PuyoPortrait_Zoh_3:dc.w 6		; DATA XREF: ROM:0001AD98↑o
 		dc.w 4
 		dc.w $C71E
@@ -34490,7 +34615,7 @@ PuyoPortrait_Zoh_3:dc.w 6		; DATA XREF: ROM:0001AD98↑o
 		dc.b $80, $81, $82, $83, $84, $85, $86
 		dc.b $A0, $A1, $A2, $A3, $A4, $A5, $A6
 		dc.b $C0, $C1, $C2, $C3, $C4, $C5, $C6
-		dc.b 0
+		even
 PuyoPortrait_Zoh_4:dc.w 6		; DATA XREF: ROM:0001AD9C↑o
 		dc.w 4
 		dc.w $C71E
@@ -34499,7 +34624,7 @@ PuyoPortrait_Zoh_4:dc.w 6		; DATA XREF: ROM:0001AD9C↑o
 		dc.b $2F, $30, $31, $32, $33, $34, $35
 		dc.b $4F, $50, $51, $52, $53, $54, $55
 		dc.b $6F, $70, $71, $72, $73, $74, $75
-		dc.b 0
+		even
 PuyoPortrait_Zoh_5:dc.w 6		; DATA XREF: ROM:0001ADA0↑o
 		dc.w 4
 		dc.w $C71E
@@ -34508,7 +34633,7 @@ PuyoPortrait_Zoh_5:dc.w 6		; DATA XREF: ROM:0001ADA0↑o
 		dc.b $CF, $D0, $D1, $D2, $D3, $D4, $D5
 		dc.b $EF, $F0, $F1, $F2, $F3, $F4, $F5
 		dc.b $F6, $F7, $F8, $F9, $FA, $FB, $FC
-		dc.b 0
+		even
 PuyoPortrait_Zoh_6:dc.w 7		; DATA XREF: ROM:0001ADA4↑o
 		dc.w 5
 		dc.w $C69E
@@ -34518,6 +34643,7 @@ PuyoPortrait_Zoh_6:dc.w 7		; DATA XREF: ROM:0001ADA4↑o
 		dc.b $80, $81, $82, $83, $84, $85, $86, $87
 		dc.b $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7
 		dc.b $C0, $C1, $C2, $C3, $C4, $C5, $C6, $C7
+		even
 PuyoPortrait_Zoh_7:dc.w 7		; DATA XREF: ROM:0001ADA8↑o
 		dc.w 5
 		dc.w $C69E
@@ -34527,6 +34653,7 @@ PuyoPortrait_Zoh_7:dc.w 7		; DATA XREF: ROM:0001ADA8↑o
 		dc.b $2F, $30, $31, $32, $33, $34, $35, $87
 		dc.b $4F, $50, $51, $52, $53, $54, $55, $A7
 		dc.b $6F, $70, $71, $72, $73, $74, $75, $C7
+		even
 PuyoPortrait_Zoh_8:dc.w 7		; DATA XREF: ROM:0001ADAC↑o
 		dc.w 5
 		dc.w $C69E
@@ -34536,6 +34663,7 @@ PuyoPortrait_Zoh_8:dc.w 7		; DATA XREF: ROM:0001ADAC↑o
 		dc.b $CF, $D0, $D1, $D2, $D3, $D4, $D5, $87
 		dc.b $EF, $F0, $F1, $F2, $F3, $F4, $F5, $A7
 		dc.b $F6, $F7, $F8, $F9, $FA, $FB, $FC, $C7
+		even
 PuyoPortrait_Schezo:dc.l PuyoPortrait_Default
 					; DATA XREF: ROM:0001A0C6↑o
 		dc.l PuyoPortrait_Defeated
@@ -34564,113 +34692,120 @@ PuyoPortrait_Schezo_0:dc.w 4		; DATA XREF: ROM:0001AF32↑o
 		dc.b $22, $23, $24, $25, $26
 		dc.b $42, $43, $44, $45, $46
 		dc.b $62, $63, $64, $65, $66
-		dc.b 0
+		even
 PuyoPortrait_Schezo_1:dc.w 4		; DATA XREF: ROM:0001AF36↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $A, $B, $C, $D, $E
 		dc.b $2A, $2B, $2C, $2D, $2E
 		dc.b $4A, $4B, $4C, $65, $66
-		dc.b 0
+		even
 PuyoPortrait_Schezo_2:dc.w 4		; DATA XREF: ROM:0001AF3A↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $A, $B, $C, $D, $E
 		dc.b $6A, $6B, $6C, $6D, $6E
 		dc.b $8A, $8B, $8C, $65, $66
-		dc.b 0
+		even
 PuyoPortrait_Schezo_3:dc.w 4		; DATA XREF: ROM:0001AF3E↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $F, $10, $11, $12, $13
 		dc.b $2F, $30, $31, $32, $33
 		dc.b $4F, $50, $51, $14, $15
-		dc.b 0
+		even
 PuyoPortrait_Schezo_4:dc.w 4		; DATA XREF: ROM:0001AF42↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $6F, $70, $71, $72, $73
 		dc.b $8F, $90, $91, $92, $93
 		dc.b $AF, $B0, $B1, $14, $15
-		dc.b 0
+		even
 PuyoPortrait_Schezo_5:dc.w 4		; DATA XREF: ROM:0001AF46↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $6F, $70, $71, $72, $73
 		dc.b $CF, $D0, $D1, $D2, $D3
 		dc.b $EF, $F0, $F1, $14, $15
-		dc.b 0
+		even
 PuyoPortrait_Schezo_6:dc.w 4		; DATA XREF: ROM:0001AF4A↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $F, $10, $11, $12, $13
 		dc.b $2F, $30, $31, $32, $33
 		dc.b $4F, $50, $51, $D4, $D5
-		dc.b 0
+		even
 PuyoPortrait_Schezo_7:dc.w 4		; DATA XREF: ROM:0001AF4E↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $6F, $70, $71, $72, $73
 		dc.b $8F, $90, $91, $92, $93
 		dc.b $AF, $B0, $B1, $D4, $D5
-		dc.b 0
+		even
 PuyoPortrait_Schezo_8:dc.w 4		; DATA XREF: ROM:0001AF52↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $6F, $70, $71, $72, $73
 		dc.b $CF, $D0, $D1, $D2, $D3
 		dc.b $EF, $F0, $F1, $D4, $D5
-		dc.b 0
+		even
 PuyoPortrait_Schezo_9:dc.w 1		; DATA XREF: ROM:0001AF56↑o
 		dc.w 1
 		dc.w $C7A8
 		dc.b $65, $66
 		dc.b $85, $86
+		even
 PuyoPortrait_Schezo_10:dc.w 1		; DATA XREF: ROM:0001AF5A↑o
 		dc.w 1
 		dc.w $C7A8
 		dc.b $AA, $AB
 		dc.b $CA, $CB
+		even
 PuyoPortrait_Schezo_11:dc.w 1		; DATA XREF: ROM:0001AF5E↑o
 		dc.w 1
 		dc.w $C7A8
 		dc.b $AC, $AD
 		dc.b $CC, $CD
+		even
 PuyoPortrait_Schezo_12:dc.w 1		; DATA XREF: ROM:0001AF62↑o
 		dc.w 1
 		dc.w $C7A8
 		dc.b $14, $15
 		dc.b $34, $35
+		even
 PuyoPortrait_Schezo_13:dc.w 1		; DATA XREF: ROM:0001AF66↑o
 		dc.w 1
 		dc.w $C7A8
 		dc.b $54, $55
 		dc.b $74, $75
+		even
 PuyoPortrait_Schezo_14:dc.w 1		; DATA XREF: ROM:0001AF6A↑o
 		dc.w 1
 		dc.w $C7A8
 		dc.b $94, $95
 		dc.b $B4, $B5
+		even
 PuyoPortrait_Schezo_15:dc.w 1		; DATA XREF: ROM:0001AF6E↑o
 		dc.w 1
 		dc.w $C7A8
 		dc.b $D4, $D5
 		dc.b $F4, $F5
+		even
 PuyoPortrait_Schezo_16:dc.w 2		; DATA XREF: ROM:0001AF72↑o
 		dc.w 0
 		dc.w $C7A6
 		dc.b $7A, $7B, $7C
-		dc.b 0
+		even
 PuyoPortrait_Schezo_17:dc.w 2		; DATA XREF: ROM:0001AF76↑o
 		dc.w 0
 		dc.w $C7A6
 		dc.b $E0, $E1, $E2
-		dc.b 0
+		even
 PuyoPortrait_Schezo_18:dc.w 2		; DATA XREF: ROM:0001AF7A↑o
 		dc.w 0
 		dc.w $C7A6
 		dc.b $E3, $E4, $E5
-		dc.b 0
+		even
 PuyoPortrait_Minotauros:dc.l PuyoPortrait_Default
 					; DATA XREF: ROM:0001A0CA↑o
 		dc.l PuyoPortrait_Defeated
@@ -34688,24 +34823,28 @@ PuyoPortrait_Minotauros_0:dc.w 1	; DATA XREF: ROM:0001B0B0↑o
 		dc.b $27, $28
 		dc.b $47, $48
 		dc.b $67, $68
+		even
 PuyoPortrait_Minotauros_1:dc.w 1	; DATA XREF: ROM:0001B0B4↑o
 		dc.w 2
 		dc.w $C6AC
 		dc.b $A, $B
 		dc.b $2A, $2B
 		dc.b $4A, $4B
+		even
 PuyoPortrait_Minotauros_2:dc.w 1	; DATA XREF: ROM:0001B0B8↑o
 		dc.w 2
 		dc.w $C6AC
 		dc.b $C, $D
 		dc.b $2C, $2D
 		dc.b $4C, $4D
+		even
 PuyoPortrait_Minotauros_3:dc.w 1	; DATA XREF: ROM:0001B0BC↑o
 		dc.w 2
 		dc.w $C6AC
 		dc.b $E, $F
 		dc.b $2E, $2F
 		dc.b $4E, $4F
+		even
 PuyoPortrait_Minotauros_4:dc.w 4	; DATA XREF: ROM:0001B0C0↑o
 		dc.w 3
 		dc.w $C7A8
@@ -34713,6 +34852,7 @@ PuyoPortrait_Minotauros_4:dc.w 4	; DATA XREF: ROM:0001B0C0↑o
 		dc.b $8A, $8B, $8C, $8D, $8E
 		dc.b $AA, $AB, $AC, $AD, $AE
 		dc.b $CA, $CB, $CC, $CD, $CE
+		even
 PuyoPortrait_Minotauros_5:dc.w 8	; DATA XREF: ROM:0001B0C4↑o
 		dc.w 5
 		dc.w $C620
@@ -34722,6 +34862,7 @@ PuyoPortrait_Minotauros_5:dc.w 8	; DATA XREF: ROM:0001B0C4↑o
 		dc.b $61, $62, $63, $64, $65, $66, $67, $68, $69
 		dc.b $10, $11, $12, $84, $85, $86, $87, $88, $89
 		dc.b $30, $31, $32, $A4, $A5, $A6, $A7, $A8, $A9
+		even
 PuyoPortrait_Minotauros_6:dc.w 3	; DATA XREF: ROM:0001B0C8↑o
 		dc.w 3
 		dc.w $C72A
@@ -34729,6 +34870,7 @@ PuyoPortrait_Minotauros_6:dc.w 3	; DATA XREF: ROM:0001B0C8↑o
 		dc.b $66, $4E, $4F, $69
 		dc.b $86, $87, $88, $89
 		dc.b $A6, $A7, $A8, $A9
+		even
 PuyoPortrait_Minotauros_7:dc.w 3	; DATA XREF: ROM:0001B0CC↑o
 		dc.w 3
 		dc.w $C72A
@@ -34736,6 +34878,7 @@ PuyoPortrait_Minotauros_7:dc.w 3	; DATA XREF: ROM:0001B0CC↑o
 		dc.b $66, $4E, $91, $92
 		dc.b $AF, $B0, $B1, $B2
 		dc.b $CF, $D0, $D1, $D2
+		even
 PuyoPortrait_Rulue:dc.l PuyoPortrait_Default ; DATA XREF: ROM:0001A0CE↑o
 		dc.l PuyoPortrait_Defeated
 		dc.l PuyoPortrait_Rulue_0
@@ -34759,81 +34902,96 @@ PuyoPortrait_Rulue_0:dc.w 5		; DATA XREF: ROM:0001B18A↑o
 		dc.b $22, $23, $24, $25, $26, $27
 		dc.b $42, $43, $44, $45, $46, $47
 		dc.b $62, $63, $64, $65, $66, $67
+		even
 PuyoPortrait_Rulue_1:dc.w 5		; DATA XREF: ROM:0001B18E↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $A, $B, $C, $D, $E, $F
 		dc.b $2A, $2B, $2C, $2D, $2E, $2F
 		dc.b $4A, $4B, $4C, $4D, $4E, $4F
+		even
 PuyoPortrait_Rulue_2:dc.w 5		; DATA XREF: ROM:0001B192↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $A, $B, $C, $D, $E, $F
 		dc.b $6A, $6B, $6C, $6D, $6E, $6F
 		dc.b $8A, $8B, $8C, $8D, $8E, $8F
+		even
 PuyoPortrait_Rulue_3:dc.w 5		; DATA XREF: ROM:0001B196↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $10, $11, $12, $13, $14, $15
 		dc.b $30, $31, $32, $33, $34, $35
 		dc.b $50, $51, $52, $53, $54, $55
+		even
 PuyoPortrait_Rulue_4:dc.w 5		; DATA XREF: ROM:0001B19A↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $10, $11, $12, $13, $14, $15
 		dc.b $70, $71, $72, $73, $74, $75
 		dc.b $4A, $4B, $4C, $4D, $4E, $4F
+		even
 PuyoPortrait_Rulue_5:dc.w 5		; DATA XREF: ROM:0001B19E↑o
 		dc.w 2
 		dc.w $C6A2
 		dc.b $10, $11, $12, $13, $14, $15
 		dc.b $90, $91, $92, $93, $94, $95
 		dc.b $8A, $8B, $8C, $8D, $8E, $8F
+		even
 PuyoPortrait_Rulue_6:dc.w 1		; DATA XREF: ROM:0001B1A2↑o
 		dc.w 1
 		dc.w $C7A4
 		dc.b $63, $64
 		dc.b $83, $84
+		even
 PuyoPortrait_Rulue_7:dc.w 1		; DATA XREF: ROM:0001B1A6↑o
 		dc.w 1
 		dc.w $C7A4
 		dc.b $63, $64
 		dc.b $AA, $AB
+		even
 PuyoPortrait_Rulue_8:dc.w 1		; DATA XREF: ROM:0001B1AA↑o
 		dc.w 1
 		dc.w $C7A4
 		dc.b $CA, $CB
 		dc.b $EA, $EB
+		even
 PuyoPortrait_Rulue_9:dc.w 1		; DATA XREF: ROM:0001B1AE↑o
 		dc.w 1
 		dc.w $C7A4
 		dc.b $51, $52
 		dc.b $AC, $AD
+		even
 PuyoPortrait_Rulue_10:dc.w 1		; DATA XREF: ROM:0001B1B2↑o
 		dc.w 1
 		dc.w $C7A4
 		dc.b $51, $52
 		dc.b $AE, $AF
+		even
 PuyoPortrait_Rulue_11:dc.w 1		; DATA XREF: ROM:0001B1B6↑o
 		dc.w 1
 		dc.w $C7A4
 		dc.b $CE, $CF
 		dc.b $EE, $EF
+		even
 PuyoPortrait_Rulue_12:dc.w 2		; DATA XREF: ROM:0001B1BA↑o
 		dc.w 1
 		dc.w $C7A4
 		dc.b $51, $52, $53
 		dc.b $CC, $CD, $85
+		even
 PuyoPortrait_Rulue_13:dc.w 2		; DATA XREF: ROM:0001B1BE↑o
 		dc.w 1
 		dc.w $C7A4
 		dc.b $51, $52, $53
 		dc.b $B0, $B1, $B2
+		even
 PuyoPortrait_Rulue_14:dc.w 2		; DATA XREF: ROM:0001B1C2↑o
 		dc.w 1
 		dc.w $C7A4
 		dc.b $D0, $D1, $D2
 		dc.b $F0, $F1, $F2
+		even
 PuyoPortrait_Satan:dc.l PuyoPortrait_Default ; DATA XREF: ROM:0001A0D2↑o
 		dc.l PuyoPortrait_Defeated
 		dc.l PuyoPortrait_Satan_0
@@ -34856,76 +35014,95 @@ PuyoPortrait_Satan_0:dc.w 5		; DATA XREF: ROM:0001B2BE↑o
 		dc.w $C722
 		dc.b $42, $43, $44, $45, $46, $47
 		dc.b $62, $63, $64, $65, $66, $67
+		even
 PuyoPortrait_Satan_1:dc.w 5		; DATA XREF: ROM:0001B2C2↑o
 		dc.w 1
 		dc.w $C722
 		dc.b $A, $B, $C, $D, $E, $F
 		dc.b $2A, $2B, $2C, $2D, $2E, $2F
+		even
 PuyoPortrait_Satan_2:dc.w 5		; DATA XREF: ROM:0001B2C6↑o
 		dc.w 1
 		dc.w $C722
 		dc.b $4A, $4B, $4C, $4D, $4E, $4F
 		dc.b $6A, $6B, $6C, $6D, $6E, $6F
+		even
 PuyoPortrait_Satan_3:dc.w 2		; DATA XREF: ROM:0001B2CA↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $83, $84, $85
 		dc.b $A3, $A4, $A5
+		even
 PuyoPortrait_Satan_4:dc.w 2		; DATA XREF: ROM:0001B2CE↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $8A, $8B, $8C
 		dc.b $AA, $AB, $AC
+		even
 PuyoPortrait_Satan_5:dc.w 2		; DATA XREF: ROM:0001B2D2↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $8D, $8E, $8F
 		dc.b $AD, $AE, $AF
+		even
 PuyoPortrait_Satan_6:dc.w 2		; DATA XREF: ROM:0001B2D6↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $10, $11, $12
 		dc.b $30, $31, $32
+		even
 PuyoPortrait_Satan_7:dc.w 2		; DATA XREF: ROM:0001B2DA↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $50, $51, $52
 		dc.b $70, $71, $72
+		even
 PuyoPortrait_Satan_8:dc.w 2		; DATA XREF: ROM:0001B2DE↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $90, $91, $92
 		dc.b $B0, $B1, $B2
+		even
 PuyoPortrait_Satan_9:dc.w 2		; DATA XREF: ROM:0001B2E2↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $13, $14, $15
 		dc.b $33, $34, $35
+		even
 PuyoPortrait_Satan_10:dc.w 2		; DATA XREF: ROM:0001B2E6↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $53, $54, $55
 		dc.b $73, $74, $75
+		even
 PuyoPortrait_Satan_11:dc.w 2		; DATA XREF: ROM:0001B2EA↑o
 		dc.w 1
 		dc.w $C824
 		dc.b $93, $94, $95
 		dc.b $B3, $B4, $B5
+		even
 PuyoPortrait_Satan_12:dc.w 4		; DATA XREF: ROM:0001B2EE↑o
 		dc.w 1
 		dc.w $C7A4
 		dc.b $79, $7A, $7B, $7C, $7D
 		dc.b $99, $9A, $9B, $9C, $9D
+		even
 PuyoPortrait_Satan_13:dc.w 4		; DATA XREF: ROM:0001B2F2↑o
 		dc.w 1
 		dc.w $C7A4
 		dc.b $CA, $CB, $CC, $CD, $CE
 		dc.b $EA, $EB, $EC, $ED, $EE
+		even
 PuyoPortrait_Satan_14:dc.w 4		; DATA XREF: ROM:0001B2F6↑o
 		dc.w 1
 		dc.w $C7A4
 		dc.b $CF, $D0, $D1, $D2, $D3
 		dc.b $EF, $F0, $F1, $F2, $F3
+		even
+
+; ---------------------------------------------------------------------------
+; TODO - Split Plane Mapping Data into Individual Files
+
 PlaneMap_Index:				; DATA XREF: QueuePlaneCmdList+C↑o
 		dc.l MapIndex_PuyoCutscene_Grass
 		dc.l MapIndex_PuyoCutscene_Ruins
@@ -34977,11 +35154,14 @@ PlaneMap_Index:				; DATA XREF: QueuePlaneCmdList+C↑o
 		dc.l MapIndex_PlaneID_2F
 		dc.l MapIndex_PlaneID_30
 		dc.l MapIndex_PuyoCutscene_Satan
-MapIndex_PlaneID_25:dc.w 1		; DATA XREF: ROM:0001B460↑o
-		dc.l word_1B49A
+
+MapIndex_PlaneID_25:
+	dc.w 1
+	dc.l word_1B49A
+
 word_1B49A:	dc.w $14		; DATA XREF: ROM:0001B496↑o
-		dc.b $28 ; (
-		dc.b	$B
+		dc.b $28
+		dc.b $B
 		dc.w $D200
 		dc.l unk_6F4E4
 		dc.w $2000
@@ -37370,8 +37550,10 @@ word_20E28:	dc.w $10E2, $172, $1E5, $172, $1D1, $1D2, $1D3, $1CF, $1D0, $1E6, $1
 		dc.w 0, $1EF, $DD, $19A, $1DC, $1DD, $1CC, $9B9, $1F0, $1F1, $C1, $1B7, $1F2, $199, $19B, $1A0
 ; ---------------------------------------------------------------------------
 
-Str_RegionLock: dc.b "    Developed for use onry with ntsc    "
-		dc.b "            genesis system.             "
+Str_RegionLock:
+	dc.b "    Developed for use onry with ntsc    "
+	dc.b "            genesis system.             "
+	even
 
 ; ---------------------------------------------------------------------------
 		move.b	($A10001).l,d0
@@ -37419,134 +37601,135 @@ loc_20F28:				; CODE XREF: RenderRegionText+24↓j
 ; End of function RenderRegionText
 
 ; ---------------------------------------------------------------------------
-FontTable_RegionLock:dc.b 0		; DATA XREF: RenderRegionText+6↑o
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 7
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 9
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 1
-		dc.b 8
-		dc.b 2
-		dc.b 0
-		dc.b $12
-		dc.b $13
-		dc.b $14
-		dc.b $15
-		dc.b $16
-		dc.b $17
-		dc.b $18
-		dc.b $19
-		dc.b $1A
-		dc.b $1B
-		dc.b 4
-		dc.b 5
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 6
-		dc.b $B
-		dc.b $1C
-		dc.b $1D
-		dc.b $1E
-		dc.b $1F
-		dc.b $20
-		dc.b $21
-		dc.b $22
-		dc.b $23
-		dc.b $24
-		dc.b $25
-		dc.b $26
-		dc.b $27
-		dc.b $28
-		dc.b $29
-		dc.b $2A
-		dc.b $2B
-		dc.b $2C
-		dc.b $2D
-		dc.b $2E
-		dc.b $2F
-		dc.b $30
-		dc.b $31
-		dc.b $32
-		dc.b $33
-		dc.b $34
-		dc.b $35
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b $38
-		dc.b $39
-		dc.b $3A
-		dc.b $3B
-		dc.b $3C
-		dc.b $3D
-		dc.b $3E
-		dc.b $3F
-		dc.b $40
-		dc.b $41
-		dc.b $42
-		dc.b $43
-		dc.b $44
-		dc.b $45
-		dc.b $46
-		dc.b $47
-		dc.b $48
-		dc.b $49
-		dc.b $4A
-		dc.b $4B
-		dc.b $4C
-		dc.b $4D
-		dc.b $4E
-		dc.b $4F
-		dc.b $50
-		dc.b $51
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
-		dc.b 0
+FontTable_RegionLock:
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 7
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 9
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 1
+	dc.b 8
+	dc.b 2
+	dc.b 0
+	dc.b $12
+	dc.b $13
+	dc.b $14
+	dc.b $15
+	dc.b $16
+	dc.b $17
+	dc.b $18
+	dc.b $19
+	dc.b $1A
+	dc.b $1B
+	dc.b 4
+	dc.b 5
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 6
+	dc.b $B
+	dc.b $1C
+	dc.b $1D
+	dc.b $1E
+	dc.b $1F
+	dc.b $20
+	dc.b $21
+	dc.b $22
+	dc.b $23
+	dc.b $24
+	dc.b $25
+	dc.b $26
+	dc.b $27
+	dc.b $28
+	dc.b $29
+	dc.b $2A
+	dc.b $2B
+	dc.b $2C
+	dc.b $2D
+	dc.b $2E
+	dc.b $2F
+	dc.b $30
+	dc.b $31
+	dc.b $32
+	dc.b $33
+	dc.b $34
+	dc.b $35
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b $38
+	dc.b $39
+	dc.b $3A
+	dc.b $3B
+	dc.b $3C
+	dc.b $3D
+	dc.b $3E
+	dc.b $3F
+	dc.b $40
+	dc.b $41
+	dc.b $42
+	dc.b $43
+	dc.b $44
+	dc.b $45
+	dc.b $46
+	dc.b $47
+	dc.b $48
+	dc.b $49
+	dc.b $4A
+	dc.b $4B
+	dc.b $4C
+	dc.b $4D
+	dc.b $4E
+	dc.b $4F
+	dc.b $50
+	dc.b $51
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
+	dc.b 0
 ; ---------------------------------------------------------------------------
 
 SoundTest_SetupPlanes:			; DATA XREF: ROM:00001BB6↑o
@@ -37605,14 +37788,16 @@ loc_21040:				; CODE XREF: ROM:0002104A↓j
 		lea	(Act_ChecksumError).l,a1
 		jmp	(FindActorSlot).l
 ; ---------------------------------------------------------------------------
-Str_ChecksumWarning:dc.b $21, $B, $1C, $18, $13, $18, $11, $25
-					; DATA XREF: ROM:00021066↑o
-		dc.b $FF
-		dc.b 0
-Str_ChecksumIncorrect:dc.b $D, $12, $F, $D, $15, $1D, $1F, $17, 0, $13, $1D, 0, $21, $1C, $19, $18, $11, $25
-					; DATA XREF: ROM:00021078↑o
-		dc.b $FF
-		dc.b 0
+
+Str_ChecksumWarning:
+	dc.b $21, $B, $1C, $18, $13, $18, $11, $25
+	dc.b $FF
+	even
+Str_ChecksumIncorrect:
+	dc.b $D, $12, $F, $D, $15, $1D, $1F, $17, 0, $13, $1D, 0, $21, $1C, $19, $18, $11, $25
+	dc.b $FF
+	even
+
 ; ---------------------------------------------------------------------------
 
 Act_ChecksumError:			; DATA XREF: ROM:00021082↑o
@@ -37795,7 +37980,7 @@ byte_21260:	dc.b 0			; DATA XREF: ROM:00021230↑r
 		dc.b $F7
 		dc.b 0
 		dc.b 0
-		dc.b 0
+	even
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -37839,7 +38024,7 @@ SoundTest_SelNonSFX:			; CODE XREF: ROM:000211B2↑p
 ; ---------------------------------------------------------------------------
 asc_212C6:	dc.b "                      "
 		dc.b $FF
-		dc.b 0
+		even
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -37913,239 +38098,185 @@ loc_2136E:				; CODE XREF: sub_2134A+A↑j
 ; End of function sub_2134A
 
 ; ---------------------------------------------------------------------------
-SoundTest_NameIndex:dc.l ST_BGMNameIndex ; DATA XREF: ROM:000211DC↑o
-					; SoundTest_SelNonSFX+4↑o ...
-		dc.l ST_VoiceNameIndex
-		dc.l ST_CmdNameIndex
-ST_BGMNameIndex:dc.l SoundTest_BGM01_Name ; DATA XREF: ROM:0002124C↑o
-					; ROM:SoundTest_NameIndex↑o
-		dc.l SoundTest_BGM02_Name
-		dc.l SoundTest_BGM03_Name
-		dc.l SoundTest_BGM04_Name
-		dc.l SoundTest_BGM05_Name
-		dc.l SoundTest_BGM06_Name
-		dc.l SoundTest_BGM07_Name
-		dc.l SoundTest_BGM08_Name
-		dc.l SoundTest_BGM09_Name
-		dc.l SoundTest_BGM0A_Name
-		dc.l SoundTest_BGM0B_Name
-		dc.l SoundTest_BGM0C_Name
-		dc.l SoundTest_BGM0D_Name
-		dc.l SoundTest_BGM0E_Name
-		dc.l SoundTest_BGM0F_Name
-		dc.l SoundTest_BGM10_Name
-		dc.l SoundTest_BGM11_Name
-		dc.l SoundTest_BGM12_Name
-		dc.l SoundTest_BGM13_Name
-		dc.l SoundTest_BGM14_Name
-		dc.l SoundTest_BGM15_Name
-		dc.l SoundTest_BGM16_Name
-		dc.l SoundTest_BGM17_Name
-		dc.l SoundTest_BGM18_Name
-SoundTest_BGM01_Name:dc.b 1		; DATA XREF: ROM:ST_BGMNameIndex↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM02_Name:dc.b 2		; DATA XREF: ROM:00021384↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM03_Name:dc.b 3		; DATA XREF: ROM:00021388↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM04_Name:dc.b 4		; DATA XREF: ROM:0002138C↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM05_Name:dc.b 5		; DATA XREF: ROM:00021390↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM06_Name:dc.b 6		; DATA XREF: ROM:00021394↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM07_Name:dc.b 7		; DATA XREF: ROM:00021398↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM08_Name:dc.b 8		; DATA XREF: ROM:0002139C↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM09_Name:dc.b 9		; DATA XREF: ROM:000213A0↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM0A_Name:dc.b $A		; DATA XREF: ROM:000213A4↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM0B_Name:dc.b $B		; DATA XREF: ROM:000213A8↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM0C_Name:dc.b $C		; DATA XREF: ROM:000213AC↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM0D_Name:dc.b $D		; DATA XREF: ROM:000213B0↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM0E_Name:dc.b $E		; DATA XREF: ROM:000213B4↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM0F_Name:dc.b $F		; DATA XREF: ROM:000213B8↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM10_Name:dc.b $10		; DATA XREF: ROM:000213BC↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM11_Name:dc.b $11		; DATA XREF: ROM:000213C0↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM12_Name:dc.b $12		; DATA XREF: ROM:000213C4↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM13_Name:dc.b $13		; DATA XREF: ROM:000213C8↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM14_Name:dc.b $14		; DATA XREF: ROM:000213CC↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM15_Name:dc.b $15		; DATA XREF: ROM:000213D0↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM16_Name:dc.b $16		; DATA XREF: ROM:000213D4↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM17_Name:dc.b $17		; DATA XREF: ROM:000213D8↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_BGM18_Name:dc.b $18		; DATA XREF: ROM:000213DC↑o
-		dc.b "  "
-		dc.b $FF
-ST_VoiceNameIndex:dc.l SoundTest_VOI81_Name ; DATA XREF: ROM:00021378↑o
-		dc.l SoundTest_VOI82_Name
-		dc.l SoundTest_VOI83_Name
-		dc.l SoundTest_VOI84_Name
-		dc.l SoundTest_VOI85_Name
-		dc.l SoundTest_VOI86_Name
-		dc.l SoundTest_VOI87_Name
-		dc.l SoundTest_VOI88_Name
-		dc.l SoundTest_VOI89_Name
-		dc.l SoundTest_VOI8A_Name
-		dc.l SoundTest_VOI8B_Name
-		dc.l SoundTest_VOI8C_Name
-		dc.l SoundTest_VOI8D_Name
-		dc.l SoundTest_VOI8E_Name
-		dc.l SoundTest_VOI8F_Name
-		dc.l SoundTest_VOI90_Name
-		dc.l SoundTest_VOI91_Name
-		dc.l SoundTest_VOI92_Name
-		dc.l SoundTest_VOI93_Name
-		dc.l SoundTest_VOI94_Name
-		dc.l SoundTest_VOI95_Name
-		dc.l SoundTest_VOI96_Name
-		dc.l SoundTest_VOI97_Name
-SoundTest_VOI81_Name:dc.b $81		; DATA XREF: ROM:ST_VoiceNameIndex↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI82_Name:dc.b $82		; DATA XREF: ROM:00021444↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI83_Name:dc.b $83		; DATA XREF: ROM:00021448↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI84_Name:dc.b $84		; DATA XREF: ROM:0002144C↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI85_Name:dc.b $85		; DATA XREF: ROM:00021450↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI86_Name:dc.b $86		; DATA XREF: ROM:00021454↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI87_Name:dc.b $87		; DATA XREF: ROM:00021458↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI88_Name:dc.b $88		; DATA XREF: ROM:0002145C↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI89_Name:dc.b $89		; DATA XREF: ROM:00021460↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI8A_Name:dc.b $8A		; DATA XREF: ROM:00021464↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI8B_Name:dc.b $8B		; DATA XREF: ROM:00021468↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI8C_Name:dc.b $8C		; DATA XREF: ROM:0002146C↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI8D_Name:dc.b $8D		; DATA XREF: ROM:00021470↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI8E_Name:dc.b $8E		; DATA XREF: ROM:00021474↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI8F_Name:dc.b $8F		; DATA XREF: ROM:00021478↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI90_Name:dc.b $90		; DATA XREF: ROM:0002147C↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI91_Name:dc.b $91		; DATA XREF: ROM:00021480↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI92_Name:dc.b $92		; DATA XREF: ROM:00021484↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI93_Name:dc.b $93		; DATA XREF: ROM:00021488↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI94_Name:dc.b $94		; DATA XREF: ROM:0002148C↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI95_Name:dc.b $95		; DATA XREF: ROM:00021490↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI96_Name:dc.b $96		; DATA XREF: ROM:00021494↑o
-		dc.b "  "
-		dc.b $FF
-SoundTest_VOI97_Name:dc.b $97		; DATA XREF: ROM:00021498↑o
-		dc.b "  "
-		dc.b $FF
-		dc.b $98
-		dc.b "  "
-		dc.b $FF
-		dc.b $99
-		dc.b "  "
-		dc.b $FF
-		dc.b $9A
-		dc.b "  "
-		dc.b $FF
-		dc.b $9B
-		dc.b "  "
-		dc.b $FF
-ST_CmdNameIndex:dc.l SoundText_CmdFE_Name ; DATA XREF: ROM:0002137C↑o
-		dc.l SoundText_CmdFD_Name
-		dc.l SoundText_CmdFF_Name
-SoundText_CmdFE_Name:dc.b $FE		; DATA XREF: ROM:ST_CmdNameIndex↑o
-		dc.b "all clear"
-		dc.b $FF
-		dc.b 0
-SoundText_CmdFD_Name:dc.b $FD		; DATA XREF: ROM:0002150C↑o
-		dc.b "fade out"
-		dc.b $FF
-SoundText_CmdFF_Name:dc.b $FF		; DATA XREF: ROM:00021510↑o
-		dc.b "pause on off"
-		dc.b $FF
-		dc.b $F4
-		dc.b "fade in"
-		dc.b $FF
-		dc.b 0
-		dc.b $F5
-		dc.b "rebirth"
-		dc.b $FF
-		dc.b 0
-		dc.b $F6
-		dc.b "pause on"
-		dc.b $FF
-		dc.b $F7
-		dc.b "pause off"
-		dc.b $FF
-		dc.b 0
+SoundTest_NameIndex:
+	dc.l ST_BGMNameIndex
+	dc.l ST_VoiceNameIndex
+	dc.l ST_CmdNameIndex
+
+ST_BGMNameIndex:
+	dc.l SoundTest_BGM01_Name
+	dc.l SoundTest_BGM02_Name
+	dc.l SoundTest_BGM03_Name
+	dc.l SoundTest_BGM04_Name
+	dc.l SoundTest_BGM05_Name
+	dc.l SoundTest_BGM06_Name
+	dc.l SoundTest_BGM07_Name
+	dc.l SoundTest_BGM08_Name
+	dc.l SoundTest_BGM09_Name
+	dc.l SoundTest_BGM0A_Name
+	dc.l SoundTest_BGM0B_Name
+	dc.l SoundTest_BGM0C_Name
+	dc.l SoundTest_BGM0D_Name
+	dc.l SoundTest_BGM0E_Name
+	dc.l SoundTest_BGM0F_Name
+	dc.l SoundTest_BGM10_Name
+	dc.l SoundTest_BGM11_Name
+	dc.l SoundTest_BGM12_Name
+	dc.l SoundTest_BGM13_Name
+	dc.l SoundTest_BGM14_Name
+	dc.l SoundTest_BGM15_Name
+	dc.l SoundTest_BGM16_Name
+	dc.l SoundTest_BGM17_Name
+	dc.l SoundTest_BGM18_Name
+
+SoundTest_BGM01_Name:	dc.b 1, "  ", $FF
+	even
+SoundTest_BGM02_Name:	dc.b 2, "  ", $FF
+	even
+SoundTest_BGM03_Name:	dc.b 3, "  ", $FF
+	even
+SoundTest_BGM04_Name:	dc.b 4, "  ", $FF
+	even
+SoundTest_BGM05_Name:	dc.b 5, "  ", $FF
+	even
+SoundTest_BGM06_Name:	dc.b 6, "  ", $FF
+	even
+SoundTest_BGM07_Name:	dc.b 7, "  ", $FF
+	even
+SoundTest_BGM08_Name:	dc.b 8, "  ", $FF
+	even
+SoundTest_BGM09_Name:	dc.b 9, "  ", $FF
+	even
+SoundTest_BGM0A_Name:	dc.b $A, "  ", $FF
+	even
+SoundTest_BGM0B_Name:	dc.b $B, "  ", $FF
+	even
+SoundTest_BGM0C_Name:	dc.b $C, "  ", $FF
+	even
+SoundTest_BGM0D_Name:	dc.b $D, "  ", $FF
+	even
+SoundTest_BGM0E_Name:	dc.b $E, "  ", $FF
+	even
+SoundTest_BGM0F_Name:	dc.b $F, "  ", $FF
+	even
+SoundTest_BGM10_Name:	dc.b $10, "  ", $FF
+	even
+SoundTest_BGM11_Name:	dc.b $11, "  ", $FF
+	even
+SoundTest_BGM12_Name:	dc.b $12, "  ", $FF
+	even
+SoundTest_BGM13_Name:	dc.b $13, "  ", $FF
+	even
+SoundTest_BGM14_Name:	dc.b $14, "  ", $FF
+	even
+SoundTest_BGM15_Name:	dc.b $15, "  ", $FF
+	even
+SoundTest_BGM16_Name:	dc.b $16, "  ", $FF
+	even
+SoundTest_BGM17_Name:	dc.b $17, "  ", $FF
+	even
+SoundTest_BGM18_Name:	dc.b $18, "  ", $FF
+	even
+
+ST_VoiceNameIndex:
+	dc.l SoundTest_VOI81_Name
+	dc.l SoundTest_VOI82_Name
+	dc.l SoundTest_VOI83_Name
+	dc.l SoundTest_VOI84_Name
+	dc.l SoundTest_VOI85_Name
+	dc.l SoundTest_VOI86_Name
+	dc.l SoundTest_VOI87_Name
+	dc.l SoundTest_VOI88_Name
+	dc.l SoundTest_VOI89_Name
+	dc.l SoundTest_VOI8A_Name
+	dc.l SoundTest_VOI8B_Name
+	dc.l SoundTest_VOI8C_Name
+	dc.l SoundTest_VOI8D_Name
+	dc.l SoundTest_VOI8E_Name
+	dc.l SoundTest_VOI8F_Name
+	dc.l SoundTest_VOI90_Name
+	dc.l SoundTest_VOI91_Name
+	dc.l SoundTest_VOI92_Name
+	dc.l SoundTest_VOI93_Name
+	dc.l SoundTest_VOI94_Name
+	dc.l SoundTest_VOI95_Name
+	dc.l SoundTest_VOI96_Name
+	dc.l SoundTest_VOI97_Name
+
+SoundTest_VOI81_Name:	dc.b $81, "  ", $FF
+	even
+SoundTest_VOI82_Name:	dc.b $82, "  ", $FF
+	even
+SoundTest_VOI83_Name:	dc.b $83, "  ", $FF
+	even
+SoundTest_VOI84_Name:	dc.b $84, "  ", $FF
+	even
+SoundTest_VOI85_Name:	dc.b $85, "  ", $FF
+	even
+SoundTest_VOI86_Name:	dc.b $86, "  ", $FF
+	even
+SoundTest_VOI87_Name:	dc.b $87, "  ", $FF
+	even
+SoundTest_VOI88_Name:	dc.b $88, "  ", $FF
+	even
+SoundTest_VOI89_Name:	dc.b $89, "  ", $FF
+	even
+SoundTest_VOI8A_Name:	dc.b $8A, "  ", $FF
+	even
+SoundTest_VOI8B_Name:	dc.b $8B, "  ", $FF
+	even
+SoundTest_VOI8C_Name:	dc.b $8C, "  ", $FF
+	even
+SoundTest_VOI8D_Name:	dc.b $8D, "  ", $FF
+	even
+SoundTest_VOI8E_Name:	dc.b $8E, "  ", $FF
+	even
+SoundTest_VOI8F_Name:	dc.b $8F, "  ", $FF
+	even
+SoundTest_VOI90_Name:	dc.b $90, "  ", $FF
+	even
+SoundTest_VOI91_Name:	dc.b $91, "  ", $FF
+	even
+SoundTest_VOI92_Name:	dc.b $92, "  ", $FF
+	even
+SoundTest_VOI93_Name:	dc.b $93, "  ", $FF
+	even
+SoundTest_VOI94_Name:	dc.b $94, "  ", $FF
+	even
+SoundTest_VOI95_Name:	dc.b $95, "  ", $FF
+	even
+SoundTest_VOI96_Name:	dc.b $96, "  ", $FF
+	even
+SoundTest_VOI97_Name:	dc.b $97, "  ", $FF
+	even
+	dc.b $98, "  ", $FF
+	even
+	dc.b $99, "  ", $FF
+	even
+	dc.b $9A, "  ", $FF
+	even
+	dc.b $9B, "  ", $FF
+	even
+
+ST_CmdNameIndex:
+	dc.l SoundText_CmdFE_Name ; DATA XREF: ROM:0002137C↑o
+	dc.l SoundText_CmdFD_Name
+	dc.l SoundText_CmdFF_Name
+
+SoundText_CmdFE_Name:	dc.b $FE, "all clear", $FF
+	even
+SoundText_CmdFD_Name:	dc.b $FD, "fade out", $FF
+	even
+SoundText_CmdFF_Name:	dc.b $FF, "pause on off", $FF
+	even
+	dc.b $F4, "fade in", $FF
+	even
+	dc.b $F5, "rebirth", $FF
+	even
+	dc.b $F6, "pause on", $FF
+	even
+	dc.b $F7, "pause off", $FF
+	even
 ; ---------------------------------------------------------------------------
 
 Options_SetupPlanes:			; DATA XREF: ROM:00001B5A↑o
@@ -38220,181 +38351,256 @@ loc_215E2:				; CODE XREF: Options_DrawStrings+26↓j
 ; End of function Options_DrawStrings
 
 ; ---------------------------------------------------------------------------
-Options_ModeIndex:dc.l OptionsMenu_TextIndex
-					; DATA XREF: Options_DrawStrings+C↑r
-		dc.l InputTest_TextIndex
-		dc.l SoundTest_TextIndex
-InputTest_TextIndex:dc.w $C		; DATA XREF: ROM:000215FE↑o
-		dc.l OptStr_InputTest
-		dc.l OptStr_PressStartAndA
-		dc.l OptStr_Pads
-		dc.l OptStr_ButtonA
-		dc.l OptStr_ButtonB
-		dc.l OptStr_ButtonC
-		dc.l OptStr_ButtonUp
-		dc.l OptStr_ButtonDown
-		dc.l OptStr_ButtonRight
-		dc.l OptStr_ButtonLeft
-		dc.l OptStr_ToExit
-		dc.l OptStr_Start
-OptStr_InputTest:dc.w $11E		; DATA XREF: ROM:00021608↑o
-		dc.w $A200
-		dc.b "input test"
-		dc.b $FF
-		dc.b 0
-OptStr_PressStartAndA:dc.w $B88		; DATA XREF: ROM:0002160C↑o
-		dc.w $A200
-		dc.b "press start button and a button"
-		dc.b $FF
-OptStr_ToExit:	dc.w $CBA		; DATA XREF: ROM:00021630↑o
-		dc.w $A200
-		dc.b "to exit"
-		dc.b $FF
-OptStr_Pads:	dc.w $222		; DATA XREF: ROM:00021610↑o
-		dc.w $E200
-		dc.b "pad1  pad2"
-		dc.b $FF
-		dc.b 0
-OptStr_Start:	dc.w $316		; DATA XREF: ROM:00021634↑o
-		dc.w $8200
-		dc.b "start:"
-		dc.b $FF
-		dc.b 0
-OptStr_ButtonA: dc.w $410		; DATA XREF: ROM:00021614↑o
-		dc.w $8200
-		dc.b "button a:"
-		dc.b $FF
-OptStr_ButtonB: dc.w $510		; DATA XREF: ROM:00021618↑o
-		dc.w $8200
-		dc.b "button b:"
-		dc.b $FF
-OptStr_ButtonC: dc.w $610		; DATA XREF: ROM:0002161C↑o
-		dc.w $8200
-		dc.b "button c:"
-		dc.b $FF
-OptStr_ButtonUp:dc.w $790		; DATA XREF: ROM:00021620↑o
-		dc.w $8200
-		dc.b "      up:"
-		dc.b $FF
-OptStr_ButtonDown:dc.w $890		; DATA XREF: ROM:00021624↑o
-		dc.w $8200
-		dc.b "    down:"
-		dc.b $FF
-OptStr_ButtonRight:dc.w $990		; DATA XREF: ROM:00021628↑o
-		dc.w $8200
-		dc.b "   right:"
-		dc.b $FF
-OptStr_ButtonLeft:dc.w $A90		; DATA XREF: ROM:0002162C↑o
-		dc.w $8200
-		dc.b "    left:"
-		dc.b $FF
-OptionsMenu_TextIndex:dc.w $A		; DATA XREF: ROM:Options_ModeIndex↑o
-		dc.l OptStr_Options
-		dc.l OptStr_Players
-		dc.l OptStr_PressStartExit
-		dc.l OptStr_AssignA
-		dc.l OptStr_AssignB
-		dc.l OptStr_AssignC
-		dc.l OptStr_CPULevel
-		dc.l OptStr_VSMatches
-		dc.l OptStr_Sampling
-		dc.l OptStr_KeyAssign
-OptStr_Options: dc.w $120		; DATA XREF: ROM:000216F8↑o
-		dc.w $A200
-		dc.b "options"
-		dc.b $FF
-OptStr_Players: dc.w $312		; DATA XREF: ROM:000216FC↑o
-		dc.w $E200
-		dc.b "player-1       player-2"
-		dc.b $FF
-OptStr_PressStartExit:dc.w $C8E		; DATA XREF: ROM:00021700↑o
-		dc.w $A200
-		dc.b "press start button to exit"
-		dc.b $FF
-		dc.b 0
-OptStr_AssignA: dc.w $40C		; DATA XREF: ROM:00021704↑o
-		dc.w $E200
-		dc.b "a:              a:"
-		dc.b $FF
-		dc.b 0
-OptStr_AssignB: dc.w $50C		; DATA XREF: ROM:00021708↑o
-		dc.w $E200
-		dc.b "b:              b:"
-		dc.b $FF
-		dc.b 0
-OptStr_AssignC: dc.w $60C		; DATA XREF: ROM:0002170C↑o
-		dc.w $E200
-		dc.b "c:              c:"
-		dc.b $FF
-		dc.b 0
-OptStr_CPULevel:dc.w $78C		; DATA XREF: ROM:00021710↑o
-		dc.w $E200
-		dc.b "vs.com level   :"
-		dc.b $FF
-		dc.b 0
-OptStr_VSMatches:dc.w $88C		; DATA XREF: ROM:00021714↑o
-		dc.w $E200
-		dc.b "1p vs.2p mode  :"
-		dc.b $FF
-		dc.b 0
-OptStr_Sampling:dc.w $98C		; DATA XREF: ROM:00021718↑o
-		dc.w $E200
-		dc.b "sampling       :"
-		dc.b $FF
-		dc.b 0
-OptStr_KeyAssign:dc.w $21A		; DATA XREF: ROM:0002171C↑o
-		dc.w $E200
-		dc.b "key assignment"
-		dc.b $FF
-		dc.b 0
-SoundTest_TextIndex:dc.w 8		; DATA XREF: ROM:00021602↑o
-		dc.l OptStr_SoundTrack
-		dc.l OptStr_PressStartExit2
-		dc.l OptStr_Sound1
-		dc.l OptStr_Sound2
-		dc.l OptStr_Sound3
-		dc.l OptStr_BGM
-		dc.l OptStr_Voice
-		dc.l OptStr_SndCmd
-OptStr_SoundTrack:dc.w $11A		; DATA XREF: ROM:00021808↑o
-		dc.w $8200
-		dc.b "sound track"
-		dc.b $FF
-OptStr_PressStartExit2:dc.w $C8E	; DATA XREF: ROM:0002180C↑o
-		dc.w $E200
-		dc.b "press start button to exit"
-		dc.b $FF
-		dc.b 0
-OptStr_Sound1:	dc.w $292		; DATA XREF: ROM:00021810↑o
-		dc.w $E200
-		dc.b "se1:"
-		dc.b $FF
-		dc.b 0
-OptStr_Sound2:	dc.w $392		; DATA XREF: ROM:00021814↑o
-		dc.w $E200
-		dc.b "se2:"
-		dc.b $FF
-		dc.b 0
-OptStr_Sound3:	dc.w $492		; DATA XREF: ROM:00021818↑o
-		dc.w $E200
-		dc.b "se3:"
-		dc.b $FF
-		dc.b 0
-OptStr_BGM:	dc.w $592		; DATA XREF: ROM:0002181C↑o
-		dc.w $E200
-		dc.b "bgm:"
-		dc.b $FF
-		dc.b 0
-OptStr_Voice:	dc.w $68E		; DATA XREF: ROM:00021820↑o
-		dc.w $E200
-		dc.b "voice:"
-		dc.b $FF
-		dc.b 0
-OptStr_SndCmd:	dc.w $78A		; DATA XREF: ROM:00021824↑o
-		dc.w $E200
-		dc.b "command:"
-		dc.b $FF
-		dc.b 0
+Options_ModeIndex:
+	dc.l OptionsMenu_TextIndex
+	dc.l InputTest_TextIndex
+	dc.l SoundTest_TextIndex
+
+InputTest_TextIndex:	dc.w $C
+	dc.l OptStr_InputTest
+	dc.l OptStr_PressStartAndA
+	dc.l OptStr_Pads
+	dc.l OptStr_ButtonA
+	dc.l OptStr_ButtonB
+	dc.l OptStr_ButtonC
+	dc.l OptStr_ButtonUp
+	dc.l OptStr_ButtonDown
+	dc.l OptStr_ButtonRight
+	dc.l OptStr_ButtonLeft
+	dc.l OptStr_ToExit
+	dc.l OptStr_Start
+
+OptStr_InputTest:
+	dc.w $11E
+	dc.w $A200
+	dc.b "input test"
+	dc.b $FF
+	even
+
+OptStr_PressStartAndA:
+	dc.w $B88
+	dc.w $A200
+	dc.b "press start button and a button"
+	dc.b $FF
+	even
+
+OptStr_ToExit:
+	dc.w $CBA
+	dc.w $A200
+	dc.b "to exit"
+	dc.b $FF
+	even
+
+OptStr_Pads:
+	dc.w $222
+	dc.w $E200
+	dc.b "pad1  pad2"
+	dc.b $FF
+	even
+
+OptStr_Start:
+	dc.w $316
+	dc.w $8200
+	dc.b "start:"
+	dc.b $FF
+	even
+
+OptStr_ButtonA:
+	dc.w $410
+	dc.w $8200
+	dc.b "button a:"
+	dc.b $FF
+	even
+
+OptStr_ButtonB:
+	dc.w $510
+	dc.w $8200
+	dc.b "button b:"
+	dc.b $FF
+	even
+
+OptStr_ButtonC:
+	dc.w $610
+	dc.w $8200
+	dc.b "button c:"
+	dc.b $FF
+	even
+
+OptStr_ButtonUp:
+	dc.w $790
+	dc.w $8200
+	dc.b "      up:"
+	dc.b $FF
+	even
+
+OptStr_ButtonDown:
+	dc.w $890
+	dc.w $8200
+	dc.b "    down:"
+	dc.b $FF
+	even
+
+OptStr_ButtonRight:
+	dc.w $990
+	dc.w $8200
+	dc.b "   right:"
+	dc.b $FF
+	even
+
+OptStr_ButtonLeft:
+	dc.w $A90
+	dc.w $8200
+	dc.b "    left:"
+	dc.b $FF
+	even
+
+OptionsMenu_TextIndex:	dc.w $A
+	dc.l OptStr_Options
+	dc.l OptStr_Players
+	dc.l OptStr_PressStartExit
+	dc.l OptStr_AssignA
+	dc.l OptStr_AssignB
+	dc.l OptStr_AssignC
+	dc.l OptStr_CPULevel
+	dc.l OptStr_VSMatches
+	dc.l OptStr_Sampling
+	dc.l OptStr_KeyAssign
+
+OptStr_Options:
+	dc.w $120
+	dc.w $A200
+	dc.b "options"
+	dc.b $FF
+	even
+
+OptStr_Players:
+	dc.w $312
+	dc.w $E200
+	dc.b "player-1       player-2"
+	dc.b $FF
+	even
+
+OptStr_PressStartExit:
+	dc.w $C8E
+	dc.w $A200
+	dc.b "press start button to exit"
+	dc.b $FF
+	even
+
+OptStr_AssignA:
+	dc.w $40C
+	dc.w $E200
+	dc.b "a:              a:"
+	dc.b $FF
+	even
+
+OptStr_AssignB:
+	dc.w $50C
+	dc.w $E200
+	dc.b "b:              b:"
+	dc.b $FF
+	even
+
+OptStr_AssignC:
+	dc.w $60C
+	dc.w $E200
+	dc.b "c:              c:"
+	dc.b $FF
+	even
+
+OptStr_CPULevel:
+	dc.w $78C
+	dc.w $E200
+	dc.b "vs.com level   :"
+	dc.b $FF
+	even
+
+OptStr_VSMatches:
+	dc.w $88C
+	dc.w $E200
+	dc.b "1p vs.2p mode  :"
+	dc.b $FF
+	even
+
+OptStr_Sampling:
+	dc.w $98C
+	dc.w $E200
+	dc.b "sampling       :"
+	dc.b $FF
+	even
+
+OptStr_KeyAssign:
+	dc.w $21A
+	dc.w $E200
+	dc.b "key assignment"
+	dc.b $FF
+	even
+
+SoundTest_TextIndex:	dc.w 8
+	dc.l OptStr_SoundTrack
+	dc.l OptStr_PressStartExit2
+	dc.l OptStr_Sound1
+	dc.l OptStr_Sound2
+	dc.l OptStr_Sound3
+	dc.l OptStr_BGM
+	dc.l OptStr_Voice
+	dc.l OptStr_SndCmd
+
+OptStr_SoundTrack:
+	dc.w $11A
+	dc.w $8200
+	dc.b "sound track"
+	dc.b $FF
+	even
+
+OptStr_PressStartExit2:
+	dc.w $C8E
+	dc.w $E200
+	dc.b "press start button to exit"
+	dc.b $FF
+	even
+
+OptStr_Sound1:
+	dc.w $292
+	dc.w $E200
+	dc.b "se1:"
+	dc.b $FF
+	even
+
+OptStr_Sound2:
+	dc.w $392
+	dc.w $E200
+	dc.b "se2:"
+	dc.b $FF
+	even
+
+OptStr_Sound3:
+	dc.w $492
+	dc.w $E200
+	dc.b "se3:"
+	dc.b $FF
+	even
+
+OptStr_BGM:
+	dc.w $592
+	dc.w $E200
+	dc.b "bgm:"
+	dc.b $FF
+	even
+
+OptStr_Voice:
+	dc.w $68E
+	dc.w $E200
+	dc.b "voice:"
+	dc.b $FF
+	even
+
+OptStr_SndCmd:
+	dc.w $78A
+	dc.w $E200
+	dc.b "command:"
+	dc.b $FF
+	even
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -38856,19 +39062,17 @@ loc_21C02:				; CODE XREF: PrintP2CtrlOption+3A↑j
 ; End of function PrintP2CtrlOption
 
 ; ---------------------------------------------------------------------------
-KeyAssign_TextIndex:dc.l OptStr_NoUse	; DATA XREF: PrintP2CtrlOption+2E↑r
-					; "no use	"
-		dc.l OptStr_TurnLeft	; "turn left	$"
-		dc.l OptStr_TurnRight	; "turn right #"
-OptStr_NoUse:	dc.b "no use      "	; DATA XREF: ROM:KeyAssign_TextIndex↑o
-		dc.b $FF
-		dc.b 0
-OptStr_TurnLeft:dc.b "turn left  $"	; DATA XREF: ROM:00021C1C↑o
-		dc.b $FF
-		dc.b 0
-OptStr_TurnRight:dc.b "turn right #"	; DATA XREF: ROM:00021C20↑o
-		dc.b $FF
-		dc.b 0
+KeyAssign_TextIndex:
+	dc.l OptStr_NoUse
+	dc.l OptStr_TurnLeft
+	dc.l OptStr_TurnRight
+
+OptStr_NoUse:		dc.b "no use      ", $FF
+	even
+OptStr_TurnLeft:	dc.b "turn left  $", $FF
+	even
+OptStr_TurnRight:	dc.b "turn right #", $FF
+	even
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -38884,20 +39088,20 @@ PrintDifficultyOption:			; CODE XREF: PrintMainOptions+8↑p
 ; End of function PrintDifficultyOption
 
 ; ---------------------------------------------------------------------------
-Difficulty_TextIndex:dc.l OptStr_Hardest
-					; DATA XREF: PrintDifficultyOption+E↑r
-					; "hardest"
-		dc.l OptStr_Hard	; "hard	"
-		dc.l OptStr_Normal	; "normal "
-		dc.l OptStr_easy	; "easy	"
-OptStr_Hardest: dc.b "hardest"		; DATA XREF: ROM:Difficulty_TextIndex↑o
-		dc.b $FF
-OptStr_Hard:	dc.b "hard   "		; DATA XREF: ROM:00021C6C↑o
-		dc.b $FF
-OptStr_Normal:	dc.b "normal "		; DATA XREF: ROM:00021C70↑o
-		dc.b $FF
-OptStr_easy:	dc.b "easy   "		; DATA XREF: ROM:00021C74↑o
-		dc.b $FF
+Difficulty_TextIndex:
+	dc.l OptStr_Hardest
+	dc.l OptStr_Hard
+	dc.l OptStr_Normal
+	dc.l OptStr_easy
+
+OptStr_Hardest:	dc.b "hardest", $FF
+	even
+OptStr_Hard:	dc.b "hard   ", $FF
+	even
+OptStr_Normal:	dc.b "normal ", $FF
+	even
+OptStr_easy:	dc.b "easy   ", $FF
+	even
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -38928,27 +39132,35 @@ loc_21CD2:				; CODE XREF: PrintVSMatchesOption+30↑j
 ; End of function PrintVSMatchesOption
 
 ; ---------------------------------------------------------------------------
-OptStr_GameMatch:dc.b "game match "	; DATA XREF: PrintVSMatchesOption+28↑o
-		dc.b $FF
-OptStr_GamesMatch:dc.b "games match"	; DATA XREF: PrintVSMatchesOption+34↑o
-		dc.b $FF
-MatchCount_TextIndex:dc.l OptStr_OneMatch
-					; DATA XREF: PrintVSMatchesOption+14↑r
-		dc.l OptStr_ThreeMatch
-		dc.l OptStr_FiveMatch
-		dc.l OptStr_SevenMatch
-		dc.l OptStr_NineMatch
-		dc.l OptStr_ElevenMatch
-		dc.l OptStr_ThirteenMatch
-		dc.l OptStr_FifteenMatch
-OptStr_OneMatch:dc.b 2, $20, $FF, 0	; DATA XREF: ROM:MatchCount_TextIndex↑o
-OptStr_ThreeMatch:dc.b 4, $20, $FF, 0	; DATA XREF: ROM:00021CFA↑o
-OptStr_FiveMatch:dc.b 6, $20, $FF, 0	; DATA XREF: ROM:00021CFE↑o
-OptStr_SevenMatch:dc.b 8, $20, $FF, 0	; DATA XREF: ROM:00021D02↑o
-OptStr_NineMatch:dc.b $A, $20, $FF, 0	; DATA XREF: ROM:00021D06↑o
-OptStr_ElevenMatch:dc.b 2, 2, $FF, 0	; DATA XREF: ROM:00021D0A↑o
-OptStr_ThirteenMatch:dc.b 2, 4, $FF, 0	; DATA XREF: ROM:00021D0E↑o
-OptStr_FifteenMatch:dc.b 2, 6, $FF, 0	; DATA XREF: ROM:00021D12↑o
+OptStr_GameMatch:	dc.b "game match ", $FF
+OptStr_GamesMatch:	dc.b "games match", $FF
+
+MatchCount_TextIndex:
+	dc.l OptStr_OneMatch
+	dc.l OptStr_ThreeMatch
+	dc.l OptStr_FiveMatch
+	dc.l OptStr_SevenMatch
+	dc.l OptStr_NineMatch
+	dc.l OptStr_ElevenMatch
+	dc.l OptStr_ThirteenMatch
+	dc.l OptStr_FifteenMatch
+
+OptStr_OneMatch:	dc.b 2, " ", $FF
+	even
+OptStr_ThreeMatch:	dc.b 4, " ", $FF
+	even
+OptStr_FiveMatch:	dc.b 6, " ", $FF
+	even
+OptStr_SevenMatch:	dc.b 8, " ", $FF
+	even
+OptStr_NineMatch:	dc.b $A, " ", $FF
+	even
+OptStr_ElevenMatch:	dc.b 2, 2, $FF
+	even
+OptStr_ThirteenMatch:	dc.b 2, 4, $FF
+	even
+OptStr_FifteenMatch:	dc.b 2, 6, $FF
+	even
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -38966,10 +39178,10 @@ loc_21D54:				; CODE XREF: PrintSamplingOption+14↑j
 ; End of function PrintSamplingOption
 
 ; ---------------------------------------------------------------------------
-OptStr_On:	dc.b "on "		; DATA XREF: PrintSamplingOption+8↑o
-		dc.b $FF
-OptStr_Off:	dc.b "off"		; DATA XREF: PrintSamplingOption+18↑o
-		dc.b $FF
+OptStr_On:	dc.b "on ", $FF
+	even
+OptStr_Off:	dc.b "off", $FF
+	even
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -38982,9 +39194,8 @@ PrintInputTest:				; CODE XREF: PrintMainOptions+14↑p
 ; End of function PrintInputTest
 
 ; ---------------------------------------------------------------------------
-OptStr_InputTest2:dc.b "input test"	; DATA XREF: PrintInputTest+8↑o
-		dc.b $FF
-		dc.b 0
+OptStr_InputTest2:	dc.b "input test", $FF
+	even
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -39002,9 +39213,9 @@ locret_21D9A:				; CODE XREF: PrintSoundTest+6↑j
 ; End of function PrintSoundTest
 
 ; ---------------------------------------------------------------------------
-OptStr_SoundTest2:dc.b "sound test"	; DATA XREF: PrintSoundTest+12↑o
-		dc.b $FF
-		dc.b 0
+OptStr_SoundTest2:	dc.b "sound test", $FF
+	even
+
 ; ---------------------------------------------------------------------------
 ; START OF FUNCTION CHUNK FOR OptionsCtrl
 
@@ -39012,20 +39223,19 @@ Act_InputTest:				; CODE XREF: OptionsCtrl+176↑j
 		move.w	#1,d0
 		bsr.w	Options_DrawStrings
 		jsr	(ActorBookmark).l
-		bsr.w	sub_21DEE
+		bsr.w	.getplayerinput
 		move.b	(v_jpad1hold).l,d0
 		andi.b	#$C0,d0
 		eori.b	#$C0,d0
-		beq.w	loc_21DE0
+		beq.w	.return
 		move.b	(v_jpad2hold).l,d0
 		andi.b	#$C0,d0
 		eori.b	#$C0,d0
-		beq.w	loc_21DE0
+		beq.w	.return
 		rts
 ; ---------------------------------------------------------------------------
 
-loc_21DE0:				; CODE XREF: OptionsCtrl+3DC↑j
-					; OptionsCtrl+3EE↑j
+.return:
 		move.b	#0,d0
 		jsr	JmpTo_PlaySound
 		bra.w	Act_Options
@@ -39034,36 +39244,40 @@ loc_21DE0:				; CODE XREF: OptionsCtrl+3DC↑j
 ; =============== S U B R O U T I N E =======================================
 
 
-sub_21DEE:				; CODE XREF: OptionsCtrl+3CA↑p
+.getplayerinput:
 		move.b	(v_jpad1hold).l,d0
 		lsl.w	#8,d0
 		move.b	(v_jpad2hold).l,d0
-		lea	(word_21E3C).l,a2
+		lea	(.VRAMLoc).l,a2
 		move.w	#$F,d1
 
-loc_21E06:				; CODE XREF: sub_21DEE+40↓j
+.draw:				; CODE XREF: sub_21DEE+40↓j
 		move.w	(a2)+,d5
-		lea	(byte_21E34).l,a1
+		lea	(.StrOn).l,a1
 		move.w	#$E500,d6
 		ror.l	#1,d0
-		bcs.w	loc_21E22
-		lea	(byte_21E38).l,a1
+		bcs.w	.inputheld
+		lea	(.StrOff).l,a1
 		move.w	#$C500,d6
 
-loc_21E22:				; CODE XREF: sub_21DEE+26↑j
+.inputheld:				; CODE XREF: sub_21DEE+26↑j
 		movem.l d0-d1/a2,-(sp)
 		bsr.w	Options_PrintRaw
 		movem.l (sp)+,d0-d1/a2
-		dbf	d1,loc_21E06
+		dbf	d1,.draw
 		rts
 ; End of function sub_21DEE
 
 ; ---------------------------------------------------------------------------
-byte_21E34:	dc.b $19, $18, $FF, 0	; DATA XREF: sub_21DEE+1A↑o
-byte_21E38:	dc.b $2C, $2D, $FF, 0	; DATA XREF: sub_21DEE+2A↑o
-word_21E3C:	dc.w $7B0, $8B0, $AB0, $9B0, $530, $630, $430, $330
-					; DATA XREF: sub_21DEE+E↑o
-		dc.w $7A4, $8A4, $AA4, $9A4, $524, $624, $424, $324
+.StrOn:		dc.b $19, $18, $FF
+	even
+.StrOff:	dc.b $2C, $2D, $FF
+	even
+
+.VRAMLoc:
+	dc.w $7B0, $8B0, $AB0, $9B0, $530, $630, $430, $330
+	dc.w $7A4, $8A4, $AA4, $9A4, $524, $624, $424, $324
+
 ; ---------------------------------------------------------------------------
 		move.l	#EndofROM-1,d0
 		addq.l	#1,d0
@@ -39142,9 +39356,24 @@ loc_21EF0:				; CODE XREF: sub_21EDC+C↑j
 ; End of function sub_21EDC
 
 ; ---------------------------------------------------------------------------
-ComboVoices:	dc.b 0, $81, $82, $83, $84, $84, $84, $84
-					; DATA XREF: SpawnGarbageGlow:loc_21F2A↓o
-		dc.b 0, $85, $86, $8D, $8E, $8E, $8E, $8E
+ComboVoices:
+	dc.b 0
+	dc.b VOI_P1_COMBO_1
+	dc.b VOI_P1_COMBO_2
+	dc.b VOI_P1_COMBO_3
+	dc.b VOI_P1_COMBO_4
+	dc.b VOI_P1_COMBO_4
+	dc.b VOI_P1_COMBO_4
+	dc.b VOI_P1_COMBO_4
+
+	dc.b 0
+	dc.b VOI_P2_COMBO_1
+	dc.b VOI_P2_COMBO_2
+	dc.b VOI_P2_COMBO_3
+	dc.b VOI_P2_COMBO_4
+	dc.b VOI_P2_COMBO_4
+	dc.b VOI_P2_COMBO_4
+	dc.b VOI_P2_COMBO_4
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -39281,7 +39510,12 @@ loc_220B8:				; CODE XREF: Act_GarbageGlow+114↑j
 ; End of function Act_GarbageGlow
 
 ; ---------------------------------------------------------------------------
-GarbageSounds:	dc.b $54, $55, $56, $56 ; DATA XREF: Act_GarbageGlow:loc_22088↑r
+GarbageSounds:
+	dc.b SFX_GARBAGE_1
+	dc.b SFX_GARBAGE_2
+	dc.b SFX_GARBAGE_3
+	dc.b SFX_GARBAGE_3
+
 byte_220C2:	dc.b 0, 7		; DATA XREF: SpawnGarbageGlow+5E↑o
 					; ROM:000220D0↓o
 		dc.b 0, 8
@@ -39332,8 +39566,7 @@ byte_22102:	dc.b 2, $11		; DATA XREF: Act_GarbageGlow+CE↑o
 ; =============== S U B R O U T I N E =======================================
 
 
-NemDec:					; CODE XREF: ROM:000017A8↑p
-					; sub_5E4E+5A↑p ...
+NemDec:
 		movem.l d0-d7/a0-a5,-(sp)
 		andi.l	#$FFFF,d0
 		add.l	d0,d0
