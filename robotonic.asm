@@ -6277,8 +6277,8 @@ byte_5436:
 	dc.b $90
 	dc.b 0
 	dc.b 0
-	dc.b 5
-	dc.w $300
+	dc.w $503
+	dc.b 0
 	dc.b 0
 	dc.b 0
 	dc.b 0
@@ -6314,8 +6314,8 @@ byte_5436:
 	dc.b $C0
 	dc.b 0
 	dc.b 0
-	dc.b 5
-	dc.w $400
+	dc.w $504
+	dc.b 0
 	dc.b 0
 	dc.b 0
 	dc.b $C0
@@ -11837,7 +11837,8 @@ byte_9126:	dc.b 0			; DATA XREF: sub_902C+38↑o
 		dc.b 0
 		dc.b 0
 		dc.b 0
-		dc.w 0
+		dc.b 0
+		dc.b 0
 		dc.b 0
 		dc.b 0
 		dc.b $EF
@@ -23589,6 +23590,7 @@ Cut_Humpty:	dc.b $85, 2		; DATA XREF: ROM:0001038A↑o
 		dc.b $83, $C
 		dc.b $82
 		dc.b $80
+	even
 Cut_Skweel:	dc.b $83, 2		; DATA XREF: ROM:0001038E↑o
 		dc.b $85, $82
 		dc.b $85, 0
@@ -23609,6 +23611,7 @@ Cut_Skweel:	dc.b $83, 2		; DATA XREF: ROM:0001038E↑o
 		dc.b $83, $A
 		dc.b $82
 		dc.b $80
+	even
 Cut_Frankly:	dc.b $85, 0		; DATA XREF: ROM:00010356↑o
 		dc.b $83, 6
 		dc.b $81, $7A
@@ -23640,6 +23643,7 @@ Cut_Frankly:	dc.b $85, 0		; DATA XREF: ROM:00010356↑o
 		dc.b $83, 6
 		dc.b $82
 		dc.b $80
+	even
 Cut_Dynamight:	dc.b $85, 0		; DATA XREF: ROM:0001035A↑o
 		dc.b $83, 2
 		dc.b $85, 2
@@ -23675,7 +23679,7 @@ Cut_Dynamight:	dc.b $85, 0		; DATA XREF: ROM:0001035A↑o
 		dc.b $85, 2
 		dc.b $82
 		dc.b $80
-		dc.b 0
+	even
 Cut_Arms:	dc.b $83, 2		; DATA XREF: ROM:0001035E↑o
 		dc.b $85, 0
 		dc.b $81, $5C
@@ -23698,6 +23702,7 @@ Cut_Arms:	dc.b $83, 2		; DATA XREF: ROM:0001035E↑o
 		dc.b $83, 8
 		dc.b $82
 		dc.b $80
+	even
 Cut_Grounder:	dc.b $83, 2		; DATA XREF: ROM:00010366↑o
 		dc.b $85, $81
 		dc.b $83, 4
@@ -23728,6 +23733,7 @@ Cut_Grounder:	dc.b $83, 2		; DATA XREF: ROM:00010366↑o
 		dc.b $85, 0
 		dc.b $82
 		dc.b $80
+	even
 Cut_Davy:	dc.b $83, 2		; DATA XREF: ROM:0001036A↑o
 		dc.b $85, 0
 		dc.b $83, 2
@@ -23753,6 +23759,7 @@ Cut_Davy:	dc.b $83, 2		; DATA XREF: ROM:0001036A↑o
 		dc.b $83, $A
 		dc.b $82
 		dc.b $80
+	even
 Cut_Coconuts:	dc.b $83, 2		; DATA XREF: ROM:Cutscene_Index↑o
 					; ROM:00010362↑o ...
 		dc.b $85, $80
@@ -23781,6 +23788,7 @@ Cut_Coconuts:	dc.b $83, 2		; DATA XREF: ROM:Cutscene_Index↑o
 		dc.b $83, 4
 		dc.b $82
 		dc.b $80
+	even
 Cut_Spike:	dc.b $83, 4		; DATA XREF: ROM:00010372↑o
 		dc.b $85, 0
 		dc.b $81, $56
@@ -23810,7 +23818,7 @@ Cut_Spike:	dc.b $83, 4		; DATA XREF: ROM:00010372↑o
 		dc.b $83, $A
 		dc.b $82
 		dc.b $80
-		dc.b 0
+	even
 Cut_SirFfuzzy:	dc.b $83, 2		; DATA XREF: ROM:00010376↑o
 		dc.b $85, $85
 		dc.b $85, 0
@@ -23836,6 +23844,7 @@ Cut_SirFfuzzy:	dc.b $83, 2		; DATA XREF: ROM:00010376↑o
 		dc.b $83, $10
 		dc.b $82
 		dc.b $80
+	even
 Cut_Dragon:	dc.b $83, 4		; DATA XREF: ROM:0001037A↑o
 		dc.b $85, 0
 		dc.b $81, $54
@@ -23858,7 +23867,7 @@ Cut_Dragon:	dc.b $83, 4		; DATA XREF: ROM:0001037A↑o
 		dc.b $83, $A
 		dc.b $82
 		dc.b $80
-		dc.b 0
+	even
 Cut_Scratch:	dc.b $83, 2		; DATA XREF: ROM:0001037E↑o
 		dc.b $85, 0
 		dc.b $81, $79
@@ -23893,7 +23902,7 @@ Cut_Scratch:	dc.b $83, 2		; DATA XREF: ROM:0001037E↑o
 		dc.b $83, 7
 		dc.b $82
 		dc.b $80
-		dc.b 0
+	even
 Cut_Robotnik:	dc.b $85, $84		; DATA XREF: ROM:00010382↑o
 		dc.b $83, $23
 		dc.b $81, $5C
@@ -23914,6 +23923,7 @@ Cut_Robotnik:	dc.b $85, $84		; DATA XREF: ROM:00010382↑o
 		dc.b $82
 		dc.b $83, 6
 		dc.b $80
+	even
 Cut_Opening:	dc.b $85, $83		; DATA XREF: ROM:00010392↑o
 		dc.b $83, $A
 		dc.b $81, $7B
@@ -23965,6 +23975,7 @@ Cut_Opening:	dc.b $85, $83		; DATA XREF: ROM:00010392↑o
 		dc.b $8A, $6B
 		dc.b $83, $14
 		dc.b $80
+	even
 
 ; =============== S U B R O U T I N E =======================================
 
