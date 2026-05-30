@@ -18071,7 +18071,7 @@ OpponentScrBoxMap:
 	dc.b %100
 
 MapEni_OpponentScrBox:
-	incbin	"data/maps/enigma/opponents_screen/Box Outline.eni
+	incbin	"data/maps/enigma/opponents_screen/Box Outline.eni"
 	even
 
 ; =============== S U B R O U T I N E =======================================
