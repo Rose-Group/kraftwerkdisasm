@@ -59,7 +59,7 @@ BC_GameIntro:
 	BVDP	1
 	BRUN	DisableSHMode
 	BCOMP	$2000, ArtComp_LevelIntro
-	BNEM	$4000, ArtNem_Opening
+	BNEM	$4000, ArtNem_LairInterior
 	BNEM	$1200, ArtNem_IntroBadniks
 	BRUN	sub_EEE0
 	BNOP
