@@ -17378,7 +17378,7 @@ Password_LoadBG:			; DATA XREF: ROM:00001AD6↑o
 		jmp	EniDec
 ; ---------------------------------------------------------------------------
 MapEni_Password:
-	incbin	"data/maps/enigma/password/Password BG.eni"
+	incbin	"data/maps/enigma/menus/Password.eni"
 	even
 
 ; ---------------------------------------------------------------------------
@@ -18072,7 +18072,7 @@ OpponentScrBoxMap:
 	dc.b %100
 
 MapEni_OpponentScrBox:
-	incbin	"data/maps/enigma/opponents_screen/Box Outline.eni"
+	incbin	"data/maps/enigma/menus/Opponent's Screen Box.eni"
 	even
 
 ; =============== S U B R O U T I N E =======================================
