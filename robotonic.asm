@@ -13239,7 +13239,7 @@ word_9AF4:	dc.w $1000		; DATA XREF: sub_9970+A4↑o
 ; ---------------------------------------------------------------------------
 
 ArtNem_GroupedStars:
-	incbin	"data/art/nemesis/2P Versus/Grouped Stars.nem"
+	incbin	"data/art/nemesis/Misc/Grouped Stars.nem"
 	even
 ; ---------------------------------------------------------------------------
 
@@ -40306,31 +40306,31 @@ loc_22684:				; CODE XREF: ROM:0002268E↓j
 	align	$10000, $FF
 
 ArtUnc_Robotnik_0:
-	incbin	"data/art/uncompressed/Robotnik/Robotnik_0.unc"
+	incbin	"data/art/uncompressed/Robotnik/Robotnik 0.unc"
 
 ArtUnc_Robotnik_1:
-	incbin	"data/art/uncompressed/Robotnik/Robotnik_1.unc"
+	incbin	"data/art/uncompressed/Robotnik/Robotnik 1.unc"
 
 ArtUnc_Robotnik_2:
-	incbin	"data/art/uncompressed/Robotnik/Robotnik_2.unc"
+	incbin	"data/art/uncompressed/Robotnik/Robotnik 2.unc"
 
 ArtUnc_Robotnik_3:
-	incbin	"data/art/uncompressed/Robotnik/Robotnik_3.unc"
+	incbin	"data/art/uncompressed/Robotnik/Robotnik 3.unc"
 
 ArtUnc_Robotnik_4:
-	incbin	"data/art/uncompressed/Robotnik/Robotnik_4.unc"
+	incbin	"data/art/uncompressed/Robotnik/Robotnik 4.unc"
 
 ArtUnc_Robotnik_5:
-	incbin	"data/art/uncompressed/Robotnik/Robotnik_5.unc"
+	incbin	"data/art/uncompressed/Robotnik/Robotnik 5.unc"
 
 ArtUnc_Robotnik_6:
-	incbin	"data/art/uncompressed/Robotnik/Robotnik_6.unc"
+	incbin	"data/art/uncompressed/Robotnik/Robotnik 6.unc"
 
 ArtUnc_Robotnik_7:
-	incbin	"data/art/uncompressed/Robotnik/Robotnik_7.unc"
+	incbin	"data/art/uncompressed/Robotnik/Robotnik 7.unc"
 
 ArtUnc_Robotnik_8:
-	incbin	"data/art/uncompressed/Robotnik/Robotnik_8.unc"
+	incbin	"data/art/uncompressed/Robotnik/Robotnik 8.unc"
 
 ArtUnc_Robotnik_9:dc.b	0		; DATA XREF: ROM:0000A6E6↑o
 					; ROM:0000E518↑o

@@ -1,0 +1,371 @@
+/***********************Directories***************************/
+#dir	data
+#dir	data/art
+#dir	data/art/Uncompressed
+#dir	data/art/Uncompressed/Robotnik
+#dir	data/art/Nemesis
+#dir	data/art/Nemesis/Background
+#dir	data/art/Nemesis/Cutscene
+#dir	data/art/Nemesis/Portrait
+#dir	data/art/Nemesis/Misc
+#dir	data/art/Compile
+#dir	data/maps/uncompressed
+#dir	data/maps/uncompressed/byte
+#dir	data/maps/uncompressed/bytepal
+#dir	data/maps/uncompressed/raw
+#dir	data/maps/uncompressed/raw/gameover
+#dir	data/maps/uncompressed/word
+#dir	data/maps/priority
+#dir	data/maps/enigma
+#dir	data/maps/enigma/portrait
+#dir	data/maps/enigma/portrait/Arms
+#dir	data/maps/enigma/portrait/Frankly
+#dir	data/maps/enigma/portrait/Humpty
+#dir	data/maps/enigma/portrait/Coconuts
+#dir	data/maps/enigma/portrait/Davy Sprocket
+#dir	data/maps/enigma/portrait/Skweel
+#dir	data/maps/enigma/portrait/Dynamight
+#dir	data/maps/enigma/portrait/Grounder
+#dir	data/maps/enigma/portrait/Spike
+#dir	data/maps/enigma/portrait/Sir Ffuzzy-Logik
+#dir	data/maps/enigma/portrait/Dragon Breath
+#dir	data/maps/enigma/portrait/Scratch
+#dir	data/maps/enigma/portrait/Dr Robotnik
+#dir	data/maps/enigma/cutscene
+#dir	data/maps/enigma/cutscene/main
+#dir	data/maps/enigma/cutscene/lair
+#dir	data/maps/enigma/cutscene/ending
+#dir	data/maps/enigma/gameover
+#dir	data/maps/enigma/menus/
+#dir	data/pal
+#dir	data/pal/array
+#dir	data/pal/array/credits
+#dir	data/pal/array/credits/pal0
+#dir	data/pal/array/credits/pal1
+#dir	data/pal/array/credits/pal2
+
+
+/***********************Palettes***************************/
+#split	0x06F736,0x06F756,data/pal/array/credits/pal0/00.pal
+#split	0x06F756,0x06F776,data/pal/array/credits/pal1/00.pal
+#split	0x06F776,0x06F796,data/pal/array/credits/pal0/01.pal
+#split	0x06F796,0x06F7B6,data/pal/array/credits/pal1/01.pal
+#split	0x06F7B6,0x06F7D6,data/pal/array/credits/pal0/02.pal
+#split	0x06F7D6,0x06F7F6,data/pal/array/credits/pal1/02.pal
+#split	0x06F7F6,0x06F816,data/pal/array/credits/pal0/03.pal
+#split	0x06F816,0x06F836,data/pal/array/credits/pal1/03.pal
+#split	0x06F836,0x06F856,data/pal/array/credits/pal0/04.pal
+#split	0x06F856,0x06F876,data/pal/array/credits/pal1/04.pal
+#split	0x06F876,0x06F896,data/pal/array/credits/pal0/05.pal
+#split	0x06F896,0x06F8B6,data/pal/array/credits/pal1/05.pal
+#split	0x06F8B6,0x06F8D6,data/pal/array/credits/pal0/06.pal
+#split	0x06F8D6,0x06F8F6,data/pal/array/credits/pal1/06.pal
+#split	0x06F8F6,0x06F916,data/pal/array/credits/pal0/07.pal
+#split	0x06F916,0x06F936,data/pal/array/credits/pal1/07.pal
+#split	0x06F936,0x06F956,data/pal/array/credits/pal0/08.pal
+#split	0x06F956,0x06F976,data/pal/array/credits/pal1/08.pal
+#split	0x06F976,0x06F996,data/pal/array/credits/pal0/09.pal
+#split	0x06F996,0x06F9B6,data/pal/array/credits/pal1/09.pal
+#split	0x06F9B6,0x06F9D6,data/pal/array/credits/pal0/0A.pal
+#split	0x06F9D6,0x06F9F6,data/pal/array/credits/pal1/0A.pal
+#split	0x06F9F6,0x06FA16,data/pal/array/credits/pal0/0B.pal
+#split	0x06FA16,0x06FA36,data/pal/array/credits/pal1/0B.pal
+#split	0x06FA36,0x06FA56,data/pal/array/credits/pal0/0C.pal
+#split	0x06FA56,0x06FA76,data/pal/array/credits/pal1/0C.pal
+#split	0x06FA76,0x06FA96,data/pal/array/credits/pal0/0D.pal
+#split	0x06FA96,0x06FAB6,data/pal/array/credits/pal1/0D.pal
+#split	0x06FAB6,0x06FAD6,data/pal/array/credits/pal0/0E.pal
+#split	0x06FAD6,0x06FAF6,data/pal/array/credits/pal1/0E.pal
+#split	0x06FAF6,0x06FB16,data/pal/array/credits/pal0/0F.pal
+#split	0x06FB16,0x06FB36,data/pal/array/credits/pal1/0F.pal
+#split	0x06FB36,0x06FB56,data/pal/array/credits/pal0/10.pal
+#split	0x06FB56,0x06FB76,data/pal/array/credits/pal1/10.pal
+#split	0x06FB76,0x06FB96,data/pal/array/credits/pal0/11.pal
+#split	0x06FB96,0x06FBB6,data/pal/array/credits/pal1/11.pal
+#split	0x06FBB6,0x06FBD6,data/pal/array/credits/pal0/12.pal
+#split	0x06FBD6,0x06FBF6,data/pal/array/credits/pal1/12.pal
+#split	0x06FBF6,0x06FC16,data/pal/array/credits/pal0/13.pal
+#split	0x06FC16,0x06FC36,data/pal/array/credits/pal1/13.pal
+#split	0x06FC36,0x06FC56,data/pal/array/credits/pal0/14.pal
+#split	0x06FC56,0x06FC76,data/pal/array/credits/pal1/14.pal
+#split	0x06FC76,0x06FC96,data/pal/array/credits/pal0/15.pal
+#split	0x06FC96,0x06FCB6,data/pal/array/credits/pal1/15.pal
+#split	0x06FCB6,0x06FCD6,data/pal/array/credits/pal0/16.pal
+#split	0x06FCD6,0x06FCF6,data/pal/array/credits/pal1/16.pal
+#split	0x06FCF6,0x06FD16,data/pal/array/credits/pal0/17.pal
+#split	0x06FD16,0x06FD36,data/pal/array/credits/pal1/17.pal
+#split	0x06FD36,0x06FD56,data/pal/array/credits/pal0/18.pal
+#split	0x06FD56,0x06FD76,data/pal/array/credits/pal1/18.pal
+#split	0x06FD76,0x06FD96,data/pal/array/credits/pal0/19.pal
+#split	0x06FD96,0x06FDB6,data/pal/array/credits/pal1/19.pal
+#split	0x06FDB6,0x06FDD6,data/pal/array/credits/pal0/1A.pal
+#split	0x06FDD6,0x06FDF6,data/pal/array/credits/pal1/1A.pal
+#split	0x06FDF6,0x06FE16,data/pal/array/credits/pal0/1B.pal
+#split	0x06FE16,0x06FE36,data/pal/array/credits/pal2/00.pal
+#split	0x06FE36,0x06FE56,data/pal/array/credits/pal0/1C.pal
+#split	0x06FE56,0x06FE76,data/pal/array/credits/pal2/01.pal
+#split	0x06FE76,0x06FE96,data/pal/array/credits/pal0/1D.pal
+#split	0x06FE96,0x06FEB6,data/pal/array/credits/pal2/02.pal
+#split	0x06FEB6,0x06FED6,data/pal/array/credits/pal0/1E.pal
+#split	0x06FED6,0x06FEF6,data/pal/array/credits/pal2/03.pal
+#split	0x06FEF6,0x06FF16,data/pal/array/credits/pal0/1F.pal
+#split	0x06FF16,0x06FF36,data/pal/array/credits/pal2/04.pal
+#split	0x06FF36,0x06FF56,data/pal/array/credits/pal0/20.pal
+#split	0x06FF56,0x06FF76,data/pal/array/credits/pal2/05.pal
+#split	0x06FF76,0x06FF96,data/pal/array/credits/pal0/21.pal
+#split	0x06FF96,0x06FFB6,data/pal/array/credits/pal2/06.pal
+#split	0x06FFB6,0x06FFD6,data/pal/array/credits/pal0/22.pal
+#split	0x06FFD6,0x06FFF6,data/pal/array/credits/pal2/07.pal
+
+/***********************Uncompressed art***************************/
+#split	0x030000,0x030880,data/art/Uncompressed/Robotnik/Robotnik 0.unc
+#split	0x030880,0x031140,data/art/Uncompressed/Robotnik/Robotnik 1.unc
+#split	0x031140,0x031C00,data/art/Uncompressed/Robotnik/Robotnik 2.unc
+#split	0x031C00,0x032700,data/art/Uncompressed/Robotnik/Robotnik 3.unc
+#split	0x032700,0x0331C0,data/art/Uncompressed/Robotnik/Robotnik 4.unc
+#split	0x0331C0,0x033C00,data/art/Uncompressed/Robotnik/Robotnik 5.unc
+#split	0x033C00,0x034600,data/art/Uncompressed/Robotnik/Robotnik 6.unc
+#split	0x034600,0x034FC0,data/art/Uncompressed/Robotnik/Robotnik 7.unc
+#split	0x034FC0,0x035980,data/art/Uncompressed/Robotnik/Robotnik 8.unc
+#split	0x035980,0x0363A0,data/art/Uncompressed/Robotnik/Robotnik 9.unc
+#split	0x0363A0,0x036E00,data/art/Uncompressed/Robotnik/Robotnik 10.unc
+#split	0x036E00,0x037700,data/art/Uncompressed/Robotnik/Robotnik 11.unc
+#split	0x037700,0x038060,data/art/Uncompressed/Robotnik/Robotnik 12.unc
+#split	0x038060,0x038920,data/art/Uncompressed/Robotnik/Robotnik 13.unc
+#split	0x038920,0x0391E0,data/art/Uncompressed/Robotnik/Robotnik 14.unc
+#split	0x0391E0,0x039AA0,data/art/Uncompressed/Robotnik/Robotnik 15.unc
+#split	0x039AA0,0x03A3C0,data/art/Uncompressed/Robotnik/Robotnik 16.unc
+#split	0x03A3C0,0x03A860,data/art/Uncompressed/Robotnik/Robotnik 17.unc
+#split	0x03A860,0x03AC20,data/art/Uncompressed/Robotnik/Robotnik 18.unc
+#split	0x03AC20,0x03B060,data/art/Uncompressed/Robotnik/Robotnik 19.unc
+#split	0x03B060,0x03B600,data/art/Uncompressed/Robotnik/Robotnik 20.unc
+
+
+/*********************Nemesis compressed art************************/
+
+#split	0x03BA62,0x03CC64,data/art/Nemesis/Portrait/Scratch.nem
+#split	0x03CD18,0x03DFAC,data/art/Nemesis/Portrait/Frankly.nem
+#split	0x03E06A,0x03F2EC,data/art/Nemesis/Portrait/Coconuts.nem
+#split	0x03F3C0,0x04053A,data/art/Nemesis/Portrait/Dynamight.nem
+#split	0x04063E,0x041C7A,data/art/Nemesis/Portrait/Grounder.nem
+#split	0x041D64,0x042C76,data/art/Nemesis/Portrait/Davy Sprocket.net
+#split	0x042D40,0x044486,data/art/Nemesis/Portrait/Spike.nem
+#split	0x04455E,0x045D04,data/art/Nemesis/Portrait/Dragon Breath.nem
+#split	0x045E0A,0x046F8A,data/art/Nemesis/Portrait/Humpty.nem
+#split	0x0470D0,0x0486F2,data/art/Nemesis/Portrait/Dr Robotnik.nem
+#split	0x0487C2,0x049C02,data/art/Nemesis/Portrait/Skweel
+#split	0x049D54,0x04B1BC,data/art/Nemesis/Portrait/Sir Ffuzzy-Logik.nem
+#split	0x04B32C,0x04C290,data/art/Nemesis/Portrait/Arms.nem
+#split	0x03B600,0x03BA62,data/art/Nemesis/Cutscene/Robotnik's Ship.nem
+#split	0x04C3EE,0x04CB74,data/art/Nemesis/Cutscene/Opening Badniks.nem
+#split	0x04FCAA,0x050A30,data/art/Nemesis/Cutscene/Coconuts.nem
+#split	0x050A30,0x051C98,data/art/Nemesis/Cutscene/Frankly.nem
+#split	0x03E018,0x03E06A,data/art/Nemesis/Cutscene/Frankly's Lightning.nem
+#split	0x051C98,0x052C54,data/art/Nemesis/Cutscene/Davy Sprocket.nem
+#split	0x052C54,0x053A22,data/art/Nemesis/Cutscene/Dynamight.nem
+#split	0x053A22,0x0549B4,data/art/Nemesis/Cutscene/Arms.nem
+#split	0x0549B4,0x054D30,data/art/Nemesis/Cutscene/Arms 2.nem
+#split	0x054D30,0x055998,data/art/Nemesis/Cutscene/Dragon Breath.nem
+#split	0x055998,0x0565B0,data/art/Nemesis/Cutscene/Spike.nem
+#split	0x0565B0,0x0571A6,data/art/Nemesis/Cutscene/Sir Ffuzzy-Logik.nem
+#split	0x0571A6,0x05827A,data/art/Nemesis/Cutscene/Humpty.nem
+#split	0x05827A,0x059002,data/art/Nemesis/Cutscene/Grounder.nem
+#split	0x05A0A8,0x05AEC4,data/art/Nemesis/Cutscene/Skweel.nem
+#split	0x05AEC4,0x05CB8A,data/art/Nemesis/Cutscene/Scratch.nem
+#split	0x0947A2,0x095FC6,data/art/Nemesis/Cutscene/Ending Beans.nem
+#split	0x009C54,0x009DD6,data/art/Nemesis/Misc/Grouped Stars.nem
+#split	0x04F976,0x04F9B8,data/art/Nemesis/Misc/Role Call Textbox.nem
+#split	0x04F9B8,0x04FCAA,data/art/Nemesis/Misc/Main Font.nem
+#split	0x059002,0x05A0A8,data/art/Nemesis/Misc/All Right and Oh No.nem
+#split	0x0668CE,0x0669EA,data/art/Nemesis/Misc/Credits Lair.nem
+#split	0x06F644,0x06F736,data/art/Nemesis/Misc/Credits Smoke.nem
+#split	0x095FC6,0x097560,data/art/Nemesis/Misc/Sega Logo.nem
+#split	0x097560,0x097B02,data/art/Nemesis/Misc/Difficulty Faces.nem
+#split	0x097B02,0x097DA2,data/art/Nemesis/Misc/Difficulty Faces 2.nem
+#split	0x04CB74,0x04D620,data/art/Nemesis/Background/Opponents Screen.nem
+#split	0x04D620,0x04F976,data/art/Nemesis/Background/Password.nem
+#split	0x060000,0x061D9E,data/art/Nemesis/Background/Cutscene.nem
+#split	0x061FD0,0x06472E,data/art/Nemesis/Background/Lair.nem
+#split	0x064D5A,0x06662E,data/art/Nemesis/Background/Ending.nem
+#split	0x0669EA,0x06709A,data/art/Nemesis/Background/Game Over.nem
+#split	0x06739C,0x06A3BE,data/art/Nemesis/Background/Game Over Background.nem
+#split	0x06A9A4,0x06CBC2,data/art/Nemesis/Background/Main Menu.nem
+#split	0x06CE30,0x06EF68,data/art/Nemesis/Background/High Scores.nem
+#split	0x06F146,0x06F558,data/art/Nemesis/Background/Credits Sky.nem
+#split	0x090000,0x094716,data/art/Nemesis/Background/Title Logo.nem
+
+/*********************Compile compressed art************************/
+#split	0x070000,0x071D12,data/art/compile/Stage Background.comp
+#split	0x071D12,0x0729DC,data/art/compile/Versus Win Lose (Puyo).comp
+#split	0x0729DC,0x07408C,data/art/compile/Level Intro.comp
+#split	0x07408C,0x074FCE,data/art/compile/Lesson Mode.comp
+#split	0x074FCE,0x075C56,data/art/compile/Level Fonts.comp
+#split	0x075C56,0x076D04,data/art/compile/Tutorial.comp
+#split	0x076D04,0x077A76,data/art/compile/Old Font.comp
+#split	0x077A76,0x07CD08,data/art/compile/Level Sprites.comp
+#split	0x07CD08,0x07FBE8,data/art/compile/Best Records.comp
+#split	0x07FBE8,0x0835FE,data/art/compile/Best Records Mode Text.comp
+
+
+/*********************Enigma mappings************************/
+#split	0x03CC64,0x03CC78,data/maps/enigma/portrait/Scratch/00.eni
+#split	0x03CC78,0x03CC94,data/maps/enigma/portrait/Scratch/01.eni
+#split	0x03CC94,0x03CCA8,data/maps/enigma/portrait/Scratch/02.eni
+#split	0x03CCA8,0x03CCC8,data/maps/enigma/portrait/Scratch/03.eni
+#split	0x03CCC8,0x03CCDC,data/maps/enigma/portrait/Scratch/04.eni
+#split	0x03CCDC,0x03CCFE,data/maps/enigma/portrait/Scratch/05.eni
+#split	0x03CCFE,0x03CD18,data/maps/enigma/portrait/Scratch/Defeated.eni
+#split	0x03DFAC,0x03DFBC,data/maps/enigma/portrait/Frankly/00.eni
+#split	0x03DFBC,0x03DFD6,data/maps/enigma/portrait/Frankly/01.eni
+#split	0x03DFD6,0x03DFE6,data/maps/enigma/portrait/Frankly/02.eni
+#split	0x03DFD6,0x03DFF4,data/maps/enigma/portrait/Frankly/03.eni
+#split	0x03DFF4,0x03E00C,data/maps/enigma/portrait/Frankly/04.eni
+#split	0x03E00C,0x03E018,data/maps/enigma/portrait/Frankly/Defeated.eni
+#split	0x03F2EC,0x03F300,data/maps/enigma/portrait/Coconuts/00.eni
+#split	0x03F300,0x03F31A,data/maps/enigma/portrait/Coconuts/01.eni
+#split	0x03F31A,0x03F32C,data/maps/enigma/portrait/Coconuts/02.eni
+#split	0x03F32C,0x03F344,data/maps/enigma/portrait/Coconuts/03.eni
+#split	0x03F344,0x03F364,data/maps/enigma/portrait/Coconuts/04.eni
+#split	0x03F364,0x03F38C,data/maps/enigma/portrait/Coconuts/05.eni
+#split	0x03F38C,0x03F3AE,data/maps/enigma/portrait/Coconuts/06.eni
+#split	0x03F3AE,0x03F3C0,data/maps/enigma/portrait/Coconuts/Defeated.eni
+#split	0x04053A,0x04054E,data/maps/enigma/portrait/Dynamight/00.eni
+#split	0x04054E,0x040566,data/maps/enigma/portrait/Dynamight/01.eni
+#split	0x040566,0x04057A,data/maps/enigma/portrait/Dynamight/02.eni
+#split	0x04057A,0x040594,data/maps/enigma/portrait/Dynamight/03.eni
+#split	0x040594,0x0405B0,data/maps/enigma/portrait/Dynamight/04.eni
+#split	0x0405B0,0x0405CC,data/maps/enigma/portrait/Dynamight/05.eni
+#split	0x0405CC,0x0405E8,data/maps/enigma/portrait/Dynamight/06.eni
+#split	0x0405E8,0x0405FC,data/maps/enigma/portrait/Dynamight/07.eni
+#split	0x0405FC,0x040616,data/maps/enigma/portrait/Dynamight/08.eni
+#split	0x040616,0x040630,data/maps/enigma/portrait/Dynamight/09.eni
+#split	0x040630,0x04063E,data/maps/enigma/portrait/Dynamight/Defeated.eni
+#split	0x041C7A,0x041C8E,data/maps/enigma/portrait/Grounder/00.eni
+#split	0x041C8E,0x041CB0,data/maps/enigma/portrait/Grounder/01.eni
+#split	0x041CB0,0x041CD2,data/maps/enigma/portrait/Grounder/02.eni
+#split	0x041CD2,0x041CE6,data/maps/enigma/portrait/Grounder/03.eni
+#split	0x041CE6,0x041D0E,data/maps/enigma/portrait/Grounder/04.eni
+#split	0x041D0E,0x041D22,data/maps/enigma/portrait/Grounder/05.eni
+#split	0x041D22,0x041D52,data/maps/enigma/portrait/Grounder/06.eni
+#split	0x041D52,0x041D64,data/maps/enigma/portrait/Grounder/Defeated.eni
+#split	0x042C76,0x042C8A,data/maps/enigma/portrait/Davy Sprocket/00.eni
+#split	0x042C8A,0x042CA8,data/maps/enigma/portrait/Davy Sprocket/01.eni
+#split	0x042CA8,0x042CC4,data/maps/enigma/portrait/Davy Sprocket/02.eni
+#split	0x042CC4,0x042CEE,data/maps/enigma/portrait/Davy Sprocket/03.eni
+#split	0x042CEE,0x042D02,data/maps/enigma/portrait/Davy Sprocket/04.eni
+#split	0x042D02,0x042D2A,data/maps/enigma/portrait/Davy Sprocket/05.eni
+#split	0x042D2A,0x042D40,data/maps/enigma/portrait/Davy Sprocket/Defeated.eni
+#split	0x044486,0x044498,data/maps/enigma/portrait/Spike/00.eni
+#split	0x044498,0x0444B8,data/maps/enigma/portrait/Spike/01.eni
+#split	0x0444B8,0x0444DA,data/maps/enigma/portrait/Spike/02.eni
+#split	0x0444DA,0x0444FE,data/maps/enigma/portrait/Spike/03.eni
+#split	0x0444FE,0x044524,data/maps/enigma/portrait/Spike/04.eni
+#split	0x044524,0x044532,data/maps/enigma/portrait/Spike/05.eni
+#split	0x044532,0x04454E,data/maps/enigma/portrait/Spike/06.eni
+#split	0x04454E,0x04455E,data/maps/enigma/portrait/Spike/Defeated.eni
+#split	0x045D04,0x045D14,data/maps/enigma/portrait/Dragon Breath/00.eni
+#split	0x045D14,0x045D32,data/maps/enigma/portrait/Dragon Breath/01.eni
+#split	0x045D32,0x045D50,data/maps/enigma/portrait/Dragon Breath/02.eni
+#split	0x045D50,0x045D72,data/maps/enigma/portrait/Dragon Breath/03.eni
+#split	0x045D72,0x045DA2,data/maps/enigma/portrait/Dragon Breath/04.eni
+#split	0x045DA2,0x045DB2,data/maps/enigma/portrait/Dragon Breath/05.eni
+#split	0x045DB2,0x045DCC,data/maps/enigma/portrait/Dragon Breath/06.eni
+#split	0x045DCC,0x045DE6,data/maps/enigma/portrait/Dragon Breath/07.eni
+#split	0x045DE6,0x045E0A,data/maps/enigma/portrait/Dragon Breath/Defeated.eni
+#split	0x046F8A,0x046FA0,data/maps/enigma/portrait/Humpty/00.eni
+#split	0x046FA0,0x046FC0,data/maps/enigma/portrait/Humpty/01.eni
+#split	0x046FC0,0x046FE2,data/maps/enigma/portrait/Humpty/02.eni
+#split	0x046FE2,0x047008,data/maps/enigma/portrait/Humpty/03.eni
+#split	0x047008,0x047032,data/maps/enigma/portrait/Humpty/04.eni
+#split	0x047032,0x047056,data/maps/enigma/portrait/Humpty/05.eni
+#split	0x047056,0x047076,data/maps/enigma/portrait/Humpty/06.eni
+#split	0x047076,0x047092,data/maps/enigma/portrait/Humpty/07.eni
+#split	0x047092,0x0470AC,data/maps/enigma/portrait/Humpty/08.eni
+#split	0x0470AC,0x0470D0,data/maps/enigma/portrait/Humpty/Defeated.eni
+#split	0x0486F2,0x048700,data/maps/enigma/portrait/Dr Robotnik/00.eni
+#split	0x048700,0x048716,data/maps/enigma/portrait/Dr Robotnik/01.eni
+#split	0x048716,0x04872C,data/maps/enigma/portrait/Dr Robotnik/02.eni
+#split	0x04872C,0x048748,data/maps/enigma/portrait/Dr Robotnik/03.eni
+#split	0x048748,0x048772,data/maps/enigma/portrait/Dr Robotnik/04.eni
+#split	0x048772,0x04878E,data/maps/enigma/portrait/Dr Robotnik/05.eni
+#split	0x04878E,0x0487AE,data/maps/enigma/portrait/Dr Robotnik/06.eni
+#split	0x0487AE,0x0487C2,data/maps/enigma/portrait/Dr Robotnik/Defeated.eni
+#split	0x049C02,0x049C16,data/maps/enigma/portrait/Skweel/00.eni
+#split	0x049C16,0x049C2E,data/maps/enigma/portrait/Skweel/01.eni
+#split	0x049C2E,0x049C4A,data/maps/enigma/portrait/Skweel/02.eni
+#split	0x049C4A,0x049C5C,data/maps/enigma/portrait/Skweel/03.eni
+#split	0x049C5C,0x049C70,data/maps/enigma/portrait/Skweel/04.eni
+#split	0x049C70,0x049C84,data/maps/enigma/portrait/Skweel/05.eni
+#split	0x049C84,0x049C98,data/maps/enigma/portrait/Skweel/06.eni
+#split	0x049C98,0x049CBA,data/maps/enigma/portrait/Skweel/07.eni
+#split	0x049CBA,0x049CDC,data/maps/enigma/portrait/Skweel/08.eni
+#split	0x049CDC,0x049D00,data/maps/enigma/portrait/Skweel/09.eni
+#split	0x049D00,0x049D20,data/maps/enigma/portrait/Skweel/10.eni
+#split	0x049D20,0x049D40,data/maps/enigma/portrait/Skweel/11.eni
+#split	0x049D40,0x049D54,data/maps/enigma/portrait/Skweel/Defeated.eni
+#split	0x04B1BC,0x04B1CA,data/maps/enigma/portrait/Sir Ffuzzy-Logik/00.eni
+#split	0x04B1CA,0x04B1E4,data/maps/enigma/portrait/Sir Ffuzzy-Logik/01.eni
+#split	0x04B1E4,0x04B200,data/maps/enigma/portrait/Sir Ffuzzy-Logik/02.eni
+#split	0x04B200,0x04B21E,data/maps/enigma/portrait/Sir Ffuzzy-Logik/03.eni
+#split	0x04B21E,0x04B240,data/maps/enigma/portrait/Sir Ffuzzy-Logik/04.eni
+#split	0x04B240,0x04B262,data/maps/enigma/portrait/Sir Ffuzzy-Logik/05.eni
+#split	0x04B262,0x04B282,data/maps/enigma/portrait/Sir Ffuzzy-Logik/06.eni
+#split	0x04B282,0x04B2AA,data/maps/enigma/portrait/Sir Ffuzzy-Logik/07.eni
+#split	0x04B2AA,0x04B2D0,data/maps/enigma/portrait/Sir Ffuzzy-Logik/08.eni
+#split	0x04B2D0,0x04B2EC,data/maps/enigma/portrait/Sir Ffuzzy-Logik/Defeated 00.eni
+#split	0x04B2EC,0x04B30C,data/maps/enigma/portrait/Sir Ffuzzy-Logik/Defeated 01.eni
+#split	0x04B30C,0x04B32C,data/maps/enigma/portrait/Sir Ffuzzy-Logik/Defeated 02.eni
+#split	0x04C290,0x04C2A0,data/maps/enigma/portrait/Arms/00.eni
+#split	0x04C2A0,0x04C2B6,data/maps/enigma/portrait/Arms/01.eni
+#split	0x04C2B6,0x04C2CC,data/maps/enigma/portrait/Arms/02.eni
+#split	0x04C2CC,0x04C2F6,data/maps/enigma/portrait/Arms/03.eni
+#split	0x04C2F6,0x04C324,data/maps/enigma/portrait/Arms/04.eni
+#split	0x04C324,0x04C350,data/maps/enigma/portrait/Arms/05.eni
+#split	0x04C350,0x04C374,data/maps/enigma/portrait/Arms/06.eni
+#split	0x04C374,0x04C39C,data/maps/enigma/portrait/Arms/07.eni
+#split	0x04C3CA,0x04C3EE,data/maps/enigma/portrait/Arms/08.eni
+#split	0x04C39C,0x04C3CA,data/maps/enigma/portrait/Arms/Defeated.eni
+#split	0x061D9E,0x061E8A,data/maps/enigma/cutscene/main/Background 0.eni
+#split	0x061E8A,0x061F22,data/maps/enigma/cutscene/main/Background 1.eni
+#split	0x061F22,0x061FD0,data/maps/enigma/cutscene/main/Background 2.eni
+#split	0x06472E,0x0648B4,data/maps/enigma/cutscene/lair/Lair Machine.eni
+#split	0x0648B4,0x0649D8,data/maps/enigma/cutscene/lair/Lair Wall.eni
+#split	0x0649D8,0x064A3A,data/maps/enigma/cutscene/lair/Lair Floor.eni
+#split	0x06662E,0x066748,data/maps/enigma/cutscene/ending/Lair Destroyed 0.eni
+#split	0x066748,0x06686C,data/maps/enigma/cutscene/ending/Lair Destroyed 1.eni
+#split	0x06686C,0x0668CE,data/maps/enigma/cutscene/ending/Lair Destroyed 2.eni
+#split	0x06F558,0x06F644,data/maps/enigma/cutscene/ending/Credits Sky.eni
+#split	0x06A3BE,0x06A4AA,data/maps/enigma/gameover/Game Over FG.eni
+#split	0x06A4AA,0x06A544,data/maps/enigma/gameover/Game Over BG.eni
+#split	0x00C794,0x00C886,data/maps/enigma/menus/Password.eni
+#split	0x00CEF4,0x00CF08,data/maps/enigma/menus/Opponent's Screen Box.eni
+#split	0x06CBC2,0x06CC72,data/maps/enigma/menus/Main Menu.eni
+#split	0x06CC72,0x06CD10,data/maps/enigma/menus/Scenario Menu.eni
+#split	0x06CD10,0x06CD9C,data/maps/enigma/menus/Main Menu Clouds.eni
+#split	0x06CD9C,0x06CE30,data/maps/enigma/menus/Main Menu Mountains.eni
+#split	0x06EF68,0x06F146,data/maps/enigma/menus/High Scores.eni
+#split	0x094716,0x094738,data/maps/enigma/menus/Title Logo.eni
+#split	0x094738,0x0947A2,data/maps/enigma/menus/Title BG.eni
+
+
+/*********************Priority mappings************************/
+#split	0x064A3A,0x064D5A,data/maps/priority/Lair Machine.bin
+#split	0x06A544,0x06A9A4,data/maps/priority/Game Over Robots.bin
+
+
+/*********************Uncompressed mappings************************/
+#split	0x0DD1DE,0x0DD30C,data/maps/uncompressed/raw/gameover/Zero.unc
+#split	0x0DD30C,0x0DD48A,data/maps/uncompressed/raw/gameover/One.unc
+#split	0x0DD1DE,0x0DD30C,data/maps/uncompressed/raw/gameover/Two.unc
+#split	0x0DD30C,0x0DD48A,data/maps/uncompressed/raw/gameover/Three.unc
+#split	0x0DD1DE,0x0DD30C,data/maps/uncompressed/raw/gameover/Four.unc
+#split	0x0DD30C,0x0DD48A,data/maps/uncompressed/raw/gameover/Five.unc
+#split	0x0DD1DE,0x0DD30C,data/maps/uncompressed/raw/gameover/Six.unc
+#split	0x0DD30C,0x0DD48A,data/maps/uncompressed/raw/gameover/Seven.unc
+#split	0x0DD1DE,0x0DD30C,data/maps/uncompressed/raw/gameover/Eight.unc
+#split	0x0DD30C,0x0DD48A,data/maps/uncompressed/raw/gameover/Nine.unc
+#split	0x0DD1DE,0x0DD30C,data/maps/uncompressed/raw/gameover/Ten.unc
+
+
+split	0x0,0x0,\0x0 - .bin
+
