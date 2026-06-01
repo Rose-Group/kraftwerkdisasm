@@ -3307,9 +3307,9 @@ loc_36F8:				; CODE XREF: sub_36D0+16↑j
 
 PuyoLandEffects:			; CODE XREF: sub_4EDA+60↓p
 					; sub_4EDA+17A↓p
-		cmpi.b	#1,(v_opponent).l
+		cmpi.b	#OPP_FRANKLY,(v_opponent).l
 		beq.s	loc_371A
-		cmpi.b	#$A,(v_opponent).l
+		cmpi.b	#OPP_DRAGON,(v_opponent).l
 		bne.w	PlayPuyoLandSound
 
 loc_371A:				; CODE XREF: PuyoLandEffects+8↑j
@@ -3364,7 +3364,7 @@ loc_3774:				; CODE XREF: Act_ShakeField+22↓j
 PlayPuyoLandSound:			; CODE XREF: PuyoLandEffects+12↑j
 					; PuyoLandEffects+1A↑j ...
 		move.b	#SFX_PUYO_LAND,d0 ; 'E'
-		cmpi.b	#$C,(v_opponent).l
+		cmpi.b	#OPP_ROBOTNIK,(v_opponent).l
 		bne.w	loc_37B0
 		move.b	#SFX_PUYO_LAND,d0 ; 'E'
 
@@ -3377,7 +3377,7 @@ loc_37B0:				; CODE XREF: PlayPuyoLandSound+C↑j
 
 PlayPuyoMoveSound:			; CODE XREF: sub_4E60+76↓j
 		move.b	#SFX_PUYO_MOVE,d0 ; 'C'
-		cmpi.b	#$C,(v_opponent).l
+		cmpi.b	#OPP_ROBOTNIK,(v_opponent).l
 		bne.w	loc_37CA
 		move.b	#SFX_PUYO_MOVE,d0 ; 'C'
 
@@ -3389,7 +3389,7 @@ loc_37CA:				; CODE XREF: sub_4E60-169E↑j
 
 PlayPuyoRotateSound:			; CODE XREF: sub_5184+A4↓j
 		move.b	#SFX_PUYO_ROTATE,d0 ; 'D'
-		cmpi.b	#$C,(v_opponent).l
+		cmpi.b	#OPP_ROBOTNIK,(v_opponent).l
 		bne.w	loc_37E4
 		move.b	#SFX_PUYO_ROTATE,d0 ; 'D'
 
@@ -5057,7 +5057,7 @@ loc_48AC:				; CODE XREF: CheckPuyoPop+66↑j
 
 loc_48BE:				; CODE XREF: CheckPuyoPop+A0↑j
 		move.b	PuyoPopSounds(pc,d1.w),d0
-		cmpi.b	#$C,(v_opponent).l
+		cmpi.b	#OPP_ROBOTNIK,(v_opponent).l
 		bne.w	loc_48D2
 		move.b	#SFX_PUYO_POP_1,d0 ; 'L'
 
@@ -7411,7 +7411,7 @@ sub_5E4E:				; CODE XREF: sub_F9E4+C↓p
 		move.w	#1,(word_FF1124).l
 		move.w	#$D688,d3
 		move.w	#$C000,d2
-		cmpi.b	#$C,(v_opponent).l
+		cmpi.b	#OPP_ROBOTNIK,(v_opponent).l
 		beq.s	loc_5E80
 		move.w	#$6000,d0
 		bra.w	loc_5E84
@@ -9586,7 +9586,7 @@ loc_799A:				; CODE XREF: ROM:00007970↑j
 
 PlayerWin_ChkRobotnik:			; CODE XREF: ROM:0000798C↑p
 		move.b	(v_opponent).l,d0
-		cmpi.b	#$C,d0
+		cmpi.b	#OPP_ROBOTNIK,d0
 		bne.s	locret_79F6
 		lea	(loc_79D4).l,a1
 		jmp	(FindActorSlotQuick).l
@@ -9613,7 +9613,7 @@ locret_79F6:				; CODE XREF: PlayerWin_ChkRobotnik+A↑j
 
 PlayerLose_ChkRobotnik:			; CODE XREF: ROM:000078FE↑p
 		move.b	(v_opponent).l,d0
-		cmpi.b	#$C,d0
+		cmpi.b	#OPP_ROBOTNIK,d0
 		bne.s	locret_7A32
 		lea	(loc_7A10).l,a1
 		jmp	(FindActorSlotQuick).l
@@ -9655,7 +9655,7 @@ loc_7A34:				; DATA XREF: ROM:00007888↑o
 		bcs.w	loc_7A8C
 		clr.w	(a1)
 		move.b	#1,(a1,d0.w)
-		move.b	#$C,(v_opponent).l
+		move.b	#OPP_ROBOTNIK,(v_opponent).l
 
 loc_7A8C:				; CODE XREF: ROM:00007A78↑j
 		bra.w	loc_6FEC
@@ -13858,7 +13858,7 @@ word_A3DC:	dc.w $68
 LoadOpponentIntro:			; DATA XREF: ROM:00001C7E↑o
 		clr.l	d0
 		move.b	(v_opponent).l,d0
-		cmpi.b	#3,d0
+		cmpi.b	#OPP_ARMS,d0
 		bne.s	loc_A43A
 		lea	(ArtNem_ArmsIntro2).l,a0
 		move.w	#$6000,d0
@@ -13895,7 +13895,7 @@ loc_A464:				; CODE XREF: ROM:0000A44A↑j
 		move.b	(v_opponent).l,d0
 		move.b	d0,d1
 		addi.b	#9,d1
-		cmpi.b	#$15,d1
+		cmpi.b	#OPP_ROBOTNIK+9,d1
 		bne.s	loc_A4AA
 		move.b	#$2B,d1 ; '+'
 		lea	(Act_RobotnikIntro).l,a1
@@ -15776,7 +15776,7 @@ Act_MainMenu_Scenario:			; CODE XREF: ROM:0000B516↑j
 		move.b	#$80,6(a0)
 		move.w	#$220,$A(a0)
 		move.w	#$D8,$E(a0)
-		move.b	#1,(v_opponent).l
+		move.b	#OPP_FRANKLY,(v_opponent).l
 		move.w	#$28,$26(a0) ; '('
 		jsr	(ActorBookmark).l
 		move.w	#$B7,d0
@@ -22087,7 +22087,7 @@ locret_F588:				; CODE XREF: sub_F57A+6↑j
 sub_F58A:				; CODE XREF: sub_F9C4+C↓p
 		movem.l a0,-(sp)
 		move.b	(v_opponent).l,d0
-		cmpi.b	#3,d0
+		cmpi.b	#OPP_ARMS,d0
 		bne.s	loc_F5BA
 		lea	(ArtNem_ArmsIntro2).l,a0
 		move.w	#$600,d0
@@ -22100,7 +22100,7 @@ sub_F58A:				; CODE XREF: sub_F9C4+C↓p
 loc_F5BA:				; CODE XREF: sub_F58A+E↑j
 		clr.l	d0
 		move.b	(v_opponent).l,d0
-		cmpi.b	#$C,d0
+		cmpi.b	#OPP_ROBOTNIK,d0
 		beq.s	loc_F5E6
 		lsl.w	#2,d0
 		lea	(OpponentIntroArt).l,a1
@@ -22116,7 +22116,7 @@ loc_F5E6:				; CODE XREF: sub_F58A+3C↑j
 		move.b	(v_opponent).l,d0
 		move.b	d0,d1
 		addi.b	#9,d1
-		cmpi.b	#$15,d1
+		cmpi.b	#OPP_ROBOTNIK+9,d1
 		bne.s	loc_F614
 		move.b	#$2B,d1 ; '+'
 		lea	(sub_F7AC).l,a1
@@ -22479,7 +22479,7 @@ sub_F9C4:				; CODE XREF: sub_F8CE+1A↑p
 		cmpi.b	#$10,(v_opponent).l
 		bcc.w	locret_F9E2
 		bsr.w	sub_F58A
-		cmpi.b	#4,(v_opponent).l
+		cmpi.b	#OPP_NASU_GRAVE,(v_opponent).l
 		beq.s	locret_F9E2
 		bsr.w	sub_F548
 
@@ -22496,13 +22496,13 @@ sub_F9E4:				; CODE XREF: sub_F8CE+10↑p
 		cmpi.b	#$10,(v_opponent).l
 		bcc.w	loc_FA04
 		jsr	(sub_5E4E).l
-		cmpi.b	#4,(v_opponent).l
+		cmpi.b	#OPP_NASU_GRAVE,(v_opponent).l
 		bne.s	loc_FA04
 		bsr.w	sub_F548
 
 loc_FA04:				; CODE XREF: sub_F9E4+8↑j
 					; sub_F9E4+1A↑j
-		cmpi.b	#$C,(v_opponent).l
+		cmpi.b	#OPP_ROBOTNIK,(v_opponent).l
 		beq.s	loc_FA10
 		rts
 ; ---------------------------------------------------------------------------
@@ -22678,7 +22678,7 @@ sub_FB96:				; CODE XREF: sub_F8CE+96↑p
 		move.w	#$FF60,(unk_FF05D4).l
 
 loc_FBD6:				; CODE XREF: sub_FB96+12↑j
-		cmpi.b	#$C,(v_opponent).l
+		cmpi.b	#OPP_ROBOTNIK,(v_opponent).l
 		beq.s	loc_FBEA
 		moveq	#$24,d0 ; '$'
 		jsr	(QueuePlaneCmdList).l
@@ -23085,7 +23085,7 @@ CutCmd_EndScene:			; CODE XREF: Act_Cutscene+82↑j
 		jsr	(ActorBookmark).l
 		cmpi.b	#$10,(v_opponent).l
 		bne.s	loc_1003A
-		move.b	#0,(v_opponent).l
+		move.b	#OPP_SKELETON,(v_opponent).l
 		jmp	(ActorDeleteSelf).l
 ; ---------------------------------------------------------------------------
 
@@ -23147,7 +23147,7 @@ CutCmd_NewText:				; DATA XREF: Act_Cutscene+BE↑o
 		clr.w	$A(a0)
 		clr.w	$C(a0)
 		bsr.w	sub_10106
-		cmpi.b	#$C,(v_opponent).l
+		cmpi.b	#OPP_ROBOTNIK,(v_opponent).l
 		beq.s	loc_100C6
 		cmpi.b	#$10,(v_opponent).l
 		bne.s	loc_100CC
@@ -23435,7 +23435,7 @@ loc_10260:				; CODE XREF: DrawTextBox:loc_102BC↓j
 		move.b	#$80,6(a1)
 		move.b	#$20,8(a1) ; ' '
 		move.b	d5,9(a1)
-		cmpi.b	#$C,(v_opponent).l
+		cmpi.b	#OPP_ROBOTNIK,(v_opponent).l
 		beq.s	loc_10298
 		cmpi.b	#$10,(v_opponent).l
 		bne.s	loc_1029C
@@ -23469,7 +23469,7 @@ loc_102D2:				; CODE XREF: DrawTextBox+A0↑j
 		move.l	a0,$2E(a1)
 		move.b	#$20,8(a1) ; ' '
 		move.b	#4,9(a1)
-		cmpi.b	#$C,(v_opponent).l
+		cmpi.b	#OPP_ROBOTNIK,(v_opponent).l
 		beq.s	loc_102FC
 		cmpi.b	#$10,(v_opponent).l
 		bne.s	loc_10300
