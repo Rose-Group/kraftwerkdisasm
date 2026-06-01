@@ -5951,9 +5951,6 @@ word_5176:	dc.w $FFFF
 
 
 sub_5184:				; CODE XREF: ROM:00004D2A↑p
-
-; FUNCTION CHUNK AT 000037D0 SIZE 0000001A BYTES
-
 		movea.l $36(a0),a1
 		tst.b	$38(a1)
 		beq.w	*+4
@@ -37572,13 +37569,13 @@ Str_RegionLock:
 	even
 
 ; ---------------------------------------------------------------------------
-		move.b	($A10001).l,d0
+		move.b	(CONSOLE_VER).l,d0
 		andi.b	#$C0,d0
 		subi.b	#$80,d0
 		move.b	d0,(v_bytecodeflag).l
 		rts
 ; ---------------------------------------------------------------------------
-		lea	(Str_RegionLock).l,a2 ; "	Developed for use onry with ntsc	"...
+		lea	(Str_RegionLock).l,a2
 		move.w	#$C500,d5
 		moveq	#1,d0
 		moveq	#$27,d1 ; '''
@@ -37837,7 +37834,7 @@ Act_SoundTest:				; DATA XREF: ROM:SpawnSoundTestActor↑o
 		bne.w	loc_21162
 		btst	#4,d0
 		bne.w	loc_2115C
-		andi.b	#$60,d0 ; '`'
+		andi.b	#$60,d0
 		bne.w	loc_211BE
 		move.b	(unk_FF110C).l,d0
 		or.b	(unk_FF1112).l,d0
@@ -38031,7 +38028,7 @@ SoundTest_SelNonSFX:			; CODE XREF: ROM:000211B2↑p
 		addi.w	#$5A4,d5
 		move.w	#$A200,d6
 		movem.l d5-d6/a1,-(sp)
-		lea	(asc_212C6).l,a1 ; "			"
+		lea	(asc_212C6).l,a1
 		bsr.w	Options_Print
 		movem.l (sp)+,d5-d6/a1
 		bra.w	Options_Print
@@ -38686,7 +38683,8 @@ locret_21904:				; CODE XREF: Options_PrintRaw+8↑j
 ; End of function Options_PrintRaw
 
 ; ---------------------------------------------------------------------------
-FontTable_Options:dc.b $11		; DATA XREF: Options_Print+6↑o
+FontTable_Options:
+		dc.b $11
 		dc.b $12
 		dc.b $13
 		dc.b $14
@@ -38848,12 +38846,7 @@ loc_219CE:				; CODE XREF: OptionsCtrl-40↑j
 ; =============== S U B R O U T I N E =======================================
 
 
-OptionsCtrl:				; CODE XREF: OptionsCtrl-32↑p
-					; OptionsCtrl-24↑p
-
-; FUNCTION CHUNK AT 00021986 SIZE 00000066 BYTES
-; FUNCTION CHUNK AT 00021DA8 SIZE 00000046 BYTES
-
+OptionsCtrl:
 		move.b	#2,d2
 		cmp.b	(v_swapctrls).l,d0
 		bne.w	loc_21A0C
@@ -41360,7 +41353,11 @@ ArtNem_DifficultyFaces2:
 
 	align	$B0000, $FF
 
+; ---------------------------------------------------------------------------
+
 	incbin	"sound/_out/sound.z80"
+
+; ---------------------------------------------------------------------------
 
 EndofROM:
 ; end of 'ROM'
