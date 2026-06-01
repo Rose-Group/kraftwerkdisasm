@@ -3363,10 +3363,10 @@ loc_3774:				; CODE XREF: Act_ShakeField+22↓j
 
 PlayPuyoLandSound:			; CODE XREF: PuyoLandEffects+12↑j
 					; PuyoLandEffects+1A↑j ...
-		move.b	#$45,d0 ; 'E'
+		move.b	#SFX_PUYO_LAND,d0 ; 'E'
 		cmpi.b	#$C,(v_opponent).l
 		bne.w	loc_37B0
-		move.b	#$45,d0 ; 'E'
+		move.b	#SFX_PUYO_LAND,d0 ; 'E'
 
 loc_37B0:				; CODE XREF: PlayPuyoLandSound+C↑j
 		jmp	JmpTo_PlaySound
@@ -3376,10 +3376,10 @@ loc_37B0:				; CODE XREF: PlayPuyoLandSound+C↑j
 ; START OF FUNCTION CHUNK FOR sub_4E60
 
 PlayPuyoMoveSound:			; CODE XREF: sub_4E60+76↓j
-		move.b	#$43,d0 ; 'C'
+		move.b	#SFX_PUYO_MOVE,d0 ; 'C'
 		cmpi.b	#$C,(v_opponent).l
 		bne.w	loc_37CA
-		move.b	#$43,d0 ; 'C'
+		move.b	#SFX_PUYO_MOVE,d0 ; 'C'
 
 loc_37CA:				; CODE XREF: sub_4E60-169E↑j
 		jmp	JmpTo_PlaySound
@@ -3388,10 +3388,10 @@ loc_37CA:				; CODE XREF: sub_4E60-169E↑j
 ; START OF FUNCTION CHUNK FOR sub_5184
 
 PlayPuyoRotateSound:			; CODE XREF: sub_5184+A4↓j
-		move.b	#$44,d0 ; 'D'
+		move.b	#SFX_PUYO_ROTATE,d0 ; 'D'
 		cmpi.b	#$C,(v_opponent).l
 		bne.w	loc_37E4
-		move.b	#$44,d0 ; 'D'
+		move.b	#SFX_PUYO_ROTATE,d0 ; 'D'
 
 loc_37E4:				; CODE XREF: sub_5184-19A8↑j
 		jmp	JmpTo_PlaySound
@@ -3413,7 +3413,7 @@ loc_37F6:				; CODE XREF: HandleStageBGM+6↑j
 ; ---------------------------------------------------------------------------
 
 loc_3800:				; CODE XREF: HandleStageBGM+10↑j
-		cmpi.b	#$12,(v_curstagebgm).l
+		cmpi.b	#BGM_DANGER,(v_curstagebgm).l
 		beq.w	loc_3830
 		cmpi.w	#60,(unk_FF2000).l
 		bcc.w	loc_381A
@@ -3421,7 +3421,7 @@ loc_3800:				; CODE XREF: HandleStageBGM+10↑j
 ; ---------------------------------------------------------------------------
 
 loc_381A:				; CODE XREF: HandleStageBGM+2A↑j
-		move.b	#$12,d0
+		move.b	#BGM_DANGER,d0
 		move.b	d0,(v_curstagebgm).l
 		jsr	StopSound
 		jmp	JmpTo_PlaySound
@@ -3982,7 +3982,7 @@ loc_3E12:				; CODE XREF: sub_3D84+88↑j
 		move.w	#$8000,d0
 		move.b	$27(a0),d0
 		jsr	(QueuePlaneCmd).l
-		move.b	#$5C,d0 ; '\'
+		move.b	#SFX_RESULT_TIME,d0 ; '\'
 		jsr	JmpTo_PlaySound
 		bsr.w	ActorBookmark
 		move.w	#$180,$28(a0)
@@ -4037,7 +4037,7 @@ loc_3EC6:				; CODE XREF: sub_3D84+13C↑j
 		move.w	#$8000,d0
 		move.b	$27(a0),d0
 		jsr	(QueuePlaneCmd).l
-		move.b	#$42,d0 ; 'B'
+		move.b	#SFX_MENU_MOVE,d0 ; 'B'
 		jsr	JmpTo_PlaySound
 
 locret_3F00:				; CODE XREF: sub_3D84+11E↑j
@@ -4046,7 +4046,7 @@ locret_3F00:				; CODE XREF: sub_3D84+11E↑j
 ; ---------------------------------------------------------------------------
 
 loc_3F02:				; CODE XREF: sub_3D84+FC↑j
-		move.b	#$41,d0 ; 'A'
+		move.b	#SFX_MENU_SELECT,d0 ; 'A'
 		jsr	JmpTo_PlaySound
 		clr.w	$28(a0)
 		bsr.w	ActorBookmark
@@ -4841,7 +4841,7 @@ Act_GarbagePuyo:			; DATA XREF: SpawnGarbage+2A↑o
 		move.w	$20(a0),$38(a0)
 		btst	#0,7(a0)
 		bne.w	loc_46DA
-		move.b	#$88,d0
+		move.b	#VOI_GARBAGE_1,d0
 		jsr	JmpTo_PlaySound
 		bset	#0,7(a0)
 
@@ -5036,12 +5036,12 @@ loc_4874:				; CODE XREF: CheckPuyoPop+52↑j
 		clr.w	d1
 		cmpi.b	#1,9(a0)
 		bne.w	loc_48AC
-		move.b	#$87,d0
+		move.b	#VOI_EGGMOBILE,d0
 		tst.b	$2A(a0)
 		beq.w	loc_48A6
 
 loc_48A2:
-		move.b	#$81,d0
+		move.b	#VOI_P1_COMBO_1,d0
 
 loc_48A6:				; CODE XREF: CheckPuyoPop+88↑j
 		jmp	JmpTo_PlaySound2
@@ -5059,7 +5059,7 @@ loc_48BE:				; CODE XREF: CheckPuyoPop+A0↑j
 		move.b	PuyoPopSounds(pc,d1.w),d0
 		cmpi.b	#$C,(v_opponent).l
 		bne.w	loc_48D2
-		move.b	#$4C,d0 ; 'L'
+		move.b	#SFX_PUYO_POP_1,d0 ; 'L'
 
 loc_48D2:				; CODE XREF: CheckPuyoPop+B4↑j
 		jmp	JmpTo_PlaySound
@@ -7018,7 +7018,7 @@ loc_5A18:				; CODE XREF: ROM:00005A10↑j
 ; ---------------------------------------------------------------------------
 
 loc_5A24:				; CODE XREF: ROM:00005A1E↑j
-		move.b	#$63,d0 ; 'c'
+		move.b	#SFX_LEVEL_START,d0 ; 'c'
 		jsr	JmpTo_PlaySound
 		movea.l $2E(a0),a1
 		movea.l $2E(a1),a2
@@ -7195,7 +7195,7 @@ loc_5C44:				; CODE XREF: sub_5B64+DA↑j
 		move.w	$38(a0),$E(a1)
 		move.b	#$FF,$36(a1)
 		clr.w	(unk_FF19AA).l
-		move.b	#$45,d0 ; 'E'
+		move.b	#SFX_PUYO_LAND,d0 ; 'E'
 		bsr.w	JmpTo_PlaySound
 		bra.w	ActorDeleteSelf
 ; End of function sub_5B64
@@ -8685,7 +8685,7 @@ loc_6F52:				; CODE XREF: sub_6F04:loc_6FAA↓j
 
 loc_6FAA:				; CODE XREF: sub_6F04+58↑j
 		dbf	d3,loc_6F52
-		move.b	#$60,d0 ; '`'
+		move.b	#SFX_FIREWORKS,d0 ; '`'
 		jsr	JmpTo_PlaySound
 		bra.w	ActorDeleteSelf
 ; End of function sub_6F04
@@ -9532,7 +9532,7 @@ loc_78AE:				; DATA XREF: ROM:off_7884↑o
 		movea.l $2E(a0),a1
 		bsr.w	ActorDeleteOther
 		bsr.w	PlayerLose_ChkRobotnik
-		move.b	#$59,d0 ; 'Y'
+		move.b	#SFX_LOSE,d0 ; 'Y'
 		jmp	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
 
@@ -9567,7 +9567,7 @@ loc_7980:				; CODE XREF: ROM:000079BA↓j
 		bsr.w	sub_7082
 		bsr.w	sub_6E78
 		bsr.w	PlayerWin_ChkRobotnik
-		move.b	#8,d0
+		move.b	#BGM_WIN,d0
 		jmp	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
 
@@ -9597,7 +9597,7 @@ loc_79D4:				; DATA XREF: PlayerWin_ChkRobotnik+C↑o
 		jsr	(ActorBookmark).l
 		subq.w	#1,$26(a0)
 		bpl.s	locret_79F6
-		move.b	#$90,d0
+		move.b	#VOI_ROBOTNIK_LOSE,d0
 		jsr	JmpTo_PlaySound
 		jmp	(ActorDeleteSelf).l
 ; ---------------------------------------------------------------------------
@@ -9624,7 +9624,7 @@ loc_7A10:				; DATA XREF: PlayerLose_ChkRobotnik+C↑o
 		jsr	(ActorBookmark).l
 		subq.w	#1,$26(a0)
 		bpl.s	locret_7A32
-		move.b	#$6B,d0 ; 'k'
+		move.b	#SFX_ROBOTNIK_LAUGH,d0 ; 'k'
 		jsr	JmpTo_PlaySound
 		jmp	(ActorDeleteSelf).l
 ; ---------------------------------------------------------------------------
@@ -9644,7 +9644,7 @@ loc_7A34:				; DATA XREF: ROM:00007888↑o
 		clr.w	(v_player1_flags).l
 		movea.l $2E(a0),a1
 		bsr.w	ActorDeleteOther
-		move.b	#$59,d0 ; 'Y'
+		move.b	#SFX_LOSE,d0 ; 'Y'
 		jsr	JmpTo_PlaySound
 		clr.w	d0
 		move.b	$2A(a0),d0
@@ -9669,7 +9669,7 @@ loc_7A90:				; DATA XREF: ROM:0000788C↑o
 		lea	(v_player1_flags).l,a2
 		move.b	#$FF,(a1,d0.w)
 		clr.b	(a2,d0.w)
-		move.b	#$59,d0 ; 'Y'
+		move.b	#SFX_LOSE,d0 ; 'Y'
 		jmp	JmpTo_PlaySound
 
 ; =============== S U B R O U T I N E =======================================
@@ -9685,7 +9685,7 @@ sub_7AB6:				; CODE XREF: ROM:00007B7C↓p
 		jsr	(QueuePlaneCmd).l
 		nop
 		nop
-		move.b	#$5C,d0 ; '\'
+		move.b	#SFX_RESULT_TIME,d0 ; '\'
 		jmp	JmpTo_PlaySound
 ; End of function sub_7AB6
 
@@ -9729,7 +9729,7 @@ loc_7B16:				; CODE XREF: ROM:00007B0E↑j
 		move.b	$27(a0),d0
 		andi.b	#3,d0
 		bne.w	loc_7B36
-		move.b	#$5F,d0 ; '_'
+		move.b	#SFX_RESULT_COUNT,d0 ; '_'
 		jsr	JmpTo_PlaySound
 
 loc_7B36:				; CODE XREF: ROM:00007B28↑j
@@ -9746,7 +9746,7 @@ sub_7B46:				; CODE XREF: ROM:00007C48↓p
 		move.w	#$9E00,d0
 		swap	d0
 		jsr	(QueuePlaneCmd).l
-		move.b	#$5D,d0 ; ']'
+		move.b	#SFX_RESULT_BONUS_2,d0 ; ']'
 		jmp	JmpTo_PlaySound
 ; End of function sub_7B46
 
@@ -9769,7 +9769,7 @@ loc_7B5E:				; DATA XREF: ROM:off_784C↑o
 		swap	d0
 		move.w	$12(a0),d0
 		jsr	(QueuePlaneCmd).l
-		move.b	#$5D,d0 ; ']'
+		move.b	#SFX_RESULT_BONUS_2,d0 ; ']'
 		jsr	JmpTo_PlaySound
 		move.w	$12(a0),d0
 		lsr.w	#7,d0
@@ -9805,7 +9805,7 @@ loc_7BFA:				; CODE XREF: ROM:00007BE2↑j
 loc_7C16:				; CODE XREF: ROM:00007B94↑j
 		move.l	#$80050000,d0
 		jsr	(QueuePlaneCmd).l
-		move.b	#$5E,d0 ; '^'
+		move.b	#SFX_RESULT_NO_BONUS,d0 ; '^'
 		jsr	JmpTo_PlaySound
 		move.w	#$40,d0 ; '@'
 		jsr	(ActorBookmark_SetDelay).l
@@ -9995,7 +9995,7 @@ loc_7E6A:				; CODE XREF: ROM:00007E2E↑j
 ; ---------------------------------------------------------------------------
 
 loc_7E9E:				; CODE XREF: ROM:00007E26↑j
-		move.b	#$41,d0 ; 'A'
+		move.b	#SFX_MENU_SELECT,d0 ; 'A'
 		jsr	JmpTo_PlaySound
 		clr.b	(v_bytecodedisabled).l
 		clr.b	(v_bytecodeflag).l
@@ -10078,7 +10078,7 @@ loc_7F94:				; CODE XREF: ROM:00007F50↑j
 		addq.b	#1,d0
 		not.b	d0
 		and.b	d0,(unk_FF1967).l
-		move.b	#$41,d0 ; 'A'
+		move.b	#SFX_MENU_SELECT,d0 ; 'A'
 		jsr	JmpTo_PlaySound
 		bclr	#0,7(a0)
 		bsr.w	ActorBookmark
@@ -10842,7 +10842,7 @@ loc_86C4:				; CODE XREF: ROM:000086BA↑j
 ; ---------------------------------------------------------------------------
 
 loc_86D4:				; CODE XREF: ROM:000086CC↑j
-		move.b	#$45,d0 ; 'E'
+		move.b	#SFX_PUYO_LAND,d0 ; 'E'
 		bsr.w	JmpTo_PlaySound
 		bsr.w	GetPuyoField
 		move.w	$1A(a0),d0
@@ -10870,7 +10870,7 @@ loc_871E:				; CODE XREF: ROM:00008778↓j
 		move.b	$29(a0),d0
 		andi.b	#3,d0
 		bne.w	loc_873C
-		move.b	#$4B,d0 ; 'K'
+		move.b	#SFX_SONIC_PUYO,d0 ; 'K'
 		bsr.w	JmpTo_PlaySound
 
 loc_873C:				; CODE XREF: ROM:00008730↑j
@@ -11157,7 +11157,7 @@ loc_8AA4:				; CODE XREF: ROM:00008A9E↑j
 		move.w	#$148,$E(a0)
 		move.l	#byte_8B12,$32(a0)
 		move.w	#$80,$26(a0)
-		move.b	#$49,d0 ; 'I'
+		move.b	#SFX_CANCEL,d0 ; 'I'
 		bsr.w	JmpTo_PlaySound
 
 loc_8AC0:				; CODE XREF: ROM:00008A44↑j
@@ -11221,7 +11221,7 @@ loc_8B38:				; CODE XREF: sub_8B24+E↑j
 		ori	#$700,sr
 		bsr.w	sub_5582
 		andi	#$F8FF,sr
-		move.b	#$4A,d0 ; 'J'
+		move.b	#SFX_GIANT_PUYO,d0 ; 'J'
 		bra.w	JmpTo_PlaySound
 ; End of function sub_8B24
 
@@ -11474,7 +11474,7 @@ loc_8DF0:				; CODE XREF: sub_8DA6+42↑j
 		jsr	(VSync).l
 		btst	#1,(v_levelmode).l
 		beq.w	loc_8E42
-		move.b	#$54,d0 ; 'T'
+		move.b	#SFX_GARBAGE_1,d0 ; 'T'
 		jmp	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
 
@@ -11485,7 +11485,7 @@ loc_8E18:				; CODE XREF: sub_8DA6+16↑j
 		jsr	(VSync).l
 		btst	#1,(v_levelmode).l
 		beq.w	loc_8E56
-		move.b	#$54,d0 ; 'T'
+		move.b	#SFX_GARBAGE_1,d0 ; 'T'
 		jmp	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
 
@@ -11659,7 +11659,7 @@ sub_8FAA:				; CODE XREF: ROM:00003BDA↑p
 		adda.l	#$294,a2
 		tst.w	8(a2)
 		bne.w	locret_8FEC
-		move.b	#$4C,d0 ; 'L'
+		move.b	#SFX_PUYO_POP_1,d0 ; 'L'
 		bsr.w	JmpTo_PlaySound
 		clr.l	d0
 		move.b	$2B(a0),d0
@@ -12042,7 +12042,7 @@ loc_92A2:				; CODE XREF: sub_9276+24↑j
 		move.b	d0,$F(a0)
 		lea	(word_92D4).l,a1
 		bsr.w	sub_93A0
-		move.b	#$69,d0 ; 'i'
+		move.b	#SFX_DIALOGUE,d0 ; 'i'
 		jmp	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
 
@@ -12866,7 +12866,7 @@ loc_9928:				; CODE XREF: sub_991A+8↑j
 		move.b	(v_levelmode).l,d0
 		andi.b	#3,d0
 		beq.w	sub_9970
-		move.b	#$5B,d0 ; '['
+		move.b	#SFX_RESULT_BONUS,d0 ; '['
 		bsr.w	JmpTo_PlaySound
 		cmpi.b	#$62,$2B(a0) ; 'b'
 		bcc.w	loc_996C
@@ -13278,7 +13278,7 @@ byte_9E10:	dc.b $15, $D		; DATA XREF: ROM:00009E00↑o
 ; ---------------------------------------------------------------------------
 
 SpecIntro_VanishGrounder:		; DATA XREF: ROM:00009DEE↑o
-		move.b	#$97,d0
+		move.b	#VOI_VANISH,d0
 		jsr	JmpTo_PlaySound
 		lea	(sub_9E7C).l,a1
 		bsr.w	FindActorSlot
@@ -13295,7 +13295,7 @@ loc_9E44:				; CODE XREF: ROM:00009E40↑j
 
 
 SpecIntro_VanishScratch:		; DATA XREF: ROM:00009DF2↑o
-		move.b	#$97,d0
+		move.b	#VOI_VANISH,d0
 		jsr	JmpTo_PlaySound
 		lea	(sub_9EC6).l,a1
 		bsr.w	FindActorSlot
@@ -14522,7 +14522,7 @@ Act_LvTransFG_FGScroll:			; CODE XREF: Act_LvTransFG+6↑j
 Act_LvTransFG_FGStop:			; CODE XREF: Act_LvTransFG+2C↑j
 					; Act_LvTransFG+46↑j
 		move.w	#0,(v_vscrollbuffer).l
-		move.b	#$45,d0 ; 'E'
+		move.b	#SFX_PUYO_LAND,d0 ; 'E'
 		jsr	JmpTo_PlaySound
 		clr.b	(v_bytecodedisabled).l
 		bra.w	ActorDeleteSelf
@@ -15443,7 +15443,7 @@ loc_B46E:				; CODE XREF: ROM:0000B458↑j
 		addq.w	#1,$26(a0)
 
 loc_B47C:				; CODE XREF: ROM:0000B46A↑j
-		move.b	#$42,d0 ; 'B'
+		move.b	#SFX_MENU_MOVE,d0 ; 'B'
 		bsr.w	JmpTo_PlaySound
 
 loc_B484:				; CODE XREF: ROM:0000B462↑j
@@ -15467,14 +15467,14 @@ loc_B49A:				; CODE XREF: ROM:0000B448↑j
 		bsr.w	sub_B5FA
 		bcc.w	loc_B4B2
 		jsr	locret_B594
-		move.b	#$67,d0 ; 'g'
+		move.b	#SFX_THUD,d0 ; 'g'
 		jmp	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
 
 loc_B4B2:				; CODE XREF: ROM:0000B49E↑j
 		jsr	locret_B594
 		move.b	$27(a0),(unk_FF0105).l
-		move.b	#$41,d0 ; 'A'
+		move.b	#SFX_MENU_SELECT,d0 ; 'A'
 		bsr.w	JmpTo_PlaySound
 		clr.w	$28(a0)
 		jsr	(ActorBookmark).l
@@ -15823,7 +15823,7 @@ loc_B7C6:				; CODE XREF: ROM:0000B7A8↑j
 
 loc_B7DA:				; CODE XREF: ROM:0000B7C2↑j
 		jsr	sub_B400
-		move.b	#$42,d0 ; 'B'
+		move.b	#SFX_MENU_MOVE,d0 ; 'B'
 		bsr.w	JmpTo_PlaySound
 		bra.s	loc_B77C
 ; ---------------------------------------------------------------------------
@@ -15834,7 +15834,7 @@ locret_B7EA:				; CODE XREF: ROM:0000B7B2↑j
 ; ---------------------------------------------------------------------------
 
 loc_B7EC:				; CODE XREF: ROM:0000B792↑j
-		move.b	#$41,d0 ; 'A'
+		move.b	#SFX_MENU_SELECT,d0 ; 'A'
 		bsr.w	JmpTo_PlaySound
 		clr.w	$28(a0)
 		jsr	(ActorBookmark).l
@@ -16016,13 +16016,13 @@ loc_B9EE:				; CODE XREF: ROM:0000B9CC↑j
 loc_BA00:				; CODE XREF: ROM:0000B9E0↑j
 					; ROM:0000B9EA↑j ...
 		clr.b	$26(a0)
-		move.b	#$42,d0 ; 'B'
+		move.b	#SFX_MENU_MOVE,d0 ; 'B'
 		bra.w	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
 
 loc_BA0C:				; CODE XREF: ROM:0000B9BC↑j
 		addq.w	#1,$E(a0)
-		move.b	#$41,d0 ; 'A'
+		move.b	#SFX_MENU_SELECT,d0 ; 'A'
 		bsr.w	JmpTo_PlaySound
 		cmpi.w	#3,$E(a0)
 		bcc.w	loc_BA3A
@@ -16037,7 +16037,7 @@ loc_BA24:				; CODE XREF: ROM:0000B9B4↑j
 
 loc_BA2E:				; CODE XREF: ROM:0000BA28↑j
 		subq.w	#1,$E(a0)
-		move.b	#$42,d0 ; 'B'
+		move.b	#SFX_MENU_MOVE,d0 ; 'B'
 		bra.w	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
 
@@ -16294,7 +16294,7 @@ loc_BC74:				; CODE XREF: sub_BBCC+72↑j
 loc_BC86:				; CODE XREF: sub_BBCC+9A↑j
 					; sub_BBCC+A4↑j ...
 		clr.b	$26(a0)
-		move.b	#$42,d0 ; 'B'
+		move.b	#SFX_MENU_MOVE,d0 ; 'B'
 		bra.w	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
 
@@ -16302,7 +16302,7 @@ loc_BC92:				; CODE XREF: sub_BBCC+56↑j
 		move.b	#$80,9(a0)
 		bsr.w	sub_BD32
 		addq.w	#1,$E(a0)
-		move.b	#$41,d0 ; 'A'
+		move.b	#SFX_MENU_SELECT,d0 ; 'A'
 		bsr.w	JmpTo_PlaySound
 		cmpi.w	#3,$E(a0)
 		bcc.w	loc_BCEC
@@ -16325,7 +16325,7 @@ loc_BCC0:				; CODE XREF: sub_BBCC+EE↑j
 
 loc_BCDC:				; CODE XREF: sub_BBCC+108↑j
 		subq.w	#1,$E(a0)
-		move.b	#$42,d0 ; 'B'
+		move.b	#SFX_MENU_MOVE,d0 ; 'B'
 		bsr.w	JmpTo_PlaySound
 		bra.w	loc_BBE4
 ; ---------------------------------------------------------------------------
@@ -16677,7 +16677,7 @@ locret_C010:				; CODE XREF: sub_BFAC+38↑j
 ; ---------------------------------------------------------------------------
 
 loc_C012:				; CODE XREF: sub_BFAC+30↑j
-		move.b	#$67,d0 ; 'g'
+		move.b	#SFX_THUD,d0 ; 'g'
 		jsr	JmpTo_PlaySound
 		tst.b	(v_bytecodedisabled).l
 		beq.w	loc_C042
@@ -17065,7 +17065,7 @@ loc_C488:				; CODE XREF: sub_C438+4A↑j
 
 
 sub_C48E:				; DATA XREF: ROM:0000C2C4↑o
-		move.b	#$6A,d0 ; 'j'
+		move.b	#SFX_MACHINE_DESTROYED,d0 ; 'j'
 		jsr	JmpTo_PlaySound
 		move.w	#$96,$26(a0)
 		jsr	(ActorBookmark).l
@@ -17075,7 +17075,7 @@ sub_C48E:				; DATA XREF: ROM:0000C2C4↑o
 ; ---------------------------------------------------------------------------
 
 loc_C4AC:				; CODE XREF: sub_C48E+1A↑j
-		move.b	#$6A,d0 ; 'j'
+		move.b	#SFX_MACHINE_DESTROYED,d0 ; 'j'
 		jsr	JmpTo_PlaySound
 		move.w	#$82,$26(a0)
 		jsr	(ActorBookmark).l
@@ -17085,7 +17085,7 @@ loc_C4AC:				; CODE XREF: sub_C48E+1A↑j
 ; ---------------------------------------------------------------------------
 
 loc_C4CA:				; CODE XREF: sub_C48E+38↑j
-		move.b	#$6A,d0 ; 'j'
+		move.b	#SFX_MACHINE_DESTROYED,d0 ; 'j'
 		jsr	JmpTo_PlaySound
 		move.w	#$B4,$26(a0)
 		jsr	(ActorBookmark).l
@@ -17095,7 +17095,7 @@ loc_C4CA:				; CODE XREF: sub_C48E+38↑j
 ; ---------------------------------------------------------------------------
 
 loc_C4E8:				; CODE XREF: sub_C48E+56↑j
-		move.b	#$91,d0
+		move.b	#VOI_BEAN_CHEER,d0
 		jsr	JmpTo_PlaySound
 		jmp	(ActorDeleteSelf).l
 ; End of function sub_C48E
@@ -17681,7 +17681,7 @@ loc_CB40:				; CODE XREF: ROM:0000CB2E↑j
 		muls.w	#$1C,d0
 		addi.w	#$8C,d0
 		move.w	d0,$A(a0)
-		move.b	#$42,d0 ; 'B'
+		move.b	#SFX_MENU_MOVE,d0 ; 'B'
 		bra.w	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
 
@@ -17713,7 +17713,7 @@ loc_CB86:				; CODE XREF: ROM:0000CB80↑j
 		or.w	d0,d1
 		rol.w	d2,d1
 		move.w	d1,$2C(a0)
-		move.b	#$41,d0 ; 'A'
+		move.b	#SFX_MENU_SELECT,d0 ; 'A'
 		bsr.w	JmpTo_PlaySound
 		rts
 
@@ -17734,7 +17734,7 @@ loc_CBAA:				; DATA XREF: ROM:0000CB76↑o
 
 loc_CBB0:				; CODE XREF: sub_CBA0+8↑j
 		move.w	d2,$2A(a0)
-		move.b	#$41,d0 ; 'A'
+		move.b	#SFX_MENU_SELECT,d0 ; 'A'
 		bsr.w	JmpTo_PlaySound
 
 locret_CBBC:				; CODE XREF: sub_CBA0+4↑j
@@ -17764,7 +17764,7 @@ loc_CBE6:				; CODE XREF: ROM:0000CBEA↓j
 		cmp.w	-(a1),d0
 		beq.s	loc_CC12
 		dbf	d1,loc_CBE6
-		move.b	#$46,d0 ; 'F'
+		move.b	#SFX_WRONG_PASSWORD,d0 ; 'F'
 		bsr.w	JmpTo_PlaySound
 		rts
 ; ---------------------------------------------------------------------------
@@ -17796,7 +17796,7 @@ loc_CC42:				; CODE XREF: ROM:0000CC4A↓j
 		dbf	d0,loc_CC42
 
 loc_CC4E:				; CODE XREF: ROM:0000CC10↑j
-		move.b	#$41,d0 ; 'A'
+		move.b	#SFX_MENU_SELECT,d0 ; 'A'
 		bsr.w	JmpTo_PlaySound
 		bsr.w	sub_D8FA
 		lea	(locret_CCAE).l,a1
@@ -17869,7 +17869,7 @@ loc_CCE8:				; CODE XREF: ROM:0000CCE2↑j
 		beq.s	locret_CD06
 		or.w	d2,d0
 		move.w	d0,$2C(a0)
-		move.b	#$41,d0 ; 'A'
+		move.b	#SFX_MENU_SELECT,d0 ; 'A'
 		bsr.w	JmpTo_PlaySound
 
 locret_CD06:				; CODE XREF: ROM:0000CCF6↑j
@@ -17878,7 +17878,7 @@ locret_CD06:				; CODE XREF: ROM:0000CCF6↑j
 
 Password_RetToMenu:			; CODE XREF: ROM:0000CBC6↑j
 					; ROM:0000CCD8↑j
-		move.b	#$49,d0 ; 'I'
+		move.b	#SFX_CANCEL,d0 ; 'I'
 		bsr.w	JmpTo_PlaySound
 		move.b	$27(a0),(v_stage).l
 		move.b	#6,(v_bytecodeflag).l
@@ -18246,7 +18246,7 @@ loc_D096:				; CODE XREF: ROM:0000D090↑j
 ; ---------------------------------------------------------------------------
 
 loc_D0A6:				; CODE XREF: ROM:0000D08C↑j
-		move.b	#$54,d0 ; 'T'
+		move.b	#SFX_GARBAGE_1,d0 ; 'T'
 		jsr	JmpTo_PlaySound
 		move.w	#$C73E,d5
 		clr.l	d2
@@ -18675,7 +18675,7 @@ loc_D48E:				; CODE XREF: sub_D462+20↑j
 		swap	d0
 		jsr	(QueuePlaneCmd).l
 		move.w	#$50,$26(a0) ; 'P'
-		move.b	#$42,d0 ; 'B'
+		move.b	#SFX_MENU_MOVE,d0 ; 'B'
 		jsr	JmpTo_PlaySound
 
 loc_D4B6:				; CODE XREF: sub_D462+28↑j
@@ -18689,7 +18689,7 @@ loc_D4B6:				; CODE XREF: sub_D462+28↑j
 ; ---------------------------------------------------------------------------
 
 loc_D4D0:				; CODE XREF: sub_D462+18↑j
-		move.b	#$41,d0 ; 'A'
+		move.b	#SFX_MENU_SELECT,d0 ; 'A'
 		bsr.w	JmpTo_PlaySound
 		clr.b	(v_bytecodeflag).l
 
@@ -19152,7 +19152,7 @@ loc_D98A:				; CODE XREF: Act_TitleRobotnik+4↑j
 		cmpi.b	#2,d0
 		bne.s	loc_D9BE
 		move.l	d0,-(sp)
-		move.b	#$94,d0
+		move.b	#VOI_THUNDER_3,d0
 		jsr	JmpTo_PlaySound
 		move.l	(sp)+,d0
 
@@ -19246,7 +19246,7 @@ Act_TitleMachineText:			; DATA XREF: ROM:0000D7F4↑o
 ; ---------------------------------------------------------------------------
 
 loc_DAA2:				; CODE XREF: ROM:0000DA9E↑j
-		move.b	#1,d0
+		move.b	#BGM_TITLE,d0
 		jsr	JmpTo_PlaySound
 		jsr	(ActorBookmark).l
 		jsr	(RandomNumber).l
@@ -19325,7 +19325,7 @@ loc_DB6A:				; CODE XREF: ROM:0000DB66↑j
 		cmpi.b	#3,$22(a0)
 		bne.s	locret_DBAE
 		bsr.w	Act_TitleHandler_SpawnBeans
-		move.b	#$57,d0 ; 'W'
+		move.b	#SFX_TITLE_MACHINE,d0 ; 'W'
 		jsr	JmpTo_PlaySound
 		addq.w	#1,$2A(a0)
 		cmpi.w	#8,$2A(a0)
@@ -20057,7 +20057,7 @@ loc_E2F6:				; CODE XREF: CheckSoundTest+20↑j
 
 loc_E306:				; CODE XREF: CheckSoundTest+30↑j
 		clr.w	$2A(a0)
-		move.b	#$5B,d0 ; '['
+		move.b	#SFX_RESULT_BONUS,d0 ; '['
 		jsr	JmpTo_PlaySound
 		move.w	(v_soundtestflag).l,d0
 		not.w	d0
@@ -20089,7 +20089,7 @@ Act_TitleHandler_StartGame:		; CODE XREF: ROM:0000DA8E↑j
 		eori.b	#1,(unk_FF196C).l
 
 loc_E360:				; CODE XREF: ROM:0000E34C↑j
-		move.b	#$41,d0 ; 'A'
+		move.b	#SFX_MENU_SELECT,d0 ; 'A'
 		jsr	JmpTo_PlaySound
 		clr.b	(v_bytecodedisabled).l
 		clr.b	(v_bytecodeflag).l
@@ -22586,7 +22586,7 @@ sub_FA66:				; DATA XREF: sub_FA36+24↑o
 
 loc_FAD8:				; CODE XREF: sub_FA66+6C↑j
 		move.l	#byte_FAF4,$32(a0)
-		move.b	#$45,d0 ; 'E'
+		move.b	#SFX_PUYO_LAND,d0 ; 'E'
 		bsr.w	JmpTo_PlaySound
 		jsr	(ActorBookmark).l
 		jmp	(ActorAnimate).l
@@ -22843,7 +22843,7 @@ sub_FD72:				; CODE XREF: sub_FD4C:loc_FD5E↑p
 		move.w	d0,(VDP_DATA).l
 		andi	#$F8FF,sr
 		addq.w	#2,$2A(a0)
-		move.b	#$69,d0 ; 'i'
+		move.b	#SFX_DIALOGUE,d0 ; 'i'
 		bra.w	JmpTo_PlaySound
 ; End of function sub_FD72
 
@@ -23261,7 +23261,7 @@ RenderCutsceneText:			; CODE XREF: Act_Cutscene+A2↑j
 		move.b	(unk_FF112A).l,d0
 		andi.b	#1,d0
 		bne.s	loc_1019A
-		move.b	#$69,d0 ; 'i'
+		move.b	#SFX_DIALOGUE,d0 ; 'i'
 		bsr.w	JmpTo_PlaySound
 
 loc_1019A:				; CODE XREF: CutCmd_AddSpace+4↑j
@@ -23972,7 +23972,7 @@ Cut_Opening:	dc.b $85, $83		; DATA XREF: ROM:00010392↑o
 		dc.b $83, 3
 		dc.b $85, $88
 		dc.b $83, 3
-		dc.b $8A, $6B
+		dc.b $8A, SFX_ROBOTNIK_LAUGH
 		dc.b $83, $14
 		dc.b $80
 	even
@@ -26888,7 +26888,7 @@ loc_124D8:				; CODE XREF: ROM:000123EE↑j
 		move.b	#$FF,(v_puyospopping).l
 		move.w	#5,(unk_FF1970).l
 		jsr	(sub_7706).l
-		move.b	#$59,d0 ; 'Y'
+		move.b	#SFX_LOSE,d0 ; 'Y'
 		jsr	JmpTo_PlaySound
 		jsr	(ActorBookmark).l
 		tst.w	$26(a0)
@@ -37926,7 +37926,7 @@ loc_211BE:				; CODE XREF: ROM:00021104↑j
 		move.b	$12(a0,d1.w),d0
 		subq.w	#3,d1
 		bcc.w	loc_211D8
-		addi.b	#$41,d0 ; 'A'
+		addi.b	#SFX__START,d0 ; 'A'
 		jmp	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
 
@@ -38883,7 +38883,7 @@ loc_21A36:				; CODE XREF: OptionsCtrl+24↑j
 		move.b	d2,$2C(a0,d0.w)
 
 loc_21A42:				; CODE XREF: OptionsCtrl+4E↑j
-		move.b	#$42,d0 ; 'B'
+		move.b	#SFX_MENU_MOVE,d0 ; 'B'
 		jmp	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
 
@@ -38894,7 +38894,7 @@ loc_21A4C:				; CODE XREF: OptionsCtrl+2C↑j
 		clr.b	$2C(a0,d0.w)
 
 loc_21A5C:				; CODE XREF: OptionsCtrl+68↑j
-		move.b	#$42,d0 ; 'B'
+		move.b	#SFX_MENU_MOVE,d0 ; 'B'
 		jmp	JmpTo_PlaySound
 ; ---------------------------------------------------------------------------
 

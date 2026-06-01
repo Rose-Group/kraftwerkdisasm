@@ -39,6 +39,8 @@ BGM_INTRO_2		rs.b	1
 ; SFX IDs
 ; --------------------------------------------------------------
 
+SFX__START	equ	$41
+
 	rsset	$41
 SFX_MENU_SELECT		rs.b	1
 SFX_MENU_MOVE		rs.b	1
@@ -89,6 +91,8 @@ SFX_ROBOTNIK_LAUGH_2	rs.b	1
 ; --------------------------------------------------------------
 ; Voice IDs
 ; --------------------------------------------------------------
+
+VOI__START	equ	$81
 
 	rsset	$81
 VOI_P1_COMBO_1		rs.b	1
