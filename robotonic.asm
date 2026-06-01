@@ -23544,434 +23544,46 @@ Cutscene_Index:
 	dc.l Cut_Skweel
 	dc.l Cut_Opening
 
-; TODO - Split Cutscene Dialogue into separate files and convert to the macro format
+	include	"data/text/cutscene/Humpty.asm"
+	even
 
-;	include	"data/text/cutscene/Humpty.asm"
-;	include	"data/text/cutscene/Skweel.asm"
-;	include	"data/text/cutscene/Frankly.asm"
-;	include	"data/text/cutscene/Dynamight.asm"
-;	include	"data/text/cutscene/Arms.asm"
-;	include	"data/text/cutscene/Grounder.asm"
-;	include	"data/text/cutscene/Davy Sprocket.asm"
-;	include	"data/text/cutscene/Coconuts.asm"
-;	include	"data/text/cutscene/Spike.asm"
-;	include	"data/text/cutscene/Sir Ffuzzy-Logik.asm"
-;	include	"data/text/cutscene/Dragon Breath.asm"
-;	include	"data/text/cutscene/Scratch.asm"
-;	include	"data/text/cutscene/Dr. Robonik.asm"
-;	include	"data/text/cutscene/Opening.asm"
+	include	"data/text/cutscene/Skweel.asm"
+	even
 
-Cut_Humpty:	dc.b $85, 2		; DATA XREF: ROM:0001038A↑o
-		dc.b $83, 2
-		dc.b $85, 0
-		dc.b $83, 8
-		dc.b $81, $74
-		dc.w $D712
-		dc.b $85, 1
-		dc.b "Gracious!"
-		dc.b $86
-		dc.b "You're here already."
-		dc.b "I'm shell shocked!"
-		dc.b $85, 0
-		dc.b $83, $C
-		dc.b $82
-		dc.b $83, 4
-		dc.b $81, $7B
-		dc.w $D70C
-		dc.b $85, 1
-		dc.b "But please eggscuse me if I"
-		dc.b "scramble your chances of"
-		dc.b $86
-		dc.b "seeing Dr. R."
-		dc.b $85, 0
-		dc.b $83, $C
-		dc.b $82
-		dc.b $80
+	include	"data/text/cutscene/Frankly.asm"
 	even
-Cut_Skweel:	dc.b $83, 2		; DATA XREF: ROM:0001038E↑o
-		dc.b $85, $82
-		dc.b $85, 0
-		dc.b $83, 4
-		dc.b $81, $59
-		dc.w $D70C
-		dc.b "I've got more sizzle than"
-		dc.b "a rasher of bacon."
-		dc.b $83, $A
-		dc.b $82
-		dc.b $83, 6
-		dc.b $81, $77
-		dc.w $D70C
-		dc.b "I'm hungry and it ain't"
-		dc.b "meals on wheels"
-		dc.b $86
-		dc.b "I'm after - it's you."
-		dc.b $83, $A
-		dc.b $82
-		dc.b $80
+
+	include	"data/text/cutscene/Dynamight.asm"
 	even
-Cut_Frankly:	dc.b $85, 0		; DATA XREF: ROM:00010356↑o
-		dc.b $83, 6
-		dc.b $81, $7A
-		dc.w $D688
-		dc.b $85, 1
-		dc.b $83, 2
-		dc.b $85, 2
-		dc.b "Arms is always too wrapped"
-		dc.b "up in himself to do"
-		dc.b $86
-		dc.b "anything useful."
-		dc.b $85, 3
-		dc.b $83, 3
-		dc.b $85, 0
-		dc.b $83, 6
-		dc.b $82
-		dc.b $83, 1
-		dc.b $81, $7A
-		dc.w $D688
-		dc.b $85, 1
-		dc.b $83, 2
-		dc.b $85, 2
-		dc.b "I'm a bright spark though "
-		dc.b "and I reckon I know how to"
-		dc.b "beat you."
-		dc.b $85, 3
-		dc.b $83, 3
-		dc.b $85, 0
-		dc.b $83, 6
-		dc.b $82
-		dc.b $80
+
+	include	"data/text/cutscene/Arms.asm"
 	even
-Cut_Dynamight:	dc.b $85, 0		; DATA XREF: ROM:0001035A↑o
-		dc.b $83, 2
-		dc.b $85, 2
-		dc.b $83, $A
-		dc.b $81, $32
-		dc.w $D810
-		dc.b $85, 1
-		dc.b "Well blow me away!"
-		dc.b $83, 2
-		dc.b $85, 0
-		dc.b $83, 4
-		dc.b $82
-		dc.b $85, 3
-		dc.b $83, $C
-		dc.b $81, $56
-		dc.w $D78C
-		dc.b $85, 1
-		dc.b "As if Dr. R hasn't had"
-		dc.b "enough stick already."
-		dc.b $85, 0
-		dc.b $83, 8
-		dc.b $82
-		dc.b $85, 2
-		dc.b $83, 8
-		dc.b $81, $56
-		dc.w $D78C
-		dc.b $85, 1
-		dc.b "Here I am to provide a"
-		dc.b "fireworks display."
-		dc.b $83, 2
-		dc.b $85, 0
-		dc.b $83, 4
-		dc.b $85, 2
-		dc.b $82
-		dc.b $80
+
+	include	"data/text/cutscene/Grounder.asm"
 	even
-Cut_Arms:	dc.b $83, 2		; DATA XREF: ROM:0001035E↑o
-		dc.b $85, 0
-		dc.b $81, $5C
-		dc.w $D788
-		dc.b "Beans, beans let me give you"
-		dc.b "a hand - or two."
-		dc.b $83, $A
-		dc.b $82
-		dc.b $83, 4
-		dc.b $81, $5C
-		dc.w $D788
-		dc.b "I've to prepare Dr. Robotnik"
-		dc.b "a beautiful bean feast."
-		dc.b $83, 6
-		dc.b $82
-		dc.b $83, 4
-		dc.b $81, $39
-		dc.w $D88C
-		dc.b "Come to Arms my beauties."
-		dc.b $83, 8
-		dc.b $82
-		dc.b $80
+
+	include	"data/text/cutscene/Davy Sprocket.asm"
 	even
-Cut_Grounder:	dc.b $83, 2		; DATA XREF: ROM:00010366↑o
-		dc.b $85, $81
-		dc.b $83, 4
-		dc.b $81, $2C
-		dc.w $D894
-		dc.b $85, 1
-		dc.b "I'm Grounder"
-		dc.b $83, 8
-		dc.b $82
-		dc.b $85, 0
-		dc.b $83, 6
-		dc.b $81, $7A
-		dc.w $D78C
-		dc.b $85, 1
-		dc.b "but you can call me SAM - "
-		dc.b "'cos I'm like a Surface to"
-		dc.b "Air Missile"
-		dc.b $83, $C
-		dc.b $82
-		dc.b $85, 0
-		dc.b $83, 6
-		dc.b $81, $5A
-		dc.w $D80C
-		dc.b $85, 1
-		dc.b "and I'm gonna have you for"
-		dc.b "launch."
-		dc.b $83, $C
-		dc.b $85, 0
-		dc.b $82
-		dc.b $80
+
+	include	"data/text/cutscene/Coconuts.asm"
 	even
-Cut_Davy:	dc.b $83, 2		; DATA XREF: ROM:0001036A↑o
-		dc.b $85, 0
-		dc.b $83, 2
-		dc.b $81, $5A
-		dc.w $D708
-		dc.b "A squirt like you has been"
-		dc.b "reuniting too many beans."
-		dc.b $85, 1
-		dc.b $83, 6
-		dc.b $85, 2
-		dc.b $82
-		dc.b $83, 2
-		dc.b $85, 3
-		dc.b $83, 8
-		dc.b $81, $5C
-		dc.w $D708
-		dc.b $85, 4
-		dc.b "I reckon I'll have to"
-		dc.b $86
-		dc.b "pioneer some new techniques."
-		dc.b $83, 4
-		dc.b $85, 5
-		dc.b $83, $A
-		dc.b $82
-		dc.b $80
+
+	include	"data/text/cutscene/Spike.asm"
 	even
-Cut_Coconuts:	dc.b $83, 2		; DATA XREF: ROM:Cutscene_Index↑o
-					; ROM:00010362↑o ...
-		dc.b $85, $80
-		dc.b $81, $76
-		dc.w $D70E
-		dc.b $85, 2
-		dc.b "I'm Coconuts"
-		dc.b $86
-		dc.b "and I'm Dr. Robotnik's"
-		dc.b "favorite robot"
-		dc.b $83, 3
-		dc.b $85, 0
-		dc.b $83, 5
-		dc.b $82
-		dc.b $85, 1
-		dc.b $83, $A
-		dc.b $85, 1
-		dc.b $83, 6
-		dc.b $81, $5B
-		dc.w $D80A
-		dc.b $85, 2
-		dc.b "because I'm going to finish"
-		dc.b "you in a flash."
-		dc.b $83, 6
-		dc.b $85, 1
-		dc.b $83, 4
-		dc.b $82
-		dc.b $80
+
+	include	"data/text/cutscene/Sir Ffuzzy-Logik.asm"
 	even
-Cut_Spike:	dc.b $83, 4		; DATA XREF: ROM:00010372↑o
-		dc.b $85, 0
-		dc.b $81, $56
-		dc.w $D70C
-		dc.b "C'mon squirt,let's see"
-		dc.b "what you're made of."
-		dc.b $83, 6
-		dc.b $85, 1
-		dc.b $83, 4
-		dc.b $82
-		dc.b $83, 6
-		dc.b $85, 0
-		dc.b $81, $59
-		dc.w $D70C
-		dc.b "Forget those rivet-brains"
-		dc.b "you've seen."
-		dc.b $83, 4
-		dc.b $85, 1
-		dc.b $83, 6
-		dc.b $82
-		dc.b $83, 4
-		dc.b $85, 0
-		dc.b $81, $57
-		dc.w $D70C
-		dc.b "I'm Spike and I'm gonna"
-		dc.b "stick it to ya!"
-		dc.b $83, $A
-		dc.b $82
-		dc.b $80
+
+	include	"data/text/cutscene/Dragon Breath.asm"
 	even
-Cut_SirFfuzzy:	dc.b $83, 2		; DATA XREF: ROM:00010376↑o
-		dc.b $85, $85
-		dc.b $85, 0
-		dc.b $81, $55
-		dc.w $D70C
-		dc.b "Milord is troubled"
-		dc.b $86
-		dc.b "by thy success, Sire."
-		dc.b $83, $C
-		dc.b $82
-		dc.b $83, 4
-		dc.b $81, $56
-		dc.w $D70C
-		dc.b "But thou art destined "
-		dc.b "to proceed no further."
-		dc.b $83, $C
-		dc.b $82
-		dc.b $83, 4
-		dc.b $81, $54
-		dc.w $D70C
-		dc.b "Prepare to duel Lord"
-		dc.b "Robotnik's champion."
-		dc.b $83, $10
-		dc.b $82
-		dc.b $80
+
+	include	"data/text/cutscene/Scratch.asm"
 	even
-Cut_Dragon:	dc.b $83, 4		; DATA XREF: ROM:0001037A↑o
-		dc.b $85, 0
-		dc.b $81, $54
-		dc.w $D70E
-		dc.b "Ol' Ffuzzy-Fface got"
-		dc.b "tied in knots, huh?"
-		dc.b $83, $A
-		dc.b $82
-		dc.b $83, 4
-		dc.b $81, $5C
-		dc.w $D70A
-		dc.b "I guess that's why the Doc's"
-		dc.b "sending the boys round."
-		dc.b $83, $A
-		dc.b $82
-		dc.b $83, 4
-		dc.b $81, $2F
-		dc.w $D816
-		dc.b "So long sucker!"
-		dc.b $83, $A
-		dc.b $82
-		dc.b $80
+
+	include	"data/text/cutscene/Dr. Robotnik.asm"
 	even
-Cut_Scratch:	dc.b $83, 2		; DATA XREF: ROM:0001037E↑o
-		dc.b $85, 0
-		dc.b $81, $79
-		dc.w $D70C
-		dc.b $85, 1
-		dc.b "You've been scratching"
-		dc.b $86
-		dc.b "around here for too long,"
-		dc.b "worm-bait."
-		dc.b $83, 3
-		dc.b $85, 2
-		dc.b $83, 7
-		dc.b $82
-		dc.b $83, 4
-		dc.b $81, $56
-		dc.w $D70C
-		dc.b $85, 3
-		dc.b "Time to cross the road"
-		dc.b "and head home, pal."
-		dc.b $83, 3
-		dc.b $85, 4
-		dc.b $83, 7
-		dc.b $82
-		dc.b $83, 4
-		dc.b $81, $57
-		dc.w $D70C
-		dc.b $85, 5
-		dc.b "I'm winning this one by"
-		dc.b "fair means or fowl."
-		dc.b $83, 3
-		dc.b $85, 6
-		dc.b $83, 7
-		dc.b $82
-		dc.b $80
-	even
-Cut_Robotnik:	dc.b $85, $84		; DATA XREF: ROM:00010382↑o
-		dc.b $83, $23
-		dc.b $81, $5C
-		dc.w $D58E
-		dc.b "You dopey duncebots -"
-		dc.b $86
-		dc.b "Can't you do anything right?"
-		dc.b $83, $A
-		dc.b $82
-		dc.b $83, 6
-		dc.b $81, $76
-		dc.w $D510
-		dc.b "Now I'll have to do my"
-		dc.b "own dirty work and"
-		dc.b $86
-		dc.b "blend those beans."
-		dc.b $83, $10
-		dc.b $82
-		dc.b $83, 6
-		dc.b $80
-	even
-Cut_Opening:	dc.b $85, $83		; DATA XREF: ROM:00010392↑o
-		dc.b $83, $A
-		dc.b $81, $7B
-		dc.w $C30C
-		dc.b "Witness my evil dream to"
-		dc.b $86
-		dc.b "rid Mobius of music and fun"
-		dc.b "forever."
-		dc.b $83, $C
-		dc.b $82
-		dc.b $83, $F
-		dc.b $81, $5A
-		dc.w $C38E
-		dc.b "My latest invention, the  "
-		dc.b "mean bean-steaming machine"
-		dc.b $83, $C
-		dc.b $82
-		dc.b $83, $F
-		dc.b $81, $78
-		dc.w $C310
-		dc.b "will not only dispose of"
-		dc.b "those fun-loving jolly  "
-		dc.b "beans of Beanville"
-		dc.b $83, $C
-		dc.b $82
-		dc.b $83, $F
-		dc.b $81, $78
-		dc.w $C310
-		dc.b "but turn them into robot"
-		dc.b "slaves to serve my evil "
-		dc.b "purposes."
-		dc.b $83, $C
-		dc.b $82
-		dc.b $83, $F
-		dc.b $81, $55
-		dc.w $C392
-		dc.b "Robots."
-		dc.b $86
-		dc.b "Bring me those beans."
-		dc.b $83, $C
-		dc.b $82
-		dc.b $83, 6
-		dc.b $85, $86
-		dc.b $83, 6
-		dc.b $85, $87
-		dc.b $83, 3
-		dc.b $85, $88
-		dc.b $83, 3
-		dc.b $8A, SFX_ROBOTNIK_LAUGH
-		dc.b $83, $14
-		dc.b $80
+
+	include	"data/text/cutscene/Opening.asm"
 	even
 
 ; =============== S U B R O U T I N E =======================================

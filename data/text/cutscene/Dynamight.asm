@@ -1,0 +1,44 @@
+Cut_Dynamight:
+	CUT_ANIM_OPP	0
+	CUT_PAUSE	2
+	CUT_ANIM_OPP	2
+	CUT_PAUSE	10
+
+	CUT_NEWTEXT_S	9, 13, 18, 1
+	CUT_ANIM_OPP	1
+
+	dc.b "Well blow me away!"
+
+	CUT_PAUSE	2
+	CUT_ANIM_OPP	0
+	CUT_PAUSE	4
+	CUT_CLOSETEXT
+
+	CUT_ANIM_OPP	3
+	CUT_PAUSE	12
+
+	CUT_NEWTEXT_S	7, 12, 22, 2
+	CUT_ANIM_OPP	1
+
+	dc.b "As if Dr. R hasn't had"
+	dc.b "enough stick already."
+
+	CUT_ANIM_OPP	0
+	CUT_PAUSE	8
+	CUT_CLOSETEXT
+
+	CUT_ANIM_OPP	2
+	CUT_PAUSE	8
+
+	CUT_NEWTEXT_S	7, 12, 22, 2
+	CUT_ANIM_OPP	1
+
+	dc.b "Here I am to provide a"
+	dc.b "fireworks display."
+
+	CUT_PAUSE	2
+	CUT_ANIM_OPP	0
+	CUT_PAUSE	4
+	CUT_ANIM_OPP	2
+	CUT_CLOSETEXT
+	CUT_END
