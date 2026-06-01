@@ -371,7 +371,7 @@ DefaultScores:		; DATA XREF: LoadDefaultScores↑o
 	dc.w 384
 	dc.l 0
 
-	dc.b 4, $13, $FF, $FF	; DS
+	dc.b 4, $13, $FF, $FF	; DSR
 	dc.b $FF
 	dc.b $FF
 	dc.l 99873
@@ -40998,6 +40998,23 @@ ArtNem_SkweelIntro:
 
 ArtNem_ScratchIntro:
 	incbin	"data/art/nemesis/cutscene/Scratch.nem"
+	even
+
+; ---------------------------------------------------------------------------
+
+; Broken Robotnik Ship Nemesis Art Data
+	incbin	"data/art/nemesis/misc/Robotnik's Ship (Corrupt).nem"
+	even
+; Duplicate of Role Call Textbox
+	incbin	"data/art/nemesis/misc/Role Call Textbox.nem"
+	even
+; A chopped off duplicate of Robotnik's 20th sprite
+	incbin	"data/art/uncompressed/Unused/Robotnik 20 (alt).unc"
+; Duplicate of Robotnik's Ship
+	incbin	"data/art/nemesis/cutscene/Robotnik's Ship.nem"
+	even
+; Another Duplicate of Role Call Textbox
+	incbin	"data/art/nemesis/misc/Role Call Textbox.nem"
 	even
 
 ; ---------------------------------------------------------------------------
