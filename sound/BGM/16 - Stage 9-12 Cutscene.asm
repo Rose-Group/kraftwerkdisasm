@@ -210,10 +210,10 @@ Song16_Noise:
 		cRelease	$01
 		cVibrato	$02, $0A
 		cNote		cnRst, $1C
-		cNote		cnG0, $1C
-		cNote		cnG0, $1C
-		cNote		cnG0, $1C
-		cNote		cnG0, $07
-		cNote		cnG0, $69
+		cNote		cnWhiteCh3, $1C
+		cNote		cnWhiteCh3, $1C
+		cNote		cnWhiteCh3, $1C
+		cNote		cnWhiteCh3, $07
+		cNote		cnWhiteCh3, $69
 	cLoopEnd
 	cStop

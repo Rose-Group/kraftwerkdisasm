@@ -649,23 +649,23 @@ Song0F_Noise:
 	cLoopStart
 		cNote		cnRst, $08
 		cInsVolPSG	$0F, $0E
-		cNote		cnG0
+		cNote		cnWhiteCh3
 		cInsVolPSG	$0F, $0C
-		cNote		cnG0
-		cNote		cnG0
+		cNote		cnWhiteCh3
+		cNote		cnWhiteCh3
 		cNote		cnRst
 		cNote		cnRst
-		cNote		cnG0
-		cNote		cnG0
+		cNote		cnWhiteCh3
+		cNote		cnWhiteCh3
 		cNote		cnRst
-		cNote		cnG0
+		cNote		cnWhiteCh3
 		cInsVolPSG	$0F, $0E
-		cNote		cnG0
+		cNote		cnWhiteCh3
 		cInsVolPSG	$0F, $0C
-		cNote		cnG0
+		cNote		cnWhiteCh3
 		cNote		cnRst
-		cNote		cnG0
-		cNote		cnG0
-		cNote		cnG0
+		cNote		cnWhiteCh3
+		cNote		cnWhiteCh3
+		cNote		cnWhiteCh3
 	cLoopEnd
 	cStop

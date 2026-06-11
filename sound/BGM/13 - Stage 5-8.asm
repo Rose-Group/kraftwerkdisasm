@@ -384,8 +384,8 @@ Song13_PSG3:
 Song13_Noise:
 	cLoopStart
 		cInsVolPSG	$0F, $0E
-		cNote		cnG0, $0C
+		cNote		cnWhiteCh3, $0C
 		cInsVolPSG	$0F, $0C
-		cNote		cnG0, $0C
+		cNote		cnWhiteCh3, $0C
 	cLoopEnd
 	cStop

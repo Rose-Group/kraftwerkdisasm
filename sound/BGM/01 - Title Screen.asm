@@ -896,10 +896,10 @@ Song01_Noise:
 	cLoopStart
 		cInsVolPSG	$0F, $0E
 		cRelease	$01
-		cNote		cnG0, $07
+		cNote		cnWhiteCh3, $07
 		cInsVolPSG	$0F, $0B
-		cNote		cnG0
-		cNote		cnG0
-		cNote		cnG0
+		cNote		cnWhiteCh3
+		cNote		cnWhiteCh3
+		cNote		cnWhiteCh3
 	cLoopEnd
 	cStop

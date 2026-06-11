@@ -538,11 +538,11 @@ Song0E_Noise:
 		cInsVolPSG	$0F, $0E
 		cNote		cnRst, $07
 		cNote		cnRst
-		cNote		cnG0
+		cNote		cnWhiteCh3
 		cNote		cnRst
 		cNote		cnRst
 		cNote		cnRst
-		cNote		cnG0
-		cNote		cnG0
+		cNote		cnWhiteCh3
+		cNote		cnWhiteCh3
 	cLoopEnd
 	cStop

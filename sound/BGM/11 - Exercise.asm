@@ -1361,6 +1361,6 @@ Song11_Noise:
 		cRelease	$01
 		cInsVolPSG	$0F, $0C
 		cNote		cnRst, $0A
-		cNote		cnG0, $0A
+		cNote		cnWhiteCh3, $0A
 	cLoopEnd
 	cStop

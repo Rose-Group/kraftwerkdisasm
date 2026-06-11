@@ -212,15 +212,15 @@ Song09_Noise:
 	cLoopStart
 		cInsVolPSG	$00, $00
 		cNote		cnRst
-		cNote		cnC1
+		cNote		cnWhite2
 		cInsVolPSG	$0F, $0D
-		cNote		cnG0, $06
+		cNote		cnWhiteCh3, $06
 		cInsVolPSG	$00, $00
 		cNote		cnRst
 		cNote		cnRst
 		cNote		cnRst
 		cInsVolPSG	$0F, $0D
-		cNote		cnG0
-		cNote		cnG0
+		cNote		cnWhiteCh3
+		cNote		cnWhiteCh3
 	cLoopEnd
 	cStop

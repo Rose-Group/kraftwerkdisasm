@@ -130,8 +130,8 @@ Song18_Noise:
 	cLoopStart
 		cInsVolPSG	$0F, $0D
 		cRelease	$01
-		cNote		cnG0, $0C
-		cNote		cnG0, $08
-		cNote		cnG0, $04
+		cNote		cnWhiteCh3, $0C
+		cNote		cnWhiteCh3, $08
+		cNote		cnWhiteCh3, $04
 	cLoopEnd
 	cStop

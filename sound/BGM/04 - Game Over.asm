@@ -830,9 +830,9 @@ Song04_PSG3:	; loc_A3AB
 Song04_Noise:	; loc_A3AE
 	cLoopStart
 		cInsVolPSG	$0F, $0D
-		cNote		cnG0, $06
+		cNote		cnWhiteCh3, $06
 		cNote		cnRst
-		cNote		cnG0
-		cNote		cnG0
+		cNote		cnWhiteCh3
+		cNote		cnWhiteCh3
 	cLoopEnd
 	cStop

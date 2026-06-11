@@ -264,16 +264,16 @@ Song17_Noise:
 		cRelease	$01
 		cInsVolPSG	$0F, $0D
 		cNote		cnRst, $06
-		cNote		cnG0, $0C
-		cNote		cnG0, $0C
-		cNote		cnG0, $0C
-		cNote		cnG0, $0C
-		cNote		cnG0, $0C
-		cNote		cnG0, $0C
-		cNote		cnG0, $0C
-		cNote		cnG0, $06
+		cNote		cnWhiteCh3, $0C
+		cNote		cnWhiteCh3, $0C
+		cNote		cnWhiteCh3, $0C
+		cNote		cnWhiteCh3, $0C
+		cNote		cnWhiteCh3, $0C
+		cNote		cnWhiteCh3, $0C
+		cNote		cnWhiteCh3, $0C
+		cNote		cnWhiteCh3, $06
 		cLoopCnt	$07
-			cNote		cnG0, $0C
+			cNote		cnWhiteCh3, $0C
 		cLoopCntEnd
 	cLoopEnd
 	cStop

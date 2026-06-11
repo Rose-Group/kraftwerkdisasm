@@ -142,6 +142,8 @@ cnC7		EQU	54h
 
 cnMaxFM		EQU	cnB6				; Max FM note
 cnMaxPSG	EQU	cnDs5				; Max PSG note
+cnWhiteCh3	EQU	cnG0				; PSG Noise Chan 3 Mode
+cnWhite2	EQU	cnC1
 
 ; --------------------------------------------------------------
 ; DAC Equates

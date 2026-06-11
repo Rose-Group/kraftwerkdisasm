@@ -557,21 +557,21 @@ Song02_Noise:	; loc_9C93
 	cLoopStart
 		cLoopCnt	$17
 			cInsVolPSG	$0F, $0E
-			cNote		cnG0, $0E
+			cNote		cnWhiteCh3, $0E
 			cInsVolPSG	$0F, $0C
-			cNote		cnG0, $0E
+			cNote		cnWhiteCh3, $0E
 			cInsVolPSG	$0F, $0E
-			cNote		cnG0, $0E
+			cNote		cnWhiteCh3, $0E
 			cInsVolPSG	$0F, $0C
-			cNote		cnG0, $0E
+			cNote		cnWhiteCh3, $0E
 		cLoopCntEnd
 		cLoopCnt	$1F
 			cInsVolPSG	$0F, $0E
-			cNote		cnG0, $07
+			cNote		cnWhiteCh3, $07
 			cInsVolPSG	$0F, $0C
-			cNote		cnG0, $07
-			cNote		cnG0
-			cNote		cnG0
+			cNote		cnWhiteCh3, $07
+			cNote		cnWhiteCh3
+			cNote		cnWhiteCh3
 		cLoopCntEnd
 	cLoopEnd
 	cStop

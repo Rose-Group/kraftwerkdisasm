@@ -15,5 +15,6 @@ if exist "_out/sound.z80" (
     echo "Something went wrong, is your batch script set up correctly?"
 )
 pause
+exit
 
-FINISH:
+:FINISH

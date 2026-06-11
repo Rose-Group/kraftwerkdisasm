@@ -587,10 +587,10 @@ Song14_PSG3:
 Song14_Noise:
 	cLoopStart
 		cInsVolPSG	$0F, $0E
-		cNote		cnG0, $05
+		cNote		cnWhiteCh3, $05
 		cInsVolPSG	$0F, $0B
-		cNote		cnG0, $05
-		cNote		cnG0
-		cNote		cnG0
+		cNote		cnWhiteCh3, $05
+		cNote		cnWhiteCh3
+		cNote		cnWhiteCh3
 	cLoopEnd
 	cStop
