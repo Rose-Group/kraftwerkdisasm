@@ -37,7 +37,7 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeType macro type
-	cubeByte type
+	db	type
 endm
 
 ; ------------------------------------------------------------------------------
@@ -49,8 +49,8 @@ endm
 
 	if CUBE_DRIVER_TYPE==0
 cubeMusicFadeOut macro time
-	cubeByte (time)&255
-	cubeByte ((time)>>8)&255
+	db	(time)&255
+	db	((time)>>8)&255
 endm
 	endif
 
@@ -63,8 +63,8 @@ endm
 
 	if CUBE_DRIVER_TYPE==1
 cubeMusicUseFm6 macro use_fm6
-	cubeByte (use_fm6)&255
-	cubeByte 0
+	db	(use_fm6)&255
+	db	0
 endm
 	endif
 
@@ -76,7 +76,7 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeMusicTempo macro tempo
-	cubeByte tempo
+	db	tempo
 endm
 
 ; ------------------------------------------------------------------------------
@@ -87,8 +87,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeChannel macro address
-	cubeByte (address)&255
-	cubeByte ((address)>>8)&255
+	db	(address)&255
+	db	((address)>>8)&255
 endm
 
 ; ------------------------------------------------------------------------------
@@ -98,14 +98,9 @@ endm
 ;	note - Note ID
 ; ------------------------------------------------------------------------------
 
-cubeNote macro note, length
-	if (narg=1)
-		cubeByte (note)&127
-	else
-		cubeByte 128|((note)&127)
-		cubeByte length
-	endif
-	endm
+cubeNote macro note
+	db	(note)&127
+endm
 
 ; ------------------------------------------------------------------------------
 ; Note with length
@@ -116,8 +111,8 @@ cubeNote macro note, length
 ; ------------------------------------------------------------------------------
 
 cubeNoteLength macro note, length
-	cubeByte 128|((note)&127)
-	cubeByte length
+	db	128|((note)&127)
+	db	length
 endm
 
 ; ------------------------------------------------------------------------------
@@ -125,8 +120,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeLoopStart macro
-	cubeByte 248
-	cubeByte 0
+	db	248
+	db	0
 endm
 
 ; ------------------------------------------------------------------------------
@@ -134,8 +129,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeVoltaStart macro
-	cubeByte 248
-	cubeByte 32
+	db	248
+	db	32
 endm
 
 ; ------------------------------------------------------------------------------
@@ -143,8 +138,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeVolta1 macro
-	cubeByte 248
-	cubeByte 64
+	db	248
+	db	64
 endm
 
 ; ------------------------------------------------------------------------------
@@ -152,8 +147,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeVolta2 macro
-	cubeByte 248
-	cubeByte 96
+	db	248
+	db	96
 endm
 
 ; ------------------------------------------------------------------------------
@@ -161,8 +156,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeVolta3 macro
-	cubeByte 248
-	cubeByte 128
+	db	248
+	db	128
 endm
 
 ; ------------------------------------------------------------------------------
@@ -170,8 +165,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeVoltaEnd macro
-	cubeByte 248
-	cubeByte 160
+	db	248
+	db	160
 endm
 
 ; ------------------------------------------------------------------------------
@@ -179,8 +174,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeLoopEnd macro
-	cubeByte 248
-	cubeByte 161
+	db	248
+	db	161
 endm
 
 ; ------------------------------------------------------------------------------
@@ -191,8 +186,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeRepeatStart macro count
-	cubeByte 248
-	cubeByte 192|((count)&31)
+	db	248
+	db	192|((count)&31)
 endm
 
 ; ------------------------------------------------------------------------------
@@ -200,8 +195,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeRepeatEnd macro
-	cubeByte 248
-	cubeByte 224
+	db	248
+	db	224
 endm
 
 ; ------------------------------------------------------------------------------
@@ -213,8 +208,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeNoteShift macro detune, transpose
-	cubeByte 249
-	cubeByte (((detune)&7)<<4)|((transpose)&143)
+	db	249
+	db	(((detune)&7)<<4)|((transpose)&143)
 endm
 
 ; ------------------------------------------------------------------------------
@@ -225,8 +220,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeFmPan macro pan
-	cubeByte 250
-	cubeByte pan
+	db	250
+	db	pan
 endm
 
 ; ------------------------------------------------------------------------------
@@ -237,8 +232,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeTempo macro tempo
-	cubeByte 250
-	cubeByte tempo
+	db	250
+	db	tempo
 endm
 
 ; ------------------------------------------------------------------------------
@@ -250,8 +245,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeVibrato macro envelope, delay
-	cubeByte 251
-	cubeByte (((envelope)&15)<<4)|((delay)&15)
+	db	251
+	db	(((envelope)&15)<<4)|((delay)&15)
 endm
 
 ; ------------------------------------------------------------------------------
@@ -262,8 +257,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeStaccato macro time
-	cubeByte 252
-	cubeByte (time)&127
+	db	252
+	db	(time)&127
 endm
 
 ; ------------------------------------------------------------------------------
@@ -271,8 +266,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeLegato macro
-	cubeByte 252
-	cubeByte 128
+	db	252
+	db	128
 endm
 
 ; ------------------------------------------------------------------------------
@@ -283,8 +278,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeArticulate macro time
-	cubeByte 252
-	cubeByte 128|((time)&127)
+	db	252
+	db	128|((time)&127)
 endm
 
 ; ------------------------------------------------------------------------------
@@ -295,8 +290,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeFmSlide macro speed
-	cubeByte 252
-	cubeByte 128|((speed)&127)
+	db	252
+	db	128|((speed)&127)
 endm
 
 ; ------------------------------------------------------------------------------
@@ -304,8 +299,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeFmSlideStop macro
-	cubeByte 252
-	cubeByte 255
+	db	252
+	db	255
 endm
 
 ; ------------------------------------------------------------------------------
@@ -316,8 +311,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeFmVolume macro volume
-	cubeByte 253
-	cubeByte (volume)&15
+	db	253
+	db	(volume)&15
 endm
 
 ; ------------------------------------------------------------------------------
@@ -329,8 +324,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubePsgInstrument macro instrument, volume
-	cubeByte 253
-	cubeByte (((instrument)&15)<<4)|((volume)&15)
+	db	253
+	db	(((instrument)&15)<<4)|((volume)&15)
 endm
 
 ; ------------------------------------------------------------------------------
@@ -341,8 +336,8 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeFmInstrument macro instrument
-	cubeByte 254
-	cubeByte instrument
+	db	254
+	db	instrument
 endm
 
 ; ------------------------------------------------------------------------------
@@ -350,9 +345,9 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeStop macro
-	cubeByte 255
-	cubeByte 0
-	cubeByte 0
+	db	255
+	db	0
+	db	0
 endm
 
 ; ------------------------------------------------------------------------------
@@ -363,9 +358,9 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeOperation macro operation
-	cubeByte 255
-	cubeByte operation
-	cubeByte 0
+	db	255
+	db	operation
+	db	0
 endm
 
 ; ------------------------------------------------------------------------------
@@ -379,9 +374,9 @@ endm
 ; ------------------------------------------------------------------------------
 
 cubeJump macro address
-	cubeByte 255
-	cubeByte (address)&255
-	cubeByte ((address)>>8)&255
+	db	255
+	db	(address)&255
+	db	((address)>>8)&255
 endm
 
 ; ------------------------------------------------------------------------------
@@ -611,42 +606,42 @@ endm
 cubeFmFeedback macro feedback
 __cube_fm_fb = (feedback)&31
 
-	cubeByte (__cube_fm_dt_1<<4)|__cube_fm_mul_1
-	cubeByte (__cube_fm_dt_2<<4)|__cube_fm_mul_2
-	cubeByte (__cube_fm_dt_3<<4)|__cube_fm_mul_3
-	cubeByte (__cube_fm_dt_4<<4)|__cube_fm_mul_4
+	db	(__cube_fm_dt_1<<4)|__cube_fm_mul_1
+	db	(__cube_fm_dt_2<<4)|__cube_fm_mul_2
+	db	(__cube_fm_dt_3<<4)|__cube_fm_mul_3
+	db	(__cube_fm_dt_4<<4)|__cube_fm_mul_4
 
-	cubeByte __cube_fm_tl_1
-	cubeByte __cube_fm_tl_2
-	cubeByte __cube_fm_tl_3
-	cubeByte __cube_fm_tl_4
+	db	__cube_fm_tl_1
+	db	__cube_fm_tl_2
+	db	__cube_fm_tl_3
+	db	__cube_fm_tl_4
 	
-	cubeByte (__cube_fm_rs_1<<6)|__cube_fm_ar_1
-	cubeByte (__cube_fm_rs_2<<6)|__cube_fm_ar_2
-	cubeByte (__cube_fm_rs_3<<6)|__cube_fm_ar_3
-	cubeByte (__cube_fm_rs_4<<6)|__cube_fm_ar_4
+	db	(__cube_fm_rs_1<<6)|__cube_fm_ar_1
+	db	(__cube_fm_rs_2<<6)|__cube_fm_ar_2
+	db	(__cube_fm_rs_3<<6)|__cube_fm_ar_3
+	db	(__cube_fm_rs_4<<6)|__cube_fm_ar_4
 
-	cubeByte (__cube_fm_am_1<<7)|__cube_fm_d1r_1
-	cubeByte (__cube_fm_am_2<<7)|__cube_fm_d1r_2
-	cubeByte (__cube_fm_am_3<<7)|__cube_fm_d1r_3
-	cubeByte (__cube_fm_am_4<<7)|__cube_fm_d1r_4
+	db	(__cube_fm_am_1<<7)|__cube_fm_d1r_1
+	db	(__cube_fm_am_2<<7)|__cube_fm_d1r_2
+	db	(__cube_fm_am_3<<7)|__cube_fm_d1r_3
+	db	(__cube_fm_am_4<<7)|__cube_fm_d1r_4
 	
-	cubeByte __cube_fm_d2r_1
-	cubeByte __cube_fm_d2r_2
-	cubeByte __cube_fm_d2r_3
-	cubeByte __cube_fm_d2r_4
+	db	__cube_fm_d2r_1
+	db	__cube_fm_d2r_2
+	db	__cube_fm_d2r_3
+	db	__cube_fm_d2r_4
 	
-	cubeByte (__cube_fm_dl_1<<4)|__cube_fm_rr_1
-	cubeByte (__cube_fm_dl_2<<4)|__cube_fm_rr_2
-	cubeByte (__cube_fm_dl_3<<4)|__cube_fm_rr_3
-	cubeByte (__cube_fm_dl_4<<4)|__cube_fm_rr_4
+	db	(__cube_fm_dl_1<<4)|__cube_fm_rr_1
+	db	(__cube_fm_dl_2<<4)|__cube_fm_rr_2
+	db	(__cube_fm_dl_3<<4)|__cube_fm_rr_3
+	db	(__cube_fm_dl_4<<4)|__cube_fm_rr_4
 
-	cubeByte __cube_fm_ssg_1
-	cubeByte __cube_fm_ssg_2
-	cubeByte __cube_fm_ssg_3
-	cubeByte __cube_fm_ssg_4
+	db	__cube_fm_ssg_1
+	db	__cube_fm_ssg_2
+	db	__cube_fm_ssg_3
+	db	__cube_fm_ssg_4
 
-	cubeByte (__cube_fm_fb<<3)|__cube_fm_alg
+	db	(__cube_fm_fb<<3)|__cube_fm_alg
 
 __cube_fm_id = __cube_fm_id+1
 endm
@@ -1423,15 +1418,12 @@ cChannel macro address
 	cubeChannel address
 endm
 
-; ------------------------------------------------------------------------------
-; Old macro for compatibility reasons
-
 cNote macro note, length
-	cubeNote note, length
-endm
-
-cNoteLength macro note, length
-	cubeNoteLength note, length
+	if narg==1
+		cubeNote note
+	else
+		cubeNoteLength note, length
+	endif
 endm
 
 cLoopStart macro
@@ -1470,8 +1462,14 @@ cLoopCntEnd macro
 	cubeRepeatEnd
 endm
 
-cNoteShift macro detune, transpose
-	cubeNoteShift detune, transpose
+cNoteShift macro arg1, arg2, arg3
+	if narg<3
+		cubeNoteShift arg1, arg2
+	elseif (arg1)==0
+		cubeNoteShift arg2, arg3
+	else
+		cubeNoteShift arg2, -(arg3)
+	endif
 endm
 
 cPan macro pan
