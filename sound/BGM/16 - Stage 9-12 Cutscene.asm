@@ -115,7 +115,7 @@ Song16_FM5:
 		cVolFM		$09
 		cRelease	$01
 		cVibrato	$02, $0A
-		cNoteShift	$00, $04, $00
+		cNoteShift	$04, $00
 		cNote		cnG4, $1C
 		cNote		cnFs4, $C4
 		cNote		cnF4, $1C

@@ -19,7 +19,7 @@ Song15_FM1:
 	cRelease	$01
 	cVibrato	$04, $0F
 	cPan		cpCenter
-	cNoteShift	$00, $00, $05
+	cNoteShift	$00, $05
 	cSustain
 	cNote		cnF2, $32
 	cSlide		$01
@@ -35,7 +35,7 @@ Song15_FM2:
 	cVolFM		$0F
 	cVibrato	$02, $02
 	cPan		cpCenter
-	cNoteShift	$00, $00, $00
+	cNoteShift	$00, $00
 	cSustain
 	cNote		cnF1, $22
 	cSlide		$01
@@ -52,7 +52,7 @@ Song15_FM3:
 	cVolFM		$0F
 	cVibrato	$02, $02
 	cPan		cpCenter
-	cNoteShift	$00, $00, $00
+	cNoteShift	$00, $00
 	cSustain
 	cNote		cnF1, $22
 	cSlide		$01
@@ -69,7 +69,7 @@ Song15_FM4:
 	cVolFM		$0F
 	cVibrato	$02, $02
 	cPan		cpCenter
-	cNoteShift	$00, $00, $00
+	cNoteShift	$00, $00
 	cSustain
 	cNote		cnF1, $22
 	cSlide		$01
@@ -86,7 +86,7 @@ Song15_FM5:
 	cVolFM		$0F
 	cVibrato	$02, $02
 	cPan		cpCenter
-	cNoteShift	$00, $00, $00
+	cNoteShift	$00, $00
 	cSustain
 	cNote		cnF1, $22
 	cSlide		$01

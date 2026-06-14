@@ -20,7 +20,7 @@ Song09_FM1:
 		cRelease	$01
 		cVibrato	$02, $0A
 		cPan		cpCenter
-		cNoteShift	$00, $00, $00
+		cNoteShift	$00, $00
 		cNote		cnC4, $06
 		cNote		cnRst, $12
 		cNote		cnC4, $24
@@ -49,7 +49,7 @@ Song09_FM2:
 		cRelease	$01
 		cVibrato	$02, $0A
 		cPan		cpRight
-		cNoteShift	$00, $00, $00
+		cNoteShift	$00, $00
 		cNote		cnA3, $06
 		cNote		cnRst, $12
 		cNote		cnA3, $24
@@ -111,7 +111,7 @@ Song09_FM4:
 		cRelease	$01
 		cVibrato	$02, $0A
 		cPan		cpLeft
-		cNoteShift	$00, $00, $00
+		cNoteShift	$00, $00
 		cNote		cnRst, $60
 		cNote		cnRst, $30
 		cInsFM		patch1E
@@ -133,7 +133,7 @@ Song09_FM5:
 		cRelease	$01
 		cVibrato	$02, $0A
 		cPan		cpCenter
-		cNoteShift	$00, $00, $00
+		cNoteShift	$00, $00
 		cNote		cnC4, $06
 		cNote		cnRst, $12
 		cNote		cnC4, $24

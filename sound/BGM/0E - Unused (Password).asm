@@ -19,7 +19,7 @@ Song0E_FM1:
 		cVolFM		$0C
 		cRelease	$01
 		cPan		cpCenter
-		cNoteShift	$00, $00, $00
+		cNoteShift	$00, $00
 		cVibrato	$02, $0A
 		cNote		cnC4, $70
 		cNote		cnD4
@@ -106,7 +106,7 @@ Song0E_FM2:
 		cRelease	$01
 		cVibrato	$02, $0A
 		cPan		cpRight
-		cNoteShift	$00, $00, $00
+		cNoteShift	$00, $00
 		cLoopCnt	$03
 			cNote		cnA3, $70
 			cNote		cnB3
@@ -186,7 +186,7 @@ Song0E_FM3:
 		cRelease	$01
 		cVibrato	$02, $0A
 		cPan		cpCenter
-		cNoteShift	$00, $00, $00
+		cNoteShift	$00, $00
 		cLoopCnt	$03
 			cNote		cnA1, $0E
 			cNote		cnA2, $04
@@ -322,7 +322,7 @@ Song0E_FM4:
 		cRelease	$01
 		cVibrato	$02, $0A
 		cPan		cpCenter
-		cNoteShift	$00, $01, $00
+		cNoteShift	$01, $00
 		cNote		cnC4, $70
 		cNote		cnD4
 		cNote		cnE4, $62
@@ -409,7 +409,7 @@ Song0E_FM5:
 		cRelease	$01
 		cVibrato	$02, $0A
 		cPan		cpLeft
-		cNoteShift	$00, $01, $00
+		cNoteShift	$01, $00
 		cLoopCnt	$03
 			cNote		cnA3, $70
 			cNote		cnB3

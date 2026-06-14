@@ -381,7 +381,7 @@ Song04_FM4:	; loc_A0FD
 		cRelease	$01
 		cVibrato	$02, $0A
 		cPan		cpCentre
-		cNoteShift	$00, $00, $00
+		cNoteShift	$00, $00
 		cLoopCnt	$03
 			cNote		cnRst, $60
 			cNote		cnRst
@@ -573,7 +573,7 @@ Song04_FM5:	; loc_A221
 		cRelease	$01
 		cVibrato	$02, $0A
 		cPan		cpCentre
-		cNoteShift	$00, $00, $00
+		cNoteShift	$00, $00
 		cLoopCnt	$03
 			cNote		cnRst, $60
 			cNote		cnRst

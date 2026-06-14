@@ -117,7 +117,7 @@ Song10_FM1:
 				cSlide		$14
 				cNote		cnC4, $0C
 				cSlideStop
-				cNoteShift	$00, $00, $00
+				cNoteShift	$00, $00
 				cRelease	$01
 			cVoltaSectEnd
 			cVoltaSect2
@@ -534,7 +534,7 @@ Song10_FM5:
 				cSlide		$14
 				cNote		cnC4, $0C
 				cSlideStop
-				cNoteShift	$00, $00, $00
+				cNoteShift	$00, $00
 				cRelease	$01
 			cVoltaSectEnd
 			cVoltaSect2

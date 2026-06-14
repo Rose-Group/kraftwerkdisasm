@@ -1,4 +1,5 @@
 FM_Instruments:
+	cfiStart
 	; Patch 00
 	; 7F 23 22 11   14 23 1E 7F   9F 9F 8F 5A
 	; 0F 00 00 00   09 00 00 00   6F 81 12 03

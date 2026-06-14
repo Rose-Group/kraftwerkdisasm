@@ -18,8 +18,8 @@ Song0A_FM1:
 		cVolFM		$00
 		cRelease	$01
 		cVibrato	$02, $0A
-		cNoteShift	$01, $04, $00
-		cNoteShift	$00, $00, $00
+		cNoteShift	$04, -$10
+		cNoteShift	$00, $00
 		cNote		cnRst, $60
 		cNote		cnRst
 		cNote		cnRst
@@ -254,7 +254,7 @@ Song0A_FM2:
 		cRelease	$01
 		cVibrato	$02, $0A
 		cPan		cpLeft
-		cNoteShift	$00, $00, $00
+		cNoteShift	$00, $00
 		cVoltaLoop
 			cVoltaSect1
 				cLoopCnt	$0C
@@ -501,7 +501,7 @@ Song0A_FM4:
 		cRelease	$01
 		cVibrato	$02, $0A
 		cPan		cpRight
-		cNoteShift	$00, $00, $00
+		cNoteShift	$00, $00
 		cLoopCnt	$1A
 			cNote		cnA2, $0C
 			cNote		cnA2
@@ -594,7 +594,7 @@ Song0A_FM5:
 		cRelease	$01
 		cVibrato	$02, $0A
 		cPan		cpCenter
-		cNoteShift	$00, $03, $00
+		cNoteShift	$03, $00
 		cNote		cnRst, $60
 		cNote		cnRst
 		cNote		cnRst

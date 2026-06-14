@@ -5,7 +5,7 @@
 	include	"INCLUDE/Macros.asm"
 	include	"INCLUDE/Constants.asm"
 	include	"INCLUDE/RAM.asm"
-	include	"INCLUDE/cube2asm_z80.asm"
+	include	"INCLUDE/cube2asm_vasm_psi-x_z80.inc"
 
 ; -------------------------------------------------------------- 
 ; Bank01 Data - loc_B0000
