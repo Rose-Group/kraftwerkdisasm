@@ -892,7 +892,7 @@ Song0A_Noise:
 	cLoopStart
 		cInsVolPSG	$00, $00
 		cNote		cnRst
-		cNote		cnWhite2
+		cNote		cnC1
 		cInsVolPSG	$0F, $0D
 		cNote		cnWhiteCh3, $06
 		cInsVolPSG	$00, $00

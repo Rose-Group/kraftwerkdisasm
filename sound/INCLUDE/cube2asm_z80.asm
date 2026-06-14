@@ -14,136 +14,175 @@ cnRst		EQU	70h				; Rest
 
 cnC0		EQU	00h				; Octave 0
 cnCs0		EQU	01h
-cnDb0		EQU	01h
 cnD0		EQU	02h
 cnDs0		EQU	03h
-cnEb0		EQU	03h
 cnE0		EQU	04h
 cnF0		EQU	05h
 cnFs0		EQU	06h
-cnGb0		EQU	06h
 cnG0		EQU	07h
 cnGs0		EQU	08h
-cnAb0		EQU	08h
 cnA0		EQU	09h
 cnAs0		EQU	0Ah
-cnBb0		EQU	0Ah
 cnB0		EQU	0Bh
 
 cnC1		EQU	0Ch				; Octave 1
 cnCs1		EQU	0Dh
-cnDb1		EQU	0Dh
 cnD1		EQU	0Eh
 cnDs1		EQU	0Fh
-cnEb1		EQU	0Fh
 cnE1		EQU	10h
 cnF1		EQU	11h
 cnFs1		EQU	12h
-cnGb1		EQU	12h
 cnG1		EQU	13h
 cnGs1		EQU	14h
-cnAb1		EQU	14h
-cnA1		EQU	15h
+cnA1		EQU	15h	; PSG notes aren't functional before here
 cnAs1		EQU	16h
-cnBb1		EQU	16h
 cnB1		EQU	17h
 
 cnC2		EQU	18h				; Octave 2
 cnCs2		EQU	19h
-cnDb2		EQU	19h
 cnD2		EQU	1Ah
 cnDs2		EQU	1Bh
-cnEb2		EQU	1Bh
 cnE2		EQU	1Ch
 cnF2		EQU	1Dh
 cnFs2		EQU	1Eh
-cnGb2		EQU	1Eh
 cnG2		EQU	1Fh
 cnGs2		EQU	20h
-cnAb2		EQU	20h
 cnA2		EQU	21h
 cnAs2		EQU	22h
-cnBb2		EQU	22h
 cnB2		EQU	23h
 
 cnC3		EQU	24h				; Octave 3
 cnCs3		EQU	25h
-cnDb3		EQU	25h
 cnD3		EQU	26h
 cnDs3		EQU	27h
-cnEb3		EQU	27h
 cnE3		EQU	28h
 cnF3		EQU	29h
 cnFs3		EQU	2Ah
-cnGb3		EQU	2Ah
 cnG3		EQU	2Bh
 cnGs3		EQU	2Ch
-cnAb3		EQU	2Ch
 cnA3		EQU	2Dh
 cnAs3		EQU	2Eh
-cnBb3		EQU	2Eh
 cnB3		EQU	2Fh
 
 cnC4		EQU	30h				; Octave 4
 cnCs4		EQU	31h
-cnDb4		EQU	31h
 cnD4		EQU	32h
 cnDs4		EQU	33h
-cnEb4		EQU	33h
 cnE4		EQU	34h
 cnF4		EQU	35h
 cnFs4		EQU	36h
-cnGb4		EQU	36h
 cnG4		EQU	37h
 cnGs4		EQU	38h
-cnAb4		EQU	38h
 cnA4		EQU	39h
 cnAs4		EQU	3Ah
-cnBb4		EQU	3Ah
 cnB4		EQU	3Bh
 
 cnC5		EQU	3Ch				; Octave 5
 cnCs5		EQU	3Dh
-cnDb5		EQU	3Dh
 cnD5		EQU	3Eh
-cnDs5		EQU	3Fh
-cnEb5		EQU	3Fh
-; The rest of the notes are FM only
+cnDs5		EQU	3Fh	; The rest of the notes are FM only
 cnE5		EQU	40h
 cnF5		EQU	41h
 cnFs5		EQU	42h
-cnGb5		EQU	42h
 cnG5		EQU	43h
 cnGs5		EQU	44h
-cnAb5		EQU	44h
 cnA5		EQU	45h
 cnAs5		EQU	46h
-cnBb5		EQU	46h
 cnB5		EQU	47h
 
 cnC6		EQU	48h				; Octave 6
 cnCs6		EQU	49h
-cnDb6		EQU	49h
 cnD6		EQU	4Ah
 cnDs6		EQU	4Bh
-cnEb6		EQU	4Bh
 cnE6		EQU	4Ch
 cnF6		EQU	4Dh
 cnFs6		EQU	4Eh
-cnGb6		EQU	4Eh
 cnG6		EQU	4Fh
 cnGs6		EQU	50h
-cnAb6		EQU	50h
 cnA6		EQU	51h
 cnAs6		EQU	52h
-cnBb6		EQU	52h
 cnB6		EQU	53h
-cnC7		EQU	54h
 
-cnMaxFM		EQU	cnB6				; Max FM note
+cnC7		EQU	54h				; Octave 7
+cnCs7		EQU	55h
+cnD7		EQU	56h
+cnDs7		EQU	57h
+cnE7		EQU	58h
+cnF7		EQU	59h
+cnFs7		EQU	5Ah
+cnG7		EQU	5Bh
+cnGs7		EQU	5Ch
+cnA7		EQU	5Dh
+cnAs7		EQU	5Eh
+cnB7		EQU	5Fh
+
+cnDb0		EQU	cnCs0
+cnEb0		EQU	cnDs0
+cnEs0		EQU	cnF0
+cnGb0		EQU	cnFs0
+cnAb0		EQU	cnGs0
+cnBb0		EQU	cnAs0
+cnBs0		EQU	cnC1
+
+cnDb1		EQU	cnCs1
+cnEb1		EQU	cnDs1
+cnEs1		EQU	cnF1
+cnGb1		EQU	cnFs1
+cnAb1		EQU	cnGs1
+cnBb1		EQU	cnAs1
+cnBs1		EQU	cnC2
+
+cnDb2		EQU	cnCs2
+cnEb2		EQU	cnDs2
+cnEs2		EQU	cnF2
+cnGb2		EQU	cnFs2
+cnAb2		EQU	cnGs2
+cnBb2		EQU	cnAs2
+cnBs2		EQU	cnC3
+
+cnDb3		EQU	cnCs3
+cnEb3		EQU	cnDs3
+cnGb3		EQU	cnFs3
+cnAb3		EQU	cnGs3
+cnBb3		EQU	cnAs3
+
+cnDb4		EQU	cnCs4
+cnEb4		EQU	cnDs4
+cnGb4		EQU	cnFs4
+cnAb4		EQU	cnGs4
+cnBb4		EQU	cnAs4
+
+cnDb5		EQU	cnCs5
+cnEb5		EQU	cnDs5
+cnGb5		EQU	cnFs5
+cnAb5		EQU	cnGs5
+cnBb5		EQU	cnAs5
+
+cnDb6		EQU	cnCs6
+cnEb6		EQU	cnDs6
+cnGb6		EQU	cnFs6
+cnAb6		EQU	cnGs6
+cnBb6		EQU	cnAs6
+
+cnDb7		EQU	cnCs7
+cnEb7		EQU	cnDs7
+cnGb7		EQU	cnFs7
+cnAb7		EQU	cnGs7
+cnBb7		EQU	cnAs7
+
+cnMinFM		EQU	cnC0				; Min FM note
+cnMaxFM		EQU	cnB7				; Max FM note
+cnMinPSG	EQU	cnA1				; Min PSG note
 cnMaxPSG	EQU	cnDs5				; Max PSG note
-cnWhiteCh3	EQU	cnG0				; PSG Noise Chan 3 Mode
-cnWhite2	EQU	cnC1
+
+cnPeriodic2	EQU	0				; Periodic noise (clock/2)
+cnPeriodic4	EQU	1				; Periodic noise (clock/4)
+cnPeriodic8	EQU	2				; Periodic noise (clock/8)
+cnPeriodicCh3	EQU	3				; Periodic Noise (PSG3)
+cnWhite2	EQU	4				; White noise (clock/2)
+cnWhite4	EQU	5				; White noise (clock/4)
+cnWhite8	EQU	6				; White noise (clock/8)
+cnWhiteCh3	EQU	7				; White Noise (PSG3)
 
 ; --------------------------------------------------------------
 ; DAC Equates
@@ -198,7 +237,7 @@ cpNone		EQU	00h
 cpRight		EQU	40h
 cpLeft		EQU	80h
 cpCentre	EQU	0C0h
-cpCenter = cpCentre
+cpCenter	EQU	cpCentre
 
 ; --------------------------------------------------------------
 ; Set music/SFX type
